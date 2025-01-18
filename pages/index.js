@@ -7,7 +7,7 @@ import CardSitio from "../components/CardSitio";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
-import marca from "../public/marca2.png";
+import marca from "../public/LOGODETALHES.png";
 import devassa from "../public/devassa.png";
 import kuat from "../public/kuat.png";
 import governo from "../public/governo.png";
@@ -19,14 +19,6 @@ export default function Home() {
   useEffect(() => {
     const btnPlayVideo = document.getElementById("btn-play-video");
     const containerVideo = document.getElementById("container-video");
-
-    btnPlayVideo.addEventListener("click", handlePlayVideo);
-
-    function handlePlayVideo() {
-      event.preventDefault();
-      btnPlayVideo.style.display = "none";
-      containerVideo.innerHTML = `<iframe width=100% height=100% src="https://www.youtube.com/embed/EmgkGqSWJRI?autoplay=1" title="Teaser" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
-    }
 
     const btnArrow = document.getElementById("btn-arrow");
     const sectionApresentacao = document.getElementById("apresentacao");
@@ -41,8 +33,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>São João 2024 - Bezerros-PE</title>
-        <meta name="title" content="São João 2024 - Bezerros-PE"></meta>
+        <title>Carnaval 2025 - Bezerros-PE</title>
+        <meta name="title" content="Carnaval 2025 - Bezerros-PE"></meta>
       </Head>
 
       <Navbar />
@@ -52,7 +44,7 @@ export default function Home() {
           <div
             className="bg-hero"
             data-parallax="scroll"
-            data-image-src="/bg-hero.jpg"
+            data-image-src="/BGAZUL.png"
           >
             <div className="container d-flex justify-content-center align-items-center">
               <Image
@@ -66,101 +58,15 @@ export default function Home() {
             </button>
           </div>
         </section>
-        <div className="divisoria"></div>
-        <section id="apresentacao">
-          <div className="container d-flex w-100 justify-content-center align-items-center">
-            <div className="d-flex flex-column justify-content-center align-items-center text-center my-5 text-white">
-              <h1 className="m-titulo-secao mb-4">O SÃO JOÃO NA SERRA NEGRA</h1>
-              <p className="m-apresentacao-texto">
-                Distante 100 km do Recife, o município de Bezerros, no Agreste,
-                também é conhecido como um dos polos juninos mais autênticos do
-                interior, mantendo viva a tradição do forró pé de serra. O São
-                João mais frio, mais alto e mais aconchegante do mundo, na Serra
-                Negra, tem como tema "DAQUI DO ALTO, TUDO É MAIS BONITO!", uma
-                referência às belas paisagens naturais, ao sabor peculiar das
-                comidas típicas, a cultura dos grupos culturais e os pontos
-                turísticos que atraem milhares de pessoas todos os anos. São
-                aproximadamente 10 km entre a cidade e o Pólo Cultural. Com
-                temperatura média de 16 graus e sensação térmica que chega a 12
-                graus, o São João na Serra Negra tornou-se um evento consolidado
-                no calendário festivo do estado.
-              </p>
-              <h2 className="m-titulo-programacaotxt mb-4">
-                PATRIMÔNIO CULTURAL IMATERIAL
-              </h2>
-              <p className="m-apresentacao-texto">
-                O São João na Serra Negra é uma das festas mais tradicionais no
-                interior de Pernambuco, atraindo forrozeiros de todos os cantos
-                do Brasil e até do mundo. Embalada pelo ritmo do forró
-                autêntico, a festa tornou-se Patrimônio Cultural Imaterial de
-                Pernambuco, a partir da Resolução Nº 1.897, aprovada em 19 de
-                abril de 2023, pela Assembléia Legislativa de Pernambuco
-                (Alepe).
-              </p>
-            </div>
-          </div>
-        </section>
-        <div className="divisoria"></div>
-        <section id="clipe">
-          <div
-            id="container-video"
-            className="d-flex justify-content-center align-items-center container-video"
-            data-parallax="scroll"
-            data-image-src="/bg-balao.jpg"
-          >
-            <button
-              id="btn-play-video"
-              type="button"
-              className="m-btn-play-video"
-            >
-              <i className="bx bx-play-circle bx-tada display-1 text-white"></i>
-            </button>
-          </div>
-        </section>
-
-        <div className="divisoria"></div>
+        <div className="divisoria"></div> 
 
         <section id="programacao">
           <div className="">
             <div className="m-container-palcos-serra d-flex justify-content-center align-items-center flex-column">
               <div className="m-container-titulo">
-                <h2 className="m-titulo-secao mt-5 text-center">PROGRAMAÇÃO</h2>
-                <h3 className="m-titulo-programacao">SERRA NEGRA</h3>
+                <h2 className="m-titulo-secao mt-5 text-center">ATRAÇÕES CONFIRMADAS!</h2>
               </div>
               <div className="container mt-3">
-                <ul
-                  className="nav nav-tabs justify-content-center"
-                  role="tablist"
-                >
-                  <li className="nav-item" role="presentation">
-                    <button
-                      className="nav-link active m-button-programacao palcos"
-                      id="palcos-tab1"
-                      data-bs-toggle="tab"
-                      data-bs-target="#palcos-tab1-pane"
-                      type="button"
-                      role="tab"
-                      aria-controls="palcos-tab1-pane"
-                      aria-selected="true"
-                    >
-                      Palco Principal
-                    </button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button
-                      className="nav-link m-button-programacao palcos"
-                      id="palcos-tab2"
-                      data-bs-toggle="tab"
-                      data-bs-target="#palcos-tab2-pane"
-                      type="button"
-                      role="tab"
-                      aria-controls="palcos-tab2-pane"
-                      aria-selected="false"
-                    >
-                      Palco Cultural
-                    </button>
-                  </li>
-                </ul>
 
                 <div className="tab-content d-flex justify-content-center mb-5">
                   <div
@@ -496,43 +402,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="patrocinio" className="mt-5 mb-5">
-          <div className="container text-center">
-            <div className="row align-items-center">
-              <div className="col m-2">
-                <Image src={devassa} width={85} alt={"devassa"}></Image>
-              </div>
-              <div className="col m-2">
-                <Image src={kuat} width={85} alt={"kuat"}></Image>
-              </div>
-              <div className="col m-2">
-                <Image src={fundarpe} width={100} alt={"fundarpe"}></Image>
-              </div>
-              <div className="col m-2">
-                <Image src={sesc} width={175} alt={"sesc-senac"}></Image>
-              </div>
-              <div className="col m-2">
-                <Image src={empetur} width={85} alt={"empetur"}></Image>
-              </div>
-              <div className="col m-2">
-                <Image src={governo} width={100} alt={"governo"}></Image>
-              </div>
-            </div>
-          </div>
-        </section>
         <div className="divisoria"></div>
-        <section id="mapa">
-          <div className="d-flex flex-column justify-content-center align-items-center m-container-mapa">
-            <h2 className="m-titulo-secao-linha mt-5 mb-5">MAPA</h2>
-            <iframe
-              loading="lazy"
-              className="container mb-5"
-              width="100%"
-              height="100%"
-              src="https://www.google.com/maps/d/u/0/embed?mid=17ylFCMfPZAy4kWIwmMJBi6WriHAnsZg&ehbc=2E312F"
-            ></iframe>
-          </div>
-        </section>
+     
         <div className="divisoria"></div>
         <section id="faq" className="pb-5">
           <div className="container d-flex justify-content-center align-items-center flex-column">
