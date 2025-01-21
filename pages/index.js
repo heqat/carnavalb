@@ -44,7 +44,7 @@ export default function Home() {
           <div
             className="bg-hero"
             data-parallax="scroll"
-            data-image-src="/BGAZUL.png"
+            data-image-src="/papangus-igreja.jpg"
           >
             <div className="container d-flex justify-content-center align-items-center">
               <Image
@@ -61,346 +61,224 @@ export default function Home() {
         <div className="divisoria"></div> 
 
         <section id="programacao">
-          <div className="">
-            <div className="m-container-palcos-serra d-flex justify-content-center align-items-center flex-column">
-              <div className="m-container-titulo">
-                <h2 className="m-titulo-secao mt-5 text-center">ATRAÇÕES CONFIRMADAS!</h2>
-              </div>
-              <div className="container mt-3">
+  <div className="">
+    <div className="m-container-palcos-serra d-flex justify-content-center align-items-center flex-column">
+      <div className="m-container-titulo">
+        <h2 className="m-titulo-secao mt-5 text-center">PROGRAMAÇÃO</h2>
+        <h3 className="m-titulo-programacao">POLO</h3>
+      </div>
+      <div className="container mt-3">
+        <ul className="nav nav-tabs justify-content-center" role="tablist">
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link active m-button-programacao palcos"
+              id="palcos-qg-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#palcos-qg-pane"
+              type="button"
+              role="tab"
+              aria-controls="palcos-qg-pane"
+              aria-selected="true"
+            >
+              PALCO QG DO FREVO
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link m-button-programacao palcos"
+              id="palcos-cultural-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#palcos-cultural-pane"
+              type="button"
+              role="tab"
+              aria-controls="palcos-cultural-pane"
+              aria-selected="false"
+            >
+              PALCO CULTURAL
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link m-button-programacao palcos"
+              id="palcos-centenaria-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#palcos-centenaria-pane"
+              type="button"
+              role="tab"
+              aria-controls="palcos-centenaria-pane"
+              aria-selected="false"
+            >
+              PALCO CENTENÁRIA
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link m-button-programacao palcos"
+              id="palcos-sebastiao-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#palcos-sebastiao-pane"
+              type="button"
+              role="tab"
+              aria-controls="palcos-sebastiao-pane"
+              aria-selected="false"
+            >
+              PALCO SÃO SEBASTIÃO
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link m-button-programacao palcos"
+              id="palcos-forro-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#palcos-forro-pane"
+              type="button"
+              role="tab"
+              aria-controls="palcos-forro-pane"
+              aria-selected="false"
+            >
+              PALCO FORRÓ DO PAPANGU
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link m-button-programacao palcos"
+              id="palcos-espaco-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#palcos-espaco-pane"
+              type="button"
+              role="tab"
+              aria-controls="palcos-espaco-pane"
+              aria-selected="false"
+            >
+              PALCO ESPAÇO DO FREVO
+            </button>
+          </li>
+        </ul>
 
-                <div className="tab-content d-flex justify-content-center mb-5">
-                  <div
-                    className="tab-pane fade show active"
-                    id="palcos-tab1-pane"
-                    role="tabpanel"
-                    aria-labelledby="palcos-tab1"
-                    tabIndex="0"
-                  >
-                    <div className="d-flex justify-content-center flex-wrap">
-                      <CardPalco
-                        nome={[
-                          "Forró Rei do Cangaço",
-                          "Forretrô",
-                          "Flávio José",
-                          "Flávio Leandro",
-                          "Amanda Leão",
-                        ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
-                        dia="Sábado"
-                        data="15/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Luizinho Moreno",
-                          "Waldonys",
-                          "Quinteto Violado",
-                          "Assisão",
-                          "Walter Lins",
-                        ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
-                        dia="Domingo"
-                        data="16/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Damião Mota",
-                          "Rodrigo Raposo",
-                          "Cezzinha",
-                          "Nena Queiroga",
-                          "Igor Henrique",
-                        ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
-                        dia="Sábado"
-                        data="22/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Ciel Santos",
-                          "Novinho da Paraíba",
-                          "Lady Falcão",
-                          "Cristina Amaral",
-                          "Marcão Noventa",
-                        ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
-                        dia="Domingo"
-                        data="23/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Daniel Gouveia",
-                          "Geraldinho Lins",
-                          "Almir Rouche",
-                          "Henrique Barbosa",
-                          "Azulinho",
-                        ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
-                        dia="Segunda"
-                        data="24/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Pau no Xote",
-                          "Michel Diniz",
-                          "Irah Caldeira",
-                          "Petrúcio Amorin",
-                          "Dudu do Acordeon",
-                        ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
-                        dia="Sábado"
-                        data="29/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Anderson Alves",
-                          "Nordestinos do Forró",
-                          "Morganna Bernardo",
-                          "Benil",
-                          "Santanna",
-                        ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
-                        dia="Domingo"
-                        data="30/06"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="tab-pane fade"
-                    id="palcos-tab2-pane"
-                    role="tabpanel"
-                    aria-labelledby="palcos-tab2"
-                    tabIndex="0"
-                  >
-                    <div className="d-flex justify-content-center flex-wrap">
-                      <CardPalco
-                        nome={[
-                          "Matheus e catirina",
-                          "kaio lima",
-                          "banda de pífanos",
-                          "Matheus e catirina",
-                          "quadrilha folcpopular",
-                          "batalhão 44/ matheus e catirina",
-                          "renilda cardoso",
-                        ]}
-                        horario={[
-                          "12:30",
-                          "13:00",
-                          "14:30",
-                          "15:00",
-                          "15:30",
-                          "16:30",
-                          "17:30",
-                        ]}
-                        dia="Sábado"
-                        data="15/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Matheus e catirina",
-                          "clara ellys",
-                          "banda de pífanos",
-                          "Matheus e catirina",
-                          "marcos montez",
-                          "jamile",
-                          "som da terra",
-                        ]}
-                        horario={[
-                          "12:30",
-                          "13:00",
-                          "15:00",
-                          "15:30",
-                          "16:30",
-                          "17:30",
-                          "18:30",
-                        ]}
-                        dia="Domingo"
-                        data="16/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Matheus e catirina",
-                          "carlinho melo",
-                          "Matheus e catirina",
-                          "quadrilha misturat",
-                          "douglas leon",
-                          "thalentos",
-                        ]}
-                        horario={[
-                          "12:30",
-                          "13:00",
-                          "15:00",
-                          "15:30",
-                          "16:30",
-                          "17:30",
-                        ]}
-                        dia="Sábado"
-                        data="22/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Matheus e catirina",
-                          "victor ferrari",
-                          "Matheus e catirina",
-                          "grupo panpaguarte",
-                          "matheus aboiador, biu lourenço e lunas costas",
-                          "zé barreto",
-                          "joãozinho de exu",
-                        ]}
-                        horario={[
-                          "12,30",
-                          "13:00",
-                          "15:00",
-                          "15:30",
-                          "16:30",
-                          "17:30",
-                          "18:30",
-                        ]}
-                        dia="Domingo"
-                        data="23/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Matheus e catirina",
-                          "kabras da peste",
-                          "Matheus e catirina",
-                          "quadrilha folcpopular",
-                          "batalhão 44/ Matheus e catirina",
-                          "farra dos tops",
-                          "valdinho paes",
-                        ]}
-                        horario={[
-                          "12:30",
-                          "13:00",
-                          "15:00",
-                          "15:30",
-                          "16:30",
-                          "17:30",
-                          "18:30",
-                        ]}
-                        dia="Segunda"
-                        data="24/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Matheus e catirina",
-                          "samara costa",
-                          "Matheus e catirina",
-                          "quadrilha misturart",
-                          "joãozinho e banda",
-                          "eu, tu e elas",
-                        ]}
-                        horario={[
-                          "12:30",
-                          "13:00",
-                          "15:00",
-                          "15:30",
-                          "16:00",
-                          "17:30",
-                        ]}
-                        dia="Sábado"
-                        data="29/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Matheus e catirina",
-                          "emerson cavalcante",
-                          "Matheus e catirina",
-                          "quadrilha riacho das almas",
-                          "neno do acordeon",
-                        ]}
-                        horario={["12:30", "13:00", "15:00", "15:30", "16:00"]}
-                        dia="Domingo"
-                        data="25/06"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="divisoria"></div>
-
-            <div className="d-flex justify-content-center align-items-center flex-column m-container-palcos-cidade">
-              <h3 className="m-titulo-programacao">SÍTIO À CIDADE</h3>
-              <div className="container mt-3">
-                <div className="container-card">
-                  <div className="d-flex justify-content-center flex-wrap">
-                    <CardSitio
-                      nome={[
-                        "Apresentações Escolar",
-                        "Leninho Filho",
-                        "Dadal Forró de Três",
-                      ]}
-                      horario={["15:30", "18:30", "20:30"]}
-                      dia="Sítio dos Remédios"
-                      data="11/06"
-                    />
-
-                    <CardSitio
-                      nome={[
-                        "Apresentações Escolar",
-                        "Programação Religiosa",
-                        "Emerson Cavalcante",
-                        "André Ferraz",
-                      ]}
-                      horario={["15:30", "18:30", "20:00", "21:30"]}
-                      dia="Cajazeiras"
-                      data="13/06"
-                    />
-                    <CardSitio
-                      nome={[
-                        "Matheus e Catirina",
-                        "Quadrilha  Gonzagão de Areias",
-                        "Michel Diniz",
-                        "Anny Sales",
-                      ]}
-                      horario={["18:00", "18:30", "19:00", "20:30"]}
-                      dia="Areias"
-                      data="14/06"
-                    />
-                    <CardSitio
-                      nome={[
-                        "Quadrilha folcpopular",
-                        "Manoel da Concertina",
-                        "Wanessa Roger",
-                      ]}
-                      horario={["20:00", "21:00", "22:30"]}
-                      dia="Encruzilhada"
-                      data="19/06"
-                    />
-                    <CardSitio
-                      nome={[
-                        "Apresentações Escolar",
-                        "Gil Teclas",
-                        "Higor Henrique",
-                      ]}
-                      horario={["15:30", "19:00", "21:00"]}
-                      dia="Boas Novas"
-                      data="20/06"
-                    />
-                    <CardSitio
-                      nome={[
-                        "Quadrilha Junina é por amor",
-                        "Trio nildo e seu reginal",
-                        "Geraldinho Lins",
-                      ]}
-                      horario={["19:00", "20:00", "21:30"]}
-                      dia="Sapucarana"
-                      data="26/06"
-                    />
-
-                    <CardCidade
-                      nome={["João Gomes", "MAIS ATRAÇÕES EM BREVE!"]}
-                      horario={["", ""]}
-                      dia="Centro da Cidade"
-                      data="07/07"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="divisoria"></div>
+        <div className="tab-content d-flex justify-content-center mb-5">
+          <div
+            className="tab-pane fade show active"
+            id="palcos-qg-pane"
+            role="tabpanel"
+            aria-labelledby="palcos-qg-tab"
+            tabIndex="0"
+          >
+            <div className="d-flex justify-content-center flex-wrap">
+              <CardPalco nome={["Exemplo"]} horario={["14:00"]} dia="SEGUNDA" data="01/01" />
+              <CardPalco nome={["Exemplo"]} horario={["14:00"]} dia="SEGUNDA" data="01/01" />
             </div>
           </div>
-        </section>
+          <div
+            className="tab-pane fade"
+            id="palcos-cultural-pane"
+            role="tabpanel"
+            aria-labelledby="palcos-cultural-tab"
+            tabIndex="0"
+          >
+            <div className="d-flex justify-content-center flex-wrap">
+              <CardPalco nome={[]} horario={[]} dia="" data="" />
+            </div>
+          </div>
+          <div
+            className="tab-pane fade"
+            id="palcos-centenaria-pane"
+            role="tabpanel"
+            aria-labelledby="palcos-centenaria-tab"
+            tabIndex="0"
+          >
+            <div className="d-flex justify-content-center flex-wrap">
+              <CardPalco nome={[]} horario={[]} dia="" data="" />
+            </div>
+          </div>
+          <div
+            className="tab-pane fade"
+            id="palcos-sebastiao-pane"
+            role="tabpanel"
+            aria-labelledby="palcos-sebastiao-tab"
+            tabIndex="0"
+          >
+            <div className="d-flex justify-content-center flex-wrap">
+              <CardPalco nome={[]} horario={[]} dia="" data="" />
+            </div>
+          </div>
+          <div
+            className="tab-pane fade"
+            id="palcos-forro-pane"
+            role="tabpanel"
+            aria-labelledby="palcos-forro-tab"
+            tabIndex="0"
+          >
+            <div className="d-flex justify-content-center flex-wrap">
+              <CardPalco nome={[]} horario={[]} dia="" data="" />
+            </div>
+          </div>
+          <div
+            className="tab-pane fade"
+            id="palcos-espaco-pane"
+            role="tabpanel"
+            aria-labelledby="palcos-espaco-tab"
+            tabIndex="0"
+          >
+            <div className="d-flex justify-content-center flex-wrap">
+              <CardPalco nome={[]} horario={[]} dia="" data="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="divisoria"></div>
+
+    <div className="d-flex justify-content-center align-items-center flex-column m-container-palcos-cidade">
+      <h3 className="m-titulo-programacao">SÍTIO À CIDADE</h3>
+      <div className="container mt-3">
+        <div className="container-card">
+          <div className="d-flex justify-content-center flex-wrap">
+            <CardSitio
+              nome={["Apresentações Escolar", "Leninho Filho", "Dadal Forró de Três"]}
+              horario={["15:30", "18:30", "20:30"]}
+              dia="Sítio dos Remédios"
+              data="11/06"
+            />
+            <CardSitio
+              nome={["Apresentações Escolar", "Programação Religiosa", "Emerson Cavalcante", "André Ferraz"]}
+              horario={["15:30", "18:30", "20:00", "21:30"]}
+              dia="Cajazeiras"
+              data="13/06"
+            />
+            <CardSitio
+              nome={["Matheus e Catirina", "Quadrilha Gonzagão de Areias", "Michel Diniz", "Anny Sales"]}
+              horario={["18:00", "18:30", "19:00", "20:30"]}
+              dia="Areias"
+              data="14/06"
+            />
+            <CardSitio
+              nome={["Quadrilha folcpopular", "Manoel da Concertina", "Wanessa Roger"]}
+              horario={["20:00", "21:00", "22:30"]}
+              dia="Encruzilhada"
+              data="19/06"
+            />
+            <CardSitio
+              nome={["Apresentações Escolar", "Gil Teclas", "Higor Henrique"]}
+              horario={["15:30", "19:00", "21:00"]}
+              dia="Boas Novas"
+              data="20/06"
+            />
+            <CardSitio
+              nome={["Quadrilha Junina é por amor", "Trio nildo e seu reginal", "Geraldinho Lins"]}
+              horario={["19:00", "20:00", "21:30"]}
+              dia="Sapucarana"
+              data="26/06"
+            />
+            <CardCidade nome={["João Gomes", "MAIS ATRAÇÕES EM BREVE!"]} horario={["", ""]} dia="Centro da Cidade" data="07/07" />
+          </div>
+        </div>
+      </div>
+      <div className="divisoria"></div>
+    </div>
+  </div>
+</section>
+
 
         <div className="divisoria"></div>
      

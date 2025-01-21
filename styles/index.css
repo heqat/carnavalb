@@ -5,7 +5,7 @@
 }
 
 .bg-hero-marca {
-  margin-top: 100px;
+  margin-top: 50px;
   width: auto;
   height: 20rem;
   position: absolute;
@@ -152,7 +152,7 @@
 }
 
 .m-button-programacao.active {
-  background: var(--cor-azul-escuro) !important;
+  background: #4386c6 !important;
 }
 
 .active {
@@ -206,11 +206,11 @@
 }
 
 .m-container-palcos-serra {
-  background-image: url("../public/serra-negra-bg.png");
+  background-image: url("../public/BGAMARELO.png");
 }
 
 .m-container-palcos-cidade {
-  background-image: url("../public/sitio-cidade-bg.png");
+  background-image: url("../public/BGAMARELO2.png");
 }
 
 .m-container-mapa {
@@ -244,7 +244,7 @@
 
 #faq {
   scroll-margin-top: 100px;
-  background: url("../public/bg-palha-verde.png");
+  background: url("../public/BGROXO.png");
   background-position: center;
   background-repeat: repeat;
 }

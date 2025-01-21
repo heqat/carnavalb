@@ -1,9 +1,9 @@
 .card {
   width: 16rem;
   height: 12.5rem;
-  border-radius: 0;
-  background: var(--cor-azul-escuro);
-  border-color: white !important;
+  border-radius: 2;
+  background: #a700ff;
+  border-color: #a700ff !important;
 }
 
 .card-cidade {
@@ -40,7 +40,7 @@
   right: 0;
   width: 6rem;
   height: 2rem;
-  background-color: white;
+  background-color: #f5821f;
   z-index: 1000;
   border-bottom-left-radius: 50px;
 }
@@ -53,7 +53,7 @@
 }
 
 .categoria.palco {
-  color: var(--cor-azul-escuro);
+  color:whitesmoke;
   text-align: right;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .horario {
-  color: var(--cor-laranja);
+  color: #ffcc08;
 }
 
 .horario-cidade {
@@ -103,7 +103,7 @@
 }
 
 .dia {
-  color: var(--cor-laranja);
+  color: whitesmoke;
   font-family: var(--fonte-principal);
 }
 

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import marca from '../public/marca.png'
+import marca from '../public/LOGO.png'
 import Link from 'next/link'
 
 export default function Navbar() {
@@ -40,7 +40,7 @@ export default function Navbar() {
     <header>
       <nav id='navbar' className='navbar navbar-expand-lg fixed-top'>
         <div className='container'>
-          <a href="/"><Image className='m-navbar-marca' src={marca} alt='marca são joao' height={85} /></a>
+          <a href="/"><Image className='m-navbar-marca' src={marca} alt='marca carnaval' height={85} /></a>
 
           <button id='btn-nav' className='navbar-toggler text-white' type='button' aria-expanded='false' data-bs-toggle='collapse' data-bs-target='#navbar-collapse'>
             <i className='bx bx-menu bx-md'></i>
@@ -48,28 +48,26 @@ export default function Navbar() {
 
           <div className='navbar-collapse collapse' id='navbar-collapse'>
             <ul className='navbar-nav ms-auto align-items-center'>
-              <li className={`nav-item m-2 ${activeSection === 'apresentacao' ? 'active' : ''}`}>
-                <a href='/../#apresentacao' className='text-nav p-2' onClick={() => setActiveSection('apresentacao')}>O SÃO JOÃO</a>
-              </li>
+            
               <li className={`nav-item m-2 ${activeSection === 'programacao' ? 'active' : ''}`}>
-                <a href='/../#programacao' className='text-nav p-2' onClick={() => setActiveSection('programacao')}>PROGRAMAÇÃO</a>
-              </li>
-              <li className={`nav-item m-2 ${activeSection === 'mapa' ? 'active' : ''}`}>
-                <a href='/../#mapa' className='text-nav p-2' onClick={() => setActiveSection('mapa')}>MAPA</a>
-              </li>
+                <a href='/../#programacao' className='text-nav p-2' onClick={() => setActiveSection('programacao')}>ATRAÇÕES CONFIRMADAS</a>
+                 
+                </li>
+          
               <li className={`nav-item m-2 ${activeSection === 'faq' ? 'active' : ''}`}>
                 <a href='/../#faq' className='text-nav p-2' onClick={() => setActiveSection('faq')}>FAQ</a>
               </li>
-              <li className={`nav-item m-2 ${router.pathname === '/vitrine-criativa' ? 'active' : ''}`}>
-                <a href='/vitrine-criativa' className='text-nav p-2'>VITRINE CRIATIVA</a>
-              </li>
+             
+            
+                
+              
             </ul>
             <ul className='navbar-nav d-flex justify-content-center flex-row align-items-center ms-auto m-navbar-icones'>
               <li className='nav-item m-2'>
                 <Link href='https://www.facebook.com/saojoaonaserranegra/' rel="noreferrer" className='m-icone-navbar text-white p-1' target='_blank'><i className='bx bxl-facebook-circle bx-sm'></i></Link>
               </li>
               <li className='nav-item m-2'>
-                <Link href='https://www.instagram.com/saojoaonaserranegra/' rel="noreferrer" className='m-icone-navbar text-white p-1' target='_blank'><i className='bx bxl-instagram bx-sm'></i></Link>
+                <Link href='https://instagram.com/foliadopapanguoficial/' rel="noreferrer" className='m-icone-navbar text-white p-1' target='_blank'><i className='bx bxl-instagram bx-sm'></i></Link>
               </li>
             </ul>
           </div>
@@ -85,7 +83,7 @@ export default function Navbar() {
           font-size: larger;
           font-weight: bold;
         
-        }
+     style
       `}</style>
     </header>
   )
