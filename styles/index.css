@@ -123,11 +123,14 @@
 }
 
 .accordion-button {
-  box-shadow: none !important;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5) !important; 
   color: white !important;
-  background-color: rgb(241, 124, 45) !important;
+  background-color: #a700ff !important;
   font-family: var(--fonte-principal);
+  border-radius: 2px !important; 
+  border: 2px solid #ffffff !important; 
 }
+
 
 .accordion-button:after {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
@@ -147,12 +150,12 @@
 
 .m-button-programacao:hover {
   color: var(--cor-branco);
-  background: var(--cor-azul-escuro) !important;
+  background: #b963e7 !important;
   border: 1px solid white;
 }
 
 .m-button-programacao.active {
-  background: #4386c6 !important;
+  background:#a700ff !important;
 }
 
 .active {
@@ -206,11 +209,17 @@
 }
 
 .m-container-palcos-serra {
-  background-image: url("../public/BGAMARELO.png");
+  background-image: url("../public/BGAZULESC.png");
+  background-size: 100%;
+  background-repeat: no-repeat; 
+  background-position: center;
 }
 
 .m-container-palcos-cidade {
-  background-image: url("../public/BGAMARELO2.png");
+  background-image: url("../public/BGROXOESC.png");
+  background-size: 100%;
+  background-repeat: no-repeat; 
+  background-position: center;
 }
 
 .m-container-mapa {
@@ -244,7 +253,7 @@
 
 #faq {
   scroll-margin-top: 100px;
-  background: url("../public/BGROXO.png");
+  background: url("../public/textura-palha-v2.png");
   background-position: center;
   background-repeat: repeat;
 }

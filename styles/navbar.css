@@ -1,15 +1,19 @@
 #navbar {
   width: 100%;
   background: url("../public/BGAZUL.png");
+  background-size: 100%;
   background-position: center;
   background-attachment: fixed;
 }
 
-.text-nav {
-  font-family: var(--fonte-principal);
-  color: white;
-  text-decoration: none;
-}
+.text-nav { font-family: var(--fonte-principal); 
+  color: white; 
+  text-decoration: none; 
+  text-shadow: 2px 2px 0 #000, /* Direita e para baixo */ 
+  -2px -2px 0 #000, /* Esquerda e para cima */ 
+  2px -2px 0 #000, /* Direita e para cima */ 
+  -2px 2px 0 #000; /* Esquerda e para baixo */}
+
 
 .text-nav:hover {
   color: white;
