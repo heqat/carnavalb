@@ -49,8 +49,23 @@ export default function Navbar() {
           <div className='navbar-collapse collapse' id='navbar-collapse'>
             <ul className='navbar-nav ms-auto align-items-center'>
             
+            <li className={`nav-item m-2 ${router.pathname === '/historia' ? 'active' : ''}`}>
+                <a href='/historia' className='text-nav p-2' onClick={() => setActiveSection('')}>HISTORIA</a>
+                 
+                </li>
+
               <li className={`nav-item m-2 ${activeSection === 'programacao' ? 'active' : ''}`}>
                 <a href='/../#programacao' className='text-nav p-2' onClick={() => setActiveSection('programacao')}>ATRAÇÕES CONFIRMADAS</a>
+                 
+                </li>
+
+                <li className={`nav-item m-2 ${router.pathname === '/baile-municipal' ? 'active' : ''}`}>
+                <a href='/baile-municipal' className='text-nav p-2' onClick={() => setActiveSection('')}>BAILE MUNICIPAL</a>
+                 
+                </li>
+
+                <li className={`nav-item m-2 ${activeSection === 'mapa' ? 'active' : ''}`}>
+                <a href= '/../#mapa' className='text-nav p-2' onClick={() => setActiveSection('')}>MAPA</a>
                  
                 </li>
           

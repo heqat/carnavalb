@@ -12,13 +12,13 @@
   --cor-branco: #ffffff;
   --cor-cinza-escuro: #333333;
 
-  --fonte-principal: "Palamecia", sans-serif;
+  --fonte-principal: "Wondra", sans-serif;
   --fonte-apoio: "Morl", sans-serif;
 }
 
 @font-face {
-  font-family: "Palamecia";
-  src: url("../assets/fonts/palamecia-titling.ttf");
+  font-family: "Wondra";
+  src: url("../assets/fonts/Wondra.otf");
 }
 
 @font-face {

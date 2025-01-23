@@ -1,0 +1,32 @@
+.container-homenageado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-foto {
+    width: 20rem;
+    z-index: 10;
+}
+
+.imagem-artista {
+    width: 100%;
+}
+
+.container-texto {
+    text-align: justify;
+    border-radius: 20px;
+    position: relative;
+    top: -8rem;
+    padding: 7rem 2rem 1rem 2rem;
+    background-color: yellow;
+    border: black 4px solid;
+}
+
+
+.texto-artista {
+    font-family: var(--fonte-apoio);
+    color: black;
+    font-size: 1.2rem;
+}

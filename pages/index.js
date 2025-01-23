@@ -7,7 +7,7 @@ import CardSitio from "../components/CardSitio";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
-import marca from "../public/LOGODETALHES.png";
+import marca from "../public/LOGO.png";
 import devassa from "../public/devassa.png";
 import kuat from "../public/kuat.png";
 import governo from "../public/governo.png";
@@ -17,19 +17,28 @@ import sesc from "../public/sesc-senac.png";
 
 export default function Home() {
   useEffect(() => {
-    const btnPlayVideo = document.getElementById("btn-play-video");
-    const containerVideo = document.getElementById("container-video");
+    const btnPlayVideo = document.getElementById('btn-play-video');
+    const containerVideo = document.getElementById('container-video');
 
-    const btnArrow = document.getElementById("btn-arrow");
-    const sectionApresentacao = document.getElementById("apresentacao");
+    btnPlayVideo.addEventListener('click', handlePlayVideo);
 
-    btnArrow.addEventListener("click", handleClickBtnArrow);
+    function handlePlayVideo() {
+      event.preventDefault();
+      btnPlayVideo.style.display = 'none';
+      containerVideo.innerHTML = `<iframe width=100% height=100% src="https://www.youtube.com/embed/PhFFVDyrG4s?autoplay=1" title="Clipe carnaval" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+    }
+
+    const btnArrow = document.getElementById('btn-arrow');
+    const sectionApresentacao = document.getElementById('apresentacao');
+
+    btnArrow.addEventListener('click', handleClickBtnArrow);
 
     function handleClickBtnArrow() {
       sectionApresentacao.scrollIntoView();
     }
-  });
 
+
+  });
   return (
     <>
       <Head>
@@ -50,7 +59,7 @@ export default function Home() {
               <Image
                 className="bg-hero-marca"
                 src={marca}
-                alt="marca são joão"
+                alt="marca carnaval"
               ></Image>
             </div>
             <button type="button" id="btn-arrow" className="arrow-down">
@@ -59,6 +68,54 @@ export default function Home() {
           </div>
         </section>
         <div className="divisoria"></div> 
+
+        <section id='apresentacao'>
+          <div className='d-flex w-100 justify-content-center flex-column align-items-center'>
+            <div className='container d-flex flex-column justify-content-center align-items-center text-center mt-0 m-5 text-white'>
+              <div className='mt-5 papangu'></div>
+              <br></br>
+              <p className='m-apresentacao-texto'>Descubra a magia do carnaval de Bezerros - uma festa única repleta de cultura, tradição, muita animação e claro, papangus!</p>
+              <p
+               className='m-apresentacao-texto'> Venha se encantar com os papangus, foliões, as cores vibrantes e a alegria contagiante desta festa inesquecível!</p>
+               <br></br>
+              <a className='m-btn-historia m-apresentacao-texto' href="/historia">Conheça a história</a>
+            </div>
+          </div>
+        </section>
+
+        <div className='divisoria'></div>
+
+        <section id='clipe'>
+          <div id='container-video' className='d-flex justify-content-center align-items-center container-video' data-parallax="scroll" data-image-src="/papangu-video.jpg">
+            <button id='btn-play-video' type='button' className='m-btn-play-video'>
+              <i className='bx bx-play-circle bx-tada text-white display-1'></i>
+            </button>
+          </div>
+        </section>
+
+        <div className='divisoria'></div>
+
+        
+<section id='homenageado' className='pt-4'>
+  <div className='container d-flex justify-content-center align-items-center flex-column'>
+
+    <div className="container-homenageado">
+      <div className="container-foto">
+        <img src="/homenageado.png" className="imagem-artista"></img>
+      </div>
+      <div className="container-texto mt-5">
+        <h2 className="m-titulo-secao text-center programacao">HOMENAGEADO</h2>
+
+        <p className="texto-artista">J. Borges, Patrimônio Vivo de Pernambuco, é o mestre do cordel e o xilogravurista brasileiro mais reconhecido no mundo. O bezerrense homenageado do Carnaval do Papangu 2024, Folia, mistério e magia, nasceu em 1935 e iniciou sua jornada de cordelista aos 20 anos de idade, criando figuras a partir das histórias e lendas populares do cenário nordestino.</p>
+        <p className="texto-artista">Nos anos 70, Borges ganhou visibilidade nacional, descoberto por colecionadores, marchands e artistas como Ariano Suassuna, Jota passou a ser expoente da xilogravura, e sua arte ganhou o mundo. A aproximação entre Ariano e Borges resultou em trabalhos expressivos, o artista foi parte importante para o movimento armorial, criado e defendido por Ariano como um produto artístico que ultrapassava as barreiras regionais apesar de sua essência popular nordestina.</p>
+        <p className="texto-artista">Jota aponta Suassuna como divisor de águas de sua carreira, responsabilizando-o pelos passeios do “popular” pelos corredores intelectuais da elite nacional e internacional.</p>
+        <p className="texto-artista">Os apaixonados pela cultura nordestina, amantes do cordel e da xilogravura, contam com o memorial de J. Borges,  reduto artístico familiar, santuário regional, localizado em Bezerros, alguns sortudos conseguem desfrutar de momentos inspiradores e conversas longas e descontraídas com o Mestre Borges.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
         <section id="programacao">
   <div className="">
@@ -282,7 +339,22 @@ export default function Home() {
 
         <div className="divisoria"></div>
      
+     
+        <section id='mapa'>
+
+
+        <div className='d-flex flex-column justify-content-center align-items-center m-container-mapa'>
+
+          <h2 className='m-titulo-secao mt-4 mb-4'>
+            <div className='ilustracao mapa'></div>
+            MAPA
+          </h2>
+          <iframe loading='lazy' className='container mb-5' width="100%" height="100%" src="https://www.google.com/maps/d/embed?mid=1FuFypVAyPR2kLnJPcIWUAxT3uaPzzs8&ehbc=2E312F"></iframe>
+        </div>
+        </section>
+
         <div className="divisoria"></div>
+
         <section id="faq" className="pb-5">
           <div className="container d-flex justify-content-center align-items-center flex-column">
             <h2 className="m-titulo-secao-maior mt-5 mb-5">

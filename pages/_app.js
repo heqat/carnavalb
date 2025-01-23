@@ -5,7 +5,9 @@ import "../styles/navbar.css";
 import "../styles/footer.css";
 import "../styles/index.css";
 import "../styles/card.css";
-
+import "../styles/homenageado.css"
+import "../styles/historia.css";
+import "../styles/baile-municipal.css";
 import Head from "next/head";
 import { useEffect } from "react";
 

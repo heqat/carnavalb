@@ -1,0 +1,65 @@
+#historia {
+    scroll-margin-top: 100px;
+    margin-top: 100px;
+    background-image: url("/bg-vermelho2.png");
+    background-size: contain;
+
+}
+
+.m-titulo-pagina {
+    font-family: var(--fonte-principal);
+    text-align: center;
+    color: white;
+    font-weight: 800 !important;
+    text-shadow: 0px 0px 20px rgb(0, 0, 0);
+
+    transform: translateY(-50px);
+    animation-name: animacao-titulo-pagina;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.m-titulo-secao.historia {
+    color: white;
+}
+
+.m-text-historia {
+    color: white;
+    text-align: justify;
+    font-size: 1.1rem;
+    font-family: var(--fonte-apoio);
+}
+
+.arrow-down {
+    border: none;
+    background: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.container-texto.historia {
+    background-color: var(--cor-azul);
+}
+
+.container-texto.historia {
+    top: -11.5rem;
+}
+
+@media screen and (min-width: 770px) {
+    .imagem-artista.historia {
+        width: 40rem;
+    }
+}
+
+@keyframes animacao-titulo-pagina {
+    from { 
+        opacity: 0;
+        
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
