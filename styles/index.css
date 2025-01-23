@@ -274,11 +274,11 @@
     height: 50vh;
   }
   .m-container-palcos-serra {
-    background-image: url("../public/BG-AZUL.png"); /* Substitua pelo nome da imagem menor */
+    background-repeat: repeat;  /* Substitua pelo nome da imagem menor */
   }
 
   .m-container-palcos-cidade {
-    background-image: url("../public/BG-VERDE.png"); /* Substitua pelo nome da imagem menor */
+    background-repeat: repeat;  /* Substitua pelo nome da imagem menor */
   }
 
   .m-titulo-secao-maior {
