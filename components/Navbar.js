@@ -7,7 +7,6 @@ import Link from "next/link";
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const [isVisible, setIsVisible] = useState(true); // Estado para visibilidade da navbar
-  const [isScrolling, setIsScrolling] = useState(false); // Estado para controlar o movimento de rolagem
   const router = useRouter();
 
   useEffect(() => {
@@ -17,22 +16,35 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Verifica se está rolando para baixo ou para cima
+      // Atualiza a visibilidade da navbar
       if (currentScrollY > lastScrollY) {
-        setIsVisible(false); // Esconde a navbar ao rolar para baixo
+        setIsVisible(false); // Esconde ao rolar para baixo
       } else {
-        setIsVisible(true); // Mostra a navbar ao rolar para cima
+        setIsVisible(true); // Mostra ao rolar para cima
       }
 
       lastScrollY = currentScrollY;
-      setIsScrolling(true); // Indica que o usuário está rolando
 
-      // Aguarda 300ms antes de considerar que a rolagem parou
+      // Identifica a seção ativa
+      const sections = document.querySelectorAll("section");
+      let currentSection = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 120; // Ajuste conforme necessário
+        const sectionHeight = section.clientHeight;
+        if (
+          window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + sectionHeight
+        ) {
+          currentSection = section.getAttribute("id");
+        }
+      });
+      setActiveSection(currentSection);
+
+      // Aguarda 300ms para reaparecer após parar a rolagem
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
-        setIsVisible(true); // Mostra a navbar após o delay
-        setIsScrolling(false); // Define que a rolagem parou
-      }, 300); // Ajuste o tempo do delay aqui (em ms)
+        setIsVisible(true); // Mostra a navbar
+      }, 300); // Tempo de delay ajustável
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -96,7 +108,7 @@ export default function Navbar() {
                   className="text-nav p-2"
                   onClick={() => setActiveSection("programacao")}
                 >
-                  ATRAÇÕES CONFIRMADAS
+                  PROGRAMAÇÃO
                 </a>
               </li>
               <li
@@ -120,9 +132,22 @@ export default function Navbar() {
                 <a
                   href="/../#mapa"
                   className="text-nav p-2"
-                  onClick={() => setActiveSection("")}
+                  onClick={() => setActiveSection("mapa")}
                 >
                   MAPA
+                </a>
+              </li>
+              <li
+                className={`nav-item m-2 ${
+                  router.pathname === "/servicos" ? "active" : ""
+                }`}
+              >
+                <a
+                  href="/servicos"
+                  className="text-nav p-2"
+                  onClick={() => setActiveSection("")}
+                >
+                  SEVIÇOS
                 </a>
               </li>
               <li
@@ -174,6 +199,10 @@ export default function Navbar() {
         }
         #navbar.visible {
           transform: translateY(0);
+        }
+        .nav-item.active a {
+          font-size: larger;
+          font-weight: bold;
         }
       `}</style>
     </header>
