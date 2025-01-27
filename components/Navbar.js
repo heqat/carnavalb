@@ -85,20 +85,7 @@ export default function Navbar() {
 
           <div className="navbar-collapse collapse" id="navbar-collapse">
             <ul className="navbar-nav ms-auto align-items-center">
-              <li
-                className={`nav-item m-2 ${
-                  router.pathname === "/historia" ? "active" : ""
-                }`}
-              >
-                <a
-                  href="/historia"
-                  className="text-nav p-2"
-                  onClick={() => setActiveSection("")}
-                >
-                  HISTORIA
-                </a>
-              </li>
-              <li
+                    <li
                 className={`nav-item m-2 ${
                   activeSection === "programacao" ? "active" : ""
                 }`}
@@ -137,32 +124,8 @@ export default function Navbar() {
                   MAPA
                 </a>
               </li>
-              <li
-                className={`nav-item m-2 ${
-                  router.pathname === "/servicos" ? "active" : ""
-                }`}
-              >
-                <a
-                  href="/servicos"
-                  className="text-nav p-2"
-                  onClick={() => setActiveSection("")}
-                >
-                  SEVIÇOS
-                </a>
-              </li>
-              <li
-                className={`nav-item m-2 ${
-                  activeSection === "faq" ? "active" : ""
-                }`}
-              >
-                <a
-                  href="/../#faq"
-                  className="text-nav p-2"
-                  onClick={() => setActiveSection("faq")}
-                >
-                  FAQ
-                </a>
-              </li>
+             
+  
             </ul>
             <ul className="navbar-nav d-flex justify-content-center flex-row align-items-center ms-auto m-navbar-icones">
               <li className="nav-item m-2">

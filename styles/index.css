@@ -135,24 +135,8 @@
   height: 100%;
 }
 
-.accordion-button {
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5) !important; 
-  color: white !important;
-  background-color: #a700ff !important;
-  font-family: var(--fonte-principal);
-  border-radius: 2px !important; 
-  border: 2px solid #ffffff !important; 
-}
 
 
-.accordion-button:after {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
-}
-
-.accordion-body {
-  font-family: var(--fonte-apoio);
-  background-color: var(--cor-amarela);
-}
 
 .m-button-programacao {
   font-family: var(--fonte-apoio);
@@ -240,6 +224,12 @@
   width: 100%;
 }
 
+.button-container {
+  display: flex; 
+  gap: 10px;
+}
+
+
 #hero {
   height: calc(100vh - 100px);
 }
@@ -271,12 +261,6 @@
   background-repeat: repeat;
 }
 
-#faq {
-  scroll-margin-top: 50px;
-  background: url("../public/BGAMARELO.png");
-  background-position: center;
-  background-repeat: repeat; 
-}
 
 @media (max-width: 991px) {
   .container-video {
@@ -308,8 +292,8 @@
     left: 50%;
     transform: translate(-50%, calc(-50% - 100px));
   }
-
 }
+
 
 @keyframes animacao-logo-hero {
   from {
