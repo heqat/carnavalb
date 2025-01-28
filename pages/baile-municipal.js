@@ -68,6 +68,17 @@ export default function BaileMunicipal() {
                             <p className="m-text-historia mt-3">Com uma carreira sólida, baseada na experiência diária e no reconhecimento popular, o nicho de Zeza ganhou maior visibilidade e seu nome era sinônimo de perfeição no quesito fantasia premiada, uma referência em toda região. Ela confeccionou muitas produções vencedoras de concursos, vestia e veste muitos foliões de tradição, blocos e grupos folclóricos da cidade como o Papanguarte e o Folcpopular, clientes fiéis que levam a arte bezerrense de todas as formas para os quatro cantos do Brasil.</p>
                         </div>
                     </div>
+
+                    <section id="ingressos-baile">
+                <div className="container d-flex justify-content-center align-items-center flex-column">
+                            <img src="/homenageada.png" alt="Homenageada" className='mt-4 mb-4 divisoria-baile' />
+
+                            <p className="m-text-historia">A homenageada do Baile Municipal de Bezerros 2024, é a bezerrense  Josefa Maria da Conceição, a conhecida Zeza Costureira, que ainda muito jovem, aos 19 anos, viu sua carreira iniciada organicamente, ao seguir os passos de sua mãe. Dona Maria Costureira enxergou na filha o talento para o ofício, e logo, fez de Zeza sua ajudante, um passo para ela praticar e aperfeiçoar suas habilidades na arte de transformar tecidos em roupa.</p>
+                            <p className="m-text-historia mt-3">Nos anos 90, o trabalho de Zeza já despertava o interesse de estilistas renomados e carnavalescos da região, foi quando ela aceitou o convite para trabalhar com Alexandre Filho, estilista de sucesso da época. Naquele tempo sua carreira se voltou por completo para a confecção de fantasias e aquela foi a oportunidade para despertar seu espírito criativo e sua visão harmônica na composição de elementos, cores e texturas. Foram mais de 20 anos ao lado de Alexandre para finalmente alçar-se numa carreira independente.</p>
+                            <p className="m-text-historia mt-3">Com uma carreira sólida, baseada na experiência diária e no reconhecimento popular, o nicho de Zeza ganhou maior visibilidade e seu nome era sinônimo de perfeição no quesito fantasia premiada, uma referência em toda região. Ela confeccionou muitas produções vencedoras de concursos, vestia e veste muitos foliões de tradição, blocos e grupos folclóricos da cidade como o Papanguarte e o Folcpopular, clientes fiéis que levam a arte bezerrense de todas as formas para os quatro cantos do Brasil.</p>
+                        </div>
+                </section>
+
                 </section>
 
             </main>

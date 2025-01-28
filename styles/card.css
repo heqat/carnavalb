@@ -14,7 +14,7 @@
   border-color: white !important;
 }
 
-.card-sitio {
+.card-bloco {
   width: 16rem;
   height: 12.5rem;
   border-radius: 0;
@@ -57,7 +57,7 @@
   text-align: right;
 }
 
-.categoria.palco-sitio {
+.categoria.palco-bloco {
   color: rgb(241, 124, 45);
   text-align: right;
 }
@@ -85,7 +85,7 @@
   color: var(--cor-branco);
 }
 
-.card-title.sitio {
+.card-title.bloco {
   margin: 0.5rem 0;
   color: var(--cor-branco);
 }
@@ -98,7 +98,7 @@
   color: #ff8569;
 }
 
-.horario-sitio {
+.horario-bloco {
   color: rgb(19, 70, 133);
 }
 
@@ -112,7 +112,7 @@
   font-family: var(--fonte-principal);
 }
 
-.dia-sitio {
+.dia-bloco {
   color: rgb(19, 70, 133);
   font-family: var(--fonte-principal);
 }

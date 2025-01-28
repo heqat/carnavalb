@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import CardPalco from "../components/CardPalco";
 import CardCidade from "../components/CardCidade";
-import CardSitio from "../components/CardSitio";
+import CardBloco from "../components/CardBloco";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
@@ -14,6 +14,7 @@ import governo from "../public/governo.png";
 import fundarpe from "../public/fundarpe.png";
 import empetur from "../public/empetur.png";
 import sesc from "../public/sesc-senac.png";
+
 
 export default function Home() {
   useEffect(() => {
@@ -100,7 +101,27 @@ export default function Home() {
 
         <div className='divisoria'></div>
 
-        
+        <section id="baile">
+        <div className='d-flex w-100 justify-content-center flex-column align-items-center'>
+            <div className='container d-flex flex-column justify-content-center align-items-center text-center mt-0 m-5 text-white'>
+              <div className='mt-5 papangu'></div>
+              <br></br>
+              <p className='m-baile-texto'>Descubra a magia do carnaval de Bezerros - uma festa única repleta de cultura, tradição, muita animação e claro, papangus!</p>
+              <p
+               className='m-baile-texto'> Venha se encantar com os papangus, foliões, as cores vibrantes e a alegria contagiante desta festa inesquecível!</p>
+               <br></br>
+               <div class="button-container">
+               <a class="m-btn-baile m-apresentacao-texto" href="/baile-municipal">MAIS INFORMAÇÕES!</a>
+  <a class="m-btn-baile m-apresentacao-texto" href="/baile-municipal/#ingressos-baile">COMPRE SEU INGRESSO</a>
+
+</div>
+
+            </div>
+          </div>
+          </section>
+
+          <div className='divisoria'></div>
+
 <section id='homenageado' className='pt-4'>
   <div className='container d-flex justify-content-center align-items-center flex-column'>
 
@@ -120,9 +141,8 @@ export default function Home() {
 
   </div>
 </section>
-        <section id="baile">
-          
-        </section>
+
+<div className='divisoria'></div>
 
         <section id="programacao">
   <div className="">
@@ -298,43 +318,43 @@ export default function Home() {
       <div className="container mt-3">
         <div className="container-card">
           <div className="d-flex justify-content-center flex-wrap">
-            <CardSitio
+            <CardBloco
               nome={["Apresentações Escolar", "Leninho Filho", "Dadal Forró de Três"]}
               horario={["15:30", "18:30", "20:30"]}
               dia="Sítio dos Remédios"
               data="11/06"
             />
-            <CardSitio
+            <CardBloco
               nome={["Apresentações Escolar", "Programação Religiosa", "Emerson Cavalcante", "André Ferraz"]}
               horario={["15:30", "18:30", "20:00", "21:30"]}
               dia="Cajazeiras"
               data="13/06"
             />
-            <CardSitio
+            <CardBloco
               nome={["Matheus e Catirina", "Quadrilha Gonzagão de Areias", "Michel Diniz", "Anny Sales"]}
               horario={["18:00", "18:30", "19:00", "20:30"]}
               dia="Areias"
               data="14/06"
             />
-            <CardSitio
+            <CardBloco
               nome={["Quadrilha folcpopular", "Manoel da Concertina", "Wanessa Roger"]}
               horario={["20:00", "21:00", "22:30"]}
               dia="Encruzilhada"
               data="19/06"
             />
-            <CardSitio
+            <CardBloco
               nome={["Apresentações Escolar", "Gil Teclas", "Higor Henrique"]}
               horario={["15:30", "19:00", "21:00"]}
               dia="Boas Novas"
               data="20/06"
             />
-            <CardSitio
+            <CardBloco
               nome={["Quadrilha Junina é por amor", "Trio nildo e seu reginal", "Geraldinho Lins"]}
               horario={["19:00", "20:00", "21:30"]}
               dia="Sapucarana"
               data="26/06"
             />
-            <CardCidade nome={["João Gomes", "MAIS ATRAÇÕES EM BREVE!"]} horario={["", ""]} dia="Centro da Cidade" data="07/07" />
+            <CardBloco nome={["João Gomes", "MAIS ATRAÇÕES EM BREVE!"]} horario={["", ""]} dia="Centro da Cidade" data="07/07" />
           </div>
         </div>
       </div>
