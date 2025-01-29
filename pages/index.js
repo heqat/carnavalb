@@ -58,7 +58,7 @@ export default function Home() {
           <div
             className="bg-hero"
             data-parallax="scroll"
-            data-image-src="/estacao.jpeg"
+            data-image-src="/estacao.jpg"
           >
             <div className="container d-flex justify-content-center align-items-center">
               <Image
@@ -96,7 +96,7 @@ export default function Home() {
         <div className='divisoria'></div>
 
         <section id='clipe'>
-          <div id='container-video' className='d-flex justify-content-center align-items-center container-video' data-parallax="scroll" data-image-src="/instrumentos.jpeg">
+          <div id='container-video' className='d-flex justify-content-center align-items-center container-video' data-parallax="scroll" data-image-src="/instrumentos.jpg">
             <button id='btn-play-video' type='button' className='m-btn-play-video'>
               <i className='bx bx-play-circle bx-tada text-white display-1'></i>
             </button>
