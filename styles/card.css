@@ -2,8 +2,8 @@
   width: 16rem;
   height: 12.5rem;
   border-radius: 2;
-  background: #a700ff;
-  border-color: #a700ff !important;
+  background: #f5821f;
+  border-color: #e86c00 !important;
 }
 
 .card.bloco {
@@ -38,6 +38,19 @@
   border-bottom-left-radius: 50px;
 }
 
+.container-categoriabloco {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  width: 6rem;
+  height: 2rem;
+  background-color: #ed1a3b;
+  z-index: 1000;
+  border-bottom-left-radius: 50px;
+}
+
 .categoria {
   font-size: 1rem;
   text-transform: uppercase;
@@ -46,12 +59,12 @@
 }
 
 .categoria.palco {
-  color: #0092ff;
+  color: #004fff;
   text-align: right;
 }
 
 .categoria.bloco {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: right;
 }
 
@@ -77,8 +90,16 @@
   color: var(--cor-branco);
 }
 
+.card-horario {
+  color: white;
+  background-color: #004fff;
+  padding: 0 1rem;
+  border-bottom-right-radius: 50px;
+}
+
+
 .horario {
-  color: #0092ff;
+  color: #ed1a3b;
 }
 
 
@@ -90,12 +111,13 @@
 
 
 .dia.bloco {
-  color: rgb(19, 70, 133);
+  color: rgb(255, 255, 255);
   font-family: var(--fonte-principal);
 }
 
 .card-subtitle {
   font-family: var(--fonte-apoio);
+  color: white;
 }
 
 .card-subtitle a {

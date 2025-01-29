@@ -31,15 +31,14 @@
   color: white;
   text-decoration: none;
   border-radius: 40px;
-  border: 2px solid black; /* Define a cor, a espessura e o estilo da borda */
-  background-color: black;
+  border: 2px solid rgb(255, 255, 255); /* Define a cor, a espessura e o estilo da borda */
   filter: drop-shadow(0px 0px 3px black);
 }
 
 .m-btn-historia:hover {
-  color: rgb(19, 17, 17);
+  color: rgb(255, 255, 255);
   transition: 0.5s;
-  background-color: var(--cor-laranja-escuro);
+  background-color:  #ed1a3b;
 }
 
 .m-btn-baile {
@@ -48,7 +47,6 @@
   text-decoration: none;
   border-radius: 40px;
   border: 2px solid rgb(255, 255, 255); /* Define a cor, a espessura e o estilo da borda */
-;
   filter: drop-shadow(0px 0px 3px black);
 }
 
@@ -177,12 +175,12 @@
 
 .m-button-programacao:hover {
   color: var(--cor-branco);
-  background: #b963e7 !important;
+  background: #f5821f  !important;
   border: 1px solid white;
 }
 
 .m-button-programacao.active {
-  background:#a700ff !important;
+  background:#e86c00 !important;
 }
 
 .m-button-programacaobloco {
@@ -194,12 +192,12 @@
 
 .m-button-programacaobloco:hover {
   color: var(--cor-branco);
-  background: #270b36 !important;
+  background: #0092ff !important;
   border: 1px solid white;
 }
 
 .m-button-programacaobloco.active {
-  background:#0b060e !important;
+  background:#1f6dff !important;
 }
 
 
@@ -254,7 +252,7 @@
 }
 
 .m-container-palcos-serra {
-  background-image: url("../public/BGROXOESC.png");
+  background-image: url("../public/PADRAOAZUL.png");
   background-size: 100%;
   background-repeat: no-repeat; 
   background-position: center;
@@ -308,7 +306,7 @@
 
 #mapa {
   scroll-margin-top: 70px;
-  background: url("../public/BGROXOESC.png");
+  background: url("../public/PADRÃOVERMELHO.png");
   background-position: center;
   background-repeat: repeat;
 }

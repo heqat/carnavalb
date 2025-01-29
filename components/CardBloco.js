@@ -2,7 +2,7 @@ export default function CardBloco({ nome, dia, horario, categoria, localizacao, 
     return (
         <div className="card border border-2 m-1 bloco">
             {/* Categoria no canto superior direito */}
-            <div className="container-categoria bloco">
+            <div className="container-categoriabloco">
                 <span className="categoria bloco">{categoria}</span>
             </div>
 

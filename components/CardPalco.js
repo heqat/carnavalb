@@ -9,7 +9,7 @@ export default function CardPalco({ nome, horario, data, dia }) {
                 <span className="dia palco">{dia}</span>
                 {   
                     nome.map((nome, i) => {
-                        return <h5 key={nome} className="card-title palco"><span className="horario">{horario[i] + " • "}</span>{nome}</h5>
+                        return <h5 key={nome} className="card-title palco"><span className="card-horario">{horario[i]}</span>{" • " + nome}</h5>
                     })
                 }
 
