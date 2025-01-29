@@ -18,10 +18,12 @@ export default function perguntas() {
             <Navbar />
 
             <main>
-            <section id="faq" className="pb-5">
+            <section id="faq" className="pb-5 d-flex flex-column align-items-center">
+    {/* Elemento papangu centralizado */}
+
           <div className="container d-flex justify-content-center align-items-center flex-column">
-          <div className='papangu'></div>
-    
+                <br></br>
+                <br></br>
             <div
               className="container accordion accordion-flush"
               id="accordionFlushExample"

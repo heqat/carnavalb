@@ -87,6 +87,32 @@ export default function Navbar() {
             <ul className="navbar-nav ms-auto align-items-center">
                     <li
                 className={`nav-item m-2 ${
+                  activeSection === "baile" ? "active" : ""
+                }`}
+              >
+                <a
+                  href="/../#baile"
+                  className="text-nav p-2"
+                  onClick={() => setActiveSection("baile")}
+                >
+                  BAILE MUNICIPAL
+                </a>
+              </li>
+              <li
+                className={`nav-item m-2 ${
+                  activeSection === "homenageado" ? "active" : ""
+                }`}
+              >
+                <a
+                  href="/../#homenageado"
+                  className="text-nav p-2"
+                  onClick={() => setActiveSection("homenageado")}
+                >
+                  HOMENAGEADO
+                </a>
+              </li>
+              <li
+                className={`nav-item m-2 ${
                   activeSection === "programacao" ? "active" : ""
                 }`}
               >
@@ -98,20 +124,7 @@ export default function Navbar() {
                   PROGRAMAÇÃO
                 </a>
               </li>
-              <li
-                className={`nav-item m-2 ${
-                  router.pathname === "/baile-municipal" ? "active" : ""
-                }`}
-              >
-                <a
-                  href="/baile-municipal"
-                  className="text-nav p-2"
-                  onClick={() => setActiveSection("")}
-                >
-                  BAILE MUNICIPAL
-                </a>
-              </li>
-              <li
+                      <li
                 className={`nav-item m-2 ${
                   activeSection === "mapa" ? "active" : ""
                 }`}

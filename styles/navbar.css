@@ -1,7 +1,7 @@
 #navbar {
   width: 100%;
   background: url("../public/ONDASAZUL.png");
-  background-size: 100%;
+  background-size: 50%;
   background-position: center;
   background-attachment: fixed;
 }
@@ -10,15 +10,13 @@
 .text-nav { font-family: var(--fonte-principal); 
   color: white; 
   text-decoration: none; 
-  text-shadow: 2px 2px 0 #000, /* Direita e para baixo */ 
-  -2px -2px 0 #000, /* Esquerda e para cima */ 
-  2px -2px 0 #000, /* Direita e para cima */ 
-  -2px 2px 0 #000; /* Esquerda e para baixo */}
+  letter-spacing: 2px;
+ }
 
 
 .text-nav:hover {
   color: white;
-  background-color: var(--cor-laranja-escuro);
+  background-color: #ed1a3b;
   transition: 0.5s;
 }
 

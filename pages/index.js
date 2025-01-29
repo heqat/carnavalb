@@ -2,18 +2,22 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
 import CardPalco from "../components/CardPalco";
-import CardCidade from "../components/CardCidade";
 import CardBloco from "../components/CardBloco";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 import marca from "../public/LOGO.png";
-import devassa from "../public/devassa.png";
-import kuat from "../public/kuat.png";
-import governo from "../public/governo.png";
-import fundarpe from "../public/fundarpe.png";
-import empetur from "../public/empetur.png";
-import sesc from "../public/sesc-senac.png";
+import marcaFundarpe from '../public/marca-fundarpe.png'
+import marcaEmpetur from '../public/marca-empetur.png'
+import marcaSecCultura from '../public/marca-seccultura.png'
+import marcaSecTurismo from '../public/marca-secturismo.png'
+import marcaDtel from '../public/marca-dtel.png'
+import marcaSesc from '../public/marca-sesc.png'
+import marcaCoca from '../public/marca-cocacola.png'
+import marcaPitu from '../public/marca-pitu.png'
+import marcaDevassa from '../public/marca-devassa.png'
+import marcaNathally from '../public/marca-nathally.png'
+import marcaTvJornal from '../public/marca-tvjornal.png'
 
 
 export default function Home() {
@@ -54,7 +58,7 @@ export default function Home() {
           <div
             className="bg-hero"
             data-parallax="scroll"
-            data-image-src="/papangus-igreja.jpg"
+            data-image-src="/estacao.jpeg"
           >
             <div className="container d-flex justify-content-center align-items-center">
               <Image
@@ -92,7 +96,7 @@ export default function Home() {
         <div className='divisoria'></div>
 
         <section id='clipe'>
-          <div id='container-video' className='d-flex justify-content-center align-items-center container-video' data-parallax="scroll" data-image-src="/papangu-video.jpg">
+          <div id='container-video' className='d-flex justify-content-center align-items-center container-video' data-parallax="scroll" data-image-src="/instrumentos.jpeg">
             <button id='btn-play-video' type='button' className='m-btn-play-video'>
               <i className='bx bx-play-circle bx-tada text-white display-1'></i>
             </button>
@@ -111,8 +115,8 @@ export default function Home() {
                className='m-baile-texto'> Venha se encantar com os papangus, foliões, as cores vibrantes e a alegria contagiante desta festa inesquecível!</p>
                <br></br>
                <div class="button-container">
-               <a class="m-btn-baile m-apresentacao-texto" href="/baile-municipal">MAIS INFORMAÇÕES!</a>
-  <a class="m-btn-baile m-apresentacao-texto" href="/baile-municipal/#ingressos-baile">COMPRE SEU INGRESSO</a>
+               <a class="m-btn-baile m-apresentacao-botao" href="/baile-municipal">MAIS INFORMAÇÕES!</a>
+  <a class="m-btn-baile m-apresentacao-botao" href="/baile-municipal/#ingressos-baile">COMPRE SEU INGRESSO</a>
 
 </div>
 
@@ -132,10 +136,8 @@ export default function Home() {
       <div className="container-texto mt-5">
         <h2 className="m-titulo-secao text-center programacao">HOMENAGEADO</h2>
 
-        <p className="texto-artista">J. Borges, Patrimônio Vivo de Pernambuco, é o mestre do cordel e o xilogravurista brasileiro mais reconhecido no mundo. O bezerrense homenageado do Carnaval do Papangu 2024, Folia, mistério e magia, nasceu em 1935 e iniciou sua jornada de cordelista aos 20 anos de idade, criando figuras a partir das histórias e lendas populares do cenário nordestino.</p>
-        <p className="texto-artista">Nos anos 70, Borges ganhou visibilidade nacional, descoberto por colecionadores, marchands e artistas como Ariano Suassuna, Jota passou a ser expoente da xilogravura, e sua arte ganhou o mundo. A aproximação entre Ariano e Borges resultou em trabalhos expressivos, o artista foi parte importante para o movimento armorial, criado e defendido por Ariano como um produto artístico que ultrapassava as barreiras regionais apesar de sua essência popular nordestina.</p>
-        <p className="texto-artista">Jota aponta Suassuna como divisor de águas de sua carreira, responsabilizando-o pelos passeios do “popular” pelos corredores intelectuais da elite nacional e internacional.</p>
-        <p className="texto-artista">Os apaixonados pela cultura nordestina, amantes do cordel e da xilogravura, contam com o memorial de J. Borges,  reduto artístico familiar, santuário regional, localizado em Bezerros, alguns sortudos conseguem desfrutar de momentos inspiradores e conversas longas e descontraídas com o Mestre Borges.</p>
+        <p className="texto-artista"> EM BREVE... </p>
+    
       </div>
     </div>
 
@@ -409,9 +411,10 @@ export default function Home() {
 
 </section>
 
-
         <div className="divisoria"></div>
-     
+        
+
+
      
         <section id='mapa'>
 
@@ -425,8 +428,35 @@ export default function Home() {
           <iframe loading='lazy' className='container mb-5' width="100%" height="100%" src="https://www.google.com/maps/d/embed?mid=1FuFypVAyPR2kLnJPcIWUAxT3uaPzzs8&ehbc=2E312F"></iframe>
         </div>
         </section>
+      
+        <div className="divisoria"></div>
+        <section id='patrocinio'>
 
+<div className='container d-flex flex-wrap align-items-center justify-content-center mt-3 pb-3'>
+  <p className='texto-patrocinio'>APOIO:</p>
+  <div className='container d-flex flex-wrap gap-5 align-items-center justify-content-center mb-5'>
+    <Image src={marcaFundarpe} height={80}></Image>
+    <Image src={marcaEmpetur} height={80}></Image>
+    <Image src={marcaSecCultura} height={80}></Image>
+    <Image src={marcaSecTurismo} height={80}></Image>
+    <Image src={marcaSesc} height={80}></Image>
+  </div>
+  <div className='border border-bottom border-1 w-100'></div>
 
+  <p className='texto-patrocinio mt-4 mb-4'>PATROCÍNIO:</p>
+  <div className='container mb-4 d-flex flex-wrap gap-5 align-items-center justify-content-center'>
+    <Image src={marcaDevassa} height={80}></Image>
+    <div className='border border-bottom border-1 w-100'></div>
+    <Image src={marcaPitu} height={50}></Image>
+    <Image src={marcaTvJornal} height={50}></Image>
+    <Image src={marcaCoca} height={50}></Image>
+    <div className='border border-bottom border-1 w-100'></div>
+    <Image src={marcaDtel} height={40}></Image>
+    <Image src={marcaNathally} height={40}></Image>
+  </div>
+</div>
+
+</section>
 
         
         <div className="divisoria"></div>
