@@ -178,6 +178,24 @@
   background:#a700ff !important;
 }
 
+.m-button-programacaobloco {
+  font-family: var(--fonte-apoio);
+  color: var(--cor-cinza-escuro);
+  background: var(--cor-branco) !important;
+  border-radius: 0 !important;
+}
+
+.m-button-programacaobloco:hover {
+  color: var(--cor-branco);
+  background: #270b36 !important;
+  border: 1px solid white;
+}
+
+.m-button-programacaobloco.active {
+  background:#0b060e !important;
+}
+
+
 .active {
   color: var(--cor-branco) !important;
 }

@@ -6,18 +6,10 @@
   border-color: #a700ff !important;
 }
 
-.card-cidade {
+.card.bloco {
   width: 16rem;
   height: 12.5rem;
-  border-radius: 0;
-  background: #7c2e18;
-  border-color: white !important;
-}
-
-.card-bloco {
-  width: 16rem;
-  height: 12.5rem;
-  border-radius: 0;
+  border-radius: 2;
   background: rgb(241, 124, 45);
   border-color: white !important;
 }
@@ -31,6 +23,7 @@
   width: 18rem;
   height: auto;
 }
+
 
 .container-categoria {
   position: absolute;
@@ -57,16 +50,10 @@
   text-align: right;
 }
 
-.categoria.palco-bloco {
-  color: rgb(241, 124, 45);
+.categoria.bloco {
+  color: rgb(0, 0, 0);
   text-align: right;
 }
-
-.categoria.palco-cidade {
-  color: #7c2e19;
-  text-align: right;
-}
-
 
 .card-title {
   margin-bottom: 2rem;
@@ -94,31 +81,25 @@
   color: #0092ff;
 }
 
-.horario-cidade {
-  color: #ff8569;
-}
-
-.horario-bloco {
-  color: rgb(19, 70, 133);
-}
 
 .dia {
   color: whitesmoke;
   font-family: var(--fonte-principal);
 }
 
-.dia-cidade {
-  color: var(--cor-branco);
-  font-family: var(--fonte-principal);
-}
 
-.dia-bloco {
+
+.dia.bloco {
   color: rgb(19, 70, 133);
   font-family: var(--fonte-principal);
 }
 
 .card-subtitle {
   font-family: var(--fonte-apoio);
+}
+
+.card-subtitle a {
+  color: white;
 }
 
 .container-card {

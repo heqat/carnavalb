@@ -314,53 +314,99 @@ export default function Home() {
     <div className="divisoria"></div>
 
     <div className="d-flex justify-content-center align-items-center flex-column m-container-palcos-cidade">
-      <h3 className="m-titulo-programacao">SÍTIO À CIDADE</h3>
-      <div className="container mt-3">
-        <div className="container-card">
-          <div className="d-flex justify-content-center flex-wrap">
-            <CardBloco
-              nome={["Apresentações Escolar", "Leninho Filho", "Dadal Forró de Três"]}
-              horario={["15:30", "18:30", "20:30"]}
-              dia="Sítio dos Remédios"
-              data="11/06"
-            />
-            <CardBloco
-              nome={["Apresentações Escolar", "Programação Religiosa", "Emerson Cavalcante", "André Ferraz"]}
-              horario={["15:30", "18:30", "20:00", "21:30"]}
-              dia="Cajazeiras"
-              data="13/06"
-            />
-            <CardBloco
-              nome={["Matheus e Catirina", "Quadrilha Gonzagão de Areias", "Michel Diniz", "Anny Sales"]}
-              horario={["18:00", "18:30", "19:00", "20:30"]}
-              dia="Areias"
-              data="14/06"
-            />
-            <CardBloco
-              nome={["Quadrilha folcpopular", "Manoel da Concertina", "Wanessa Roger"]}
-              horario={["20:00", "21:00", "22:30"]}
-              dia="Encruzilhada"
-              data="19/06"
-            />
-            <CardBloco
-              nome={["Apresentações Escolar", "Gil Teclas", "Higor Henrique"]}
-              horario={["15:30", "19:00", "21:00"]}
-              dia="Boas Novas"
-              data="20/06"
-            />
-            <CardBloco
-              nome={["Quadrilha Junina é por amor", "Trio nildo e seu reginal", "Geraldinho Lins"]}
-              horario={["19:00", "20:00", "21:30"]}
-              dia="Sapucarana"
-              data="26/06"
-            />
-            <CardBloco nome={["João Gomes", "MAIS ATRAÇÕES EM BREVE!"]} horario={["", ""]} dia="Centro da Cidade" data="07/07" />
-          </div>
+      <h3 className="m-titulo-programacao">BLOCOS</h3>
+      <ul className="nav nav-tabs justify-content-center" role="tablist">
+      <li className="nav-item" role="presentation">
+        <button className="nav-link active m-button-programacaobloco" id="tab-26-02" data-bs-toggle="tab" data-bs-target="#pane-26-02" type="button" role="tab" aria-controls="pane-26-02" aria-selected="true">26/02</button>
+      </li>
+      <li className="nav-item" role="presentation">
+        <button className="nav-link m-button-programacaobloco" id="tab-27-02" data-bs-toggle="tab" data-bs-target="#pane-27-02" type="button" role="tab" aria-controls="pane-27-02" aria-selected="false">27/02</button>
+      </li>
+      <li className="nav-item" role="presentation">
+        <button className="nav-link m-button-programacaobloco" id="tab-28-02" data-bs-toggle="tab" data-bs-target="#pane-28-02" type="button" role="tab" aria-controls="pane-28-02" aria-selected="false">28/02</button>
+      </li>
+      <li className="nav-item" role="presentation">
+        <button className="nav-link m-button-programacaobloco" id="tab-29-02" data-bs-toggle="tab" data-bs-target="#pane-29-02" type="button" role="tab" aria-controls="pane-29-02" aria-selected="false">29/02</button>
+      </li>
+      <li className="nav-item" role="presentation">
+        <button className="nav-link m-button-programacaobloco" id="tab-01-03" data-bs-toggle="tab" data-bs-target="#pane-01-03" type="button" role="tab" aria-controls="pane-01-03" aria-selected="false">01/03</button>
+      </li>
+      <li className="nav-item" role="presentation">
+        <button className="nav-link m-button-programacaobloco" id="tab-02-03" data-bs-toggle="tab" data-bs-target="#pane-02-03" type="button" role="tab" aria-controls="pane-02-03" aria-selected="false">02/03</button>
+      </li>
+      <li className="nav-item" role="presentation">
+        <button className="nav-link m-button-programacaobloco" id="tab-03-03" data-bs-toggle="tab" data-bs-target="#pane-03-03" type="button" role="tab" aria-controls="pane-03-03" aria-selected="false">03/03</button>
+      </li>
+      <li className="nav-item" role="presentation">
+        <button className="nav-link m-button-programacaobloco" id="tab-04-03" data-bs-toggle="tab" data-bs-target="#pane-04-03" type="button" role="tab" aria-controls="pane-04-03" aria-selected="false">04/03</button>
+      </li>
+      <li className="nav-item" role="presentation">
+        <button className="nav-link m-button-programacaobloco" id="tab-05-03" data-bs-toggle="tab" data-bs-target="#pane-05-03" type="button" role="tab" aria-controls="pane-05-03" aria-selected="false">05/03</button>
+      </li>
+    </ul>
+
+    <div className="tab-content d-flex justify-content-center mb-5">
+      <div className="tab-pane fade show active" id="pane-26-02" role="tabpanel" aria-labelledby="tab-26-02">
+        <div className=" d-flex justify-content-center flex-wrap">
+          <CardBloco nome="BLOCO DE EXEMPLO" horario="12:00" dia="QUARTA-FEIRA" categoria="BLOCO" localizacao="Localização" mapa="#" />
         </div>
       </div>
-      <div className="divisoria"></div>
+
+      <div className="tab-pane fade" id="pane-27-02" role="tabpanel" aria-labelledby="tab-27-02">
+        <div className="d-flex justify-content-center flex-wrap">
+          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
+          <CardBloco nome="BLOCO DE EXEMPLO" horario="12:00" dia="QUARTA-FEIRA" categoria="BLOCO" localizacao="Localização" mapa="#" />
+        </div>
+      </div>
+
+      <div className="tab-pane fade" id="pane-28-02" role="tabpanel" aria-labelledby="tab-28-02">
+        <div className="d-flex justify-content-center flex-wrap">
+          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
+        </div>
+      </div>
+
+      <div className="tab-pane fade" id="pane-29-02" role="tabpanel" aria-labelledby="tab-29-02">
+        <div className="d-flex justify-content-center flex-wrap">
+          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
+        </div>
+      </div>
+
+      <div className="tab-pane fade" id="pane-01-03" role="tabpanel" aria-labelledby="tab-01-03">
+        <div className="d-flex justify-content-center flex-wrap">
+          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
+        </div>
+      </div>
+
+      <div className="tab-pane fade" id="pane-02-03" role="tabpanel" aria-labelledby="tab-02-03">
+        <div className="d-flex justify-content-center flex-wrap">
+          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
+        </div>
+      </div>
+
+      <div className="tab-pane fade" id="pane-03-03" role="tabpanel" aria-labelledby="tab-03-03">
+        <div className="d-flex justify-content-center flex-wrap">
+          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
+        </div>
+      </div>
+
+      <div className="tab-pane fade" id="pane-04-03" role="tabpanel" aria-labelledby="tab-04-03">
+        <div className="d-flex justify-content-center flex-wrap">
+          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
+        </div>
+      </div>
+
+      <div className="tab-pane fade" id="pane-05-03" role="tabpanel" aria-labelledby="tab-05-03">
+        <div className="d-flex justify-content-center flex-wrap">
+          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
+        </div>
+      </div>
     </div>
   </div>
+
+
+</div>
+  
+
 </section>
 
 
