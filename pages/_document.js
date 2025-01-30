@@ -1,4 +1,3 @@
-
 import { Html, Head, Main, NextScript } from 'next/document'
 import Script from 'next/script'
 
@@ -38,6 +37,12 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        {/* Adicionando o Bootstrap JS após o conteúdo principal */}
+        <Script
+          strategy="afterInteractive"
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        />
+        {/* Seus outros scripts */}
         <Script strategy='beforeInteractive' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' />
         <Script strategy='beforeInteractive' src='https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js' />
       </body>
