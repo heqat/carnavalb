@@ -18,22 +18,12 @@ import marcaPitu from '../public/marca-pitu.png'
 import marcaDevassa from '../public/marca-devassa.png'
 import marcaNathally from '../public/marca-nathally.png'
 import marcaTvJornal from '../public/marca-tvjornal.png'
+import VideoPlayer from "../components/VideoSection";
 
 
 export default function Home() {
   useEffect(() => {
-    const btnPlayVideo = document.getElementById('btn-play-video');
-    const containerVideo = document.getElementById('container-video');
-
-    btnPlayVideo.addEventListener('click', handlePlayVideo);
-
-    function handlePlayVideo() {
-      event.preventDefault();
-      btnPlayVideo.style.display = 'none';
-      containerVideo.innerHTML = `<iframe width=100% height=100% src="https://www.youtube.com/embed/PhFFVDyrG4s?autoplay=1" title="Clipe carnaval" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
-    }
-
-    const btnArrow = document.getElementById('btn-arrow');
+       const btnArrow = document.getElementById('btn-arrow');
     const sectionApresentacao = document.getElementById('apresentacao');
 
     btnArrow.addEventListener('click', handleClickBtnArrow);
@@ -47,8 +37,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Carnaval 2025 - Bezerros-PE</title>
-        <meta name="title" content="Carnaval 2025 - Bezerros-PE"></meta>
+      <Head>
+  <title>Carnaval 2025 - Bezerros-PE</title>
+  <meta name="title" content="Carnaval 2025 - Bezerros-PE"></meta>
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</Head>
+
       </Head>
 
       <Navbar />
@@ -95,27 +90,21 @@ export default function Home() {
 
         <div className='divisoria'></div>
 
-        <section id='clipe'>
-          <div id='container-video' className='d-flex justify-content-center align-items-center container-video' data-parallax="scroll" data-image-src="/instrumentos.jpg">
-            <button id='btn-play-video' type='button' className='m-btn-play-video'>
-              <i className='bx bx-play-circle bx-tada text-white display-1'></i>
-            </button>
-          </div>
-        </section>
+        <VideoPlayer />
 
         <div className='divisoria'></div>
 
         <section id="baile">
         <div className='d-flex w-100 justify-content-center flex-column align-items-center'>
             <div className='container d-flex flex-column justify-content-center align-items-center text-center mt-0 m-5 text-white'>
-              <div className='mt-5 papangu'></div>
+              <div className='mt-5 logo-baile'></div>
               <br></br>
               <p className='m-baile-texto'>Descubra a magia do carnaval de Bezerros - uma festa única repleta de cultura, tradição, muita animação e claro, papangus!</p>
               <p
                className='m-baile-texto'> Venha se encantar com os papangus, foliões, as cores vibrantes e a alegria contagiante desta festa inesquecível!</p>
                <br></br>
                <div class="button-container">
-               <a class="m-btn-baile m-apresentacao-botao" href="/baile-municipal">MAIS INFORMAÇÕES!</a>
+               <a class="m-btn-baile m-apresentacao-botao" href="/baile-municipal">MAIS INFORMAÇÕES</a>
   <a class="m-btn-baile m-apresentacao-botao" href="/baile-municipal/#ingressos-baile">COMPRE SEU INGRESSO</a>
 
 </div>
@@ -250,8 +239,7 @@ export default function Home() {
             tabIndex="0"
           >
             <div className="d-flex justify-content-center flex-wrap">
-              <CardPalco nome={["Exemplo"]} horario={["14:00"]} dia="SEGUNDA" data="01/01" />
-              <CardPalco nome={["Exemplo"]} horario={["14:00"]} dia="SEGUNDA" data="01/01" />
+              <CardPalco nome={["EM BREVE"]} horario={["HORÁRIO"]} dia="DOMINGO" data="01/03" />
             </div>
           </div>
           <div
@@ -262,7 +250,7 @@ export default function Home() {
             tabIndex="0"
           >
             <div className="d-flex justify-content-center flex-wrap">
-              <CardPalco nome={[]} horario={[]} dia="" data="" />
+            <CardPalco nome={["EM BREVE"]} horario={["HORÁRIO"]} dia="DOMINGO" data="01/03" />
             </div>
           </div>
           <div
@@ -273,7 +261,7 @@ export default function Home() {
             tabIndex="0"
           >
             <div className="d-flex justify-content-center flex-wrap">
-              <CardPalco nome={[]} horario={[]} dia="" data="" />
+            <CardPalco nome={["EM BREVE"]} horario={["HORÁRIO"]} dia="DOMINGO" data="01/03" />
             </div>
           </div>
           <div
@@ -284,7 +272,7 @@ export default function Home() {
             tabIndex="0"
           >
             <div className="d-flex justify-content-center flex-wrap">
-              <CardPalco nome={[]} horario={[]} dia="" data="" />
+            <CardPalco nome={["EM BREVE"]} horario={["HORÁRIO"]} dia="DOMINGO" data="01/03" />
             </div>
           </div>
           <div
@@ -295,7 +283,7 @@ export default function Home() {
             tabIndex="0"
           >
             <div className="d-flex justify-content-center flex-wrap">
-              <CardPalco nome={[]} horario={[]} dia="" data="" />
+            <CardPalco nome={["EM BREVE"]} horario={["HORÁRIO"]} dia="DOMINGO" data="01/03" />
             </div>
           </div>
           <div
@@ -306,7 +294,7 @@ export default function Home() {
             tabIndex="0"
           >
             <div className="d-flex justify-content-center flex-wrap">
-              <CardPalco nome={[]} horario={[]} dia="" data="" />
+            <CardPalco nome={["EM BREVE"]} horario={["HORÁRIO"]} dia="DOMINGO" data="01/03" />
             </div>
           </div>
         </div>
@@ -328,9 +316,6 @@ export default function Home() {
         <button className="nav-link m-button-programacaobloco" id="tab-28-02" data-bs-toggle="tab" data-bs-target="#pane-28-02" type="button" role="tab" aria-controls="pane-28-02" aria-selected="false">28/02</button>
       </li>
       <li className="nav-item" role="presentation">
-        <button className="nav-link m-button-programacaobloco" id="tab-29-02" data-bs-toggle="tab" data-bs-target="#pane-29-02" type="button" role="tab" aria-controls="pane-29-02" aria-selected="false">29/02</button>
-      </li>
-      <li className="nav-item" role="presentation">
         <button className="nav-link m-button-programacaobloco" id="tab-01-03" data-bs-toggle="tab" data-bs-target="#pane-01-03" type="button" role="tab" aria-controls="pane-01-03" aria-selected="false">01/03</button>
       </li>
       <li className="nav-item" role="presentation">
@@ -350,56 +335,50 @@ export default function Home() {
     <div className="tab-content d-flex justify-content-center mb-5">
       <div className="tab-pane fade show active" id="pane-26-02" role="tabpanel" aria-labelledby="tab-26-02">
         <div className=" d-flex justify-content-center flex-wrap">
-          <CardBloco nome="BLOCO DE EXEMPLO" horario="12:00" dia="QUARTA-FEIRA" categoria="BLOCO" localizacao="Localização" mapa="#" />
+          <CardBloco nome="EM BREVE" horario="Horário" dia="QUARTA-FEIRA" categoria="BLOCO" localizacao="Localização" mapa="#" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-27-02" role="tabpanel" aria-labelledby="tab-27-02">
         <div className="d-flex justify-content-center flex-wrap">
           <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
-          <CardBloco nome="BLOCO DE EXEMPLO" horario="12:00" dia="QUARTA-FEIRA" categoria="BLOCO" localizacao="Localização" mapa="#" />
+          <CardBloco nome="EM BREVE" horario="12:00" dia="QUINTA-FEIRA" categoria="BLOCO" localizacao="Localização" mapa="#" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-28-02" role="tabpanel" aria-labelledby="tab-28-02">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
-        </div>
-      </div>
-
-      <div className="tab-pane fade" id="pane-29-02" role="tabpanel" aria-labelledby="tab-29-02">
-        <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
+          <CardBloco nome="EM BREVE" horario="Horário" dia="SEXTA-FEIRA" categoria="Categoria" localizacao="Localização" mapa="#" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-01-03" role="tabpanel" aria-labelledby="tab-01-03">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
+          <CardBloco nome="EM BREVE" horario="Horário" dia="SÁBADO" categoria="Categoria" localizacao="Localização" mapa="#" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-02-03" role="tabpanel" aria-labelledby="tab-02-03">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
+          <CardBloco nome="EM BREVE" horario="Horário" dia="DOMINGO" categoria="Categoria" localizacao="Localização" mapa="#" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-03-03" role="tabpanel" aria-labelledby="tab-03-03">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
+          <CardBloco nome="EM BREVE" horario="Horário" dia="SEGUNDA" categoria="Categoria" localizacao="Localização" mapa="#" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-04-03" role="tabpanel" aria-labelledby="tab-04-03">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
+          <CardBloco nome="EM BREVE" horario="Horário" dia="TERÇA" categoria="Categoria" localizacao="Localização" mapa="#" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-05-03" role="tabpanel" aria-labelledby="tab-05-03">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
+          <CardBloco nome="EM BREVE" horario="Horário" dia="QUARTA-FEIRA" categoria="Categoria" localizacao="Localização" mapa="#" />
         </div>
       </div>
     </div>
@@ -429,34 +408,8 @@ export default function Home() {
         </div>
         </section>
       
-        <div className="divisoria"></div>
-        <section id='patrocinio'>
-
-<div className='container d-flex flex-wrap align-items-center justify-content-center mt-3 pb-3'>
-  <p className='texto-patrocinio'>APOIO:</p>
-  <div className='container d-flex flex-wrap gap-5 align-items-center justify-content-center mb-5'>
-    <Image src={marcaFundarpe} height={80}></Image>
-    <Image src={marcaEmpetur} height={80}></Image>
-    <Image src={marcaSecCultura} height={80}></Image>
-    <Image src={marcaSecTurismo} height={80}></Image>
-    <Image src={marcaSesc} height={80}></Image>
-  </div>
-  <div className='border border-bottom border-1 w-100'></div>
-
-  <p className='texto-patrocinio mt-4 mb-4'>PATROCÍNIO:</p>
-  <div className='container mb-4 d-flex flex-wrap gap-5 align-items-center justify-content-center'>
-    <Image src={marcaDevassa} height={80}></Image>
-    <div className='border border-bottom border-1 w-100'></div>
-    <Image src={marcaPitu} height={50}></Image>
-    <Image src={marcaTvJornal} height={50}></Image>
-    <Image src={marcaCoca} height={50}></Image>
-    <div className='border border-bottom border-1 w-100'></div>
-    <Image src={marcaDtel} height={40}></Image>
-    <Image src={marcaNathally} height={40}></Image>
-  </div>
-</div>
-
-</section>
+    
+      
 
         
         <div className="divisoria"></div>

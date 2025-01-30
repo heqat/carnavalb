@@ -23,7 +23,7 @@ export default function Historia() {
 
                     <div className="container container-homenageado">
                         <div className="container-foto d-flex justify-content-center align-items-center">
-                            <img src="/papangus-historia.png" className="imagem-artista historia"></img>
+                            <img src="/marcavazada.png" className="imagem-artista historia"></img>
                         </div>
                         <div className="container-texto historia mt-5">
                             <div className="mt-5 mb-5">
@@ -42,7 +42,7 @@ export default function Historia() {
                     </div>
                     
                 </section>
-
+                <div className='divisoria'></div>
             </main>
 
             <Footer />

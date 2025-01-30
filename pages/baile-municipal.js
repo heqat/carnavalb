@@ -24,7 +24,8 @@ export default function BaileMunicipal() {
                     <div className="d-flex flex-column justify-content-center align-items-center text-center">
                         
                         <div className="container-textobaile">
-                        <img src="/marca-baile3.png" alt="Marca Baile Municipal" className="baile-marca"></img>
+                            <p></p>
+                        <img src="/marcabaile.png" alt="Marca Baile Municipal" className="baile-marca"></img>
                             <h1 className="m-titulo-secao text-white">20º BAILE MUNICIPAL DE BEZERROS</h1>
                             <p className="m-text-historia">No sábado, dia 27 de janeiro de 2024, no Centro Literário Rui Barbosa, no Bairro do Cruzeiro, a partir das 21h. Bezerros espera por você para vivenciar momentos de saudades, boas lembranças, emoção e alegria no baile mais tradicional do interior.</p>
                        
@@ -75,7 +76,7 @@ export default function BaileMunicipal() {
                 </section>
     
                 </section>
-
+                <div className='divisoria'></div>
             </main>
             <Footer />
         </>

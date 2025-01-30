@@ -44,7 +44,7 @@ export default function Navbar() {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         setIsVisible(true); // Mostra a navbar
-      }, 300); // Tempo de delay ajustável
+      }, 500); // Tempo de delay ajustável
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -141,25 +141,18 @@ export default function Navbar() {
   
             </ul>
             <ul className="navbar-nav d-flex justify-content-center flex-row align-items-center ms-auto m-navbar-icones">
-              <li className="nav-item m-2">
+                 <li className="nav-item m-2">
                 <Link
-                  href="https://www.facebook.com/saojoaonaserranegra/"
-                  rel="noreferrer"
-                  className="m-icone-navbar text-white p-1"
-                  target="_blank"
-                >
-                  <i className="bx bxl-facebook-circle bx-sm"></i>
-                </Link>
-              </li>
-              <li className="nav-item m-2">
-                <Link
-                  href="https://instagram.com/foliadopapanguoficial/"
+                  href="https://instagram.com/carnavaldopapanguoficial/"
                   rel="noreferrer"
                   className="m-icone-navbar text-white p-1"
                   target="_blank"
                 >
                   <i className="bx bxl-instagram bx-sm"></i>
                 </Link>
+              </li>
+              <li className='nav-item m-2'>
+                <a href='https://open.spotify.com/playlist/56vXoOCmiFrA0IAN7rc5XP?si=1c0b45e8fd9746ab' className='m-icone-navbar text-white p-1' target='_blank'><i className='bx bxl-spotify bx-sm'></i></a>
               </li>
             </ul>
           </div>

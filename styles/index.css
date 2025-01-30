@@ -26,6 +26,16 @@
   filter: drop-shadow(0px 0px 3px black);
 }
 
+.logo-baile {
+  width: 30rem;
+  height: 10rem;
+  background-image: url("../public/marcabaile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(0px 0px 3px black);
+}
+
 .m-btn-historia {
   padding: 1rem 1.5rem;
   color: white;
@@ -285,6 +295,7 @@
   scroll-margin-top: 100px;
   background: url("../public/ONDASAZUL.jpg");
   background-position: center;
+  background-size: 100%;
   background-repeat: repeat;
 }
 
@@ -337,7 +348,7 @@
   }
 
   .m-apresentacao-botao {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .bg-hero-marca {

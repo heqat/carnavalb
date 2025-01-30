@@ -13,7 +13,7 @@
   --cor-cinza-escuro: #333333;
 
   --fonte-principal: "Wondra", sans-serif;
-  --fonte-apoio: "Morl", sans-serif;
+  --fonte-apoio: "Gabarito", sans-serif;
 }
 
 @font-face {
@@ -22,8 +22,8 @@
 }
 
 @font-face {
-  font-family: "Morl";
-  src: url("../assets/fonts/MorlRounded-Regular.otf");
+  font-family: "Gabarito";
+  src: url("../assets/fonts/Gabarito.ttf");
 }
 
 * {

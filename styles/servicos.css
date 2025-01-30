@@ -3,13 +3,14 @@
     margin-top: 80px;
     font-family: var(--fonte-apoio);
     background-image: url("../public/BGAMARELO.png");
-    background-repeat: no-repeat; /* Impede repetição */
+    background-repeat: repeat; /* Impede repetição */
     background-size: cover; /* Ocupa toda a página */
     background-position: center; /* Centraliza a imagem */ /* Altura da página, respeitando cabeçalho e rodapé */
     display: flex; /* Garante que o conteúdo centralize corretamente */
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-size: 50%;
     padding: 20px 0; /* Espaçamento superior e inferior */
     min-height: 100vh;
 }
