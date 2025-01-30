@@ -350,7 +350,10 @@
   .m-apresentacao-botao {
     font-size: 0.8rem;
   }
-
+  .logo-baile {
+    width: 20rem;
+    height: 8rem;
+  }
   .bg-hero-marca {
     margin-top: 100px;
     width: 20rem;
@@ -360,7 +363,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, calc(-50% - 100px));
+
+    
   }
+
 }
 
 

@@ -23,26 +23,33 @@ import VideoPlayer from "../components/VideoSection";
 
 export default function Home() {
   useEffect(() => {
-       const btnArrow = document.getElementById('btn-arrow');
-    const sectionApresentacao = document.getElementById('apresentacao');
-
-    btnArrow.addEventListener('click', handleClickBtnArrow);
+    const btnArrow = document.getElementById("btn-arrow");
+    const sectionApresentacao = document.getElementById("apresentacao");
 
     function handleClickBtnArrow() {
       sectionApresentacao.scrollIntoView();
     }
 
+    if (btnArrow) {
+      btnArrow.addEventListener("click", handleClickBtnArrow);
+    }
 
-  });
+    return () => {
+      if (btnArrow) {
+        btnArrow.removeEventListener("click", handleClickBtnArrow);
+      }
+    };
+  }, []);
+
   return (
     <>
-      <Head>
+      
       <Head>
   <title>Carnaval 2025 - Bezerros-PE</title>
   <meta name="title" content="Carnaval 2025 - Bezerros-PE"></meta>
   <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</Head>
+
 
       </Head>
 
@@ -104,7 +111,7 @@ export default function Home() {
                className='m-baile-texto'> Venha se encantar com os papangus, foliões, as cores vibrantes e a alegria contagiante desta festa inesquecível!</p>
                <br></br>
                <div class="button-container">
-               <a class="m-btn-baile m-apresentacao-botao" href="/baile-municipal">MAIS INFORMAÇÕES</a>
+               <a class="m-btn-baile m-apresentacao-botao" href="/baile-municipal">SAIBA MAIS</a>
   <a class="m-btn-baile m-apresentacao-botao" href="/baile-municipal/#ingressos-baile">COMPRE SEU INGRESSO</a>
 
 </div>
