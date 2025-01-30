@@ -7,13 +7,13 @@ export default function BaileMunicipal() {
     return (
         <>
             <Head>
-                <title>Baile Municipal - Carnaval do Papangu 2024</title>
-                <meta name="title" content="Baile Municipal - Carnaval do Papangu 2024" />
+                <title>Baile Municipal - Carnaval do Papangu 2025</title>
+                <meta name="title" content="Baile Municipal - Carnaval do Papangu 2025" />
 
                 <meta property="og:url" content="https://carnaval.bezerros.pe.gov.br/baile-municipal" />
-                <meta property="og:title" content="Baile Municipal - Carnaval do Papangu 2024" />
+                <meta property="og:title" content="Baile Municipal - Carnaval do Papangu 2025" />
                 <meta property="twitter:url" content="https://carnaval.bezerros.pe.gov.br/baile-municipal" />
-                <meta property="twitter:title" content="Baile Municipal - Carnaval do Papangu 2024" />
+                <meta property="twitter:title" content="Baile Municipal - Carnaval do Papangu 2025" />
             </Head>
 
             <Navbar />
@@ -26,7 +26,7 @@ export default function BaileMunicipal() {
                         <div className="container-textobaile">
                             <p></p>
                         <img src="/marcabaile.png" alt="Marca Baile Municipal" className="baile-marca"></img>
-                            <h1 className="m-titulo-secao text-white">20º BAILE MUNICIPAL DE BEZERROS</h1>
+i s
                             <p className="m-text-historia">No sábado, dia 27 de janeiro de 2024, no Centro Literário Rui Barbosa, no Bairro do Cruzeiro, a partir das 21h. Bezerros espera por você para vivenciar momentos de saudades, boas lembranças, emoção e alegria no baile mais tradicional do interior.</p>
                        
 

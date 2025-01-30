@@ -7,13 +7,13 @@ export default function Historia() {
     return (
         <>
             <Head>
-                <title>História - Carnaval do Papangu 2024</title>
-                <meta name="title" content="História - Carnaval do Papangu 2024" />
+                <title>História - Carnaval do Papangu 2025</title>
+                <meta name="title" content="História - Carnaval do Papangu 2025" />
 
                 <meta property="og:url" content="https://carnaval.bezerros.pe.gov.br/historia" />
-                <meta property="og:title" content="História - Carnaval do Papangu 2024" />
+                <meta property="og:title" content="História - Carnaval do Papangu 2025" />
                 <meta property="twitter:url" content="https://carnaval.bezerros.pe.gov.br/historia" />
-                <meta property="twitter:title" content="História - Carnaval do Papangu 2024" />
+                <meta property="twitter:title" content="História - Carnaval do Papangu 2025" />
             </Head>
 
             <Navbar />

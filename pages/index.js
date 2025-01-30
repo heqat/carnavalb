@@ -106,13 +106,12 @@ export default function Home() {
             <div className='container d-flex flex-column justify-content-center align-items-center text-center mt-0 m-5 text-white'>
               <div className='mt-5 logo-baile'></div>
               <br></br>
-              <p className='m-baile-texto'>Descubra a magia do carnaval de Bezerros - uma festa única repleta de cultura, tradição, muita animação e claro, papangus!</p>
-              <p
-               className='m-baile-texto'> Venha se encantar com os papangus, foliões, as cores vibrantes e a alegria contagiante desta festa inesquecível!</p>
+              <p className='m-baile-texto'>Prepare-se para uma noite mágica e inesquecível, repleta de música vibrante, trajes deslumbrantes e a alegria contagiante do carnaval. O baile deste ano celebra a rica tradição dos papangus e promete transportar você para o coração cultural de Bezerros, conectando passado e presente em uma celebração de pura folia e magia!</p>
+             
                <br></br>
                <div class="button-container">
-               <a class="m-btn-baile m-apresentacao-botao" href="/baile-municipal">SAIBA MAIS</a>
-  <a class="m-btn-baile m-apresentacao-botao" href="/baile-municipal/#ingressos-baile">COMPRE SEU INGRESSO</a>
+               <a class="m-btn-baile m-apresentacao-botao">MAIS INFORMAÇÕES EM BREVE</a>
+
 
 </div>
 

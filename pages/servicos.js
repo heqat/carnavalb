@@ -7,12 +7,12 @@ export default function ServicosUteis() {
         <>
             <Head>
                 <title>Nossos Serviços - Carnaval do Papangu 2024</title>
-                <meta name="title" content="Nossos Serviços - Carnaval do Papangu 2024" />
+                <meta name="title" content="Nossos Serviços - Carnaval do Papangu 2025" />
 
-                <meta property="og:url" content="https://carnaval.bezerros.pe.gov.br/nossos-servicos" />
-                <meta property="og:title" content="Nossos Serviços - Carnaval do Papangu 2024" />
-                <meta property="twitter:url" content="https://carnaval.bezerros.pe.gov.br/nossos-servicos" />
-                <meta property="twitter:title" content="Nossos Serviços - Carnaval do Papangu 2024" />
+                <meta property="og:url" content="https://carnaval.bezerros.pe.gov.br/servicos" />
+                <meta property="og:title" content="Nossos Serviços - Carnaval do Papangu 2025" />
+                <meta property="twitter:url" content="https://carnaval.bezerros.pe.gov.br/servicos" />
+                <meta property="twitter:title" content="Nossos Serviços - Carnaval do Papangu 2025" />
             </Head>
 
             <Navbar />
