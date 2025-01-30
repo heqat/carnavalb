@@ -348,44 +348,43 @@ export default function Home() {
 
       <div className="tab-pane fade" id="pane-27-02" role="tabpanel" aria-labelledby="tab-27-02">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="Nome do Bloco" horario="Horário" dia="Dia da Semana" categoria="Categoria" localizacao="Localização" mapa="#" />
           <CardBloco nome="EM BREVE" horario="12:00" dia="QUINTA-FEIRA" categoria="BLOCO" localizacao="Localização" mapa="#" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-28-02" role="tabpanel" aria-labelledby="tab-28-02">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="EM BREVE" horario="Horário" dia="SEXTA-FEIRA" categoria="Categoria" localizacao="Localização" mapa="#" />
+          <CardBloco nome="EM BREVE" horario="Horário" dia="SEXTA-FEIRA" categoria="BLOCO" localizacao="Localização" mapa="#" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-01-03" role="tabpanel" aria-labelledby="tab-01-03">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="EM BREVE" horario="Horário" dia="SÁBADO" categoria="Categoria" localizacao="Localização" mapa="#" />
+          <CardBloco nome="EM BREVE" horario="Horário" dia="SÁBADO" categoria="BLOCO" localizacao="Localização" mapa="#" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-02-03" role="tabpanel" aria-labelledby="tab-02-03">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="EM BREVE" horario="Horário" dia="DOMINGO" categoria="Categoria" localizacao="Localização" mapa="#" />
+          <CardBloco nome="EM BREVE" horario="Horário" dia="DOMINGO" categoria="BLOCO" localizacao="Localização" mapa="#" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-03-03" role="tabpanel" aria-labelledby="tab-03-03">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="EM BREVE" horario="Horário" dia="SEGUNDA" categoria="Categoria" localizacao="Localização" mapa="#" />
+          <CardBloco nome="EM BREVE" horario="Horário" dia="SEGUNDA" categoria="BLOCO" localizacao="Localização" mapa="#" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-04-03" role="tabpanel" aria-labelledby="tab-04-03">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="EM BREVE" horario="Horário" dia="TERÇA" categoria="Categoria" localizacao="Localização" mapa="#" />
+          <CardBloco nome="EM BREVE" horario="Horário" dia="TERÇA" categoria="BLOCO" localizacao="Localização" mapa="#" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-05-03" role="tabpanel" aria-labelledby="tab-05-03">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="EM BREVE" horario="Horário" dia="QUARTA-FEIRA" categoria="Categoria" localizacao="Localização" mapa="#" />
+          <CardBloco nome="EM BREVE" horario="Horário" dia="QUARTA-FEIRA" categoria="BLOCO" localizacao="Localização" mapa="#" />
         </div>
       </div>
     </div>

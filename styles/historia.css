@@ -41,7 +41,7 @@
 }
 
 .container-texto.historia {
-    background-color: var(--cor-azul);
+    background-color: rgb(0, 79, 255, 0.8);
 }
 
 .container-texto.historia {
@@ -54,13 +54,4 @@
     }
 }
 
-@keyframes animacao-titulo-pagina {
-    from { 
-        opacity: 0;
-        
-    }
-    to { 
-        opacity: 1;
-        transform: translateY(0);
-    }
-  }
+  

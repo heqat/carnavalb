@@ -14,6 +14,10 @@ export default function Navbar() {
     setIsMenuOpen((prev) => !prev);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false); // Fecha o menu ao clicar em um item
+  };
+
   useEffect(() => {
     let lastScrollY = window.scrollY;
     let timeoutId;
@@ -101,7 +105,10 @@ export default function Navbar() {
                 <a
                   href="/../#baile"
                   className="text-nav p-2"
-                  onClick={() => setActiveSection("baile")}
+                  onClick={() => { 
+                    setActiveSection("baile");
+                    closeMenu(); // Fecha o menu ao clicar
+                  }}
                 >
                   BAILE MUNICIPAL
                 </a>
@@ -114,7 +121,10 @@ export default function Navbar() {
                 <a
                   href="/../#homenageado"
                   className="text-nav p-2"
-                  onClick={() => setActiveSection("homenageado")}
+                  onClick={() => { 
+                    setActiveSection("homenageado");
+                    closeMenu(); // Fecha o menu ao clicar
+                  }}
                 >
                   HOMENAGEADO
                 </a>
@@ -127,7 +137,10 @@ export default function Navbar() {
                 <a
                   href="/../#programacao"
                   className="text-nav p-2"
-                  onClick={() => setActiveSection("programacao")}
+                  onClick={() => { 
+                    setActiveSection("programacao");
+                    closeMenu(); // Fecha o menu ao clicar
+                  }}
                 >
                   PROGRAMAÇÃO
                 </a>
@@ -140,7 +153,10 @@ export default function Navbar() {
                 <a
                   href="/../#mapa"
                   className="text-nav p-2"
-                  onClick={() => setActiveSection("mapa")}
+                  onClick={() => { 
+                    setActiveSection("mapa");
+                    closeMenu(); // Fecha o menu ao clicar
+                  }}
                 >
                   MAPA
                 </a>

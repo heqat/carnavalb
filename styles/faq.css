@@ -1,8 +1,9 @@
 #faq {
     margin-top: 100px;
-    background-color: #ed1a3b;
+    background-image: url("../public/ONDASVERMELHAS.jpg");
     background-position: center;
     background-repeat: repeat; 
+    background-size: 50%;
   }
 
   .accordion-button {

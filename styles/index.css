@@ -348,7 +348,7 @@
   }
 
   .m-apresentacao-botao {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .logo-baile {
     width: 20rem;
@@ -367,7 +367,8 @@
     
   }
   #apresentacao{
-        background-size: 50%;
+        background-size: 200%;
+        background-repeat: no-repeat;
       
     }
 
