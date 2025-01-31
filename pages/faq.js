@@ -10,7 +10,7 @@ export default function perguntas() {
                 <meta name="title" content="FAQ - Carnaval do Papangu 2025" />
 
                 <meta property="og:url" content="https://carnaval.bezerros.pe.gov.br/faq" />
-                <meta property="og:title" content="FAQ - Carnaval do Papangu 2024" />
+                <meta property="og:title" content="FAQ - Carnaval do Papangu 2025" />
                 <meta property="twitter:url" content="https://carnaval.bezerros.pe.gov.br/faq" />
                 <meta property="twitter:title" content="FAQ - Carnaval do Papangu 2025" />
             </Head>
@@ -46,9 +46,10 @@ export default function perguntas() {
                   className="accordion-collapse collapse"
                   aria-labelledby="flush-heading1"
                   data-bs-parent="#accordionFlushExample"
+                  
                 >
                   <div className="accordion-body">
-                    01, 02, 03, 04 de março de 2025.
+                    01, 02, 03, 04 e 05 de março de 2025.
                     
                   </div>
                 </div>

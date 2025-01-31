@@ -34,7 +34,7 @@ export default function ServicosUteis() {
                         </div>
                        
                         <div className="container-servico">
-                            <p className="nome-servico">ECO FOLIA - RECICLAR É MASSA</p>
+                            <p className="nome-servico">RECICLAR É MASSA</p>
                             <p className="texto-servico">O RECICLAR É MASSA faz parte do projeto Eco Folia, de educação ambiental, incentivo a reciclagem e apoio aos recicladores que trabalham durante os dias de carnaval coletando e separando o lixo gerado pelos foliões. Este ano o ponto de apoio fica ao lado do CAT, no corredor de estandes de serviços e artesanato, nas proximidades da  Praça da Bandeira e funciona das 9h às 22h.</p>
                         </div>
 
@@ -57,10 +57,13 @@ export default function ServicosUteis() {
                         <div className="container-servico">
 
                             <ul>
-                                <li>SAMU - 192/(81)3727-8350 ou (81)98384-4303.</li>
-                                <li>BOMBEIROS - 193.</li>
-                                <li>POLÍCIA - 190.</li>
-                                <li>DEFESA CIVIL - 199.</li>
+                                                         
+                                <p className="nome-servico">NÚMEROS ÚTEIS</p>
+                                <div className="texto-servico">SAMU - 192/(81)3727-8350 ou (81)98384-4303.</div>
+                                <div className="texto-servico">BOMBEIROS - 193.</div>
+                                <div className="texto-servico">POLÍCIA - 190.</div>
+                                <div className="texto-servico">DEFESA CIVIL - 199.</div>
+                               
                             </ul>
                         </div>
                     </div>

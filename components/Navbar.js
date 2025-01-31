@@ -126,7 +126,7 @@ export default function Navbar() {
                     closeMenu(); // Fecha o menu ao clicar
                   }}
                 >
-                  HOMENAGEADO
+                  HOMENAGEADOS
                 </a>
               </li>
               <li

@@ -8,7 +8,7 @@ export default function VideoSection() {
     function handlePlayVideo(event) {
       event.preventDefault();
       btnPlayVideo.style.display = 'none';
-      containerVideo.innerHTML = `<iframe width=100% height=100% src="https://www.youtube.com/embed/PhFFVDyrG4s?autoplay=1" title="Clipe carnaval" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      containerVideo.innerHTML = `<iframe width=100% height=100% src="https://www.youtube.com/embed/GdVTH-02big?si=HgFV-6SdKQOWkKgq" title=" title="Clipe carnaval" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
     }
 
     btnPlayVideo?.addEventListener('click', handlePlayVideo);

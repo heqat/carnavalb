@@ -6,7 +6,7 @@ import CardBloco from "../components/CardBloco";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
-import marca from "../public/marcavazada.png";
+import marca from "../public/marcasembezerros.png";
 import marcaFundarpe from '../public/marca-fundarpe.png'
 import marcaEmpetur from '../public/marca-empetur.png'
 import marcaSecCultura from '../public/marca-seccultura.png'
@@ -48,7 +48,7 @@ export default function Home() {
   <title>Carnaval 2025 - Bezerros-PE</title>
   <meta name="title" content="Carnaval 2025 - Bezerros-PE"></meta>
   <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
       </Head>
@@ -81,14 +81,14 @@ export default function Home() {
             <div className='container d-flex flex-column justify-content-center align-items-center text-center mt-0 m-5 text-white'>
               <div className='mt-5 logog'></div>
               <br></br>
-              <p className='m-apresentacao-texto'>Descubra a magia do carnaval de Bezerros - uma festa única repleta de cultura, tradição, muita animação e claro, papangus!</p>
+              <p className='m-apresentacao-texto'>Conheça o carnaval de Bezerros - uma festa única repleta de cultura, tradição, muita animação e claro, os famosos Papangus!</p>
               <p
-               className='m-apresentacao-texto'> Venha se encantar com os papangus, foliões, as cores vibrantes e a alegria contagiante desta festa inesquecível!</p>
+               className='m-apresentacao-texto'> Venha se encantar com os Papangus, os foliões, as cores vibrantes e a alegria contagiante desta festa inesquecível!</p>
                <br></br>
-               <div class="button-container">
-  <a class="m-btn-historia m-apresentacao-texto" href="/historia">HISTÓRIA</a>
-  <a class="m-btn-historia m-apresentacao-texto" href="/servicos">SERVIÇOS</a>
-  <a class="m-btn-historia m-apresentacao-texto" href="/faq">FAQ</a>
+               <div className="button-container">
+  <a className="m-btn-historia m-apresentacao-texto" href="/historia">HISTÓRIA</a>
+  <a className="m-btn-historia m-apresentacao-texto" href="/servicos">SERVIÇOS</a>
+  <a className="m-btn-historia m-apresentacao-texto" href="/faq">FAQ</a>
 </div>
 
             </div>
@@ -111,8 +111,8 @@ export default function Home() {
               <p className='m-baile-texto'>Prepare-se para uma noite mágica e inesquecível, repleta de música vibrante, trajes deslumbrantes e a alegria contagiante do carnaval. O baile deste ano celebra a rica tradição dos papangus e promete transportar você para o coração cultural de Bezerros, conectando passado e presente em uma celebração de pura folia e magia!</p>
              
                <br></br>
-               <div class="button-container">
-               <a class="m-btn-baile m-apresentacao-botao">MAIS INFORMAÇÕES EM BREVE</a>
+               <div className="button-container">
+               <a className="m-btn-baile m-apresentacao-botao">MAIS INFORMAÇÕES EM BREVE</a>
 
 
 </div>
@@ -121,7 +121,7 @@ export default function Home() {
           </div>
           </section>
 
-          <div className='divisoria'></div>
+          <div className='divisoria-laranja'></div>
 
 <section id='homenageado' className='pt-4'>
   <div className='container d-flex justify-content-center align-items-center flex-column'>
@@ -131,7 +131,7 @@ export default function Home() {
         <img src="/homenageado.png" className="imagem-artista"></img>
       </div>
       <div className="container-texto mt-5">
-        <h2 className="m-titulo-secao text-center programacao">HOMENAGEADO</h2>
+        <h2 className="m-titulo-secao text-center programacao">HOMENAGEADOS</h2>
 
         <p className="texto-artista"> EM BREVE... </p>
     
