@@ -154,7 +154,7 @@ export default function Home() {
 
         <div className="">
         <div className="container-programacao tab-content d-flex justify-content-center mb-5">
-        <img src="/programacao.png" className="imagem-artista"></img>
+        <img src="/PROGRAMACAO.png" className="imagem-artista"></img>
       </div>
       </div>
     </div>
