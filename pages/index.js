@@ -112,8 +112,8 @@ export default function Home() {
              
                <br></br>
                <div className="button-container">
-               <a className="m-btn-baile m-apresentacao-botao" href="/baile-municipal">SAIBA MAIS</a>
-               <a className="m-btn-baile m-apresentacao-botao" href="https://www.exemplo.com" target="_blank">COMPRE SEU INGRESSO</a>
+               <a className="m-btn-baile m-apresentacao-botao" href="/baile-municipal">SAIBA MAIS!</a>
+              
 
 </div>
 
@@ -152,9 +152,9 @@ export default function Home() {
       <div className="container mt-3">
         
 
-        <div className="tab-content d-flex justify-content-center mb-5">
-        <div className="container-foto">
-        <img src="/homenageado.png" className="imagem-artista"></img>
+        <div className="">
+        <div className="container-programacao tab-content d-flex justify-content-center mb-5">
+        <img src="/programacao.png" className="imagem-artista"></img>
       </div>
       </div>
     </div>

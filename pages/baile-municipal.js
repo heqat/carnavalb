@@ -75,24 +75,7 @@ colaboração do seu esposo para manter essa tradição.</p>
                         </div>
                     </div>
                     <p></p>
-                    <section id="ingressos-baile">
-                    
-                    <img src="/ingressos.png" alt="Ingressos" className='mt-4 mb-4 divisoria-baile'></img>
-<div className="container-ingresso">
-<p className="m-text-titulo text-center">INGRESSOS</p>
-    <p className="m-text-historia text-center">Valores:</p>
-    <ul>
-        <li className="baile-list">DIA DO EVENTO: <span className="baile-valor">27/01/2024.</span></li>
-        <li className="baile-list">INGRESSO INTEIRA: <span className="baile-valor">R$60.</span></li>
-        <li className="baile-list">INGRESSO SOCIAL: <span className="baile-valor">R$40 + 1kg de alimento.</span></li>
-        <li className="baile-list">INGRESSO MEIA: <span className="baile-valor">R$ 30.</span></li>
-    </ul>
-    <p className="m-text-historia text-center">Para aquisição de mesas e camarotes consultar disponibilidade em Auciene dos Cartões.</p>
-
-    <p className="m-text-historia text-center">Os ingressos podem ser adquiridos em Auciene dos Cartões ou <a className="m-text-historia" href="https://www.sympla.com.br/evento/20-baile-municipal-de-bezerros/2293408" target="_blank">on-line através do Sympla.</a></p>
-</div>
-<br></br>
-                </section>
+                  
                 
                 </section>
                 <div className='divisoria'></div>

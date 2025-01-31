@@ -273,7 +273,7 @@
 .m-container-palcos-serra {
   background-image: url("../public/PADRAOAZUL.png");
   background-size: 100%;
-  background-repeat: no-repeat; 
+  background-repeat: repeat; 
   background-position: center;
 }
 
@@ -444,3 +444,7 @@
   filter: drop-shadow(0px 0px 3px black);
 }
 
+.container-programacao{
+  height: auto;
+  width: auto;
+}
