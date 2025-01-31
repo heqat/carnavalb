@@ -31,14 +31,13 @@ export default function BaileMunicipal() {
                             <p className="m-text-historia">Já imaginou vivenciar uma noite de música vibrante, cores, ritmos e alegria em uma só festa? Vista sua fantasia e venha participar do mais tradicional baile carnavalesco do interior de Pernambuco. Este ano, nossa festa celebra a arte, história e tradição do nosso anfitrião, no fantástico ateliê do Papangu de Bezerros - Pernambuco. Participe conosco e se conecte ao universo do maior e melhor carnaval do interior do Brasil: o Carnaval do Papangu!!!
 
 Com o tema “O Fantástico Ateliê do Papangu”, o baile remonta à criatividade dos artesãos na confecção das máscaras dos papangus, expressando toda a riqueza artística e cultural do nosso carnaval e da nossa gente. 
-</p> <img src="/bailetema.png" alt="Tema" className='mt-4 mb-4 tema-baile' />
+</p> <img src="/BAILETEMA.png" alt="Tema" className='mt-4 mb-4 tema-baile' />
                             <p className="m-text-historia">Sábado, dia 22 de fevereiro de 2025, no Clube Literário Rui Barbosa - Bairro do Cruzeiro, a partir das 21h, Bezerros espera por você no 21º Baile Municipal. Juntos, vamos celebrar momentos de saudades, boas lembranças, emoção e a alegria contagiante do nosso papangu. </p>
                            
                        <br></br>
                  
                                                     <p className="m-text-titulo text-center">ATRAÇÕES</p>
-                            <img src="/artistas-baile.png" alt="Atrações" className='mt-4 mb-4 baile-atracoes divisoria-baile'></img>
-
+                           
                             <ul>
                                 <li className="baile-list">Ciel Santos;</li>
                                 <li className="baile-list">Almir Rouche;</li>
@@ -54,8 +53,8 @@ Com o tema “O Fantástico Ateliê do Papangu”, o baile remonta à criativida
                       
 
                         <div className="container-textobaile d-flex justify-content-center align-items-center flex-column">
-                            <img src="/bailehomenageados.png" alt="Homenageados" className='mt-4 mb-4 tema-baile' />
-                            <img src="/baileclaudio.png" alt="Homenageada" className='container-fotobaile' />
+                            <img src="/BAILEHOMENAGEADOS.png" alt="Homenageados" className='mt-4 mb-4 tema-baile' />
+                            <img src="/BAILECLAUDIO.png" alt="Homenageado" className='container-fotobaile' />
                             <p className="m-text-historia">Claudio Sérgio da Rocha, mais conhecido como Claudio das máscaras, 
 gravataense de nascimento e bezerrense de coração; há mais de 20 anos se 
 dedica a produção e divulgação das máscaras de papangus, personagem 
@@ -64,7 +63,7 @@ em várias formas e tamanhos, usando diversas matérias primas em sua
 confecção, como: papel machê, papel colê (papietagem), fibra de vidro, tela de 
 metal e couro de bode. O mesmo usa de sua criatividade para manter à 
 tradição cultural viva  e notória dos papangus de Bezerros.</p>
-<img src="/bailejosy.png" alt="Homenageada" className='container-fotobaile' />
+<img src="/BAILEJOSY.png" alt="Homenageada" className='container-fotobaile' />
                             <p className="m-text-historia mt-3">Josy Santos, artesã bezerrense, trabalha com máscaras de papangus 
 em diversos tamanhos e peças decorativas e utilitárias, como: chaveiro, ímãs, 
 brincos, colares, quadros, porta controles, porta chaves, etc. Profissional 
