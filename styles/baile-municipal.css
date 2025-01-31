@@ -86,4 +86,11 @@
     .baile-atracoes {
         width: 90%;
     }
+    .tema-baile {
+        width: 20rem;
+    }
+    .baile-marca {
+        width: 20rem;
+
+    }
 }
