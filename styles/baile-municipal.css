@@ -6,13 +6,14 @@
 }
 
 .container-textobaile {
+    margin-top: 100px;
     text-align: center; /* Alinha o texto ao centro */
     border-radius: 20px;
     position: relative;
     top: -8rem;
     padding: 7rem 2rem 1rem 2rem;
     background-color: rgba(124, 0, 196, 0.8);
-    border: black 4px solid;
+    border: #8900b9 4px solid;
     max-width: 1200px; /* Limita a largura máxima do container */
     margin: 0 auto; /* Centraliza o container na tela */
 }

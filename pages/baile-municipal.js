@@ -22,7 +22,7 @@ export default function BaileMunicipal() {
 
                 <section id="baile-municipal">
                     <div className="d-flex flex-column justify-content-center align-items-center text-center">
-                        
+                        <p></p>
                         <div className="container-textobaile">
                             <p></p>
                         <img src="/marcabaile.png" alt="Marca Baile Municipal" className="baile-marca"></img>

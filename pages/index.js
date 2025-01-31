@@ -81,9 +81,9 @@ export default function Home() {
             <div className='container d-flex flex-column justify-content-center align-items-center text-center mt-0 m-5 text-white'>
               <div className='mt-5 logog'></div>
               <br></br>
-              <p className='m-apresentacao-texto'>Conheça o carnaval de Bezerros - uma festa única repleta de cultura, tradição, muita animação e claro, os famosos Papangus!</p>
+              <p className='m-apresentacao-texto'> Bem-vindos ao maior e melhor carnaval do interior do Brasil: o Carnaval do Papangu em Bezerros - Pernambuco. Os ritmos que unem gerações e tradição embalam a folia mais tradicional, autêntica, segura e familiar dos festejos carnavalescos. </p>
               <p
-               className='m-apresentacao-texto'> Venha se encantar com os Papangus, os foliões, as cores vibrantes e a alegria contagiante desta festa inesquecível!</p>
+               className='m-apresentacao-texto'> Você é nosso convidado especial para conhecer a magia dos nossos papangus, suas cores, ritmos, alegria contagiante e uma experiência que vai ficar para sempre em sua memória. BEZERROS ESPERA POR VOCÊ!!! </p>
                <br></br>
                <div className="button-container">
   <a className="m-btn-historia m-apresentacao-texto" href="/historia">HISTÓRIA</a>
@@ -108,7 +108,7 @@ export default function Home() {
             <div className='container d-flex flex-column justify-content-center align-items-center text-center mt-0 m-5 text-white'>
               <div className='mt-5 logo-baile'></div>
               <br></br>
-              <p className='m-baile-texto'>Prepare-se para uma noite mágica e inesquecível, repleta de música vibrante, trajes deslumbrantes e a alegria contagiante do carnaval. O baile deste ano celebra a rica tradição dos papangus e promete transportar você para o coração cultural de Bezerros, conectando passado e presente em uma celebração de pura folia e magia!</p>
+              <p className='m-baile-texto'>Já imaginou vivenciar uma noite de música vibrante, cores, ritmos e alegria em uma só festa? Vista sua fantasia e venha participar do mais tradicional baile carnavalesco do interior de Pernambuco. Este ano, nossa festa celebra a arte, história e tradição do nosso anfitrião, no fantástico ateliê do Papangu de Bezerros - Pernambuco. Participe conosco e se conecte ao universo do maior e melhor carnaval do interior do Brasil: o Carnaval do Papangu!!!</p>
              
                <br></br>
                <div className="button-container">
@@ -148,95 +148,9 @@ export default function Home() {
     <div className="m-container-palcos-serra d-flex justify-content-center align-items-center flex-column">
       <div className="m-container-titulo">
         <h2 className="m-titulo-secao mt-5 text-center">PROGRAMAÇÃO</h2>
-        <h3 className="m-titulo-programacao">POLO</h3>
       </div>
       <div className="container mt-3">
-        <ul className="nav nav-tabs justify-content-center" role="tablist">
-          <li className="nav-item" role="presentation">
-            <button
-              className="nav-link active m-button-programacao palcos"
-              id="palcos-qg-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#palcos-qg-pane"
-              type="button"
-              role="tab"
-              aria-controls="palcos-qg-pane"
-              aria-selected="true"
-            >
-              PALCO QG DO FREVO
-            </button>
-          </li>
-          <li className="nav-item" role="presentation">
-            <button
-              className="nav-link m-button-programacao palcos"
-              id="palcos-cultural-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#palcos-cultural-pane"
-              type="button"
-              role="tab"
-              aria-controls="palcos-cultural-pane"
-              aria-selected="false"
-            >
-              PALCO CULTURAL
-            </button>
-          </li>
-          <li className="nav-item" role="presentation">
-            <button
-              className="nav-link m-button-programacao palcos"
-              id="palcos-centenaria-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#palcos-centenaria-pane"
-              type="button"
-              role="tab"
-              aria-controls="palcos-centenaria-pane"
-              aria-selected="false"
-            >
-              PALCO CENTENÁRIA
-            </button>
-          </li>
-          <li className="nav-item" role="presentation">
-            <button
-              className="nav-link m-button-programacao palcos"
-              id="palcos-sebastiao-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#palcos-sebastiao-pane"
-              type="button"
-              role="tab"
-              aria-controls="palcos-sebastiao-pane"
-              aria-selected="false"
-            >
-              PALCO SÃO SEBASTIÃO
-            </button>
-          </li>
-          <li className="nav-item" role="presentation">
-            <button
-              className="nav-link m-button-programacao palcos"
-              id="palcos-forro-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#palcos-forro-pane"
-              type="button"
-              role="tab"
-              aria-controls="palcos-forro-pane"
-              aria-selected="false"
-            >
-              PALCO FORRÓ DO PAPANGU
-            </button>
-          </li>
-          <li className="nav-item" role="presentation">
-            <button
-              className="nav-link m-button-programacao palcos"
-              id="palcos-espaco-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#palcos-espaco-pane"
-              type="button"
-              role="tab"
-              aria-controls="palcos-espaco-pane"
-              aria-selected="false"
-            >
-              PALCO ESPAÇO DO FREVO
-            </button>
-          </li>
-        </ul>
+        
 
         <div className="tab-content d-flex justify-content-center mb-5">
           <div
