@@ -6,7 +6,6 @@
 }
 
 .bg-hero-marca {
-  margin-top: 50px;
   width: 30rem;
   height: auto;
   position: absolute;
@@ -20,6 +19,16 @@
   width: 25rem;
   height: 10rem;
   background-image: url("../public/marcavazada.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(0px 0px 3px black);
+}
+
+.logog {
+  width: 25rem;
+  height: 10rem;
+  background-image: url("../public/logo-grande.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -356,7 +365,7 @@
     height: 8rem;
   }
   .bg-hero-marca {
-    margin-top: 100px;
+   
     width: 20rem;
     height: auto;
     position: absolute;

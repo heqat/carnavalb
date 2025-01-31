@@ -6,7 +6,7 @@ import CardBloco from "../components/CardBloco";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
-import marca from "../public/LOGO.png";
+import marca from "../public/marcavazada.png";
 import marcaFundarpe from '../public/marca-fundarpe.png'
 import marcaEmpetur from '../public/marca-empetur.png'
 import marcaSecCultura from '../public/marca-seccultura.png'
@@ -79,7 +79,7 @@ export default function Home() {
         <section id='apresentacao'>
           <div className='d-flex w-100 justify-content-center flex-column align-items-center'>
             <div className='container d-flex flex-column justify-content-center align-items-center text-center mt-0 m-5 text-white'>
-              <div className='mt-5 papangu'></div>
+              <div className='mt-5 logog'></div>
               <br></br>
               <p className='m-apresentacao-texto'>Descubra a magia do carnaval de Bezerros - uma festa única repleta de cultura, tradição, muita animação e claro, papangus!</p>
               <p
@@ -93,6 +93,8 @@ export default function Home() {
 
             </div>
           </div>
+        
+
         </section>
 
         <div className='divisoria'></div>
