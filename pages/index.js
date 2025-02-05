@@ -112,8 +112,9 @@ export default function Home() {
              
                <br></br>
                <div className="button-container">
-               <a className="m-btn-baile m-apresentacao-botao">MAIS INFORMAÇÕES EM BREVE</a>
-
+               <a className="m-btn-baile m-apresentacao-botao" href="/baile-municipal">SAIBA MAIS!</a>
+              <a className="m-btn-baile m-apresentacao-botao" href="https://www.sympla.com.br/evento/21-baile-municipal-de-bezerros/2818440?qrcode=true&share_id=whatsapp " target="_blank">COMPRE SEU INGRESSO</a>
+              
 
 </div>
 
@@ -147,162 +148,56 @@ export default function Home() {
   <div className="">
     <div className="m-container-palcos-serra d-flex justify-content-center align-items-center flex-column">
       <div className="m-container-titulo">
-        <h2 className="m-titulo-secao mt-5 text-center">PROGRAMAÇÃO</h2>
+        <h2 className="m-titulo-secao mt-5 text-center">ATRAÇÕES CONFIRMADAS</h2>
       </div>
       <div className="container mt-3">
         
 
-        <div className="tab-content d-flex justify-content-center mb-5">
-          <div
-            className="tab-pane fade show active"
-            id="palcos-qg-pane"
-            role="tabpanel"
-            aria-labelledby="palcos-qg-tab"
-            tabIndex="0"
-          >
-            <div className="d-flex justify-content-center flex-wrap">
-              <CardPalco nome={["EM BREVE"]} horario={["HORÁRIO"]} dia="DOMINGO" data="01/03" />
-            </div>
-          </div>
-          <div
-            className="tab-pane fade"
-            id="palcos-cultural-pane"
-            role="tabpanel"
-            aria-labelledby="palcos-cultural-tab"
-            tabIndex="0"
-          >
-            <div className="d-flex justify-content-center flex-wrap">
-            <CardPalco nome={["EM BREVE"]} horario={["HORÁRIO"]} dia="DOMINGO" data="01/03" />
-            </div>
-          </div>
-          <div
-            className="tab-pane fade"
-            id="palcos-centenaria-pane"
-            role="tabpanel"
-            aria-labelledby="palcos-centenaria-tab"
-            tabIndex="0"
-          >
-            <div className="d-flex justify-content-center flex-wrap">
-            <CardPalco nome={["EM BREVE"]} horario={["HORÁRIO"]} dia="DOMINGO" data="01/03" />
-            </div>
-          </div>
-          <div
-            className="tab-pane fade"
-            id="palcos-sebastiao-pane"
-            role="tabpanel"
-            aria-labelledby="palcos-sebastiao-tab"
-            tabIndex="0"
-          >
-            <div className="d-flex justify-content-center flex-wrap">
-            <CardPalco nome={["EM BREVE"]} horario={["HORÁRIO"]} dia="DOMINGO" data="01/03" />
-            </div>
-          </div>
-          <div
-            className="tab-pane fade"
-            id="palcos-forro-pane"
-            role="tabpanel"
-            aria-labelledby="palcos-forro-tab"
-            tabIndex="0"
-          >
-            <div className="d-flex justify-content-center flex-wrap">
-            <CardPalco nome={["EM BREVE"]} horario={["HORÁRIO"]} dia="DOMINGO" data="01/03" />
-            </div>
-          </div>
-          <div
-            className="tab-pane fade"
-            id="palcos-espaco-pane"
-            role="tabpanel"
-            aria-labelledby="palcos-espaco-tab"
-            tabIndex="0"
-          >
-            <div className="d-flex justify-content-center flex-wrap">
-            <CardPalco nome={["EM BREVE"]} horario={["HORÁRIO"]} dia="DOMINGO" data="01/03" />
-            </div>
-          </div>
-        </div>
+        <div className="">
+        <div className="container-programacao tab-content d-flex justify-content-center mb-5">
+        <img src="/PROGRAMACAO.png" className="imagem-artista"></img>
+      </div>
       </div>
     </div>
 
     <div className="divisoria"></div>
 
     <div className="d-flex justify-content-center align-items-center flex-column m-container-palcos-cidade">
-      <h3 className="m-titulo-programacao">BLOCOS</h3>
+      <h3 className="m-titulo-programacao">PRÉVIAS CARNAVAL DO PAPANGU</h3>
       <ul className="nav nav-tabs justify-content-center" role="tablist">
       <li className="nav-item" role="presentation">
-        <button className="nav-link active m-button-programacaobloco" id="tab-26-02" data-bs-toggle="tab" data-bs-target="#pane-26-02" type="button" role="tab" aria-controls="pane-26-02" aria-selected="true">26/02</button>
+        <button className="nav-link active m-button-programacaobloco" id="tab-02-02" data-bs-toggle="tab" data-bs-target="#pane-26-02" type="button" role="tab" aria-controls="pane-26-02" aria-selected="true">02/02</button>
       </li>
       <li className="nav-item" role="presentation">
-        <button className="nav-link m-button-programacaobloco" id="tab-27-02" data-bs-toggle="tab" data-bs-target="#pane-27-02" type="button" role="tab" aria-controls="pane-27-02" aria-selected="false">27/02</button>
+        <button className="nav-link m-button-programacaobloco" id="tab-09-02" data-bs-toggle="tab" data-bs-target="#pane-27-02" type="button" role="tab" aria-controls="pane-27-02" aria-selected="false">09/02</button>
       </li>
       <li className="nav-item" role="presentation">
-        <button className="nav-link m-button-programacaobloco" id="tab-28-02" data-bs-toggle="tab" data-bs-target="#pane-28-02" type="button" role="tab" aria-controls="pane-28-02" aria-selected="false">28/02</button>
+        <button className="nav-link m-button-programacaobloco" id="tab-16-02" data-bs-toggle="tab" data-bs-target="#pane-28-02" type="button" role="tab" aria-controls="pane-28-02" aria-selected="false">16/02</button>
       </li>
-      <li className="nav-item" role="presentation">
-        <button className="nav-link m-button-programacaobloco" id="tab-01-03" data-bs-toggle="tab" data-bs-target="#pane-01-03" type="button" role="tab" aria-controls="pane-01-03" aria-selected="false">01/03</button>
-      </li>
-      <li className="nav-item" role="presentation">
-        <button className="nav-link m-button-programacaobloco" id="tab-02-03" data-bs-toggle="tab" data-bs-target="#pane-02-03" type="button" role="tab" aria-controls="pane-02-03" aria-selected="false">02/03</button>
-      </li>
-      <li className="nav-item" role="presentation">
-        <button className="nav-link m-button-programacaobloco" id="tab-03-03" data-bs-toggle="tab" data-bs-target="#pane-03-03" type="button" role="tab" aria-controls="pane-03-03" aria-selected="false">03/03</button>
-      </li>
-      <li className="nav-item" role="presentation">
-        <button className="nav-link m-button-programacaobloco" id="tab-04-03" data-bs-toggle="tab" data-bs-target="#pane-04-03" type="button" role="tab" aria-controls="pane-04-03" aria-selected="false">04/03</button>
-      </li>
-      <li className="nav-item" role="presentation">
-        <button className="nav-link m-button-programacaobloco" id="tab-05-03" data-bs-toggle="tab" data-bs-target="#pane-05-03" type="button" role="tab" aria-controls="pane-05-03" aria-selected="false">05/03</button>
-      </li>
+  
     </ul>
 
     <div className="tab-content d-flex justify-content-center mb-5">
       <div className="tab-pane fade show active" id="pane-26-02" role="tabpanel" aria-labelledby="tab-26-02">
         <div className=" d-flex justify-content-center flex-wrap">
-          <CardBloco nome="EM BREVE" horario="Horário" dia="QUARTA-FEIRA" categoria="BLOCO" localizacao="Localização" mapa="#" />
+          <CardBloco nome="Orquesta de Frevo + Pagode" horario="15 horas" dia="DOMINGO" categoria="PRÉVIA" localizacao=" Praça São Sebastião" mapa="Praça São Sebastião" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-27-02" role="tabpanel" aria-labelledby="tab-27-02">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="EM BREVE" horario="12:00" dia="QUINTA-FEIRA" categoria="BLOCO" localizacao="Localização" mapa="#" />
+        <CardBloco nome="Orquesta de Frevo + Pagode" horario="15 horas" dia="DOMINGO" categoria="PRÉVIA" localizacao=" Praça São Sebastião" mapa="Praça São Sebastião" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-28-02" role="tabpanel" aria-labelledby="tab-28-02">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="EM BREVE" horario="Horário" dia="SEXTA-FEIRA" categoria="BLOCO" localizacao="Localização" mapa="#" />
+        <CardBloco nome="Orquesta de Frevo + Pagode" horario="15 horas" dia="DOMINGO" categoria="PRÉVIA" localizacao=" Praça São Sebastião" mapa="Praça São Sebastião" />
         </div>
       </div>
+          </div>
+  </div>
 
-      <div className="tab-pane fade" id="pane-01-03" role="tabpanel" aria-labelledby="tab-01-03">
-        <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="EM BREVE" horario="Horário" dia="SÁBADO" categoria="BLOCO" localizacao="Localização" mapa="#" />
-        </div>
-      </div>
-
-      <div className="tab-pane fade" id="pane-02-03" role="tabpanel" aria-labelledby="tab-02-03">
-        <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="EM BREVE" horario="Horário" dia="DOMINGO" categoria="BLOCO" localizacao="Localização" mapa="#" />
-        </div>
-      </div>
-
-      <div className="tab-pane fade" id="pane-03-03" role="tabpanel" aria-labelledby="tab-03-03">
-        <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="EM BREVE" horario="Horário" dia="SEGUNDA" categoria="BLOCO" localizacao="Localização" mapa="#" />
-        </div>
-      </div>
-
-      <div className="tab-pane fade" id="pane-04-03" role="tabpanel" aria-labelledby="tab-04-03">
-        <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="EM BREVE" horario="Horário" dia="TERÇA" categoria="BLOCO" localizacao="Localização" mapa="#" />
-        </div>
-      </div>
-
-      <div className="tab-pane fade" id="pane-05-03" role="tabpanel" aria-labelledby="tab-05-03">
-        <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="EM BREVE" horario="Horário" dia="QUARTA-FEIRA" categoria="BLOCO" localizacao="Localização" mapa="#" />
-        </div>
-      </div>
-    </div>
   </div>
 
 

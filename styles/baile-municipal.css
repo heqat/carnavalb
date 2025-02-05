@@ -1,50 +1,55 @@
 #baile-municipal {
     scroll-margin-top: 100px;
     margin-top: 100px;
-    background: url("../public/BGROXOESC.png");
-    
+    background: url("/BGROXOESC.png") no-repeat center center;
+    background-size: cover;
 }
 
-.container-textobaile {
-    margin-top: 100px;
-    text-align: center; /* Alinha o texto ao centro */
+.container-textobaile, .container-ingresso {
+    text-align: center;
     border-radius: 20px;
     position: relative;
-    top: -8rem;
-    padding: 7rem 2rem 1rem 2rem;
-    background-color: rgba(124, 0, 196, 0.8);
-    border: #8900b9 4px solid;
-    max-width: 1200px; /* Limita a largura máxima do container */
-    margin: 0 auto; /* Centraliza o container na tela */
+    padding: 1rem 2rem 2rem;
+    background-color: rgba(124, 0, 196, 0.85);
+    border: 4px solid #8900b9;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.container-ingresso {
+    background-image: none;
 }
 
 .foto-noticia {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     border-radius: 10px;
-    margin: auto;
 }
 
 @media screen and (max-width: 400px) {
     .foto-noticia {
         width: 80%;
-        border-radius: 10px;
-        margin: auto;
     }
 }
 
 .divisoria-baile {
-    width: 20rem;
-    height: auto;
+    width: 100%;
+    max-width: 20rem;
+}
+
+.tema-baile {
+    width: 100%;
+    max-width: 30rem;
 }
 
 .baile-marca {
-    width: 90%;
+    width: auto;
     max-width: 25rem;
-    height: auto;
 }
 
 .baile-atracoes {
     width: 100%;
+    max-width: 900px;
 }
 
 .baile-valor {
@@ -58,10 +63,34 @@
     font-size: 1.2rem;
     text-align: center;
     list-style: none;
+    padding: 0;
 }
 
-@media screen and (min-width: 900px) {
+.m-text-titulo {
+    font-size: 2.5rem;
+    color: white;
+    font-family: var(--fonte-principal);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.container-fotobaile {
+    margin-top: 0px;
+    width: 100%;
+    max-width: 20rem;
+    z-index: 10;
+    filter: drop-shadow(0px 0px 3px black);
+}
+
+@media screen and (max-width: 900px) {
     .baile-atracoes {
-        width: 70%;       
+        width: 90%;
+    }
+    .tema-baile {
+        width: 20rem;
+    }
+    .baile-marca {
+        width: 20rem;
+
     }
 }

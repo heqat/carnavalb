@@ -20,6 +20,18 @@ export default function Document() {
 
         <meta name="description" content="Descubra a magia do carnaval de Bezerros - uma festa única repleta de cultura, tradição, muita animação e claro, papangus! Venha se encantar com os papangus, foliões, as cores vibrantes e a alegria contagiante desta festa inesquecível!" />
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Google Analytics */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-Y09ZEFSS04" strategy='afterInteractive' />
+        <Script strategy='afterInteractive'>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-Y09ZEFSS04');
+          `}
+        </Script>
       </Head>
       <body>
         <Main />

@@ -24,59 +24,80 @@ export default function BaileMunicipal() {
                     <div className="d-flex flex-column justify-content-center align-items-center text-center">
                         <p></p>
                         <div className="container-textobaile">
-                            <p></p>
+
                         <img src="/marcabaile.png" alt="Marca Baile Municipal" className="baile-marca"></img>
-i s
-                            <p className="m-text-historia">No sábado, dia 27 de janeiro de 2024, no Centro Literário Rui Barbosa, no Bairro do Cruzeiro, a partir das 21h. Bezerros espera por você para vivenciar momentos de saudades, boas lembranças, emoção e alegria no baile mais tradicional do interior.</p>
-                       
+                            <p></p>
 
-                        <img src="/atracoes.png" alt="Ingressos" className='mt-4 mb-4 divisoria-baile'></img>
+                            <p className="m-text-historia">Já imaginou vivenciar uma noite de música vibrante, cores, ritmos e alegria em uma só festa? Vista sua fantasia e venha participar do mais tradicional baile carnavalesco do interior de Pernambuco. Este ano, nossa festa celebra a arte, história e tradição do nosso anfitrião, no fantástico ateliê do Papangu de Bezerros - Pernambuco. Participe conosco e se conecte ao universo do maior e melhor carnaval do interior do Brasil: o Carnaval do Papangu!!!
 
-                        
-                            <p className="m-text-historia text-center">Apresentando:</p>
-                            <img src="/artistas-baile.png" alt="Atrações" className='mt-4 mb-4 baile-atracoes divisoria-baile'></img>
-
+Com o tema “O Fantástico Ateliê do Papangu”, o baile remonta à criatividade dos artesãos na confecção das máscaras dos papangus, expressando toda a riqueza artística e cultural do nosso carnaval e da nossa gente. 
+</p> <img src="/BAILETEMA.png" alt="Tema" className='mt-4 mb-4 tema-baile' />
+                            <p className="m-text-historia">Sábado, dia 22 de fevereiro de 2025, no Clube Literário Rui Barbosa - Bairro do Cruzeiro, a partir das 21h, Bezerros espera por você no 21º Baile Municipal. Juntos, vamos celebrar momentos de saudades, boas lembranças, emoção e a alegria contagiante do nosso papangu. </p>
+                           
+                       <br></br>
+                 
+                                                    <p className="m-text-titulo text-center">ATRAÇÕES</p>
+                           
                             <ul>
-                                <li className="baile-list">Morganna Bernado;</li>
-                                <li className="baile-list">Maestro Forró;</li>
-                                <li className="baile-list">Nonô Germano;</li>
-                                <li className="baile-list">Orquestra Cônego Alexandre Cavalcanti.</li>
+                                <li className="baile-list">Ciel Santos;</li>
+                                <li className="baile-list">Almir Rouche;</li>
+                                <li className="baile-list">Rafa Mesquita;</li>
+                                <li className="baile-list">Bateria Cabulosa;</li>
+                                <li className="baile-list">Orquestra Centenária Cônego Alexandre Cavalcanti. </li>
                             </ul>
 
                         </div>
 
+                        <br></br>
+                        <br></br>
                       
 
-                        <img src="/titulo-homenageada.png" alt="Homenageada" className='mt-4 mb-4 divisoria-baile' />
-
                         <div className="container-textobaile d-flex justify-content-center align-items-center flex-column">
-                            <img src="/homenageada.png" alt="Homenageada" className='mt-4 mb-4 divisoria-baile' />
-
-                            <p className="m-text-historia">A homenageada do Baile Municipal de Bezerros 2024, é a bezerrense  Josefa Maria da Conceição, a conhecida Zeza Costureira, que ainda muito jovem, aos 19 anos, viu sua carreira iniciada organicamente, ao seguir os passos de sua mãe. Dona Maria Costureira enxergou na filha o talento para o ofício, e logo, fez de Zeza sua ajudante, um passo para ela praticar e aperfeiçoar suas habilidades na arte de transformar tecidos em roupa.</p>
-                            <p className="m-text-historia mt-3">Nos anos 90, o trabalho de Zeza já despertava o interesse de estilistas renomados e carnavalescos da região, foi quando ela aceitou o convite para trabalhar com Alexandre Filho, estilista de sucesso da época. Naquele tempo sua carreira se voltou por completo para a confecção de fantasias e aquela foi a oportunidade para despertar seu espírito criativo e sua visão harmônica na composição de elementos, cores e texturas. Foram mais de 20 anos ao lado de Alexandre para finalmente alçar-se numa carreira independente.</p>
-                            <p className="m-text-historia mt-3">Com uma carreira sólida, baseada na experiência diária e no reconhecimento popular, o nicho de Zeza ganhou maior visibilidade e seu nome era sinônimo de perfeição no quesito fantasia premiada, uma referência em toda região. Ela confeccionou muitas produções vencedoras de concursos, vestia e veste muitos foliões de tradição, blocos e grupos folclóricos da cidade como o Papanguarte e o Folcpopular, clientes fiéis que levam a arte bezerrense de todas as formas para os quatro cantos do Brasil.</p>
+                            <img src="/BAILEHOMENAGEADOS.png" alt="Homenageados" className='mt-4 mb-4 tema-baile' />
+                            <img src="/BAILECLAUDIO.png" alt="Homenageado" className='container-fotobaile' />
+                            <p className="m-text-historia">Claudio Sérgio da Rocha, mais conhecido como Claudio das máscaras, 
+gravataense de nascimento e bezerrense de coração; há mais de 20 anos se 
+dedica a produção e divulgação das máscaras de papangus, personagem 
+principal do carnaval de Bezerros. Suas peças vão do utilitário ao decorativo 
+em várias formas e tamanhos, usando diversas matérias primas em sua 
+confecção, como: papel machê, papel colê (papietagem), fibra de vidro, tela de 
+metal e couro de bode. O mesmo usa de sua criatividade para manter à 
+tradição cultural viva  e notória dos papangus de Bezerros.</p>
+<img src="/BAILEJOSY.png" alt="Homenageada" className='container-fotobaile' />
+                            <p className="m-text-historia mt-3">Josy Santos, artesã bezerrense, trabalha com máscaras de papangus 
+em diversos tamanhos e peças decorativas e utilitárias, como: chaveiro, ímãs, 
+brincos, colares, quadros, porta controles, porta chaves, etc. Profissional 
+prendada e criativa começou com bordados e crochê pela AAB (Associação 
+dos Artesãos de Bezerros), em seguida resolveu trabalhar com máscaras de 
+papangus ao observar os artesãos mascreiros da cidade. O acabamento e a 
+pintura das suas obras são caprichosos e diferenciados. A artesã conta com a 
+colaboração do seu esposo para manter essa tradição.</p>
                         </div>
                     </div>
                     <p></p>
+                  
                     <section id="ingressos-baile">
                     
-                    <img src="/ingressos.png" alt="Ingressos" className='mt-4 mb-4 divisoria-baile'></img>
-<div className="container-textobaile">
-    <p className="m-text-historia text-center">Valores:</p>
-    <ul>
-        <li className="baile-list">DIA DO EVENTO: <span className="baile-valor">27/01/2024.</span></li>
-        <li className="baile-list">INGRESSO INTEIRA: <span className="baile-valor">R$60.</span></li>
-        <li className="baile-list">INGRESSO SOCIAL: <span className="baile-valor">R$40 + 1kg de alimento.</span></li>
-        <li className="baile-list">INGRESSO MEIA: <span className="baile-valor">R$ 30.</span></li>
-    </ul>
-    <p className="m-text-historia text-center">Para aquisição de mesas e camarotes consultar disponibilidade em Auciene dos Cartões.</p>
+                 
+<div className="container-ingresso">
+<img src="/INGRESSOS.png" alt="Homenageados" className='mt-4 mb-4 tema-baile' />
 
-    <p className="m-text-historia text-center">Os ingressos podem ser adquiridos em Auciene dos Cartões ou <a className="m-text-historia" href="https://www.sympla.com.br/evento/20-baile-municipal-de-bezerros/2293408" target="_blank">on-line através do Sympla.</a></p>
+
+    <ul>
+       
+        <li className="baile-list">INGRESSO INTEIRA: <span className="baile-valor">R$50.</span></li>
+        <li className="baile-list">INGRESSO SOCIAL: <span className="baile-valor">R$30 + 1kg de alimento.</span></li>
+        <li className="baile-list">INGRESSO MEIA: <span className="baile-valor">R$25.</span></li>
+    </ul>
+    <p className="m-text-historia text-center">Para aquisição de mesas e camarotes consultar disponibilidade em Point Card Bezerros - Auciene dos Cartões.</p>
+
+    <p className="m-text-historia text-center">Os ingressos podem ser adquiridos em Point Card Bezerros - Auciene dos Cartões, na R. Coronel Bezerra, Centro, ou <a className="m-text-historia" href="https://www.sympla.com.br/evento/21-baile-municipal-de-bezerros/2818440" target="_blank">on-line através do Sympla.</a></p>
 </div>
+<br></br>
                 </section>
-    
+                    <div className='divisoria'></div>
                 </section>
-                <div className='divisoria'></div>
+        
             </main>
             <Footer />
         </>

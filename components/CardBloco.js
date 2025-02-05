@@ -20,7 +20,7 @@ export default function CardBloco({ nome, dia, horario, categoria, localizacao, 
                     </h6>
                     <h6 className="card-subtitle bloco">
                         <i className="text-white bx bx-map-pin"></i> 
-                        <a href={mapa} target="_blank">{localizacao}</a>
+                     {localizacao}
                     </h6>
                 </div>
             </div>

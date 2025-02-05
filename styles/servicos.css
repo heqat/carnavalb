@@ -2,7 +2,7 @@
     scroll-margin-top: 100px;
     margin-top: 80px;
     font-family: var(--fonte-apoio);
-    background-image: url("../public/laranjapadrao.png");
+    background-image: url("../public/BGAMARELO.png");
     background-repeat: repeat; /* Impede repetição */
     background-size: cover; /* Ocupa toda a página */
     background-position: center; /* Centraliza a imagem */ /* Altura da página, respeitando cabeçalho e rodapé */
