@@ -128,14 +128,13 @@ export default function Home() {
   <div className='container d-flex justify-content-center align-items-center flex-column'>
 
     <div className="container-homenageado">
-      <div className="container-foto">
-        <img src="/homenageado.png" className="imagem-artista"></img>
-      </div>
+      <br></br>
+    <div className="container-foto d-flex justify-content-center align-items-center">
+                            <img src="/maestros.png" className="imagem-artista historia"></img>
+                        </div>
       <div className="container-texto mt-5">
-        <h2 className="m-titulo-secao text-center programacao">HOMENAGEADOS</h2>
-
-        <p className="texto-artista"> EM BREVE... </p>
-    
+        <p className="texto-artista"> O Carnaval do Papangu 2025 presta sua homenagem aos músicos e maestros que são pessoas fundamentais para abrilhantar, com suas orquestras e alegorias, os sons e ritmos que embalam o maior e melhor carnaval do interior do Brasil, na Terra do Papangu, preservando nossa arte, cultura e história. Os “ritmos que unem gerações e tradição” promovem a capacidade musical de perpetuar o espírito carnavalesco da essência de cada folião, conectando passado, presente e futuro ao grande anfitrião dos festejos de momo: o Papangu. </p>
+        <p className="texto-artista">Bezerros lhe espera de braços abertos para fazer uma viagem sonora aos ritmos carnavalescos que homenageiam nossos mestres da música que são, acima de tudo, professores de crianças, jovens, adultos e idosos, numa celebração atemporal da musicalidade bezerrense, pernambucano e brasileira.</p>
       </div>
     </div>
 
