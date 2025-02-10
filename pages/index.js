@@ -145,21 +145,191 @@ export default function Home() {
 
         <section id="programacao">
   <div className="">
-    <div className="m-container-palcos-serra d-flex justify-content-center align-items-center flex-column">
+  <div className="m-container-palcos-serra d-flex justify-content-center align-items-center flex-column">
       <div className="m-container-titulo">
-        <h2 className="m-titulo-secao mt-5 text-center">ATRAÇÕES CONFIRMADAS</h2>
+        <h2 className="m-titulo-secao mt-5 text-center">PROGRAMAÇÃO</h2>
+        <h3 className="m-titulo-programacao">POLO</h3>
       </div>
       <div className="container mt-3">
-        
+        <ul className="nav nav-tabs justify-content-center" role="tablist">
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link active m-button-programacao palcos"
+              id="palcos-qg-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#palcos-qg-pane"
+              type="button"
+              role="tab"
+              aria-controls="palcos-qg-pane"
+              aria-selected="true"
+            >
+              PALCO QG DO FREVO
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link m-button-programacao palcos"
+              id="palcos-cultural-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#palcos-cultural-pane"
+              type="button"
+              role="tab"
+              aria-controls="palcos-cultural-pane"
+              aria-selected="false"
+            >
+              PALCO CULTURAL
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link m-button-programacao palcos"
+              id="palcos-centenaria-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#palcos-centenaria-pane"
+              type="button"
+              role="tab"
+              aria-controls="palcos-centenaria-pane"
+              aria-selected="false"
+            >
+              PALCO CENTENÁRIA
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link m-button-programacao palcos"
+              id="palcos-sebastiao-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#palcos-sebastiao-pane"
+              type="button"
+              role="tab"
+              aria-controls="palcos-sebastiao-pane"
+              aria-selected="false"
+            >
+              PALCO SÃO SEBASTIÃO
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link m-button-programacao palcos"
+              id="palcos-forro-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#palcos-forro-pane"
+              type="button"
+              role="tab"
+              aria-controls="palcos-forro-pane"
+              aria-selected="false"
+            >
+              PALCO FORRÓ DO PAPANGU
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link m-button-programacao palcos"
+              id="palcos-espaco-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#palcos-espaco-pane"
+              type="button"
+              role="tab"
+              aria-controls="palcos-espaco-pane"
+              aria-selected="false"
+            >
+              PALCO ESPAÇO DO FREVO
+            </button>
+          </li>
+        </ul>
 
-        <div className="">
-        <div className="container-programacao tab-content d-flex justify-content-center mb-5">
-        <img src="/PROGRAMACAO.png" className="imagem-artista"></img>
-      </div>
-      </div>
-    </div>
+        <div className="tab-content d-flex justify-content-center mb-5">
+          <div
+            className="tab-pane fade show active"
+            id="palcos-qg-pane"
+            role="tabpanel"
+            aria-labelledby="palcos-qg-tab"
+            tabIndex="0"
+          >
+            <div className="d-flex justify-content-center flex-wrap">
+              <CardPalco nome={["ORQUESTRA CENTENÁRIA, CÔNEGO ALEXANDRE CAVALCANTI + GRUPO CULTURAL FOLCPOPULAR", "XAND AVIÃO", "TAYARA ANDREZA"]} horario={["19:00", "21:00", "23:00"]} dia="SÁBADO" data="01/03" />
+              <CardPalco nome={["HENRIQUE BARBOSA", "ALMIR ROUCHE", "ANDRÉ RIO", "ELBA RAMALHO", "LADY FALCÃO", "GERALDINHO LINS", "LENINE E SPOK FREVO"]} horario={["10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"]} dia="DOMINGO" data="02/03" />
+              <CardPalco nome={["MAESTRO FORRÓ", "ANDRÉ MARRETA", "REVELAÇÃO", "MARROM BRASILEIRO", "MORGANA BERNARDO", "CIEL SANTOS", "DILSINHO"]} horario={["10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"]} dia="SEGUNDA" data="03/03" />
+              <CardPalco nome={["HIGOR HENRIQUE", "GERLANE LOPES", "NAÇÃO ZUMBI", "MARCÃO NOVENTA", "FELIPE AMOROM", "CLARA SOBRAL", "MARIA CLARA"]} horario={["10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"]} dia="TERÇA" data="04/03" />
+            </div>
+          </div>
+          <div
+  className="tab-pane fade"
+  id="palcos-cultural-pane"
+  role="tabpanel"
+  aria-labelledby="palcos-cultural-tab"
+  tabIndex="0"
+>
+  <div className="d-flex justify-content-center flex-wrap">
+    <CardPalco nome={["OFICINA AGRESTE FREVO", "GUSTAVO TRAVASSOS", "BRUNINHO LIMA", "ACADEMIA DA BERLINDA", "LUIZINHO MORENO", "DUDU DO ACORDEON"]} horario={["10:00", "12:00", "14:00", "16:00", "18:00", "20:00"]} dia="DOMINGO" data="02/03" />
+    <CardPalco nome={["RODRIGO RAPOSO", "WALTER LINS", "CRISTINA AMARAL", "BATERIA CABULOSA", "MAZZAMORRA", "RETRODAC"]} horario={["10:00", "12:00", "14:00", "16:00", "18:00", "20:00"]} dia="SEGUNDA" data="03/03" />
+    <CardPalco nome={["SILVÉRIO PESSOA", "IRAH CALDEIRA", "DOUGLAS LEON", "ZÉ BARRETO", "NENA QUEIROGA", "ANDERSON ALVES"]} horario={["10:00", "12:00", "14:00", "16:00", "18:00", "20:00"]} dia="TERÇA" data="04/03" />
+  </div>
+</div>
+
+<div
+  className="tab-pane fade"
+  id="palcos-centenaria-pane"
+  role="tabpanel"
+  aria-labelledby="palcos-centenaria-tab"
+  tabIndex="0"
+>
+  <div className="d-flex justify-content-center flex-wrap">
+    <CardPalco nome={["SOM BRASIL", "BENIL", "RAFA MESQUITA", "SAMARA COSTA", "LABAREDAS", "EMERSON CAVALCANTI"]} horario={["10:00", "12:00", "14:00", "16:00", "18:00", "20:00"]} dia="DOMINGO" data="02/03" />
+    <CardPalco nome={["MICHEL DINIZ", "MEGA PLAY", "JAMILE OLIVEIRA", "O CONDE", "O PELOTÃO", "VICTOR FERRARI"]} horario={["10:00", "12:00", "14:00", "16:00", "18:00", "20:00"]} dia="SEGUNDA" data="03/03" />
+    <CardPalco nome={["CLARA ELLYS", "BANDA PINGUIM", "DAVI FIRMA", "SEDUTORA", "FARINGES DA PAIXÃO", "WANESSA ROGER"]} horario={["10:00", "12:00", "14:00", "16:00", "18:00", "20:00"]} dia="TERÇA" data="04/03" />
+  </div>
+</div>
+
+<div
+  className="tab-pane fade"
+  id="palcos-sebastiao-pane"
+  role="tabpanel"
+  aria-labelledby="palcos-sebastiao-tab"
+  tabIndex="0"
+>
+  <div className="d-flex justify-content-center flex-wrap">
+    <CardPalco nome={["ORQUESTRA TUPY", "ORQUESTRA FREVO E CIA", "ORQUESTRA DO BIU", "ORQUESTRA ZENÓBIO TORRES", "ORQUESTRA FREVART"]} horario={["09:00", "11:00", "13:00", "15:00", "17:00"]} dia="DOMINGO" data="02/03" />
+    <CardPalco nome={["ORQUESTRA FREVO NO PÉ", "ANNY SALLES", "FÁBIO DA GM", "EVERTON LEO", "VITINHO KABULOSO", "KELVIS DURAN"]} horario={["09:00", "11:00", "13:00", "15:00", "17:00", "19:00"]} dia="SEGUNDA" data="03/03" />
+    <CardPalco nome={["ORQUESTRA DO RAIMUNDO", "ORQUESTRA FREVO SERRANO", "AMANnda LEÃO", "TIPO 3", "GRUPO TÔ NA SUA", "100XTRESSE"]} horario={["09:00", "11:00", "13:00", "15:00", "17:00", "19:00"]} dia="TERÇA" data="04/03" />
+  </div>
+</div>
+
+<div
+  className="tab-pane fade"
+  id="palcos-forro-pane"
+  role="tabpanel"
+  aria-labelledby="palcos-forro-tab"
+  tabIndex="0"
+>
+  <div className="d-flex justify-content-center flex-wrap">
+    <CardPalco nome={["PAU NO XOTE", "TRIO LAMPIÃO A GÁS", "PATRÍCIA ALVES", "TRIO ZEZINHO SANFONEIRO"]} horario={["10:00", "12:00", "14:00", "16:00"]} dia="DOMINGO" data="02/03" />
+    <CardPalco nome={["TRIO CHINELO DE PALHA", "MANOEL DA CONCERTINA", "DADAL FORRÓ DE TRÊS", "RINALDO XAVIER"]} horario={["10:00", "12:00", "14:00", "16:00"]} dia="SEGUNDA" data="03/03" />
+    <CardPalco nome={["CABILÁ E TAMBORETE DE FORRÓ", "TRIO KABRAS DA PESTE", "RENILDA CARDOSO", "TRIO ASA BRANCA"]} horario={["10:00", "12:00", "14:00", "16:00"]} dia="TERÇA" data="04/03" />
+  </div>
+</div>
+
+<div
+  className="tab-pane fade"
+  id="palcos-espaco-pane"
+  role="tabpanel"
+  aria-labelledby="palcos-espaco-tab"
+  tabIndex="0"
+>
+  <div className="d-flex justify-content-center flex-wrap">
+    <CardPalco nome={["ORQUESTRA FREVO NO PÉ", "ORQUESTRA CABELO DE FOGO", "ORQUESTRA DO RONALDINHO", "ORQUESTRA MAGNATAS"]} horario={["10:00", "12:00", "14:00", "16:00"]} dia="DOMINGO" data="02/03" />
+    <CardPalco nome={["ORQUESTRA DO RAIMUNDO", "ORQUESTRA OFICINA AGRESTE FREVO", "ORQUESTRA VASSOURINHAS"]} horario={["10:00", "12:00", "14:00"]} dia="SEGUNDA" data="03/03" />
+    <CardPalco nome={["ORQUESTRA AMIGOS DO FREVO", "ORQUESTRA CHARANGA PAPANGU", "ORQUESTRA FREVO E CIA"]} horario={["10:00", "12:00", "14:00"]} dia="TERÇA" data="04/03" />
+  </div>
+</div>
+</div> 
+</div>
+</div>
 
     <div className="divisoria"></div>
+      
+
+
 
     <div className="d-flex justify-content-center align-items-center flex-column m-container-palcos-cidade">
       <h3 className="m-titulo-programacao">PRÉVIAS CARNAVAL DO PAPANGU</h3>
@@ -197,7 +367,7 @@ export default function Home() {
           </div>
   </div>
 
-  </div>
+  
 
 
 </div>
