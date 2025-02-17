@@ -148,7 +148,7 @@ export default function Home() {
   <div className="m-container-palcos-serra d-flex justify-content-center align-items-center flex-column">
       <div className="m-container-titulo">
         <h2 className="m-titulo-secao mt-5 text-center">PROGRAMAÇÃO</h2>
-        <h3 className="m-titulo-programacao">POLO</h3>
+ 
       </div>
       <div className="container mt-3">
         <ul className="nav nav-tabs justify-content-center" role="tablist">
@@ -333,7 +333,7 @@ export default function Home() {
       <section id="blocos">
 
     <div className="d-flex justify-content-center align-items-center flex-column m-container-palcos-cidade">
-      <h3 className="m-titulo-programacao">BLOCOS</h3>
+    <h2 className="m-titulo-secao mt-5 text-center">BLOCOS</h2>
       <ul className="nav nav-tabs justify-content-center" role="tablist">
       <li className="nav-item" role="presentation">
   <button className="nav-link active m-button-programacaobloco" id="tab-02-02" data-bs-toggle="tab" data-bs-target="#pane-02-02" type="button" role="tab" aria-controls="pane-02-02" aria-selected="true">02/02</button>
