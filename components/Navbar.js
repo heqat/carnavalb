@@ -147,6 +147,22 @@ export default function Navbar() {
               </li>
               <li
                 className={`nav-item m-2 ${
+                  activeSection === "blocos" ? "active" : ""
+                }`}
+              >
+                <a
+                  href="/../#blocos"
+                  className="text-nav p-2"
+                  onClick={() => { 
+                    setActiveSection("blocos");
+                    closeMenu(); // Fecha o menu ao clicar
+                  }}
+                >
+                  BLOCOS
+                </a>
+              </li>
+              <li
+                className={`nav-item m-2 ${
                   activeSection === "mapa" ? "active" : ""
                 }`}
               >

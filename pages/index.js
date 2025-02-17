@@ -325,11 +325,12 @@ export default function Home() {
 </div> 
 </div>
 </div>
-
+</div>
     <div className="divisoria"></div>
-      
+      </section>
 
 
+      <section id="blocos">
 
     <div className="d-flex justify-content-center align-items-center flex-column m-container-palcos-cidade">
       <h3 className="m-titulo-programacao">BLOCOS</h3>
@@ -417,19 +418,19 @@ export default function Home() {
 
 <div className="tab-pane fade" id="pane-26-02" role="tabpanel" aria-labelledby="tab-26-02">
     <div className="d-flex justify-content-center flex-wrap">
-        <CardBloco nome="EDUCARNAVAL" horario="19:00" dia="SEGUNDA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
+        <CardBloco nome="EDUCARNAVAL" horario="19:00" dia="QUARTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
     </div>
 </div>
 
 <div className="tab-pane fade" id="pane-27-02" role="tabpanel" aria-labelledby="tab-27-02">
     <div className="d-flex justify-content-center flex-wrap">
-        <CardBloco nome="FOLIA DA BOA IDADE" horario="13:30" dia="TERÇA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
-        <CardBloco nome="RISOTRIL" horario="17:30" dia="TERÇA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
-        <CardBloco nome="NOVIOS" horario="19:00" dia="TERÇA" categoria="BLOCO" localizacao="Rua Gercino Ferreira da Silva" mapa="Rua Gercino Ferreira da Silva" />
-        <CardBloco nome="CORREDORES NOTURNOS DE BEZERROS" horario="19:30" dia="TERÇA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
-        <CardBloco nome="BLOCO NA BATIDA E NO FREVO" horario="20:00" dia="TERÇA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
-        <CardBloco nome="VAI DAR TUDO CERTO" horario="21:00" dia="TERÇA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
-        <CardBloco nome="ÓIA O CHICO" horario="21:30" dia="TERÇA" categoria="BLOCO" localizacao="Praça São Sebastião (Restaurante Lá em Casa)" mapa="Restaurante Lá em Casa" />
+        <CardBloco nome="FOLIA DA BOA IDADE" horario="13:30" dia="QUINTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
+        <CardBloco nome="RISOTRIL" horario="17:30" dia="QUINTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
+        <CardBloco nome="NOVIOS" horario="19:00" dia="QUINTA" categoria="BLOCO" localizacao="Rua Gercino Ferreira da Silva" mapa="Rua Gercino Ferreira da Silva" />
+        <CardBloco nome="CORREDORES NOTURNOS DE BEZERROS" horario="19:30" dia="QUINTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
+        <CardBloco nome="BLOCO NA BATIDA E NO FREVO" horario="20:00" dia="QUINTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
+        <CardBloco nome="VAI DAR TUDO CERTO" horario="21:00" dia="QUINTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
+        <CardBloco nome="ÓIA O CHICO" horario="21:30" dia="QUINTA" categoria="BLOCO" localizacao="Praça São Sebastião (Restaurante Lá em Casa)" mapa="Restaurante Lá em Casa" />
     </div>
 </div>
 
@@ -437,7 +438,7 @@ export default function Home() {
         <div className="d-flex justify-content-center flex-wrap">
         <CardBloco nome="EDUPAPANGU I" horario="08:00" dia="SEXTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
         <CardBloco nome="EDUPAPANGU II" horario="14:00" dia="SEXTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
-        <CardBloco nome="BLOCO TO NO SUAS (CIDADANIA) " horario="15:00" dia="SÁBADO" categoria="BLOCO" localizacao=" Praça São Sebastião" mapa="Praça São Sebastião" />
+        <CardBloco nome="BLOCO TO NO SUAS (CIDADANIA) " horario="15:00" dia="SEXTA" categoria="BLOCO" localizacao=" Praça São Sebastião" mapa="Praça São Sebastião" />
         <CardBloco nome="BATATÃO FOLIA" horario="18:00" dia="SEXTA" categoria="BLOCO" localizacao="Praça do Santo Antônio" mapa="Praça do Santo Antônio" />
         <CardBloco nome="SEGURA O CEGO" horario="18:00" dia="SEXTA" categoria="BLOCO" localizacao="Praça Centenária" mapa="Praça Centenária" />
         <CardBloco nome="BALÉ DA KIKA" horario="19:00" dia="SEXTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
@@ -449,23 +450,23 @@ export default function Home() {
 
 <div className="tab-pane fade" id="pane-01-03" role="tabpanel" aria-labelledby="tab-01-03">
     <div className="d-flex justify-content-center flex-wrap">
-        <CardBloco nome="ESQUENTA PARA SEU ZÉ PEREIRA" horario="14:00" dia="QUINTA" categoria="BLOCO" localizacao="Rua 09 de Janeiro" mapa="Rua 09 de Janeiro" />
-        <CardBloco nome="A CASA CAIU" horario="15:00" dia="QUINTA" categoria="BLOCO" localizacao="Rua São Sebastião (Centro) - Sapucarana" mapa="Rua São Sebastião" />
-        <CardBloco nome="AS CATRAIAS DO CRUZEIRO" horario="15:00" dia="QUINTA" categoria="BLOCO" localizacao="Campo do Cruzeiro" mapa="Campo do Cruzeiro" />
-        <CardBloco nome="A LIGA DO CRUZEIRO" horario="16:00" dia="QUINTA" categoria="BLOCO" localizacao="Praça Imaculada Conceição - Bairro do Cruzeiro" mapa="Praça Imaculada Conceição" />
-        <CardBloco nome="BIU LOLA" horario="18:00" dia="QUINTA" categoria="BLOCO" localizacao="Amarílis Recepção" mapa="Amarílis Recepção" />
-        <CardBloco nome="LIBERA O TOIN" horario="19:30" dia="QUINTA" categoria="BLOCO" localizacao="Rua Princesa Isabel, Rua da Palmeira, Rua Professor Amaral - Centenária" mapa="Rua Princesa Isabel" />
-        <CardBloco nome="BLOCO DO ZÉ PEREIRA" horario="19:00" dia="QUINTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
-        <CardBloco nome="BLOCO DO EU SOZINHO" horario="20:30" dia="QUINTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
+        <CardBloco nome="ESQUENTA PARA SEU ZÉ PEREIRA" horario="14:00" dia="SÁBADO" categoria="BLOCO" localizacao="Rua 09 de Janeiro" mapa="Rua 09 de Janeiro" />
+        <CardBloco nome="A CASA CAIU" horario="15:00" dia="SÁBADO" categoria="BLOCO" localizacao="Rua São Sebastião (Centro) - Sapucarana" mapa="Rua São Sebastião" />
+        <CardBloco nome="AS CATRAIAS DO CRUZEIRO" horario="15:00" dia="SÁBADO" categoria="BLOCO" localizacao="Campo do Cruzeiro" mapa="Campo do Cruzeiro" />
+        <CardBloco nome="A LIGA DO CRUZEIRO" horario="16:00" dia="SÁBADO" categoria="BLOCO" localizacao="Praça Imaculada Conceição - Bairro do Cruzeiro" mapa="Praça Imaculada Conceição" />
+        <CardBloco nome="BIU LOLA" horario="18:00" dia="SÁBADO" categoria="BLOCO" localizacao="Amarílis Recepção" mapa="Amarílis Recepção" />
+        <CardBloco nome="LIBERA O TOIN" horario="19:30" dia="SÁBADO" categoria="BLOCO" localizacao="Rua Princesa Isabel, Rua da Palmeira, Rua Professor Amaral - Centenária" mapa="Rua Princesa Isabel" />
+        <CardBloco nome="BLOCO DO ZÉ PEREIRA" horario="19:00" dia="SÁBADO" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
+        <CardBloco nome="BLOCO DO EU SOZINHO" horario="20:30" dia="SÁBADO" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
     </div>
 </div>
 
 <div className="tab-pane fade" id="pane-02-03" role="tabpanel" aria-labelledby="tab-02-03">
     <div className="d-flex justify-content-center flex-wrap">
-        <CardBloco nome="GRUPO CULTURAL BOI ESTRELA" horario="08:00" dia="SEXTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
-        <CardBloco nome="BLOCO DO PAPANGU" horario="11:00" dia="SEXTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
-        <CardBloco nome="BLOCO BOI CHORÃO" horario="10:00" dia="SEXTA" categoria="BLOCO" localizacao="Ponte do Rosário - Passagem Molhada" mapa="Ponte do Rosário" />
-        <CardBloco nome="RESSUSCITA FACILITA" horario="14:00" dia="SEXTA" categoria="BLOCO" localizacao="Praça Hilário Ribas - Boas Novas" mapa="Praça Hilário Ribas" />
+        <CardBloco nome="GRUPO CULTURAL BOI ESTRELA" horario="08:00" dia="DOMINGO" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
+        <CardBloco nome="BLOCO DO PAPANGU" horario="11:00" dia="DOMINGO" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
+        <CardBloco nome="BLOCO BOI CHORÃO" horario="10:00" dia="DOMINGO" categoria="BLOCO" localizacao="Ponte do Rosário - Passagem Molhada" mapa="Ponte do Rosário" />
+        <CardBloco nome="RESSUSCITA FACILITA" horario="14:00" dia="DOMINGO" categoria="BLOCO" localizacao="Praça Hilário Ribas - Boas Novas" mapa="Praça Hilário Ribas" />
     </div>
 </div>
 
@@ -494,14 +495,14 @@ export default function Home() {
 
       <div className="tab-pane fade" id="pane-05-03" role="tabpanel" aria-labelledby="tab-05-03">
         <div className="d-flex justify-content-center flex-wrap">
-        <CardBloco nome="PEIXADA DA CONFRA" horario="13:00" dia="QUARTA" categoria="EVENTO" localizacao="Em frente a CONFRARIA BEZERROS (rua da matriz) colado ao banco CIOOB" mapa="Em frente a CONFRARIA BEZERROS (rua da matriz) colado ao banco CIOOB" />
+        <CardBloco nome="PEIXADA DA CONFRA" horario="13:00" dia="QUARTA" categoria="EVENTO" localizacao="Em frente a CONFRARIA BEZERROS (rua da matriz) colado ao banco SICOOB" mapa="Em frente a CONFRARIA BEZERROS (rua da matriz) colado ao banco CIOOB" />
         <CardBloco nome="BACALHAU DO LULA VASSOUREIRO" horario="19:30" dia="QUARTA" categoria="BLOCO" localizacao="PRAÇA SÃO SEBASTIÃO" mapa="PRAÇA SÃO SEBASTIÃO" />
         </div>
       </div>
 
       <div className="tab-pane fade" id="pane-09-03" role="tabpanel" aria-labelledby="tab-09-03">
         <div className="d-flex justify-content-center flex-wrap">
-        <CardBloco nome="CARNAVAL DO SANTO AMARO 2" horario="14:00" dia="DOMINGO" categoria="CARNAVAL" localizacao="Rua do Imperador SANTO AMARO 2" mapa="Rua do Imperador SANTO AMARO 2" />
+        <CardBloco nome="CARNAVAL DO SANTO AMARO 2" horario="14:00" dia="DOMINGO" categoria="CARNAVAL" localizacao="Rua do Imperador" mapa="Rua do Imperador SANTO AMARO 2" />
         <CardBloco nome="SÓ AS CINZAS" horario="16:00" dia="DOMINGO" categoria="BLOCO" localizacao="Praça Centenária" mapa="Praça Centenária" />
         </div>
       </div>
@@ -513,7 +514,7 @@ export default function Home() {
   
 
 
-</div>
+
   
 
 </section>
