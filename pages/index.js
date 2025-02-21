@@ -554,6 +554,7 @@ export default function Home() {
 
     <Image src={marcaSesc} height={80}></Image>
   </div>
+  <div className='border border-bottom border-1 w-100'></div>
 
   <p className='texto-patrocinio'>REALIZAÇÃO:</p>
   <div className='container d-flex flex-wrap gap-5 align-items-center justify-content-center mb-5'>
