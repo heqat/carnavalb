@@ -464,7 +464,7 @@ export default function Home() {
         <div className="d-flex justify-content-center flex-wrap">
           <CardBloco nome="GRUPO CULTURAL BOI ESTRELA" horario="08:00" dia="DOMINGO" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
           <CardBloco nome="BLOCO DO PAPANGU" horario="11:00" dia="DOMINGO" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
-          <CardBloco nome="BLOCO BOI CHORÃO (PONTE DO ROSÁRIO - PASSAGEM MOLHADA)" horario="10:00" dia="DOMINGO" categoria="BLOCO" localizacao="Ponte do Rosário - Passagem Molhada" mapa="Ponte do Rosário" />
+          <CardBloco nome="BLOCO BOI CHORÃO" horario="10:00" dia="DOMINGO" categoria="BLOCO" localizacao="Ponte do Rosário - Passagem Molhada" mapa="Ponte do Rosário" />
           <CardBloco nome="RESSUSCITA FACILITA" horario="14:00" dia="DOMINGO" categoria="BLOCO" localizacao="Praça Hilário Ribas - Boas Novas" mapa="Praça Hilário Ribas" />
         </div>
       </div>
