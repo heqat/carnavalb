@@ -249,7 +249,7 @@ export default function Home() {
               <CardPalco nome={["ORQUESTRA CENTENÁRIA, CÔNEGO ALEXANDRE CAVALCANTI + GRUPO CULTURAL FOLCPOPULAR", "XAND AVIÃO", "TAYARA ANDREZA"]} horario={["19:00", "21:00", "23:00"]} dia="SÁBADO" data="01/03" />
               <CardPalco nome={["HENRIQUE BARBOSA", "ALMIR ROUCHE", "ANDRÉ RIO", "ELBA RAMALHO", "LADY FALCÃO", "GERALDINHO LINS", "LENINE E SPOK FREVO"]} horario={["10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"]} dia="DOMINGO" data="02/03" />
               <CardPalco nome={["MAESTRO FORRÓ", "ANDRÉ MARRETA", "REVELAÇÃO", "MARROM BRASILEIRO", "MORGANA BERNARDO", "CIEL SANTOS", "DILSINHO"]} horario={["10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"]} dia="SEGUNDA" data="03/03" />
-              <CardPalco nome={["HIGOR HENRIQUE", "GERLANE LOPES", "NAÇÃO ZUMBI", "MARCÃO NOVENTA", "FELIPE AMOROM", "CLARA SOBRAL", "MARIA CLARA"]} horario={["10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"]} dia="TERÇA" data="04/03" />
+              <CardPalco nome={["HIGOR HENRIQUE", "GERLANE LOPES", "NAÇÃO ZUMBI", "MARCÃO NOVENTA", "FELIPE AMORIM", "CLARA SOBRAL", "MARIA CLARA"]} horario={["10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"]} dia="TERÇA" data="04/03" />
             </div>
           </div>
           <div
@@ -351,10 +351,7 @@ export default function Home() {
       <li className="nav-item" role="presentation">
         <button className="nav-link m-button-programacaobloco" id="tab-23-02" data-bs-toggle="tab" data-bs-target="#pane-23-02" type="button" role="tab" aria-controls="pane-23-02" aria-selected="false">23/02</button>
       </li>
-      <li className="nav-item" role="presentation">
-        <button className="nav-link m-button-programacaobloco" id="tab-25-02" data-bs-toggle="tab" data-bs-target="#pane-25-02" type="button" role="tab" aria-controls="pane-25-02" aria-selected="false">25/02</button>
-      </li>
-      <li className="nav-item" role="presentation">
+        <li className="nav-item" role="presentation">
         <button className="nav-link m-button-programacaobloco" id="tab-26-02" data-bs-toggle="tab" data-bs-target="#pane-26-02" type="button" role="tab" aria-controls="pane-26-02" aria-selected="false">26/02</button>
       </li>
       <li className="nav-item" role="presentation">
@@ -387,7 +384,7 @@ export default function Home() {
       {/* Conteúdo dos dias PRÉVIA */}
       <div className="tab-pane fade show active" id="pane-02-02" role="tabpanel" aria-labelledby="tab-02-02">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="Orquesta de Frevo + Pagode" horario="15 horas" dia="DOMINGO" categoria="PRÉVIA" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
+          <CardBloco nome="Orquesta de Frevo + Pagode" horario="15:00" dia="DOMINGO" categoria="PRÉVIA" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
         </div>
       </div>
       <div className="tab-pane fade" id="pane-09-02" role="tabpanel" aria-labelledby="tab-09-02">
@@ -401,7 +398,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Conteúdo dos dias BLOCO (atualizados conforme PDF) */}
+  
       <div className="tab-pane fade" id="pane-22-02" role="tabpanel" aria-labelledby="tab-22-02">
         <div className="d-flex justify-content-center flex-wrap">
           <CardBloco nome="TROÇA ANACONSERVADORA DA PSICODEDELIA" horario="14:00" dia="SÁBADO" categoria="BLOCO" localizacao="R Rufina Borba" mapa="R Rufina Borba" />
@@ -415,12 +412,7 @@ export default function Home() {
           <CardBloco nome="BLOCO INFANTIL BRINCANDO DE SER CRIANÇA" horario="15:00" dia="DOMINGO" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
         </div>
       </div>
-      <div className="tab-pane fade" id="pane-25-02" role="tabpanel" aria-labelledby="tab-25-02">
-        <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="BAILE CARNAVALESCO DA PESSOA IDOSA (AFABE)" horario="16:00" dia="TERÇA" categoria="BLOCO" localizacao="Praça Duque de Caxias" mapa="Praça Duque de Caxias" />
-        </div>
-      </div>
-      <div className="tab-pane fade" id="pane-26-02" role="tabpanel" aria-labelledby="tab-26-02">
+               <div className="tab-pane fade" id="pane-26-02" role="tabpanel" aria-labelledby="tab-26-02">
         <div className="d-flex justify-content-center flex-wrap">
           <CardBloco nome="EDUCARNAVAL" horario="19:00" dia="QUARTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
         </div>
@@ -437,8 +429,8 @@ export default function Home() {
       </div>
       <div className="tab-pane fade" id="pane-28-02" role="tabpanel" aria-labelledby="tab-28-02">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="CARNAVAL DAS ESCOLAS MUNICIPAIS DO SÍTIO FRUTUOSO" horario="09:00" dia="SEXTA" categoria="BLOCO" localizacao="Sítio Frutuoso" mapa="Sítio Frutuoso" />
           <CardBloco nome="EDUPAPANGU I" horario="08:00" dia="SEXTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
+          <CardBloco nome="CARNAVAL DAS ESCOLAS MUNICIPAIS DO SÍTIO FRUTUOSO" horario="09:00" dia="SEXTA" categoria="BLOCO" localizacao="Sítio Frutuoso" mapa="Sítio Frutuoso" />
           <CardBloco nome="EDUPAPANGU II" horario="14:00" dia="SEXTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
           <CardBloco nome="BLOCO TO NO SUAS (CIDADANIA)" horario="15:00" dia="SEXTA" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
           <CardBloco nome="BATATÃO FOLIA" horario="18:00" dia="SEXTA" categoria="BLOCO" localizacao="Praça do Santo Antônio" mapa="Praça do Santo Antônio" />
@@ -451,20 +443,20 @@ export default function Home() {
       <div className="tab-pane fade" id="pane-01-03" role="tabpanel" aria-labelledby="tab-01-03">
         <div className="d-flex justify-content-center flex-wrap">
           <CardBloco nome="ESQUENTA PARA SEU ZÉ PEREIRA" horario="14:00" dia="SÁBADO" categoria="BLOCO" localizacao="Rua 09 de Janeiro" mapa="Rua 09 de Janeiro" />
-          <CardBloco nome="A LIGA DO CRUZEIRO" horario="16:00" dia="SÁBADO" categoria="BLOCO" localizacao="Praça Imaculada Conceição - Bairro do Cruzeiro" mapa="Praça Imaculada Conceição" />
           <CardBloco nome="A CASA CAIU" horario="15:00" dia="SÁBADO" categoria="BLOCO" localizacao="Rua São Sebastião (Centro) - Sapucarana" mapa="Rua São Sebastião" />
           <CardBloco nome="AS CATRAIAS DO CRUZEIRO" horario="15:00" dia="SÁBADO" categoria="BLOCO" localizacao="Campo do Cruzeiro" mapa="Campo do Cruzeiro" />
-          <CardBloco nome="LIBERA O TOIN" horario="19:30" dia="SÁBADO" categoria="BLOCO" localizacao="Rua Princesa Isabel, Rua da Palmeira, Rua Professor Amaral - Centenária" mapa="Rua Princesa Isabel" />
+          <CardBloco nome="A LIGA DO CRUZEIRO" horario="16:00" dia="SÁBADO" categoria="BLOCO" localizacao="Praça Imaculada Conceição - Bairro do Cruzeiro" mapa="Praça Imaculada Conceição" />
           <CardBloco nome="BIU LOLA" horario="18:00" dia="SÁBADO" categoria="BLOCO" localizacao="Amarílis Recepção" mapa="Amarílis Recepção" />
           <CardBloco nome="BLOCO DO ZÉ PEREIRA" horario="19:00" dia="SÁBADO" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
+          <CardBloco nome="LIBERA O TOIN" horario="19:30" dia="SÁBADO" categoria="BLOCO" localizacao="Rua Princesa Isabel, Rua da Palmeira, Rua Professor Amaral - Centenária" mapa="Rua Princesa Isabel" />
           <CardBloco nome="BLOCO DO EU SOZINHO" horario="20:30" dia="SÁBADO" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
         </div>
       </div>
       <div className="tab-pane fade" id="pane-02-03" role="tabpanel" aria-labelledby="tab-02-03">
         <div className="d-flex justify-content-center flex-wrap">
           <CardBloco nome="GRUPO CULTURAL BOI ESTRELA" horario="08:00" dia="DOMINGO" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
-          <CardBloco nome="BLOCO DO PAPANGU" horario="11:00" dia="DOMINGO" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
           <CardBloco nome="BLOCO BOI CHORÃO" horario="10:00" dia="DOMINGO" categoria="BLOCO" localizacao="Ponte do Rosário - Passagem Molhada" mapa="Ponte do Rosário" />
+          <CardBloco nome="BLOCO DO PAPANGU" horario="11:00" dia="DOMINGO" categoria="BLOCO" localizacao="Praça São Sebastião" mapa="Praça São Sebastião" />
           <CardBloco nome="RESSUSCITA FACILITA" horario="14:00" dia="DOMINGO" categoria="BLOCO" localizacao="Praça Hilário Ribas - Boas Novas" mapa="Praça Hilário Ribas" />
         </div>
       </div>
@@ -498,7 +490,7 @@ export default function Home() {
       </div>
       <div className="tab-pane fade" id="pane-09-03" role="tabpanel" aria-labelledby="tab-09-03">
         <div className="d-flex justify-content-center flex-wrap">
-          <CardBloco nome="CARNAVAL DO SANTO AMARO 2" horario="14:00" dia="DOMINGO" categoria="BLOCO" localizacao="Rua do Imperador SANTO AMARO 2" mapa="Rua do Imperador SANTO AMARO 2" />
+          <CardBloco nome="CARNAVAL DO SANTO AMARO 2" horario="14:00" dia="DOMINGO" categoria="BLOCO" localizacao="Rua do Imperador" mapa="Rua do Imperador SANTO AMARO 2" />
           <CardBloco nome="CARAVANA DO BEM" horario="14:00" dia="DOMINGO" categoria="BLOCO" localizacao="Residencial Bezerros" mapa="Residencial Bezerros" />
           <CardBloco nome="SÓ AS CINZAS" horario="16:00" dia="DOMINGO" categoria="BLOCO" localizacao="Praça Centenária" mapa="Praça Centenária" />
         </div>
@@ -546,7 +538,7 @@ export default function Home() {
   </div>
 
 
-  <p className='texto-patrocinio'>APOIO:</p>
+  <p className='texto-patrocinio'>APOIO INSTITUCIONAL:</p>
   <div className='container d-flex flex-wrap gap-5 align-items-center justify-content-center mb-5'>
     <Image src={marcaFundarpe} height={80}></Image>
     <Image src={marcaEmpetur} height={80}></Image>
