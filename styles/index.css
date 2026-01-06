@@ -1,8 +1,14 @@
+/* =================================================================
+   1. HERO PRINCIPAL E ANIMAÇÕES
+   ================================================================= */
 .bg-hero {
   margin-top: 100px;
   width: 100%;
   height: 100%;
-  
+}
+
+#hero {
+  height: calc(100vh - 100px);
 }
 
 .bg-hero-marca {
@@ -15,153 +21,6 @@
   transform: translate(-50%, calc(-50% - 100px));
 }
 
-.papangu {
-  width: 25rem;
-  height: 10rem;
-  background-image: url("../public/marcavazada.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  filter: drop-shadow(0px 0px 3px black);
-}
-
-.maestros {
-  width: 25rem;
-  height: 10rem;
-  background-image: url("../public/maestros.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  filter: drop-shadow(0px 0px 3px black);
-}
-
-.logog {
-  width: 25rem;
-  height: 10rem;
-  background-image: url("../public/logo-grande.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  filter: drop-shadow(0px 0px 3px black);
-}
-
-.logo-baile {
-  width: 30rem;
-  height: 10rem;
-  background-image: url("../public/marcabaile.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  filter: drop-shadow(0px 0px 3px black);
-}
-
-.m-btn-historia {
-  padding: 1rem 1.5rem;
-  color: white;
-  text-decoration: none;
-  border-radius: 40px;
-  border: 2px solid rgb(255, 255, 255); /* Define a cor, a espessura e o estilo da borda */
-  filter: drop-shadow(0px 0px 3px black);
-}
-
-.m-btn-historia:hover {
-  color: rgb(255, 255, 255);
-  transition: 0.5s;
-  background-color:  #ed1a3b;
-}
-
-.m-btn-baile {
-  padding: 1rem 1.5rem;
-  color: white;
-  text-decoration: none;
-  border-radius: 40px;
-  border: 2px solid rgb(255, 255, 255); /* Define a cor, a espessura e o estilo da borda */
-  filter: drop-shadow(0px 0px 3px black);
-}
-
-.m-btn-baile:hover {
-  color: white;
-  transition: 0.5s;
-  background-color: #ed1a3b;
-}
-
-
-.m-titulo-secao {
-  color: white;
-  font-family: var(--fonte-principal);
-  font-size: 2.5rem;
-}
-
-.m-titulo-secao-linha {
-  display: inline-block;
-  padding: 15px 25px;
-  color: white;
-  font-family: var(--fonte-principal);
-  font-size: 2.5rem;
-  /* background-image: url("../public/placa-madeira.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: auto;
-  max-width: 500px;
-  filter: drop-shadow(0px 0px 3px black); */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.m-titulo-secao-maior {
-  display: inline-block;
-  padding: 15px 25px;
-  color: white;
-  font-family: var(--fonte-principal);
-  font-size: 2.5rem;
-  /* background-image: url("../public/placa-madeira.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: auto;
-  max-width: 500px;
-  filter: drop-shadow(0px 0px 3px black); */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.m-titulo-secao-menor {
-  display: none;
-  padding: 15px 25px;
-  color: white;
-  font-family: var(--fonte-principal);
-  font-size: 2.5rem;
-  /* background-image: url("../public/placa-madeira.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: auto;
-  max-width: 500px;
-  filter: drop-shadow(0px 0px 3px black); */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
-}
-
-.m-apresentacao-texto {
-  font-size: 1.2rem;
-  font-family: var(--fonte-apoio);
-  line-height: 1.5rem;
-  text-align: justify;
-}
-
-.m-apresentacao-botao {
-  font-size: 1.2rem;
-  font-family: var(--fonte-apoio);
-  line-height: 1.5rem;
-  text-align: justify;
-}
-
-.m-baile-texto {
-  font-size: 1.2rem;
-  font-family: var(--fonte-apoio);
-  line-height: 1.5rem;
-  text-align: justify;
-}
-
 .arrow-down {
   border: none;
   background: none;
@@ -171,6 +30,370 @@
   bottom: 0;
 }
 
+@keyframes animacao-logo-hero {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSuave {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-animation {
+  animation: fadeInSuave 0.6s ease-out forwards;
+  width: 100%;
+}
+
+/* =================================================================
+   2. TIPOGRAFIA E TÍTULOS
+   ================================================================= */
+.m-titulo-secao,
+.m-titulo-secao-linha,
+.m-titulo-secao-maior,
+.m-titulo-secao-menor {
+  color: white;
+  font-family: var(--fonte-principal);
+  font-size: 2.5rem;
+}
+
+.m-titulo-secao-linha,
+.m-titulo-secao-maior,
+.m-titulo-secao-menor {
+  display: inline-block;
+  padding: 15px 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.m-titulo-secao-menor {
+  display: none;
+}
+
+.m-titulo-programacaotxt,
+.m-titulo-programacao {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-family: var(--fonte-principal);
+}
+
+.m-titulo-programacao {
+  margin-top: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.m-apresentacao-texto,
+.m-apresentacao-botao,
+.m-baile-texto,
+.texto-artista {
+  font-size: 1.2rem;
+  font-family: var(--fonte-apoio);
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
+/* =================================================================
+   3. ELEMENTOS GRÁFICOS (Logos e Imagens Decorativas)
+   ================================================================= */
+.papangu,
+.maestros,
+.logog,
+.logo-baile {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(0px 0px 3px black);
+}
+
+.papangu {
+  width: 25rem;
+  height: 10rem;
+  background-image: url("../public/marcavazada.png");
+}
+
+.maestros {
+  width: 25rem;
+  height: 10rem;
+  background-image: url("../public/maestros.png");
+}
+
+.logog {
+  width: 25rem;
+  height: 20rem;
+  background-image: url("../public/logo-grande.png");
+}
+
+.logo-baile {
+  width: 30rem;
+  height: 10rem;
+  background-image: url("../public/marcabaile.png");
+}
+
+/* =================================================================
+   4. BOTÕES GERAIS
+   ================================================================= */
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.m-btn-historia,
+.m-btn-baile {
+  padding: 1rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 40px;
+  border: 2px solid rgb(255, 255, 255);
+  filter: drop-shadow(0px 0px 3px black);
+  transition: 0.5s;
+}
+
+.m-btn-historia:hover,
+.m-btn-baile:hover {
+  color: rgb(255, 255, 255);
+  background-color: #ed1a3b;
+}
+
+.m-button-programacao,
+.m-button-programacaobloco {
+  font-family: var(--fonte-apoio);
+  color: var(--cor-cinza-escuro);
+  background: var(--cor-branco) !important;
+  border-radius: 0 !important;
+}
+
+.m-button-programacao:hover {
+  color: var(--cor-branco);
+  background: #f5821f !important;
+  border: 1px solid white;
+}
+
+.m-button-programacaobloco:hover {
+  color: var(--cor-branco);
+  background: #0092ff !important;
+  border: 1px solid white;
+}
+
+.m-button-programacao.active {
+  background: #e86c00 !important;
+}
+
+.m-button-programacaobloco.active {
+  background: #1f6dff !important;
+}
+
+/* =================================================================
+   5. NOVO HERO INTERATIVO (AJUSTES SOLICITADOS)
+   ================================================================= */
+
+.hero-interativo {
+  width: 100%;
+  min-height: 85vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.6s ease-in-out;
+}
+
+.bg-festa {
+  background-image: url("../public/ONDASAZUL.jpg");
+}
+
+.bg-homenageado {
+  background-image: url("../public/bg-azul2.png");
+}
+
+#apresentacao,
+#homenageado {
+  background: transparent !important;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+/* Botões com efeito translúcido (Glassmorphism) */
+.toggle-container {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 8px;
+  border-radius: 50px;
+  display: inline-flex;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn {
+  border: none;
+  background: transparent;
+  padding: 10px 25px;
+  border-radius: 40px;
+  font-family: 'Gabarito', sans-serif;
+  font-weight: 700;
+  color: #eee;
+  /* Cor clara para contraste */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.toggle-btn:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.toggle-btn.ativo {
+  background: #f5821f;
+  /* Laranja ativo */
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+#baile {
+  background-image: url("../public/BGROXOESC.png");
+  scroll-margin-top: 100px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+#programacao {
+  scroll-margin-top: 100px;
+  background: url("../public/BGAZULESC.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: repeat;
+  min-height: 80vh;
+}
+
+.container-programacao {
+  height: auto;
+  width: auto;
+}
+
+.m-container-mapa {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.m-container-mapa iframe {
+  width: 100vw;
+  max-width: 100%;
+  height: 500px;
+  /* Altura fixa */
+
+  border: none;
+
+  border-radius: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+#mapa {
+  scroll-margin-top: 70px;
+  background: url("../public/PADRÃOVERMELHO.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.m-container-mapa iframe {
+  border: 10px solid white;
+  border-bottom: 30px solid white;
+
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+}
+
+#patrocinio {
+  background-color: whitesmoke;
+}
+
+/* =================================================================
+   7. DIVISÓRIAS E UTILITÁRIOS
+   ================================================================= */
+.divisoria,
+.divisoria-laranja,
+.divisoria-azul,
+.divisoria-roxo {
+  width: 100%;
+  height: 1rem;
+  background-position: center;
+  background-size: contain;
+  filter: drop-shadow(0px 0px 3px black);
+}
+
+.divisoria,
+.divisoria-laranja {
+  background-image: url("/faixa-laranja.png");
+}
+
+.divisoria-azul {
+  background-image: url("/faixa.png");
+}
+
+.divisoria-roxo {
+  background-image: url("/faixa-roxo.png");
+}
+
+.sombra-suave {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 30px;
+  background: white;
+}
+
+.tag-artista {
+  background-color: #fff;
+  color: #444;
+  font-family: 'Gabarito', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: default;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}
+
+.tag-artista:hover {
+  background-color: #f5821f;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(245, 130, 31, 0.3);
+  border-color: #f5821f;
+}
+
+/* =================================================================
+   8. VÍDEO E MÍDIA
+   ================================================================= */
 .container-video {
   width: 100%;
   height: 90vh;
@@ -192,170 +415,17 @@
   height: 100%;
 }
 
-
-
-
-.m-button-programacao {
-  font-family: var(--fonte-apoio);
-  color: var(--cor-cinza-escuro);
-  background: var(--cor-branco) !important;
-  border-radius: 0 !important;
-}
-
-.m-button-programacao:hover {
-  color: var(--cor-branco);
-  background: #f5821f  !important;
-  border: 1px solid white;
-}
-
-.m-button-programacao.active {
-  background:#e86c00 !important;
-}
-
-.m-button-programacaobloco {
-  font-family: var(--fonte-apoio);
-  color: var(--cor-cinza-escuro);
-  background: var(--cor-branco) !important;
-  border-radius: 0 !important;
-}
-
-.m-button-programacaobloco:hover {
-  color: var(--cor-branco);
-  background: #0092ff !important;
-  border: 1px solid white;
-}
-
-.m-button-programacaobloco.active {
-  background:#1f6dff !important;
-}
-
-
-.active {
-  color: var(--cor-branco) !important;
-}
-
-.palcos.active {
-  color: var(--cor-branco) !important;
-}
-
-.nav-tabs {
-  border: none !important;
-}
-
-.m-titulo-programacaotxt {
-  text-align: center;
-  color: white;
-  font-size: 2rem;
-  font-family: var(--fonte-principal);
-}
-
-.m-titulo-programacao {
-  text-align: center;
-  color: #fff;
-  font-size: 2rem;
-  font-family: var(--fonte-principal);
-  margin-top: 2.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  height: 50px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center; /*
-  background-image: url("../public/placa-madeira.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 24rem;
-  max-width: 500px;
-  filter: drop-shadow(0px 0px 3px black) */
-  
-}
-
-.m-container-palcos-serra,
-.m-container-palcos-cidade {
-  scroll-margin-top: 100px;
-  width: 100%;
-  background-position: center;
-  background-repeat: repeat;
-}
-
-.m-container-palcos-serra {
-  background-image: url("../public/BGAZULESC.png");
-  background-size: 100%;
-  background-repeat: repeat; 
-  background-position: center;
-}
-
-.m-container-palcos-cidade {
-  scroll-margin-top: 100px;
-  background-image: url("../public/ONDASLARANJA.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat; 
-  background-position: center;
-}
-
-.m-container-mapa {
-  height: 100vh;
-  width: 100%;
-}
-
-.button-container {
-  display: flex; 
-  gap: 10px;
-}
-
-
-#hero {
-  height: calc(100vh - 100px);
-}
-
-#apresentacao {
-  scroll-margin-top: 100px;
-  background: url("../public/ONDASAZUL.jpg");
-  background-position: center;
-  background-size: 100%;
-  background-repeat: repeat;
-}
-
-#baile {
-  background-image: url("../public/BGROXOESC.png");
-  scroll-margin-top: 100px;
-  background-size: 100%;
-  background-position: center;
-  background-repeat: repeat;
-}
-
-#homenageado {
-  scroll-margin-top: 100px;
-  background-image: url("../public/PADRAOAZUL.png");
-  background-size: 100%;
-  background-position: center;
-  background-repeat: repeat;
-}
-
-#mapa {
-  scroll-margin-top: 70px;
-  background: url("../public/PADRÃOVERMELHO.png");
-  background-position: center;
-  background-repeat: repeat;
-}
-
-#patrocinio {
-  background-color: whitesmoke;
-}
-
-
+/* =================================================================
+   9. RESPONSIVIDADE (MOBILE)
+   ================================================================= */
 @media (max-width: 991px) {
   .container-video {
     height: 50vh;
   }
-  .m-container-palcos-serra {
-    background-repeat: repeat;  /* Substitua pelo nome da imagem menor */
-  }
 
+  .m-container-palcos-serra,
   .m-container-palcos-cidade {
-    background-repeat: repeat;  /* Substitua pelo nome da imagem menor */
+    background-repeat: repeat;
   }
 
   .m-titulo-secao-maior {
@@ -370,12 +440,13 @@
     font-size: 1rem;
     text-align: center;
   }
+
   .logo-baile {
     width: 20rem;
     height: 8rem;
   }
+
   .bg-hero-marca {
-   
     width: 20rem;
     height: auto;
     position: absolute;
@@ -383,78 +454,23 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, calc(-50% - 100px));
-
-    
-  }
-  #apresentacao{
-        background-size: 200%;
-        background-repeat: no-repeat;
-      
-    }
-
-}
-
-
-@keyframes animacao-logo-hero {
-  from {
-    opacity: 0;
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  /* Ajuste no Hero Interativo para Mobile */
+  .hero-interativo {
+    background-size: cover;
+    /* No mobile pode precisar ajustar a altura se ficar muito grande */
+    min-height: auto;
+    padding-bottom: 2rem;
   }
-}
 
-.nav-tabs {
-  border: none !important;
-}
+  #apresentacao,
+  #homenageado {
+    padding-top: 1rem;
+  }
 
-.nav-link:not(.active) {
-  opacity: 0.8;
-}
-
-.nav-link.active {
-  opacity: 1;
-}
-
-.divisoria {
-  width: 100%;
-  height: 1rem;
-  background-image: url("/faixa-laranja.png");
-  background-position: center;
-  background-size: contain;
-  filter: drop-shadow(0px 0px 3px black);
-}
-
-.divisoria-azul {
-  width: 100%;
-  height: 1rem;
-  background-image: url("/faixa.png");
-  background-position: center;
-  background-size: contain;
-  filter: drop-shadow(0px 0px 3px black);
-}
-
-.divisoria-roxo {
-  width: 100%;
-  height: 1rem;
-  background-image: url("/faixa-roxo.png");
-  background-position: center;
-  background-size: contain;
-  filter: drop-shadow(0px 0px 3px black);
-}
-
-.divisoria-laranja {
-  width: 100%;
-  height: 1rem;
-  background-image: url("/faixa-laranja.png");
-  background-position: center;
-  background-size: contain;
-  filter: drop-shadow(0px 0px 3px black);
-}
-
-.container-programacao{
-  height: auto;
-  width: auto;
+  .tag-artista {
+    padding: 7px 14px;
+    font-size: 0.9rem;
+  }
 }

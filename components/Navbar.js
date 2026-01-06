@@ -113,7 +113,7 @@ export default function Navbar() {
                   BAILE MUNICIPAL
                 </a>
               </li>
-              <li
+             {/* <li
                 className={`nav-item m-2 ${
                   activeSection === "homenageado" ? "active" : ""
                 }`}
@@ -128,7 +128,7 @@ export default function Navbar() {
                 >
                   HOMENAGEADOS
                 </a>
-              </li>
+              </li> */}
               <li
                 className={`nav-item m-2 ${
                   activeSection === "programacao" ? "active" : ""
@@ -142,10 +142,10 @@ export default function Navbar() {
                     closeMenu(); // Fecha o menu ao clicar
                   }}
                 >
-                  PROGRAMAÇÃO
+                  ATRAÇÕES
                 </a>
               </li>
-              <li
+             {/*  <li
                 className={`nav-item m-2 ${
                   activeSection === "blocos" ? "active" : ""
                 }`}
@@ -161,6 +161,7 @@ export default function Navbar() {
                   BLOCOS
                 </a>
               </li>
+              */}
               <li
                 className={`nav-item m-2 ${
                   activeSection === "mapa" ? "active" : ""
