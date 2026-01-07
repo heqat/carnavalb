@@ -1,46 +1,4 @@
-/* =================================================================
-   1. HERO PRINCIPAL E ANIMAÇÕES
-   ================================================================= */
-.bg-hero {
-  margin-top: 100px;
-  width: 100%;
-  height: 100%;
-}
-
-#hero {
-  height: calc(100vh - 100px);
-}
-
-.bg-hero-marca {
-  width: 30rem;
-  height: auto;
-  position: absolute;
-  filter: drop-shadow(0px 0px 3px black);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, calc(-50% - 100px));
-}
-
-.arrow-down {
-  border: none;
-  background: none;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-}
-
-@keyframes animacao-logo-hero {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* ANIMAÇÕES */
 @keyframes fadeInSuave {
   from {
     opacity: 0;
@@ -58,67 +16,146 @@
   width: 100%;
 }
 
-/* =================================================================
-   2. TIPOGRAFIA E TÍTULOS
-   ================================================================= */
-.m-titulo-secao,
-.m-titulo-secao-linha,
-.m-titulo-secao-maior,
-.m-titulo-secao-menor {
-  color: white;
-  font-family: var(--fonte-principal);
-  font-size: 2.5rem;
+/* HERO INTERATIVO */
+.hero-interativo {
+  margin-top: 70px;
+  width: 100%;
+
+  height: calc(100vh - 70px);
+  min-height: 650px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.6s ease-in-out;
+
+  position: relative;
+  padding-bottom: 3rem;
 }
 
-.m-titulo-secao-linha,
-.m-titulo-secao-maior,
-.m-titulo-secao-menor {
-  display: inline-block;
-  padding: 15px 25px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.bg-festa {
+  background-image: url("../public/ONDASAZUL.jpg");
 }
 
-.m-titulo-secao-menor {
-  display: none;
+.bg-homenageado {
+  background-image: url("../public/bg-azul2.png");
 }
 
-.m-titulo-programacaotxt,
-.m-titulo-programacao {
-  text-align: center;
-  color: white;
-  font-size: 2rem;
-  font-family: var(--fonte-principal);
+#apresentacao,
+#homenageado {
+  background: transparent !important;
 }
 
-.m-titulo-programacao {
-  margin-top: 2.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  height: 50px;
+.arrow-down {
+  border: none;
+  background: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.video-wrapper {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  background: #000;
+}
+
+.hero-video-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../public/estacao.jpg");
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  z-index: 5;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-.m-apresentacao-texto,
-.m-apresentacao-botao,
-.m-baile-texto,
-.texto-artista {
-  font-size: 1.2rem;
-  font-family: var(--fonte-apoio);
-  line-height: 1.5rem;
-  text-align: justify;
+.video-capa::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
 }
 
-/* =================================================================
-   3. ELEMENTOS GRÁFICOS (Logos e Imagens Decorativas)
-   ================================================================= */
-.papangu,
-.maestros,
-.logog,
-.logo-baile {
+.video-capa:hover::before {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.m-btn-play-video {
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 6;
+}
+
+.m-btn-play-video:hover {
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+
+.texto-ver-video {
+  margin-top: 15px;
+  color: white;
+  font-family: 'Gabarito', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  z-index: 6;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+/* ELEMENTOS GRÁFICOS */
+.logog {
+  width: 100%;
+  max-width: 25rem;
+  height: 12rem;
+  background-image: url("../public/logo-grande.png");
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+}
+
+.logo-baile {
+  width: 30rem;
+  height: 10rem;
+  background-image: url("../public/marcabaile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.papangu,
+.maestros {
+  background-repeat: no-repeat;
+  background-size: contain;
   background-position: center;
   filter: drop-shadow(0px 0px 3px black);
 }
@@ -135,101 +172,31 @@
   background-image: url("../public/maestros.png");
 }
 
-.logog {
-  width: 25rem;
-  height: 20rem;
-  background-image: url("../public/logo-grande.png");
-}
-
-.logo-baile {
-  width: 30rem;
-  height: 10rem;
-  background-image: url("../public/marcabaile.png");
-}
-
-/* =================================================================
-   4. BOTÕES GERAIS
-   ================================================================= */
+/* BOTÕES */
 .button-container {
   display: flex;
   gap: 10px;
-  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .m-btn-historia,
 .m-btn-baile {
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   color: white;
   text-decoration: none;
   border-radius: 40px;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid white;
   filter: drop-shadow(0px 0px 3px black);
   transition: 0.5s;
+  white-space: nowrap;
 }
 
 .m-btn-historia:hover,
 .m-btn-baile:hover {
-  color: rgb(255, 255, 255);
+  color: white;
   background-color: #ed1a3b;
 }
 
-.m-button-programacao,
-.m-button-programacaobloco {
-  font-family: var(--fonte-apoio);
-  color: var(--cor-cinza-escuro);
-  background: var(--cor-branco) !important;
-  border-radius: 0 !important;
-}
-
-.m-button-programacao:hover {
-  color: var(--cor-branco);
-  background: #f5821f !important;
-  border: 1px solid white;
-}
-
-.m-button-programacaobloco:hover {
-  color: var(--cor-branco);
-  background: #0092ff !important;
-  border: 1px solid white;
-}
-
-.m-button-programacao.active {
-  background: #e86c00 !important;
-}
-
-.m-button-programacaobloco.active {
-  background: #1f6dff !important;
-}
-
-/* =================================================================
-   5. NOVO HERO INTERATIVO (AJUSTES SOLICITADOS)
-   ================================================================= */
-
-.hero-interativo {
-  width: 100%;
-  min-height: 85vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: background-image 0.6s ease-in-out;
-}
-
-.bg-festa {
-  background-image: url("../public/ONDASAZUL.jpg");
-}
-
-.bg-homenageado {
-  background-image: url("../public/bg-azul2.png");
-}
-
-#apresentacao,
-#homenageado {
-  background: transparent !important;
-  width: 100%;
-  padding-top: 2rem;
-}
-
-/* Botões com efeito translúcido (Glassmorphism) */
 .toggle-container {
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
@@ -249,7 +216,6 @@
   font-family: 'Gabarito', sans-serif;
   font-weight: 700;
   color: #eee;
-  /* Cor clara para contraste */
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
@@ -263,12 +229,70 @@
 
 .toggle-btn.ativo {
   background: #f5821f;
-  /* Laranja ativo */
   color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.m-button-programacao,
+.m-button-programacaobloco {
+  font-family: var(--fonte-apoio);
+  color: var(--cor-cinza-escuro);
+  background: var(--cor-branco) !important;
+  border-radius: 0 !important;
+}
 
+.m-button-programacao:hover {
+  color: white;
+  background: #f5821f !important;
+  border: 1px solid white;
+}
+
+.m-button-programacaobloco:hover {
+  color: white;
+  background: #0092ff !important;
+  border: 1px solid white;
+}
+
+.m-button-programacao.active {
+  background: #e86c00 !important;
+}
+
+.m-button-programacaobloco.active {
+  background: #1f6dff !important;
+}
+
+
+/* IPOGRAFIA */
+.m-titulo-secao,
+.m-titulo-programacaotxt,
+.m-titulo-programacao {
+  color: white;
+  font-family: var(--fonte-principal);
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.m-titulo-programacaotxt,
+.m-titulo-programacao {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.m-apresentacao-texto,
+.m-apresentacao-botao,
+.m-baile-texto,
+.texto-artista {
+  font-size: 1.15rem;
+  font-family: var(--fonte-apoio);
+  line-height: 1.6rem;
+}
+
+.m-apresentacao-texto {
+  text-align: justify;
+}
+
+
+/*  SEÇÕES */
 #baile {
   background-image: url("../public/BGROXOESC.png");
   scroll-margin-top: 100px;
@@ -286,32 +310,6 @@
   min-height: 80vh;
 }
 
-.container-programacao {
-  height: auto;
-  width: auto;
-}
-
-.m-container-mapa {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-}
-
-.m-container-mapa iframe {
-  width: 100vw;
-  max-width: 100%;
-  height: 500px;
-  /* Altura fixa */
-
-  border: none;
-
-  border-radius: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  margin: 0;
-}
-
 #mapa {
   scroll-margin-top: 70px;
   background: url("../public/PADRÃOVERMELHO.png");
@@ -319,25 +317,20 @@
   background-repeat: repeat;
 }
 
+#patrocinio {
+  background-color: whitesmoke;
+}
+
 .m-container-mapa iframe {
   border: 10px solid white;
   border-bottom: 30px solid white;
-
   border-radius: 5px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-
   width: 100%;
   max-width: 1000px;
   height: 500px;
 }
 
-#patrocinio {
-  background-color: whitesmoke;
-}
-
-/* =================================================================
-   7. DIVISÓRIAS E UTILITÁRIOS
-   ================================================================= */
 .divisoria,
 .divisoria-laranja,
 .divisoria-azul,
@@ -351,21 +344,15 @@
 
 .divisoria,
 .divisoria-laranja {
-  background-image: url("/faixa-laranja.png");
+  background-image: url("../public/faixa-laranja.png");
 }
 
 .divisoria-azul {
-  background-image: url("/faixa.png");
+  background-image: url("../public/faixa.png");
 }
 
 .divisoria-roxo {
-  background-image: url("/faixa-roxo.png");
-}
-
-.sombra-suave {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border-radius: 30px;
-  background: white;
+  background-image: url("../public/faixa-roxo.png");
 }
 
 .tag-artista {
@@ -391,54 +378,35 @@
   border-color: #f5821f;
 }
 
-/* =================================================================
-   8. VÍDEO E MÍDIA
-   ================================================================= */
-.container-video {
-  width: 100%;
-  height: 90vh;
+.sombra-suave {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 30px;
+  background: white;
 }
 
-.m-btn-play-video {
-  border: none;
-  background: none;
-}
 
-.m-btn-play-video:hover {
-  transition: 0.5s;
-  transform: scale(1.2);
-}
-
-.m-iframe-video {
-  visibility: hidden;
-  width: 100%;
-  height: 100%;
-}
-
-/* =================================================================
-   9. RESPONSIVIDADE (MOBILE)
-   ================================================================= */
+/*  RESPONSIVIDADE (MOBILE) */
 @media (max-width: 991px) {
-  .container-video {
-    height: 50vh;
+
+  .hero-interativo {
+    height: auto !important;
+    min-height: 100vh;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
   }
 
-  .m-container-palcos-serra,
-  .m-container-palcos-cidade {
-    background-repeat: repeat;
+  .logog {
+    background-position: center;
+    height: 10rem;
+    margin-bottom: 1rem;
   }
 
-  .m-titulo-secao-maior {
-    display: none;
-  }
-
-  .m-titulo-secao-menor {
-    display: inline-block;
-  }
-
-  .m-apresentacao-botao {
-    font-size: 1rem;
+  .m-apresentacao-texto {
     text-align: center;
+  }
+
+  .button-container {
+    justify-content: center !important;
   }
 
   .logo-baile {
@@ -446,27 +414,16 @@
     height: 8rem;
   }
 
-  .bg-hero-marca {
-    width: 20rem;
-    height: auto;
-    position: absolute;
-    filter: drop-shadow(0px 0px 3px black);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, calc(-50% - 100px));
+  .m-btn-historia,
+  .m-btn-baile {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
 
-  /* Ajuste no Hero Interativo para Mobile */
-  .hero-interativo {
-    background-size: cover;
-    /* No mobile pode precisar ajustar a altura se ficar muito grande */
-    min-height: auto;
-    padding-bottom: 2rem;
-  }
-
-  #apresentacao,
-  #homenageado {
-    padding-top: 1rem;
+  .m-container-mapa iframe {
+    border-width: 5px;
+    border-bottom-width: 15px;
+    height: 350px;
   }
 
   .tag-artista {

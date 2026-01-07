@@ -6,8 +6,11 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
-  const [isVisible, setIsVisible] = useState(true); // Estado para visibilidade da navbar
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar o menu hamburguer
+  const [isVisible, setIsVisible] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const [termoBusca, setTermoBusca] = useState(""); 
+  
   const router = useRouter();
 
   const toggleMenu = () => {
@@ -15,7 +18,26 @@ export default function Navbar() {
   };
 
   const closeMenu = () => {
-    setIsMenuOpen(false); // Fecha o menu ao clicar em um item
+    setIsMenuOpen(false);
+  };
+
+  const handleSearchFocus = (e) => {
+    e.preventDefault();
+    closeMenu();
+
+    const termoParaEnviar = termoBusca;
+
+    setTermoBusca("");
+
+    if (termoParaEnviar.trim() !== "") {
+        router.push({
+            pathname: '/',
+            query: { busca: termoParaEnviar },
+            hash: 'programacao'
+        });
+    } else {
+        router.push('/#programacao');
+    }
   };
 
   useEffect(() => {
@@ -25,20 +47,17 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Atualiza a visibilidade da navbar
       if (currentScrollY > lastScrollY) {
-        setIsVisible(false); // Esconde ao rolar para baixo
+        setIsVisible(false);
       } else {
-        setIsVisible(true); // Mostra ao rolar para cima
+        setIsVisible(true);
       }
-
       lastScrollY = currentScrollY;
 
-      // Identifica a seção ativa
       const sections = document.querySelectorAll("section");
       let currentSection = "";
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 120; // Ajuste conforme necessário
+        const sectionTop = section.offsetTop - 120;
         const sectionHeight = section.clientHeight;
         if (
           window.scrollY >= sectionTop &&
@@ -49,11 +68,10 @@ export default function Navbar() {
       });
       setActiveSection(currentSection);
 
-      // Aguarda 300ms para reaparecer após parar a rolagem
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
-        setIsVisible(true); // Mostra a navbar
-      }, 500); // Tempo de delay ajustável
+        setIsVisible(true);
+      }, 500);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -72,7 +90,7 @@ export default function Navbar() {
         }`}
       >
         <div className="container">
-          <a href="/">
+          <a href="/" className="navbar-brand">
             <Image
               className="m-navbar-marca"
               src={marca}
@@ -86,100 +104,64 @@ export default function Navbar() {
             className="navbar-toggler text-white"
             type="button"
             aria-expanded={isMenuOpen ? "true" : "false"}
-            onClick={toggleMenu} // Função para alternar o menu
+            onClick={toggleMenu}
             aria-label="Toggle navigation"
           >
             <i className="bx bx-menu bx-md"></i>
           </button>
 
           <div
-            className={`navbar-collapse collapse ${isMenuOpen ? "show" : ""}`} // Alterna a classe 'show'
+            className={`navbar-collapse collapse ${isMenuOpen ? "show" : ""}`}
             id="navbar-collapse"
           >
-            <ul className="navbar-nav ms-auto align-items-center">
-              <li
-                className={`nav-item m-2 ${
-                  activeSection === "baile" ? "active" : ""
-                }`}
-              >
+            <ul className="navbar-nav me-auto align-items-center">
+              <li className={`nav-item m-2 ${activeSection === "baile" ? "active" : ""}`}>
                 <a
                   href="/../#baile"
                   className="text-nav p-2"
-                  onClick={() => { 
-                    setActiveSection("baile");
-                    closeMenu(); // Fecha o menu ao clicar
-                  }}
+                  onClick={() => { setActiveSection("baile"); closeMenu(); }}
                 >
                   BAILE MUNICIPAL
                 </a>
               </li>
-             {/* <li
-                className={`nav-item m-2 ${
-                  activeSection === "homenageado" ? "active" : ""
-                }`}
-              >
-                <a
-                  href="/../#homenageado"
-                  className="text-nav p-2"
-                  onClick={() => { 
-                    setActiveSection("homenageado");
-                    closeMenu(); // Fecha o menu ao clicar
-                  }}
-                >
-                  HOMENAGEADOS
-                </a>
-              </li> */}
-              <li
-                className={`nav-item m-2 ${
-                  activeSection === "programacao" ? "active" : ""
-                }`}
-              >
+              <li className={`nav-item m-2 ${activeSection === "programacao" ? "active" : ""}`}>
                 <a
                   href="/../#programacao"
                   className="text-nav p-2"
-                  onClick={() => { 
-                    setActiveSection("programacao");
-                    closeMenu(); // Fecha o menu ao clicar
-                  }}
+                  onClick={() => { setActiveSection("programacao"); closeMenu(); }}
                 >
                   ATRAÇÕES
                 </a>
               </li>
-             {/*  <li
-                className={`nav-item m-2 ${
-                  activeSection === "blocos" ? "active" : ""
-                }`}
-              >
-                <a
-                  href="/../#blocos"
-                  className="text-nav p-2"
-                  onClick={() => { 
-                    setActiveSection("blocos");
-                    closeMenu(); // Fecha o menu ao clicar
-                  }}
-                >
-                  BLOCOS
-                </a>
-              </li>
-              */}
-              <li
-                className={`nav-item m-2 ${
-                  activeSection === "mapa" ? "active" : ""
-                }`}
-              >
+              <li className={`nav-item m-2 ${activeSection === "mapa" ? "active" : ""}`}>
                 <a
                   href="/../#mapa"
                   className="text-nav p-2"
-                  onClick={() => { 
-                    setActiveSection("mapa");
-                    closeMenu(); // Fecha o menu ao clicar
-                  }}
+                  onClick={() => { setActiveSection("mapa"); closeMenu(); }}
                 >
                   MAPA
                 </a>
               </li>
             </ul>
-            <ul className="navbar-nav d-flex justify-content-center flex-row align-items-center ms-auto m-navbar-icones">
+
+            {/*  BUSCA */}
+            <div className="search-pill-container">
+                <div className="search-pill">
+                    <input 
+                        type="text" 
+                        placeholder="Buscar atração..." 
+                        className="search-input"
+                        value={termoBusca} 
+                        onChange={(e) => setTermoBusca(e.target.value)}
+                        onKeyDown={(e) => { if(e.key === 'Enter') handleSearchFocus(e) }}
+                    />
+                    <button className="search-btn" onClick={handleSearchFocus}>
+                        <i className="bx bx-search bx-sm"></i>
+                    </button>
+                </div>
+            </div>
+
+            <ul className="navbar-nav ms-auto d-flex justify-content-center flex-row align-items-center m-navbar-icones">
               <li className="nav-item m-2">
                 <Link
                   href="https://instagram.com/carnavaldopapanguoficial/"
@@ -203,22 +185,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-
-      <style jsx>{`
-        #navbar {
-          transition: transform 0.3s ease-in-out;
-        }
-        #navbar.hidden {
-          transform: translateY(-100%);
-        }
-        #navbar.visible {
-          transform: translateY(0);
-        }
-        .nav-item.active a {
-          font-size: larger;
-          font-weight: bold;
-        }
-      `}</style>
     </header>
   );
 }
