@@ -40,46 +40,55 @@ export default function Navbar() {
     }
   };
 
-  useEffect(() => {
+ useEffect(() => {
     let lastScrollY = window.scrollY;
-    let timeoutId;
+    let ticking = false; // Variável de controle (semaforo)
 
-    const handleScroll = () => {
+    const updateNavbar = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY) {
+      // 1. Atualiza Visibilidade
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
       }
       lastScrollY = currentScrollY;
 
+      // 2. Identifica Seção Ativa (Cálculo Pesado)
       const sections = document.querySelectorAll("section");
       let currentSection = "";
+      
+      // Otimização: Adiciona um buffer para não trocar freneticamente
+      const scrollMiddle = window.scrollY + (window.innerHeight / 3); 
+
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 120;
+        const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (
-          window.scrollY >= sectionTop &&
-          window.scrollY < sectionTop + sectionHeight
-        ) {
+        
+        if (scrollMiddle >= sectionTop && scrollMiddle < sectionTop + sectionHeight) {
           currentSection = section.getAttribute("id");
         }
       });
-      setActiveSection(currentSection);
+      
+      // Só atualiza o estado se realmente mudou (Evita re-render desnecessário)
+      if (currentSection !== activeSection) {
+        setActiveSection(currentSection);
+      }
 
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        setIsVisible(true);
-      }, 500);
+      ticking = false; // Libera para a próxima execução
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(timeoutId);
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateNavbar);
+        ticking = true;
+      }
     };
-  }, []);
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [activeSection]); 
 
   return (
     <header>

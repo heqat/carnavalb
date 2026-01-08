@@ -18,27 +18,26 @@
 
 /* HERO INTERATIVO */
 .hero-interativo {
-  margin-top: 70px;
+  padding-top: 100px;
   width: 100%;
-
-  height: calc(100vh - 70px);
-  min-height: 650px;
-
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition: background-image 0.6s ease-in-out;
-
   position: relative;
-  padding-bottom: 3rem;
+  overflow: hidden;
 }
 
 .bg-festa {
-  background-image: url("../public/ONDASAZUL.jpg");
+  background-image: url("../public/CBG7.jpg");
 }
 
 .bg-homenageado {
-  background-image: url("../public/bg-azul2.png");
+  background-image: url("../public/CBG9.jpg");
 }
 
 #apresentacao,
@@ -52,12 +51,13 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 20px;
+  bottom: 10px;
   z-index: 20;
   cursor: pointer;
 }
 
 .video-wrapper {
+  margin-top:-55px;
   width: 100%;
   position: relative;
   padding-bottom: 56.25%;
@@ -66,6 +66,7 @@
   overflow: hidden;
   border: 4px solid rgba(255, 255, 255, 0.5);
   background: #000;
+  max-height: 45vh;
 }
 
 .hero-video-frame {
@@ -131,12 +132,32 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+.conteudo-fixo {
+  padding-top: 2rem;
+  padding-bottom: 3.5rem;
+}
+
+.hero-interativo .col-lg-6.text-white {
+  margin-top: -2rem;
+}
+
+.logog {
+  margin-top: -1rem;
+}
+
+.button-container {
+  margin-bottom: 2rem;
+}
+
+.arrow-down {
+  bottom: 15px;
+}
 
 /* ELEMENTOS GRÁFICOS */
 .logog {
-  width: 100%;
-  max-width: 25rem;
-  height: 12rem;
+  width: 280px;
+  height: 180px;
+  margin: 0 auto;
   background-image: url("../public/logo-grande.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -200,19 +221,20 @@
 .toggle-container {
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
-  padding: 8px;
+  padding: 5px;
   border-radius: 50px;
   display: inline-flex;
   gap: 10px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
 }
 
 .toggle-btn {
   border: none;
   background: transparent;
-  padding: 10px 25px;
-  border-radius: 40px;
+  padding: 8px 20px;
+  border-radius: 30px;
   font-family: 'Gabarito', sans-serif;
   font-weight: 700;
   color: #eee;
@@ -232,35 +254,6 @@
   color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-.m-button-programacao,
-.m-button-programacaobloco {
-  font-family: var(--fonte-apoio);
-  color: var(--cor-cinza-escuro);
-  background: var(--cor-branco) !important;
-  border-radius: 0 !important;
-}
-
-.m-button-programacao:hover {
-  color: white;
-  background: #f5821f !important;
-  border: 1px solid white;
-}
-
-.m-button-programacaobloco:hover {
-  color: white;
-  background: #0092ff !important;
-  border: 1px solid white;
-}
-
-.m-button-programacao.active {
-  background: #e86c00 !important;
-}
-
-.m-button-programacaobloco.active {
-  background: #1f6dff !important;
-}
-
 
 /* IPOGRAFIA */
 .m-titulo-secao,
@@ -282,17 +275,18 @@
 .m-apresentacao-botao,
 .m-baile-texto,
 .texto-artista {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-family: var(--fonte-apoio);
-  line-height: 1.6rem;
+  line-height: 1.5rem;
 }
 
 .m-apresentacao-texto {
   text-align: justify;
+  margin-bottom: 1rem;
+  text-shadow:2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-
-/*  SEÇÕES */
+/* SEÇÕES */
 #baile {
   background-image: url("../public/BGROXOESC.png");
   scroll-margin-top: 100px;
@@ -312,7 +306,7 @@
 
 #mapa {
   scroll-margin-top: 70px;
-  background: url("../public/PADRÃOVERMELHO.png");
+  background: url("../public/CBG13.jpg");
   background-position: center;
   background-repeat: repeat;
 }
@@ -384,20 +378,18 @@
   background: white;
 }
 
-
-/*  RESPONSIVIDADE (MOBILE) */
 @media (max-width: 991px) {
 
   .hero-interativo {
     height: auto !important;
     min-height: 100vh;
-    padding-top: 2rem;
+    padding-top: 120px;
     padding-bottom: 5rem;
   }
 
   .logog {
-    background-position: center;
-    height: 10rem;
+    width: 220px;
+    height: 130px;
     margin-bottom: 1rem;
   }
 
@@ -429,5 +421,18 @@
   .tag-artista {
     padding: 7px 14px;
     font-size: 0.9rem;
+  }
+
+  .hero-interativo .col-lg-6.text-white {
+   margin-top: 0;
+  }
+  
+  .conteudo-fixo {
+    padding-top:1.5rem;
+    padding-bottom: 0rem
+  }
+
+  .video-wrapper {
+    margin-top:0;
   }
 }

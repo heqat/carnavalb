@@ -52,11 +52,11 @@ export default function Home() {
       <Navbar />
 
       <main>
-        <section 
-          className={`hero-interativo d-flex flex-column align-items-center justify-content-center ${abaAtiva === 'apresentacao' ? 'bg-festa' : 'bg-homenageado'}`}
+      <section 
+          className={`hero-interativo d-flex flex-column align-items-center ${abaAtiva === 'apresentacao' ? 'bg-festa' : 'bg-homenageado'}`}
         >
           
-          <div className="container d-flex justify-content-center pt-5 pb-4 position-relative" style={{ zIndex: 10 }}>
+          <div className="container d-flex justify-content-center mt-3 position-relative" style={{ zIndex: 10, flex: '0 0 auto' }}>
             <div className="toggle-container shadow-sm">
                 <button 
                     className={`toggle-btn ${abaAtiva === 'apresentacao' ? 'ativo' : ''}`}
@@ -73,13 +73,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="container conteudo-fixo w-100 flex-grow-1 d-flex align-items-center position-relative">
+          <div className="container conteudo-fixo w-100 flex-grow-1 d-flex justify-content-center position-relative">
             
             {abaAtiva === 'apresentacao' && (
                 <div className="fade-in-animation w-100">
-                    <div className="row align-items-center">
-                        <div className="col-lg-6 col-12 text-white text-center mb-5 mb-lg-0">
-                            <div className='logog mx-auto mb-4'></div>
+                    <div className="row align-items-center justify-content-center">
+                        <div className="col-lg-6 col-12 text-white text-center mb-4 mb-lg-0">
+                            <div className='logog mx-auto mb-3'></div>
                             <p className='m-apresentacao-texto'> 
                                 Bem-vindos ao maior e melhor carnaval do interior do Brasil: o Carnaval do Papangu em Bezerros - Pernambuco. 
                                 Os ritmos que unem gerações e tradição embalam a folia mais tradicional, autêntica, segura e familiar.
@@ -88,7 +88,7 @@ export default function Home() {
                                 Você é nosso convidado especial para conhecer a magia dos nossos papangus, suas cores, ritmos e alegria contagiante.
                                 <strong> BEZERROS ESPERA POR VOCÊ!!! </strong>
                             </p>
-                            <div className="button-container justify-content-center mt-4">
+                            <div className="button-container justify-content-center mt-3">
                                 <a className="m-btn-historia" href="/historia">HISTÓRIA</a>
                                 <a className="m-btn-historia" href="/servicos">SERVIÇOS</a>
                                 <a className="m-btn-historia" href="/faq">FAQ</a>
@@ -126,11 +126,10 @@ export default function Home() {
                 <div className="fade-in-animation w-100">
                       <div className='d-flex justify-content-center align-items-center flex-column'>
                         <div className="container-homenageado text-center text-white">
-                            <br></br>
-                            <div className="container-foto d-flex justify-content-center align-items-center mb-4">
-                                <img src="/maestros.png" className="imagem-artista historia img-fluid" style={{maxHeight: '300px'}} alt="Maestros Homenageados"></img>
+                            <div className="container-foto d-flex justify-content-center align-items-center mb-3">
+                                <img src="/maestros.png" className="imagem-artista historia img-fluid" style={{maxHeight: '35vh'}} alt="Maestros Homenageados"></img>
                             </div>
-                            <div className="container-texto mt-3">
+                            <div className="container-texto mt-2" style={{maxWidth: '900px'}}>
                                 <p className="texto-artista"> 
                                     O Carnaval do Papangu 2025 presta sua homenagem aos músicos e maestros que são pessoas fundamentais para abrilhantar, 
                                     com suas orquestras e alegorias, os sons e ritmos que embalam o maior e melhor carnaval do interior do Brasil.
