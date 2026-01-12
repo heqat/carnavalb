@@ -187,15 +187,15 @@
     overflow-y: auto;
   }
 
-  .historia-ano {
-    font-size: 3rem;
-    top: 10px;
-    right: 20px;
-  }
   .historia-titulo {
     font-size: 1.8rem;
     margin-top: 20px;
   }
+
+  .historia-ano {
+    font-size: 1.4rem;
+  }
+
   .historia-texto {
     font-size: 1rem;
     line-height: 1.5;
