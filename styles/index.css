@@ -36,14 +36,16 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right,
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.15));
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.15)
+  );
   backdrop-filter: blur(2px);
   z-index: 1;
 }
 
-.hero-interativo>* {
+.hero-interativo > * {
   position: relative;
   z-index: 2;
 }
@@ -84,7 +86,7 @@
 }
 
 .video-wrapper {
-  margin-top:-55px;
+  margin-top: -55px;
   width: 100%;
   position: relative;
   padding-bottom: 56.25%;
@@ -123,7 +125,7 @@
 }
 
 .video-capa::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -152,7 +154,7 @@
 .texto-ver-video {
   margin-top: 15px;
   color: white;
-  font-family: 'Gabarito', sans-serif;
+  font-family: "Gabarito", sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
   z-index: 6;
@@ -166,7 +168,6 @@
 
 .hero-interativo .col-lg-6.text-white {
   margin-top: -2rem;
-  
 }
 
 .logog {
@@ -263,7 +264,7 @@
   background: transparent;
   padding: 8px 20px;
   border-radius: 30px;
-  font-family: 'Gabarito', sans-serif;
+  font-family: "Gabarito", sans-serif;
   font-weight: 700;
   color: #eee;
   cursor: pointer;
@@ -311,7 +312,7 @@
 .m-apresentacao-texto {
   text-align: justify;
   margin-bottom: 1rem;
-  text-shadow:2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* SEÇÕES */
@@ -380,7 +381,7 @@
 .tag-artista {
   background-color: #fff;
   color: #444;
-  font-family: 'Gabarito', sans-serif;
+  font-family: "Gabarito", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   padding: 10px 24px;
@@ -407,7 +408,6 @@
 }
 
 @media (max-width: 991px) {
-
   .hero-interativo {
     height: auto !important;
     min-height: 100vh;
@@ -452,15 +452,15 @@
   }
 
   .hero-interativo .col-lg-6.text-white {
-   margin-top: 0;
+    margin-top: 0;
   }
-  
+
   .conteudo-fixo {
-    padding-top:1.5rem;
-    padding-bottom: 0rem
+    padding-top: 1.5rem;
+    padding-bottom: 0rem;
   }
 
   .video-wrapper {
-    margin-top:0;
+    margin-top: 0;
   }
 }
