@@ -4,7 +4,6 @@
     opacity: 0;
     transform: translateY(10px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -13,10 +12,11 @@
 
 .fade-in-animation {
   animation: fadeInSuave 0.6s ease-out forwards;
-  width: 100%;
 }
 
-/* HERO INTERATIVO */
+/* =========================================
+   HERO INTERATIVO
+   ========================================= */
 .hero-interativo {
   padding-top: 120px;
   width: 100%;
@@ -61,30 +61,46 @@
   justify-content: center;
 }
 
+/* Backgrounds do Hero */
 .bg-festa {
   background-image: url("../public/CBG7.jpg");
 }
-
 .bg-homenageado {
   background-image: url("../public/CBG9.jpg");
 }
-
 #apresentacao,
 #homenageado {
   background: transparent !important;
 }
 
+/* Controles e Botões do Hero */
+.conteudo-fixo {
+  padding-top: 2rem;
+  padding-bottom: 3.5rem;
+}
+.hero-interativo .col-lg-6.text-white {
+  margin-top: -2rem;
+}
+.logog {
+  margin-top: -1rem;
+}
+.button-container {
+  margin-bottom: 2rem;
+}
+
+/* Seta Rolagem */
 .arrow-down {
   border: none;
   background: none;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 10px;
+  bottom: 15px;
   z-index: 20;
   cursor: pointer;
 }
 
+/* Wrapper de Vídeo */
 .video-wrapper {
   margin-top: -55px;
   width: 100%;
@@ -134,7 +150,6 @@
   background: rgba(0, 0, 0, 0.3);
   transition: background 0.3s;
 }
-
 .video-capa:hover::before {
   background: rgba(0, 0, 0, 0.1);
 }
@@ -145,7 +160,6 @@
   cursor: pointer;
   z-index: 6;
 }
-
 .m-btn-play-video:hover {
   transition: 0.5s;
   transform: scale(1.2);
@@ -161,28 +175,9 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.conteudo-fixo {
-  padding-top: 2rem;
-  padding-bottom: 3.5rem;
-}
-
-.hero-interativo .col-lg-6.text-white {
-  margin-top: -2rem;
-}
-
-.logog {
-  margin-top: -1rem;
-}
-
-.button-container {
-  margin-bottom: 2rem;
-}
-
-.arrow-down {
-  bottom: 15px;
-}
-
-/* ELEMENTOS GRÁFICOS */
+/* =========================================
+   ELEMENTOS GRÁFICOS E LOGOS
+   ========================================= */
 .logog {
   width: 280px;
   height: 180px;
@@ -193,15 +188,6 @@
   background-size: contain;
 }
 
-.logo-baile {
-  width: 30rem;
-  height: 10rem;
-  background-image: url("../public/marcabaile.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
 .papangu,
 .maestros {
   background-repeat: no-repeat;
@@ -209,42 +195,45 @@
   background-position: center;
   filter: drop-shadow(0px 0px 3px black);
 }
-
 .papangu {
   width: 25rem;
   height: 10rem;
   background-image: url("../public/marcavazada.png");
 }
-
 .maestros {
   width: 25rem;
   height: 10rem;
   background-image: url("../public/maestros.png");
 }
 
-/* BOTÕES */
+/* =========================================
+   BOTÕES E CONTROLES (Toggle)
+   ========================================= */
 .button-container {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.m-btn-historia,
-.m-btn-baile {
-  padding: 0.8rem 1.5rem;
+.m-btn-historia {
+  padding: 0.8rem 1.8rem;
   color: white;
   text-decoration: none;
   border-radius: 40px;
   border: 2px solid white;
   filter: drop-shadow(0px 0px 3px black);
-  transition: 0.5s;
+  transition: 0.4s;
   white-space: nowrap;
+  font-weight: bold;
+  background: transparent;
+  cursor: pointer;
 }
 
-.m-btn-historia:hover,
-.m-btn-baile:hover {
-  color: white;
-  background-color: #ed1a3b;
+.m-btn-historia:hover {
+  color: #d69c1e;
+  background-color: white;
+  border-color: white;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
 .toggle-container {
@@ -277,14 +266,15 @@
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
 }
-
 .toggle-btn.ativo {
   background: #f5821f;
   color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* IPOGRAFIA */
+/* =========================================
+   TIPOGRAFIA
+   ========================================= */
 .m-titulo-secao,
 .m-titulo-programacaotxt,
 .m-titulo-programacao {
@@ -293,7 +283,6 @@
   font-size: 2.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
 .m-titulo-programacaotxt,
 .m-titulo-programacao {
   text-align: center;
@@ -308,22 +297,272 @@
   font-family: var(--fonte-apoio);
   line-height: 1.5rem;
 }
-
 .m-apresentacao-texto {
   text-align: justify;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* SEÇÕES */
+/* SEÇÃO BAILE MUNICIPAL */
 #baile {
-  background-image: url("../public/BGROXOESC.png");
-  scroll-margin-top: 100px;
-  background-size: 100%;
+  background-image: url("../public/CBG2.jpg");
+  background-size: cover;
   background-position: center;
-  background-repeat: repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  scroll-margin-top: 80px;
 }
 
+.baile-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.baile-slider-wrapper {
+  display: flex;
+  width: 200vw;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* CADA TELA */
+.baile-slide {
+  width: 100vw;
+  min-height: 90vh;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- ELEMENTOS GERAIS --- */
+
+/* A Seta do Canto (FIXA NA SECTION) */
+.btn-corner-toggle {
+  position: absolute;
+  top: 60px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-corner-toggle.voltar {
+  right: auto;
+  left: 25px;
+}
+
+.btn-corner-toggle:hover {
+  background: #f5821f;
+  border-color: #f5821f;
+  transform: scale(1.1);
+}
+
+/* --- TELA 1 (CAPA) --- */
+.logo-baile {
+  width: 100%;
+  max-width: 450px;
+  height: 20 0px;
+  background-image: url("../public/marcabaile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
+}
+.m-baile-texto {
+  color: white;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  max-width: 90%;
+}
+.button-container-baile {
+  margin-bottom: 20px;
+}
+
+/* Botão de Compra */
+.m-btn-baile {
+  padding: 1rem 2.2rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid white;
+  transition: 0.3s;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer;
+}
+.m-btn-baile.destaque {
+  background: #ed1a3b;
+  border-color: #ed1a3b;
+  box-shadow: 0 0 20px rgba(237, 26, 59, 0.4);
+}
+.m-btn-baile:hover {
+  background: white;
+  color: #4c12a1;
+  border-color: white;
+  transform: translateY(-3px);
+}
+
+/* Card do Line-Up (Coluna Direita) */
+.baile-lineup-card {
+  background: rgba(76, 18, 161, 0.5);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 25px;
+  width: 100%;
+  max-width: 420px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transform: rotate(1deg);
+  transition: 0.3s;
+}
+.baile-lineup-card:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.lineup-header {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+  color: #f5821f;
+  font-family: var(--fonte-principal);
+  font-size: 1.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.lineup-list {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.lineup-list span {
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+  padding-bottom: 5px;
+  width: 100%;
+  text-align: center;
+}
+.lineup-list span:last-child {
+  border-bottom: none;
+}
+.lineup-footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* --- TELA 2 (DETALHES) --- */
+.baile-card-vidro {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  padding: 40px;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  color: white;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.baile-controls {
+  margin-bottom: 40px;
+}
+.baile-tab-content {
+  width: 100%;
+  animation: fadeInSuave 0.5s ease;
+}
+
+/* Grid de Informações */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  text-align: left;
+}
+.info-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 15px;
+}
+.info-box.full-width {
+  grid-column: 1 / -1;
+}
+.info-box h4 {
+  color: #f5821f;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Layout Homenageado */
+.homenageado-layout {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-align: left;
+  padding: 0 30px;
+}
+.homenageado-avatar img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #f5821f;
+  box-shadow: 0 0 30px rgba(245, 130, 31, 0.5);
+}
+.homenageado-bio h3 {
+  font-family: var(--fonte-principal);
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+.badge-patrimonio {
+  background: #ed1a3b;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.homenageado-bio p {
+  margin-top: 20px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+/* =========================================
+   OUTRAS SEÇÕES
+   ========================================= */
 #programacao {
   scroll-margin-top: 100px;
   background: url("../public/BGAZULESC.png");
@@ -354,30 +593,47 @@
   height: 500px;
 }
 
-.divisoria,
-.divisoria-laranja,
-.divisoria-azul,
-.divisoria-roxo {
+/* DIVISÓRIAS */
+.divisoria-overlap {
+  position: relative;
   width: 100%;
-  height: 1rem;
-  background-position: center;
-  background-size: contain;
-  filter: drop-shadow(0px 0px 3px black);
+  line-height: 0;
+  z-index: 10; /* Garante que a imagem fique POR CIMA do conteúdo seguinte */
+  pointer-events: none; /* Importante: deixa clicar no mapa/conteúdo que estiver "atrás" da parte transparente */
+
+  /* A MÁGICA: Puxa o conteúdo de baixo para cima */
+  /* Ajuste essa porcentagem dependendo da altura da sua imagem */
+  margin-bottom: -2vw;
+  margin-top: -2vw;
 }
 
-.divisoria,
-.divisoria-laranja {
-  background-image: url("../public/faixa-laranja.png");
+.divisoria-overlap img {
+  width: 100%;
+  height: 4rem;
+  display: block;
+  /* Opcional: Filtro de sombra para dar profundidade ao recorte */
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.3));
 }
 
-.divisoria-azul {
-  background-image: url("../public/faixa.png");
+.footer-ilustracao-wrapper {
+  width: 100%;
+  background-color: transparent; /* Ou a cor de fundo do site se precisar */
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.divisoria-roxo {
-  background-image: url("../public/faixa-roxo.png");
+.footer-imagem {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Se no PC ficar muito grande, você pode limitar a largura máxima assim: */
+  /* max-width: 1920px; */
+  object-fit: cover;
 }
 
+/* COMPONENTES EXTRAS */
 .tag-artista {
   background-color: #fff;
   color: #444;
@@ -392,7 +648,6 @@
   transition: all 0.2s ease-in-out;
   white-space: nowrap;
 }
-
 .tag-artista:hover {
   background-color: #f5821f;
   color: #fff;
@@ -407,60 +662,126 @@
   background: white;
 }
 
+/* =========================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================= */
 @media (max-width: 991px) {
+  /* Hero Ajustes */
   .hero-interativo {
     height: auto !important;
     min-height: 100vh;
     padding-top: 120px;
     padding-bottom: 5rem;
   }
-
   .logog {
     width: 220px;
     height: 130px;
     margin-bottom: 1rem;
   }
-
   .m-apresentacao-texto {
     text-align: center;
   }
-
   .button-container {
     justify-content: center !important;
   }
+  .hero-interativo .col-lg-6.text-white {
+    margin-top: 0;
+  }
+  .conteudo-fixo {
+    padding-top: 1.5rem;
+    padding-bottom: 0rem;
+  }
+  .video-wrapper {
+    margin-top: 0;
+  }
 
+  /* Seta no Mobile */
+  .btn-corner-toggle {
+    top: 20px;
+    right: 20px; /* Mantém fixo */
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  /* Ajuste Tela 1 Baile Mobile */
+  .baile-slide {
+    padding: 40px 20px;
+  }
   .logo-baile {
-    width: 20rem;
-    height: 8rem;
+    background-position: center;
+    margin: 0 auto 1.5rem auto;
+    height: 120px;
+    width: 100%;
+  }
+  .m-baile-texto {
+    text-align: center;
+    max-width: 100%;
+  }
+  .button-container-baile {
+    justify-content: center;
+  }
+  .col-lg-6 {
+    text-align: center;
   }
 
-  .m-btn-historia,
-  .m-btn-baile {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+  /* Lineup Card Mobile */
+  .baile-lineup-card {
+    transform: none;
+    margin-top: 30px;
+    max-width: 100%;
   }
 
+  /* Ajuste Tela 2 Baile */
+  .baile-card-vidro {
+    padding: 20px;
+    min-height: auto;
+  }
+  .homenageado-layout {
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+  }
+  .homenageado-avatar img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Mapa/Outros */
   .m-container-mapa iframe {
     border-width: 5px;
     border-bottom-width: 15px;
     height: 350px;
   }
-
   .tag-artista {
     padding: 7px 14px;
     font-size: 0.9rem;
   }
-
-  .hero-interativo .col-lg-6.text-white {
-    margin-top: 0;
+  .footer-imagem {
+    width: 150%; /* Dica: aumenta um pouco a imagem no mobile para focar no centro */
+    margin-left: -25%; /* Centraliza o excesso */
+    /* OU deixe 100% se a imagem já for pensada para mobile */
+    max-width: 100%;
+    margin-left: 0;
   }
 
-  .conteudo-fixo {
-    padding-top: 1.5rem;
-    padding-bottom: 0rem;
+  .divisoria-overlap {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: -2vw;
+    margin-top: -2vw;
   }
 
-  .video-wrapper {
-    margin-top: 0;
+  .divisoria-overlap img {
+    width: 100%;
+    height: 2rem;
+    display: block;
+    /* Opcional: Filtro de sombra para dar profundidade ao recorte */
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.3));
   }
 }

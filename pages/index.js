@@ -21,6 +21,8 @@ export default function Home() {
   const router = useRouter(); // Inicializa o router
   const [busca, setBusca] = useState("");
   const [abaAtiva, setAbaAtiva] = useState("apresentacao");
+  const [slideBaile, setSlideBaile] = useState(0); // 0 = Capa, 1 = Detalhes
+  const [abaBaile, setAbaBaile] = useState("atracoes"); // 'atracoes' ou 'ingressos'
   const [videoRodando, setVideoRodando] = useState(false);
 
   useEffect(() => {
@@ -200,38 +202,127 @@ export default function Home() {
             <i className="bx bx-chevron-down bx-fade-down display-1 text-white"></i>
           </button>
         </section>
-
-        <div className="divisoria"></div>
-
+        <div className="divisoria-overlap">
+          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
+        </div>
         <section id="baile">
-          <div className="d-flex w-100 justify-content-center flex-column align-items-center">
-            <div className="container d-flex flex-column justify-content-center align-items-center text-center mt-0 m-5 text-white">
-              <div className="mt-5 logo-baile"></div>
-              <br></br>
-              <p className="m-baile-texto">
-                Já imaginou vivenciar uma noite de música vibrante, cores,
-                ritmos e alegria em uma só festa? Vista sua fantasia e venha
-                participar do mais tradicional baile carnavalesco do interior de
-                Pernambuco.
-              </p>
-              <br></br>
-              <div className="button-container">
-                <a className="m-btn-baile" href="/baile-municipal">
-                  SAIBA MAIS!
-                </a>
-                <a
-                  className="m-btn-baile"
-                  href="https://www.sympla.com.br"
-                  target="_blank"
-                >
-                  COMPRE SEU INGRESSO
-                </a>
+          {/* BOTÃO DE NAVEGAÇÃO */}
+          <button
+            className={`btn-corner-toggle ${slideBaile === 1 ? "voltar" : ""}`}
+            onClick={() => {
+              if (slideBaile === 0) {
+                setSlideBaile(1);
+                setAbaBaile("detalhes"); // já garante tela 2 em detalhes
+              } else {
+                setSlideBaile(0);
+              }
+            }}
+          >
+            <i
+              className={`bx ${
+                slideBaile === 0 ? "bx-right-arrow-alt" : "bx-left-arrow-alt"
+              }`}
+            ></i>
+          </button>
+
+          {/* VIEWPORT DO SLIDER */}
+          <div className="baile-viewport">
+            <div
+              className="baile-slider-wrapper"
+              style={{ transform: `translateX(-${slideBaile * 100}vw)` }}
+            >
+              {/* --- TELA 1 DO BAILE (CAPA) --- */}
+              <div className="baile-slide">
+                {/* REMOVIDO d-flex do container para não quebrar o Grid */}
+                <div className="container h-100 position-relative">
+                  {/* row h-100 para centralizar verticalmente as colunas */}
+                  <div className="row h-100 align-items-center justify-content-center">
+                    {/* COLUNA ESQUERDA (Texto) */}
+                    <div className="col-12 col-lg-6 text-center text-lg-start mb-5 mb-lg-0 fade-in-animation">
+                      <div className="logo-baile mx-auto mx-lg-0"></div>
+
+                      <p className="m-baile-texto">
+                        Prepare sua fantasia! O baile mais tradicional do
+                        interior está de volta. Uma noite de frevo, cultura e
+                        alegria no Clube Literário.
+                      </p>
+
+                      <div className="button-container-baile d-flex justify-content-center justify-content-lg-start">
+                        <a
+                          className="m-btn-baile destaque"
+                          href="https://www.sympla.com.br"
+                          target="_blank"
+                        >
+                          GARANTIR INGRESSO
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* COLUNA DIREITA (Card) */}
+                    <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center fade-in-animation">
+                      <div className="baile-lineup-card shadow-lg">
+                        <div className="lineup-header">
+                          <i className="bx bxs-music"></i> LINE-UP
+                        </div>
+                        <div className="lineup-list">
+                          <span>ALCEU VALENÇA</span>
+                          <span>ELBA RAMALHO</span>
+                          <span>MAESTRO FORRÓ</span>
+                          <span>ORQ. TROPICANA</span>
+                        </div>
+                        <div className="lineup-footer">
+                          *Programação sujeita a alterações
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* --- TELA 2 --- */}
+              <div className="baile-slide">
+                <div className="baile-card-vidro">
+                  <div className="baile-controls">
+                    <div className="toggle-container">
+                      <button
+                        className={`toggle-btn ${
+                          abaBaile === "detalhes" ? "ativo" : ""
+                        }`}
+                        onClick={() => setAbaBaile("detalhes")}
+                      >
+                        ℹ️ DETALHES GERAIS
+                      </button>
+                      <button
+                        className={`toggle-btn ${
+                          abaBaile === "homenageado" ? "ativo" : ""
+                        }`}
+                        onClick={() => setAbaBaile("homenageado")}
+                      >
+                        🌟 HOMENAGEADO
+                      </button>
+                    </div>
+                  </div>
+
+                  {abaBaile === "detalhes" && (
+                    <div className="baile-tab-content info-grid fade-in-animation">
+                      {/* ... seu conteúdo */}
+                    </div>
+                  )}
+
+                  {abaBaile === "homenageado" && (
+                    <div className="baile-tab-content homenageado-layout fade-in-animation">
+                      {/* ... seu conteúdo */}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <div className="divisoria-laranja"></div>
+        <div className="divisoria-overlap">
+          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
+        </div>
 
         <section id="programacao" className="w-100 py-5">
           <div className="container">
@@ -278,7 +369,9 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="divisoria"></div>
+        <div className="divisoria-overlap">
+          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
+        </div>
 
         <section id="mapa">
           <div className="d-flex flex-column justify-content-center align-items-center m-container-mapa">
@@ -294,7 +387,9 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="divisoria"></div>
+        <div className="divisoria-overlap">
+          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
+        </div>
       </main>
       <Footer />
     </>

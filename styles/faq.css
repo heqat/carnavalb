@@ -1,29 +1,159 @@
+/* SEÇÃO PRINCIPAL */
 #faq {
-    margin-top: 100px;
-    background-image: url("../public/ONDASVERMELHAS.jpg");
-    background-position: center;
-    background-repeat: repeat; 
-    background-size: 50%;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  font-family: var(--fonte-apoio);
+
+  /* Mesmo fundo do site para coerência */
+  background-image: url("../public/BGAMARELO.png");
+  background-repeat: repeat;
+  background-size: 50%;
+  background-position: center;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TÍTULO */
+.page-title {
+  font-family: var(--fonte-principal);
+  font-size: 3rem;
+  color: #ed1a3b;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 0px white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+/* CONTAINER DAS PERGUNTAS */
+.faq-container {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaço entre os cartões */
+}
+
+/* O CARTÃO (ACORDEÃO) */
+.faq-item {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  overflow: hidden; /* Esconde a resposta quando fechado */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(237, 26, 59, 0.1);
+  border-color: #f5821f;
+}
+
+/* ESTADO ATIVO (ABERTO) */
+.faq-item.active {
+  background: white;
+  border-color: #ed1a3b;
+  box-shadow: 0 10px 25px rgba(237, 26, 59, 0.15);
+}
+
+/* A PERGUNTA (CABEÇALHO CLICÁVEL) */
+.faq-question {
+  width: 100%;
+  padding: 20px 25px;
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+}
+
+.question-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #444;
+  transition: color 0.3s;
+  padding-right: 20px;
+}
+
+.faq-item.active .question-text {
+  color: #ed1a3b; /* Vermelho quando aberto */
+}
+
+/* ÍCONE (+ / -) */
+.icon-toggle {
+  font-size: 1.5rem;
+  color: #f5821f;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  min-width: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-item.active .icon-toggle {
+  transform: rotate(135deg); /* Gira e vira um X */
+  color: #ed1a3b;
+}
+
+/* A RESPOSTA (CONTEÚDO) */
+.faq-answer {
+  max-height: 0; /* Começa fechado */
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, opacity 0.4s ease;
+  opacity: 0;
+  background: rgba(245, 130, 31, 0.05); /* Fundo bem leve laranja */
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px; /* Altura suficiente para texto */
+  opacity: 1;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.answer-content {
+  padding: 20px 25px 30px 25px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* IMAGEM DECORATIVA NO FINAL (OPCIONAL) */
+.faq-footer-img {
+  margin-top: 50px;
+  width: 150px;
+  opacity: 0.8;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.5rem;
   }
-
-  .accordion-button {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5) !important; 
-   color: white !important;
-   background-color: #0077ff !important;
-   font-family: var(--fonte-principal);
-   border-radius: 2px !important; 
-   border: 2px solid #ffffff !important; 
- }
- 
- 
- .accordion-button:after {
-   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
- }
-
- .accordion-body {
-    font-family: var(--fonte-apoio);
-    background-color: var(--cor-amarela);
+  .faq-question {
+    padding: 15px 20px;
   }
-
-
- 
+  .question-text {
+    font-size: 1rem;
+  }
+}
