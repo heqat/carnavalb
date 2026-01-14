@@ -12,7 +12,7 @@ export default function FAQ() {
     {
       pergunta: "Quando começa o Carnaval do Papangu 2026?",
       resposta:
-        "A festa oficial começa na sexta-feira de carnaval, mas as prévias e o clima de folia tomam conta da cidade semanas antes. Fique ligado na nossa programação oficial para não perder o Galo, os blocos de rua e os shows no palco principal!",
+        "A festa oficial começa na sexta-feira de carnaval, mas as prévias e o clima de folia tomam conta da cidade semanas antes. Fique ligado na nossa programação oficial para não perder os blocos de rua e os shows no palco principal!",
     },
     {
       pergunta: "Onde posso encontrar a programação dos blocos?",
@@ -34,11 +34,6 @@ export default function FAQ() {
       resposta:
         "Durante o carnaval, montamos uma estrutura especial de saúde e segurança. O posto médico avançado fica próximo à Praça da Matriz, e temos viaturas do SAMU e Polícia Militar em pontos estratégicos dos polos de animação.",
     },
-    {
-      pergunta: "Como participar do concurso de Papangus?",
-      resposta:
-        "As inscrições para o tradicional Concurso dos Papangus geralmente abrem algumas semanas antes do evento e podem ser feitas na Secretaria de Turismo ou online. Fique atento às categorias (tradicional, estilizado, infantil) e aos prêmios!",
-    },
   ];
 
   // Função para alternar (abrir/fechar)
@@ -54,20 +49,20 @@ export default function FAQ() {
     <>
       <Head>
         <title>FAQ - Carnaval do Papangu 2025</title>
-        <meta name="title" content="FAQ - Carnaval do Papangu 2025" />
+        <meta name="title" content="FAQ - Carnaval do Papangu 2026" />
 
         <meta
           property="og:url"
           content="https://carnaval.bezerros.pe.gov.br/faq"
         />
-        <meta property="og:title" content="FAQ - Carnaval do Papangu 2025" />
+        <meta property="og:title" content="FAQ - Carnaval do Papangu 2026" />
         <meta
           property="twitter:url"
           content="https://carnaval.bezerros.pe.gov.br/faq"
         />
         <meta
           property="twitter:title"
-          content="FAQ - Carnaval do Papangu 2025"
+          content="FAQ - Carnaval do Papangu 2026"
         />
       </Head>
 
@@ -76,7 +71,6 @@ export default function FAQ() {
       <main>
         <section id="faq">
           <div className="container d-flex flex-column align-items-center">
-            <h1 className="page-title fade-in-animation">Dúvidas Frequentes</h1>
             <p className="page-subtitle fade-in-animation">
               Tudo o que você precisa saber para curtir a folia com
               tranquilidade.
@@ -107,17 +101,11 @@ export default function FAQ() {
                 </div>
               ))}
             </div>
-
-            {/* Elemento Decorativo no final */}
-            <img
-              src="/filapapangu.png"
-              className="faq-footer-img fade-in-animation"
-              alt="Papangu"
-            />
           </div>
         </section>
-
-        <div className="divisoria"></div>
+        <div className="divisoria-overlap">
+          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
+        </div>
       </main>
 
       <Footer />

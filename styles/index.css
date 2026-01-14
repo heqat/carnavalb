@@ -272,6 +272,17 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.toggle-btn.ativob {
+  background: linear-gradient(
+    135deg,
+    #02aab0 0%,
+    #00cdac 100%
+  ); /* Verde/Azul */
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(0, 205, 172, 0.3);
+}
+
 /* =========================================
    TIPOGRAFIA
    ========================================= */
@@ -305,16 +316,30 @@
 
 /* SEÇÃO BAILE MUNICIPAL */
 #baile {
-  background-image: url("../public/CBG2.jpg");
+  background-image: url("../public/CBG12.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
   scroll-margin-top: 80px;
+}
+
+#baile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.1)
+  );
+  backdrop-filter: blur(2px);
+  z-index: 1;
+  pointer-events: none; /* importante */
 }
 
 .baile-viewport {
@@ -327,6 +352,8 @@
   width: 200vw;
   height: 100%;
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  position: relative;
+  z-index: 2;
 }
 
 /* CADA TELA */
@@ -349,16 +376,17 @@
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1); /* Vidro sutil */
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 50;
   cursor: pointer;
   transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
 }
 
 .btn-corner-toggle.voltar {
@@ -367,16 +395,17 @@
 }
 
 .btn-corner-toggle:hover {
-  background: #f5821f;
-  border-color: #f5821f;
+  background: #ff8008; /* Laranja da identidade */
+  border-color: #ff8008;
   transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 128, 8, 0.5);
 }
 
 /* --- TELA 1 (CAPA) --- */
 .logo-baile {
   width: 100%;
   max-width: 450px;
-  height: 20 0px;
+  height: 200px;
   background-image: url("../public/marcabaile.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -385,13 +414,16 @@
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
 }
 .m-baile-texto {
-  color: white;
-  font-size: 1.15rem;
+  color: white; /* Branco puro para ler bem no rosa */
+  font-weight: 500;
+  font-size: 1.2rem;
   line-height: 1.6;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  /* Sombra azulada para separar o texto do fundo rosa */
+  text-shadow: 0 2px 4px rgba(0, 50, 100, 0.3);
   margin-bottom: 2rem;
   max-width: 90%;
 }
+
 .button-container-baile {
   margin-bottom: 20px;
 }
@@ -408,13 +440,34 @@
   font-weight: 800;
   text-transform: uppercase;
   display: inline-block;
-  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .m-btn-baile.destaque {
-  background: #ed1a3b;
-  border-color: #ed1a3b;
-  box-shadow: 0 0 20px rgba(237, 26, 59, 0.4);
+  border: none;
+  /* Degradê da logo: Azul -> Verde */
+  background: linear-gradient(135deg, #02aab0 0%, #00cdac 100%);
+
+  box-shadow: 0 5px 20px rgba(0, 205, 172, 0.4); /* Sombra Esverdeada */
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
+
+.m-btn-baile.destaque:hover {
+  transform: translateY(-3px);
+  /* No hover, podemos usar o LARANJA para dar um "estouro" de atenção */
+  background: linear-gradient(135deg, #ff8008 0%, #ffc837 100%);
+  box-shadow: 0 8px 25px rgba(255, 128, 8, 0.5);
+}
+
+/* Hover do botão transparente */
+.m-btn-baile:not(.destaque):hover {
+  background: white;
+  color: #004e92; /* Azul escuro no texto */
+  border-color: white;
+  transform: translateY(-3px);
+}
+
 .m-btn-baile:hover {
   background: white;
   color: #4c12a1;
@@ -424,31 +477,39 @@
 
 /* Card do Line-Up (Coluna Direita) */
 .baile-lineup-card {
-  background: rgba(76, 18, 161, 0.5);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  /* Azul Profundo com transparência (Harmoniza com a Logo Verde/Azul) */
+  background: rgba(0, 40, 80, 0.65);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Borda Ciano/Verde Água (Puxando a Logo) */
+  border: 1px solid rgba(0, 255, 200, 0.2);
+  border-top: 1px solid rgba(0, 255, 200, 0.4);
+
   border-radius: 25px;
   width: 100%;
-  max-width: 420px;
-  padding: 0;
+  max-width: 400px;
+  box-shadow: 0 20px 50px rgba(0, 30, 60, 0.4);
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-  transform: rotate(1deg);
-  transition: 0.3s;
 }
+
 .baile-lineup-card:hover {
   transform: rotate(0deg) scale(1.02);
 }
 
 .lineup-header {
-  background: rgba(0, 0, 0, 0.2);
-  padding: 15px;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 18px;
   text-align: center;
-  color: #f5821f;
+  /* Verde Neon ou Ciano (Destaca muito no Azul Escuro) */
+  color: #00ffcc;
   font-family: var(--fonte-principal);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .lineup-list {
   padding: 25px;
   display: flex;
@@ -458,43 +519,50 @@
 }
 .lineup-list span {
   font-family: "Gabarito", sans-serif;
-  font-weight: 800;
-  font-size: 1.3rem;
-  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #e0f7fa; /* Branco levemente azulado */
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
-  padding-bottom: 5px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+  padding: 12px 0;
   width: 100%;
   text-align: center;
 }
+
+.lineup-list span:hover {
+  color: #00ffcc; /* Acende em verde ao passar o mouse */
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .lineup-list span:last-child {
   border-bottom: none;
 }
+
 .lineup-footer {
   text-align: center;
-  padding: 10px;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
-  font-style: italic;
-  background: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 /* --- TELA 2 (DETALHES) --- */
 .baile-card-vidro {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* AGORA SEGUE O PADRÃO AZUL PROFUNDO */
+  background: rgba(0, 30, 60, 0.85); /* Mais opaco para leitura */
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 255, 200, 0.2); /* Borda Verde-Água */
   border-radius: 30px;
   padding: 40px;
   width: 90%;
   max-width: 1000px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 60px rgba(0, 10, 30, 0.6);
   color: white;
-  min-height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Altura flexível */
+  min-height: 400px;
 }
 
 .baile-controls {
@@ -565,7 +633,7 @@
    ========================================= */
 #programacao {
   scroll-margin-top: 100px;
-  background: url("../public/BGAZULESC.png");
+  background: url("../public/CBG1.jpg");
   background-position: center;
   background-size: 100%;
   background-repeat: repeat;
@@ -598,11 +666,8 @@
   position: relative;
   width: 100%;
   line-height: 0;
-  z-index: 10; /* Garante que a imagem fique POR CIMA do conteúdo seguinte */
-  pointer-events: none; /* Importante: deixa clicar no mapa/conteúdo que estiver "atrás" da parte transparente */
-
-  /* A MÁGICA: Puxa o conteúdo de baixo para cima */
-  /* Ajuste essa porcentagem dependendo da altura da sua imagem */
+  z-index: 10;
+  pointer-events: none;
   margin-bottom: -2vw;
   margin-top: -2vw;
 }
@@ -611,26 +676,7 @@
   width: 100%;
   height: 4rem;
   display: block;
-  /* Opcional: Filtro de sombra para dar profundidade ao recorte */
   filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.3));
-}
-
-.footer-ilustracao-wrapper {
-  width: 100%;
-  background-color: transparent; /* Ou a cor de fundo do site se precisar */
-  line-height: 0;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.footer-imagem {
-  width: 100%;
-  height: auto;
-  display: block;
-  /* Se no PC ficar muito grande, você pode limitar a largura máxima assim: */
-  /* max-width: 1920px; */
-  object-fit: cover;
 }
 
 /* COMPONENTES EXTRAS */

@@ -212,7 +212,7 @@ export default function Home() {
             onClick={() => {
               if (slideBaile === 0) {
                 setSlideBaile(1);
-                setAbaBaile("detalhes"); // já garante tela 2 em detalhes
+                setAbaBaile("detalhes");
               } else {
                 setSlideBaile(0);
               }
@@ -225,29 +225,31 @@ export default function Home() {
             ></i>
           </button>
 
-          {/* VIEWPORT DO SLIDER */}
           <div className="baile-viewport">
             <div
               className="baile-slider-wrapper"
               style={{ transform: `translateX(-${slideBaile * 100}vw)` }}
             >
-              {/* --- TELA 1 DO BAILE (CAPA) --- */}
+              {/* --- TELA 1 DO BAILE (CAPA - MODELO HERO) --- */}
               <div className="baile-slide">
-                {/* REMOVIDO d-flex do container para não quebrar o Grid */}
-                <div className="container h-100 position-relative">
-                  {/* row h-100 para centralizar verticalmente as colunas */}
-                  <div className="row h-100 align-items-center justify-content-center">
-                    {/* COLUNA ESQUERDA (Texto) */}
-                    <div className="col-12 col-lg-6 text-center text-lg-start mb-5 mb-lg-0 fade-in-animation">
-                      <div className="logo-baile mx-auto mx-lg-0"></div>
+                {/* Container com estrutura igual à Hero */}
+                <div className="container h-100 position-relative d-flex flex-column justify-content-center">
+                  <div className="row align-items-center justify-content-center h-100">
+                    {/* COLUNA ESQUERDA (Texto e Botão) */}
+                    {/* Adicionado text-white e text-center para igualar ao Hero */}
+                    <div className="col-lg-6 col-12 text-white text-center mb-4 mb-lg-0 fade-in-animation">
+                      {/* Logo centralizada (mx-auto) igual na Hero */}
+                      <div className="logo-baile mx-auto mb-3"></div>
 
+                      {/* Texto centralizado */}
                       <p className="m-baile-texto">
                         Prepare sua fantasia! O baile mais tradicional do
                         interior está de volta. Uma noite de frevo, cultura e
                         alegria no Clube Literário.
                       </p>
 
-                      <div className="button-container-baile d-flex justify-content-center justify-content-lg-start">
+                      {/* Botões centralizados */}
+                      <div className="button-container-baile d-flex justify-content-center mt-3">
                         <a
                           className="m-btn-baile destaque"
                           href="https://www.sympla.com.br"
@@ -258,20 +260,22 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* COLUNA DIREITA (Card) */}
-                    <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center fade-in-animation">
+                    {/* COLUNA DIREITA (Card/Conteúdo) */}
+                    <div className="col-lg-6 col-12 d-flex justify-content-center align-items-center fade-in-animation">
                       <div className="baile-lineup-card shadow-lg">
                         <div className="lineup-header">
-                          <i className="bx bxs-music"></i> LINE-UP
+                          <i className="bx bxs-music"></i> ATRAÇÕES{" "}
+                          <i className="bx bxs-music"></i>
                         </div>
                         <div className="lineup-list">
-                          <span>ALCEU VALENÇA</span>
-                          <span>ELBA RAMALHO</span>
-                          <span>MAESTRO FORRÓ</span>
-                          <span>ORQ. TROPICANA</span>
+                          <span>NONÔ GERMANO</span>
+                          <span>MARRON BRASILEIRO</span>
+                          <span>MARCÃO NOVENTA</span>
+                          <span>ORQ. CÔNEGO ALEXANDRE CAVALCANTI</span>
                         </div>
                         <div className="lineup-footer">
-                          *Programação sujeita a alterações
+                          07 DE FEVEREIRO, CLUBE LITERÁRIO RUI BARBOSA
+                          <p className="m-0 mt-1">A PARTIR DAS 21H</p>
                         </div>
                       </div>
                     </div>
@@ -286,7 +290,7 @@ export default function Home() {
                     <div className="toggle-container">
                       <button
                         className={`toggle-btn ${
-                          abaBaile === "detalhes" ? "ativo" : ""
+                          abaBaile === "detalhes" ? "ativob" : ""
                         }`}
                         onClick={() => setAbaBaile("detalhes")}
                       >
@@ -294,7 +298,7 @@ export default function Home() {
                       </button>
                       <button
                         className={`toggle-btn ${
-                          abaBaile === "homenageado" ? "ativo" : ""
+                          abaBaile === "homenageado" ? "ativob" : ""
                         }`}
                         onClick={() => setAbaBaile("homenageado")}
                       >

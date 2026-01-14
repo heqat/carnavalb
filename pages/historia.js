@@ -83,7 +83,7 @@ export default function Historia() {
   return (
     <>
       <Head>
-        <title>História Interativa - Carnaval 2026</title>
+        <title>História - Carnaval 2026</title>
       </Head>
 
       <Navbar />

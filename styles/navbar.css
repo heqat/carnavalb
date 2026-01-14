@@ -1,7 +1,6 @@
 #navbar {
   width: 100%;
   background: url("../public/ONDASAZUL.jpg");
-  /* Caminho original */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -117,7 +116,6 @@
 
 /* --- Responsividade --- */
 @media (max-width: 991px) {
-
   .navbar-collapse {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 15px;
