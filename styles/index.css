@@ -66,7 +66,7 @@
   background-image: url("../public/CBG7.jpg");
 }
 .bg-homenageado {
-  background-image: url("../public/CBG9.jpg");
+  background-image: url("../public/CBG2.jpg");
 }
 #apresentacao,
 #homenageado {
@@ -269,8 +269,8 @@
 .toggle-btn.ativob {
   background: linear-gradient(
     135deg,
-    #02aab0 0%,
-    #00cdac 100%
+    #24b7eb 0%,
+    #3468b1 100%
   ); /* Verde/Azul */
   color: white;
   border-color: transparent;
@@ -310,7 +310,7 @@
 
 /* SEÇÃO BAILE MUNICIPAL */
 #baile {
-  background-image: url("../public/CBG2.jpg");
+  background-image: url("../public/CBGBAILE.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -362,7 +362,6 @@
 
 /* --- ELEMENTOS GERAIS --- */
 
-/* A Seta do Canto (FIXA NA SECTION) */
 .btn-corner-toggle {
   position: absolute;
   top: 60px;
@@ -370,8 +369,8 @@
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1); /* Vidro sutil */
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: #f38d29;
+  border: 2px solid #f38d29;
   color: white;
   font-size: 1.8rem;
   display: flex;
@@ -380,7 +379,6 @@
   z-index: 50;
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
 }
 
 .btn-corner-toggle.voltar {
@@ -389,7 +387,7 @@
 }
 
 .btn-corner-toggle:hover {
-  background: #ff8008; /* Laranja da identidade */
+  background: #ff8008;
   border-color: #ff8008;
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(255, 128, 8, 0.5);
@@ -408,11 +406,10 @@
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
 }
 .m-baile-texto {
-  color: white; /* Branco puro para ler bem no rosa */
+  color: white;
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 1.6;
-  /* Sombra azulada para separar o texto do fundo rosa */
   text-shadow: 0 2px 4px rgba(0, 50, 100, 0.3);
   margin-bottom: 2rem;
   max-width: 90%;
@@ -422,7 +419,6 @@
   margin-bottom: 20px;
 }
 
-/* Botão de Compra */
 .m-btn-baile {
   padding: 1rem 2.2rem;
   color: white;
@@ -439,53 +435,41 @@
 
 .m-btn-baile.destaque {
   border: none;
-  /* Degradê da logo: Azul -> Verde */
-  background: linear-gradient(135deg, #02aab0 0%, #00cdac 100%);
-
-  box-shadow: 0 5px 20px rgba(0, 205, 172, 0.4); /* Sombra Esverdeada */
-  color: white;
+  background: #f38d29;
+  box-shadow: 0 5px 20px rgba(248, 174, 27, 0.4);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .m-btn-baile.destaque:hover {
   transform: translateY(-3px);
-  /* No hover, podemos usar o LARANJA para dar um "estouro" de atenção */
   background: linear-gradient(135deg, #ff8008 0%, #ffc837 100%);
   box-shadow: 0 8px 25px rgba(255, 128, 8, 0.5);
 }
 
-/* Hover do botão transparente */
 .m-btn-baile:not(.destaque):hover {
   background: white;
-  color: #004e92; /* Azul escuro no texto */
+  color: #004e92;
   border-color: white;
   transform: translateY(-3px);
 }
 
 .m-btn-baile:hover {
   background: white;
-  color: #4c12a1;
+  color: #3468b1;
   border-color: white;
   transform: translateY(-3px);
 }
 
-/* Card do Line-Up (Coluna Direita) */
 .baile-lineup-card {
-  /* Azul Profundo com transparência (Harmoniza com a Logo Verde/Azul) */
-  background: rgba(0, 40, 80, 0.65);
-
+  width: 40vw;
+  height: 60vw;
+  margin: 0 auto;
+  background-image: url("../public/prog.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
-  /* Borda Ciano/Verde Água (Puxando a Logo) */
-  border: 1px solid rgba(0, 255, 200, 0.2);
-  border-top: 1px solid rgba(0, 255, 200, 0.4);
-
-  border-radius: 25px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 20px 50px rgba(0, 30, 60, 0.4);
-  overflow: hidden;
 }
 
 .baile-lineup-card:hover {
@@ -496,7 +480,6 @@
   background: rgba(0, 0, 0, 0.25);
   padding: 18px;
   text-align: center;
-  /* Verde Neon ou Ciano (Destaca muito no Azul Escuro) */
   color: #00ffcc;
   font-family: var(--fonte-principal);
   font-size: 1.6rem;
@@ -515,7 +498,7 @@
   font-family: "Gabarito", sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
-  color: #e0f7fa; /* Branco levemente azulado */
+  color: #e0f7fa;
   text-transform: uppercase;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
   padding: 12px 0;
@@ -524,7 +507,7 @@
 }
 
 .lineup-list span:hover {
-  color: #00ffcc; /* Acende em verde ao passar o mouse */
+  color: #00ffcc;
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -542,10 +525,9 @@
 
 /* --- TELA 2 (DETALHES) --- */
 .baile-card-vidro {
-  /* AGORA SEGUE O PADRÃO AZUL PROFUNDO */
-  background: rgba(0, 30, 60, 0.85); /* Mais opaco para leitura */
+  background: rgba(243, 141, 41, 0.85);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 255, 200, 0.2); /* Borda Verde-Água */
+  border: 1px solid rgba(236, 103, 26, 0.2);
   border-radius: 30px;
   padding: 40px;
   width: 90%;
@@ -555,7 +537,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Altura flexível */
   min-height: 400px;
 }
 
@@ -567,7 +548,6 @@
   animation: fadeInSuave 0.5s ease;
 }
 
-/* Grid de Informações */
 .info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -702,6 +682,40 @@
   background: white;
 }
 
+/* ANIMAÇÃO DA SETA DO BAILE */
+@keyframes balancoDireita {
+  0%,
+  100% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(6px) scale(1.1);
+  }
+}
+
+@keyframes balancoEsquerda {
+  0%,
+  100% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(-6px) scale(1.1);
+  }
+}
+
+.btn-corner-toggle i {
+  display: inline-block;
+  animation: balancoDireita 1.5s infinite ease-in-out;
+}
+
+.btn-corner-toggle.voltar i {
+  animation: balancoEsquerda 1.5s infinite ease-in-out;
+}
+
+.btn-corner-toggle:hover i {
+  animation-play-state: paused;
+}
+
 /* =========================================
    RESPONSIVIDADE (MOBILE)
    ========================================= */
@@ -748,7 +762,7 @@
   #baile {
     min-height: auto;
     height: auto;
-    overflow: visible; /* deixa crescer verticalmente */
+    overflow: visible;
     align-items: flex-start;
   }
 
@@ -764,7 +778,7 @@
   .logo-baile {
     background-position: center;
     margin: 0 auto 1.5rem auto;
-    height: 120px;
+    height: 35vw;
     width: 100%;
   }
   .m-baile-texto {
@@ -778,14 +792,11 @@
     text-align: center;
   }
 
-  /* Lineup Card Mobile */
   .baile-lineup-card {
-    transform: none;
-    margin-top: 30px;
-    max-width: 100%;
+    width: 100vw;
+    height: 70vw;
   }
 
-  /* Ajuste Tela 2 Baile */
   .baile-card-vidro {
     padding: 20px;
     min-height: auto;
@@ -805,7 +816,6 @@
     grid-template-columns: 1fr;
   }
 
-  /* Mapa/Outros */
   .m-container-mapa iframe {
     border-width: 5px;
     border-bottom-width: 15px;
@@ -814,13 +824,6 @@
   .tag-artista {
     padding: 7px 14px;
     font-size: 0.9rem;
-  }
-  .footer-imagem {
-    width: 150%; /* Dica: aumenta um pouco a imagem no mobile para focar no centro */
-    margin-left: -25%; /* Centraliza o excesso */
-    /* OU deixe 100% se a imagem já for pensada para mobile */
-    max-width: 100%;
-    margin-left: 0;
   }
 
   .divisoria-overlap {
@@ -835,7 +838,6 @@
     width: 100%;
     height: 2rem;
     display: block;
-    /* Opcional: Filtro de sombra para dar profundidade ao recorte */
     filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.3));
   }
 }

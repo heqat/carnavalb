@@ -146,7 +146,7 @@ export default function Home() {
                       ) : (
                         <iframe
                           className="hero-video-frame"
-                          src="https://www.youtube.com/embed/SEU_ID_AQUI?autoplay=1"
+                          src="https://www.youtube.com/embed/U3bWmghjFoE?si=osIz3G4vE0rtyJRe?autoplay=1"
                           title="Vídeo Carnaval Bezerros"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
@@ -224,29 +224,22 @@ export default function Home() {
               className="baile-slider-wrapper"
               style={{ transform: `translateX(-${slideBaile * 100}vw)` }}
             >
-              {/* --- TELA 1 DO BAILE (CAPA - MODELO HERO) --- */}
               <div className="baile-slide">
-                {/* Container com estrutura igual à Hero */}
                 <div className="container h-100 position-relative d-flex flex-column justify-content-center">
                   <div className="row align-items-center justify-content-center h-100">
-                    {/* COLUNA ESQUERDA (Texto e Botão) */}
-                    {/* Adicionado text-white e text-center para igualar ao Hero */}
                     <div className="col-lg-6 col-12 text-white text-center mb-4 mb-lg-0 fade-in-animation">
-                      {/* Logo centralizada (mx-auto) igual na Hero */}
                       <div className="logo-baile mx-auto mb-3"></div>
 
-                      {/* Texto centralizado */}
                       <p className="m-baile-texto">
                         Prepare sua fantasia! O baile mais tradicional do
                         interior está de volta. Uma noite de frevo, cultura e
                         alegria no Clube Literário.
                       </p>
 
-                      {/* Botões centralizados */}
                       <div className="button-container-baile d-flex justify-content-center mt-3">
                         <a
                           className="m-btn-baile destaque"
-                          href="https://www.sympla.com.br"
+                          href="https://www.sympla.com.br/evento/22-baile-municipal-de-bezerros/3269711r"
                           target="_blank"
                         >
                           GARANTIR INGRESSO
@@ -256,22 +249,7 @@ export default function Home() {
 
                     {/* COLUNA DIREITA (Card/Conteúdo) */}
                     <div className="col-lg-6 col-12 d-flex justify-content-center align-items-center fade-in-animation">
-                      <div className="baile-lineup-card shadow-lg">
-                        <div className="lineup-header">
-                          <i className="bx bxs-music"></i> ATRAÇÕES{" "}
-                          <i className="bx bxs-music"></i>
-                        </div>
-                        <div className="lineup-list">
-                          <span>NONÔ GERMANO</span>
-                          <span>MARRON BRASILEIRO</span>
-                          <span>MARCÃO NOVENTA</span>
-                          <span>ORQ. CÔNEGO ALEXANDRE CAVALCANTI</span>
-                        </div>
-                        <div className="lineup-footer">
-                          07 DE FEVEREIRO, CLUBE LITERÁRIO RUI BARBOSA
-                          <p className="m-0 mt-1">A PARTIR DAS 21H</p>
-                        </div>
-                      </div>
+                      <div className="baile-lineup-card"></div>
                     </div>
                   </div>
                 </div>
