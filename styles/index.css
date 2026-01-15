@@ -18,9 +18,9 @@
    HERO INTERATIVO
    ========================================= */
 .hero-interativo {
-  padding-top: 120px;
+  padding-top: 110px;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -316,7 +316,7 @@
 
 /* SEÇÃO BAILE MUNICIPAL */
 #baile {
-  background-image: url("../public/CBG12.jpg");
+  background-image: url("../public/CBG2.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

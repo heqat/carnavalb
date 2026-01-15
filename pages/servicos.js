@@ -127,7 +127,9 @@ export default function ServicosUteis() {
             </div>
           </div>
         </section>
-
+        <div className="divisoria-overlap">
+          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
+        </div>
         <div className="divisoria"></div>
       </main>
       <Footer />
