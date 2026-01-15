@@ -84,7 +84,7 @@ export default function Home() {
                 }`}
                 onClick={() => setAbaAtiva("homenageado")}
               >
-                🎶 HOMENAGEADOS
+                🎉 HOMENAGEADA
               </button>
             </div>
           </div>
@@ -159,34 +159,28 @@ export default function Home() {
             )}
 
             {abaAtiva === "homenageado" && (
-              <div className="fade-in-animation w-100">
-                <div className="d-flex justify-content-center align-items-center flex-column">
-                  <div className="container-homenageado text-center text-white">
-                    <div className="container-foto d-flex justify-content-center align-items-center mb-3">
-                      <img
-                        src="/maestros.png"
-                        className="imagem-artista historia img-fluid"
-                        style={{ maxHeight: "35vh" }}
-                        alt="Maestros Homenageados"
-                      ></img>
-                    </div>
-                    <div
-                      className="container-texto mt-2"
-                      style={{ maxWidth: "900px" }}
-                    >
-                      <p className="texto-artista">
-                        O Carnaval do Papangu 2025 presta sua homenagem aos
-                        músicos e maestros que são pessoas fundamentais para
-                        abrilhantar, com suas orquestras e alegorias, os sons e
-                        ritmos que embalam o maior e melhor carnaval do interior
-                        do Brasil.
-                      </p>
-                      <p className="texto-artista">
-                        Bezerros lhe espera de braços abertos para fazer uma
-                        viagem sonora aos ritmos carnavalescos que homenageiam
-                        nossos mestres da música, numa celebração atemporal da
-                        musicalidade pernambucana.
-                      </p>
+              <div className="fade-in-animation w-100 h-100">
+                <div className="row align-items-center justify-content-center h-100">
+                  <div className="col-lg-10 col-12 d-flex justify-content-center">
+                    <div className="hero-homenageado-wrapper">
+                      <div className="hero-homenageado-foto"></div>
+                      <div className="hero-homenageado-card text-white text-center">
+                        <div className="hero-homenageado-texto">
+                          <p className="texto-artista">
+                            O Carnaval do Papangu 2025 presta sua homenagem aos
+                            músicos e maestros que são pessoas fundamentais para
+                            abrilhantar, com suas orquestras e alegorias, os
+                            sons e ritmos que embalam o maior e melhor carnaval
+                            do interior do Brasil.
+                          </p>
+                          <p className="texto-artista">
+                            Bezerros lhe espera de braços abertos para fazer uma
+                            viagem sonora aos ritmos carnavalescos que
+                            homenageiam nossos mestres da música, numa
+                            celebração atemporal da musicalidade pernambucana.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

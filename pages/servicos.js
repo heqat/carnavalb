@@ -119,7 +119,7 @@ export default function ServicosUteis() {
               <div className="emergency-list">
                 <div className="emergency-item">SAMU: 192</div>
                 <div className="emergency-item">
-                  SAMU LOCAL: (81)3727-8350 OU (81)98384-4303.
+                  SAMU LOCAL: (81)3727-8350 OU (81)98384-4303
                 </div>
                 <div className="emergency-item">BOMBEIROS: 193</div>
                 <div className="emergency-item">POLÍCIA: 190</div>

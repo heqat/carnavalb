@@ -28,7 +28,7 @@
 .text-nav:hover,
 .nav-item.active .text-nav {
   color: white;
-  background-color: #ed1a3b;
+  background-color: #1a9fec;
   border-radius: 4px;
 }
 
@@ -49,7 +49,7 @@
 
 .m-icone-navbar:hover {
   transition: 0.5s;
-  background-color: #ed1a3b;
+  background-color: #1a9fec;
   transform: scale(1.1);
 }
 
@@ -78,7 +78,7 @@
 .search-pill:hover,
 .search-pill:focus-within {
   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 0 10px rgba(237, 26, 59, 0.5);
+  box-shadow: 0 0 10px #1a9fec;
   border-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -110,7 +110,7 @@
 }
 
 .search-btn:hover {
-  background-color: #ed1a3b;
+  background-color: #1a9fec;
   transform: rotate(10deg);
 }
 

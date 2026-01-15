@@ -188,8 +188,7 @@
   background-size: contain;
 }
 
-.papangu,
-.maestros {
+.papangu {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -199,11 +198,6 @@
   width: 25rem;
   height: 10rem;
   background-image: url("../public/marcavazada.png");
-}
-.maestros {
-  width: 25rem;
-  height: 10rem;
-  background-image: url("../public/maestros.png");
 }
 
 /* =========================================
