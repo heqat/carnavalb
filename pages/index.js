@@ -161,10 +161,26 @@ export default function Home() {
             {abaAtiva === "homenageado" && (
               <div className="fade-in-animation w-100 h-100">
                 <div className="row align-items-center justify-content-center h-100">
-                  <div className="col-lg-10 col-12 d-flex justify-content-center">
+                  <div className="col-lg-12 col-12 d-flex justify-content-center">
+                    {" "}
                     <div className="hero-homenageado-wrapper">
                       <div className="hero-homenageado-foto"></div>
+
                       <div className="hero-homenageado-card text-white text-center">
+                        <div className="homenageado-header">
+                          <div className="homenageado-nome">
+                            <h3>MILEIDE</h3>
+                          </div>
+
+                          <div className="homenageado-spacer"></div>
+
+                          <div className="homenageado-selo">
+                            <span className="badge-patrimonio">
+                              HOMENAGEADA 2026
+                            </span>
+                          </div>
+                        </div>
+
                         <div className="hero-homenageado-texto">
                           <p className="texto-artista">
                             O Carnaval do Papangu 2025 presta sua homenagem aos
@@ -247,7 +263,6 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* COLUNA DIREITA (Card/Conteúdo) */}
                     <div className="col-lg-6 col-12 d-flex justify-content-center align-items-center fade-in-animation">
                       <div className="baile-lineup-card"></div>
                     </div>
@@ -280,14 +295,48 @@ export default function Home() {
                   </div>
 
                   {abaBaile === "detalhes" && (
-                    <div className="baile-tab-content info-grid fade-in-animation">
-                      {/* ... seu conteúdo */}
+                    <div className="baile-tab-content detalhes-duas-colunas fade-in-animation">
+                      <div className="detalhes-col">
+                        <h4>📍 Local & Data</h4>
+                        <p>Clube Literário de Bezerros</p>
+                        <p>Sábado de Zé Pereira, às 22h</p>
+
+                        <h4>🎟️ Ingressos</h4>
+                        <p>Vendas pelo Sympla e pontos físicos autorizados.</p>
+                      </div>
+
+                      <div className="detalhes-col">
+                        <h4>👗 Traje</h4>
+                        <p>Fantasia criativa ou esporte fino.</p>
+                        <p>Proibido camisa de time e chinelo.</p>
+
+                        <h4>🍾 Open Bar</h4>
+                        <p>Setor de mesas com serviço de garçom.</p>
+                        <p>Permitida 1 garrafa de destilado por mesa.</p>
+                      </div>
                     </div>
                   )}
 
                   {abaBaile === "homenageado" && (
                     <div className="baile-tab-content homenageado-layout fade-in-animation">
-                      {/* ... seu conteúdo */}
+                      <div className="homenageado-avatar">
+                        <img src="/mileidefoto.png" alt="Homenageado" />
+                      </div>
+
+                      <div className="homenageado-bio">
+                        <h3>MILEIDE</h3>
+                        <span className="badge-patrimonio">
+                          HOMENAGEADA 2026
+                        </span>
+                        <p>
+                          Artista que representa a força cultural de Bezerros,
+                          levando tradição, música e identidade para gerações.
+                        </p>
+                        <p>
+                          Sua trajetória se confunde com a própria história do
+                          carnaval e da cultura popular da cidade.
+                        </p>
+                      </div>
                     </div>
                   )}
                 </div>
