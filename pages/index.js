@@ -97,13 +97,13 @@ export default function Home() {
                     <div className="logog mx-auto mb-3"></div>
                     <p className="m-apresentacao-texto">
                       Bem-vindos ao maior e melhor carnaval do interior do
-                      Brasil: o Carnaval do Papangu em Bezerros - Pernambuco. Os
-                      ritmos que unem gerações e tradição embalam a folia mais
-                      tradicional, autêntica, segura e familiar.
+                      Brasil: o Carnaval do Papangu em Bezerros - Pernambuco.
+                      Feito de histórias que se vivem, movimentos que contagiam
+                      e encantos que transformam.
                     </p>
                     <p className="m-apresentacao-texto">
                       Você é nosso convidado especial para conhecer a magia dos
-                      nossos papangus, suas cores, ritmos e alegria contagiante.
+                      nossos papangus e viver essa folia com a gente.
                       <strong> BEZERROS ESPERA POR VOCÊ!!! </strong>
                     </p>
                     <div className="button-container justify-content-center mt-3">
@@ -297,11 +297,11 @@ export default function Home() {
                   {abaBaile === "detalhes" && (
                     <div className="baile-tab-content detalhes-duas-colunas fade-in-animation">
                       <div className="detalhes-col">
-                        <h4>📍 Local & Data</h4>
+                        <h4>LOCAL E DATA</h4>
                         <p>Clube Literário de Bezerros</p>
                         <p>Sábado, dia 07/02, às 21h</p>
 
-                        <h4>🎟️ Ingressos</h4>
+                        <h4>INGRESSOS</h4>
                         <p>
                           Vendas pelo Sympla e no Point Card (Auciene dos
                           Cartões), Rua Coronel Bezerra, Centro, Bezerros.{" "}
@@ -315,11 +315,10 @@ export default function Home() {
                       </div>
 
                       <div className="detalhes-col">
-                        <h4>👗 Traje</h4>
-                        <p>Fantasia criativa ou esporte fino.</p>
-                        <p>Proibido camisa de time e chinelo.</p>
-
-                        <h4>🍾 AAAA</h4>
+                        <h4>PREENCHER</h4>
+                        <p>AAAAAAAAAAAAAAAAA</p>
+                        <p>BBBBBBBBBBBBB</p>
+                        <h4>PREENCER</h4>
                         <p>AAAAAAAAAAAm.</p>
                         <p>PBBBBBBBB.</p>
                       </div>
@@ -328,10 +327,6 @@ export default function Home() {
 
                   {abaBaile === "homenageado" && (
                     <div className="baile-tab-content homenageado-layout fade-in-animation">
-                      <div className="homenageado-avatar">
-                        <img src="/mileidefoto.png" alt="Homenageado" />
-                      </div>
-
                       <div className="homenageado-bio">
                         <h3>NOSSOS MAESTROS</h3>
                         <span className="badge-patrimonio">

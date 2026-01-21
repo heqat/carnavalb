@@ -10,14 +10,9 @@ export default function FAQ() {
   // Dados das Perguntas (Fácil de editar)
   const faqData = [
     {
-      pergunta: "Quando começa o Carnaval do Papangu 2026?",
+      pergunta: "Quando serão os dias de festa do Carnaval do Papangu 2026?",
       resposta:
-        "A festa oficial começa na sexta-feira de carnaval, mas as prévias e o clima de folia tomam conta da cidade semanas antes. Fique ligado na nossa programação oficial para não perder os blocos de rua e os shows no palco principal!",
-    },
-    {
-      pergunta: "Onde posso encontrar a programação dos blocos?",
-      resposta:
-        "A programação completa dos blocos, horários de saída e percursos está disponível aqui no site na aba 'Programação' e também em nossas redes sociais oficiais. Atualizamos diariamente durante o período festivo.",
+        "A festa oficial começa na sexta-feira de carnaval, mas as prévias e o clima de folia tomam conta da cidade semanas antes. Fique ligado na nossa programação oficial para não perder os blocos de rua, as prévias e nosso Baile Municipal.",
     },
     {
       pergunta: "Como chegar em Bezerros?",
@@ -30,9 +25,19 @@ export default function FAQ() {
         "Sim! O Carnaval de Bezerros é conhecido por ser um dos mais familiares e seguros do estado. Temos o polo infantil e horários mais tranquilos durante o dia, ideal para apresentar a cultura dos Papangus aos pequenos com tranquilidade.",
     },
     {
-      pergunta: "Onde ficam os serviços de emergência e saúde?",
+      pergunta: "Com que roupa eu vou?",
       resposta:
-        "Durante o carnaval, montamos uma estrutura especial de saúde e segurança. O posto médico avançado fica próximo à Praça da Matriz, e temos viaturas do SAMU e Polícia Militar em pontos estratégicos dos polos de animação.",
+        "Use roupas leves e confortáveis, o clima está bem quente e a grande concentração de pessoas deixam o local ainda mais abafado.",
+    },
+    {
+      pergunta:
+        "Posso circular com recipientes de vidro nas imediações do palco principal?",
+      resposta: "Não, não é permitido.",
+    },
+    {
+      pergunta: "Onde será o local de apoio para emergências?",
+      resposta:
+        "Teremos quatro pontos de apoio: Ao lado da Matriz; atrás do palco do QG do Frevo; atrás do palco da Centenária; em frente à casa de mulher. Também temos a UPA 24h em pleno funcionamento. Mais informações e contatos disponíveis em 'Serviços' ",
     },
   ];
 
