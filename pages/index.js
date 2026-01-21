@@ -183,17 +183,18 @@ export default function Home() {
 
                         <div className="hero-homenageado-texto">
                           <p className="texto-artista">
-                            O Carnaval do Papangu 2025 presta sua homenagem aos
-                            músicos e maestros que são pessoas fundamentais para
-                            abrilhantar, com suas orquestras e alegorias, os
-                            sons e ritmos que embalam o maior e melhor carnaval
-                            do interior do Brasil.
+                            O Carnaval do Papangu 2026 presta homenagem a
+                            Mileide Santos, artista da terra que comanda o grupo
+                            FolcPopular há 25 anos. À frente de um projeto
+                            transformador, Mileide impacta a vida de pessoas
+                            apaixonadas pela dança e pela cultura popular, que
+                            ajudam a embalar o maior e melhor carnaval do
+                            interior do Brasil.
                           </p>
                           <p className="texto-artista">
-                            Bezerros lhe espera de braços abertos para fazer uma
-                            viagem sonora aos ritmos carnavalescos que
-                            homenageiam nossos mestres da música, numa
-                            celebração atemporal da musicalidade pernambucana.
+                            Bezerros lhe espera de braços abertos para curtir
+                            com a gente uma festa plural, feita para todos os
+                            públicos e para todas as formas de viver o Carnaval.
                           </p>
                         </div>
                       </div>
@@ -247,9 +248,11 @@ export default function Home() {
                       <div className="logo-baile mx-auto mb-3"></div>
 
                       <p className="m-baile-texto">
-                        Prepare sua fantasia! O baile mais tradicional do
-                        interior está de volta. Uma noite de frevo, cultura e
-                        alegria no Clube Literário.
+                        Prepare sua fantasia! O 22º Baile Municipal mais
+                        tradicional do interior está de volta. Uma noite de
+                        muito frevo, cultura e alegria no Clube Literário
+                        celebrando "O encanto do Papangu no país do Frevo e do
+                        Futebol".
                       </p>
 
                       <div className="button-container-baile d-flex justify-content-center mt-3">
@@ -298,13 +301,15 @@ export default function Home() {
                     <div className="baile-tab-content detalhes-duas-colunas fade-in-animation">
                       <div className="detalhes-col">
                         <h4>LOCAL E DATA</h4>
-                        <p>Clube Literário de Bezerros</p>
-                        <p>Sábado, dia 07/02, às 21h</p>
+                        <p>
+                          Clube Literário Rui Barbosa - Bairro do Cruzeiro.{" "}
+                        </p>
+                        <p>Sábado, dia 07/02, a partir das 21h </p>
 
                         <h4>INGRESSOS</h4>
                         <p>
-                          Vendas pelo Sympla e no Point Card (Auciene dos
-                          Cartões), Rua Coronel Bezerra, Centro, Bezerros.{" "}
+                          Vendas pelo Sympla e em Point Card Bezerros (Auciene
+                          dos Cartões), Rua Coronel Bezerra, Centro, Bezerros.{" "}
                         </p>
                         <p>
                           {" "}
@@ -315,10 +320,14 @@ export default function Home() {
                       </div>
 
                       <div className="detalhes-col">
+                        <h4>MESAS E CAMAROTES </h4>
+                        <p>
+                          Para aquisição de mesas e camarotes consultar
+                          disponibilidade em Point Card Bezerros (Auciene dos
+                          Cartões).
+                        </p>
+
                         <h4>PREENCHER</h4>
-                        <p>AAAAAAAAAAAAAAAAA</p>
-                        <p>BBBBBBBBBBBBB</p>
-                        <h4>PREENCER</h4>
                         <p>AAAAAAAAAAAm.</p>
                         <p>PBBBBBBBB.</p>
                       </div>
@@ -328,17 +337,23 @@ export default function Home() {
                   {abaBaile === "homenageado" && (
                     <div className="baile-tab-content homenageado-layout fade-in-animation">
                       <div className="homenageado-bio">
-                        <h3>NOSSOS MAESTROS</h3>
+                        <h3>PROFISSIONAIS DE DANÇA</h3>
                         <span className="badge-patrimonio">
                           HOMENAGEADOS 2026
                         </span>
                         <p>
-                          Artista que representa a força cultural de Bezerros,
-                          levando tradição, música e identidade para gerações.
+                          O Baile Municipal esse ano celebra quem transforma
+                          música em movimento, alegria em expressão e o Carnaval
+                          em arte viva. A homenagem é para os profissionais de
+                          dança que fazem da folia um espetáculo de ritmo,
+                          entrega e emoção.
                         </p>
                         <p>
-                          Sua trajetória se confunde com a própria história do
-                          carnaval e da cultura popular da cidade.
+                          Referencia-se principalmente Jefferson, Bruno, Ianka,
+                          Ana Paula, Carlos Marques, Clécio, Silvani Kika,
+                          Marcos Tota, Luizinho Moreno, Equilaine, Jonathan,
+                          Arthur Bruno e Cláudio, sempre levando cores, passos e
+                          sorrisos para o Carnaval do Papangu.
                         </p>
                       </div>
                     </div>
