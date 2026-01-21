@@ -552,8 +552,9 @@
 }
 
 .detalhes-col h4 {
-  color: #f5821f;
+  color: white;
   margin-bottom: 8px;
+  text-shadow: 1px 1px 3px #298ef3;
 }
 
 .detalhes-col p {

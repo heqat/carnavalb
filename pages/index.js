@@ -299,10 +299,19 @@ export default function Home() {
                       <div className="detalhes-col">
                         <h4>📍 Local & Data</h4>
                         <p>Clube Literário de Bezerros</p>
-                        <p>Sábado de Zé Pereira, às 22h</p>
+                        <p>Sábado, dia 07/02, às 21h</p>
 
                         <h4>🎟️ Ingressos</h4>
-                        <p>Vendas pelo Sympla e pontos físicos autorizados.</p>
+                        <p>
+                          Vendas pelo Sympla e no Point Card (Auciene dos
+                          Cartões), Rua Coronel Bezerra, Centro, Bezerros.{" "}
+                        </p>
+                        <p>
+                          {" "}
+                          Obs.: Para os ingressos "Área Comum (Social)" a
+                          entrada será mediante a entrega de 1Kg de alimento não
+                          perecível
+                        </p>
                       </div>
 
                       <div className="detalhes-col">
@@ -310,9 +319,9 @@ export default function Home() {
                         <p>Fantasia criativa ou esporte fino.</p>
                         <p>Proibido camisa de time e chinelo.</p>
 
-                        <h4>🍾 Open Bar</h4>
-                        <p>Setor de mesas com serviço de garçom.</p>
-                        <p>Permitida 1 garrafa de destilado por mesa.</p>
+                        <h4>🍾 AAAA</h4>
+                        <p>AAAAAAAAAAAm.</p>
+                        <p>PBBBBBBBB.</p>
                       </div>
                     </div>
                   )}
@@ -324,9 +333,9 @@ export default function Home() {
                       </div>
 
                       <div className="homenageado-bio">
-                        <h3>MILEIDE</h3>
+                        <h3>NOSSOS MAESTROS</h3>
                         <span className="badge-patrimonio">
-                          HOMENAGEADA 2026
+                          HOMENAGEADOS 2026
                         </span>
                         <p>
                           Artista que representa a força cultural de Bezerros,
