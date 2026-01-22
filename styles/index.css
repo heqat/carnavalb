@@ -599,6 +599,7 @@
 }
 .homenageado-bio h3 {
   font-family: var(--fonte-principal);
+  margin-top: -3vw;
   font-size: 3rem;
   margin-bottom: 5px;
 }
@@ -773,7 +774,7 @@
 
   /* Ajuste Tela 1 Baile Mobile */
   #baile {
-    min-height: auto;
+    min-height: 90vw;
     height: auto;
     overflow: visible;
     align-items: flex-start;
@@ -785,13 +786,13 @@
 
   .baile-slide {
     height: auto;
-    min-height: auto;
+    padding: 0;
   }
 
   .logo-baile {
     background-position: center;
     margin: 0 auto 1.5rem auto;
-    height: 35vw;
+    height: 45vw;
     width: 100%;
   }
   .m-baile-texto {
@@ -807,7 +808,7 @@
 
   .baile-lineup-card {
     width: 100vw;
-    height: 70vw;
+    height: 90vw;
   }
 
   .baile-card-vidro {
@@ -829,6 +830,13 @@
     height: 180px;
     margin-bottom: 20px;
   }
+
+  .homenageado-bio h3 {
+    margin-top: -7vw;
+    font-size: 2rem;
+    margin-bottom: 7px;
+  }
+
   .info-grid {
     grid-template-columns: 1fr;
   }

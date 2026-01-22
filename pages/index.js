@@ -339,14 +339,15 @@ export default function Home() {
                         <span className="badge-patrimonio">
                           HOMENAGEADOS 2026
                         </span>
-                        <p>
+                        <p className="m-apresentacao-texto">
                           O Baile Municipal deste ano é um tributo a quem
                           transforma o Carnaval em experiência. Profissionais da
                           dança que fazem da música um gesto coletivo, do corpo
                           uma linguagem e da folia uma manifestação artística
                           que pulsa nas ruas.
                         </p>
-                        <p>
+                        <p className="m-apresentacao-texto">
+                          {" "}
                           A homenagem se estende a nomes que há anos ajudam a
                           construir o espetáculo do Carnaval do Papangu, como
                           Jefferson, Bruno, Ianka, Ana Paula, Carlos Marques,
