@@ -365,9 +365,9 @@
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background: #f38d29;
-  border: 2px solid #f38d29;
-  color: white;
+  background: whitesmokea;
+  border: 2px solid #ec671a;
+  color: #ec671a;
   font-size: 1.8rem;
   display: flex;
   align-items: center;
@@ -383,8 +383,6 @@
 }
 
 .btn-corner-toggle:hover {
-  background: #ff8008;
-  border-color: #ff8008;
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(255, 128, 8, 0.5);
 }

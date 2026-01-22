@@ -32,7 +32,7 @@ export default function Home() {
   }, [router.isReady, router.query.busca]);
 
   const artistasFiltrados = artistas.filter((artista) =>
-    artista.nome.toLowerCase().includes(busca.toLowerCase())
+    artista.nome.toLowerCase().includes(busca.toLowerCase()),
   );
 
   const handleScrollDown = () => {
@@ -309,7 +309,8 @@ export default function Home() {
                         <h4>INGRESSOS</h4>
                         <p>
                           Vendas pelo Sympla e em Point Card Bezerros (Auciene
-                          dos Cartões), Rua Coronel Bezerra, Centro, Bezerros.{" "}
+                          dos Cartões), Rua Coronel Bezerra, Centro,
+                          Bezerros.{" "}
                         </p>
                         <p>
                           {" "}
@@ -326,10 +327,7 @@ export default function Home() {
                           disponibilidade em Point Card Bezerros (Auciene dos
                           Cartões).
                         </p>
-
-                        <h4>PREENCHER</h4>
-                        <p>AAAAAAAAAAAm.</p>
-                        <p>PBBBBBBBB.</p>
+                        <p> </p>
                       </div>
                     </div>
                   )}
@@ -342,18 +340,20 @@ export default function Home() {
                           HOMENAGEADOS 2026
                         </span>
                         <p>
-                          O Baile Municipal esse ano celebra quem transforma
-                          música em movimento, alegria em expressão e o Carnaval
-                          em arte viva. A homenagem é para os profissionais de
-                          dança que fazem da folia um espetáculo de ritmo,
-                          entrega e emoção.
+                          O Baile Municipal deste ano é um tributo a quem
+                          transforma o Carnaval em experiência. Profissionais da
+                          dança que fazem da música um gesto coletivo, do corpo
+                          uma linguagem e da folia uma manifestação artística
+                          que pulsa nas ruas.
                         </p>
                         <p>
-                          Referencia-se principalmente Jefferson, Bruno, Ianka,
-                          Ana Paula, Carlos Marques, Clécio, Silvani Kika,
-                          Marcos Tota, Luizinho Moreno, Equilaine, Jonathan,
-                          Arthur Bruno e Cláudio, sempre levando cores, passos e
-                          sorrisos para o Carnaval do Papangu.
+                          A homenagem se estende a nomes que há anos ajudam a
+                          construir o espetáculo do Carnaval do Papangu, como
+                          Jefferson, Bruno, Ianka, Ana Paula, Carlos Marques,
+                          Clécio, Silvani Kika, Marcos Tota, Luizinho Moreno,
+                          Equilaine, Jonathan, Arthur Bruno e Cláudio. Artistas
+                          que, com presença e dedicação, seguem levando
+                          movimento, identidade e emoção para a festa.
                         </p>
                       </div>
                     </div>

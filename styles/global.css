@@ -1,4 +1,3 @@
-
 :root {
   --cor-vermelho-escuro: #9e0000;
   --cor-vermelho: #d10404;
@@ -12,13 +11,13 @@
   --cor-branco: #ffffff;
   --cor-cinza-escuro: #333333;
 
-  --fonte-principal: "Wondra", sans-serif;
+  --fonte-principal: "BabySchool", sans-serif;
   --fonte-apoio: "Gabarito", sans-serif;
 }
 
 @font-face {
-  font-family: "Wondra";
-  src: url("../assets/fonts/Wondra.otf");
+  font-family: "BabySchool";
+  src: url("../assets/fonts/BabySchoolItalic.ttf");
 }
 
 @font-face {
