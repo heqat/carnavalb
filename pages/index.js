@@ -20,6 +20,9 @@ import marcaPrefeitura from "../public/marca-prefeitura.png";
 export default function Home() {
   const router = useRouter(); // Inicializa o router
   const [busca, setBusca] = useState("");
+const categorias = ["TODOS", ...new Set(artistas.map((a) => a.categoria || "Outros"))];
+  const [mostrarFiltros, setMostrarFiltros] = useState(false); // Novo estado para o dropdown
+  const [categoriaSelecionada, setCategoriaSelecionada] = useState("TODOS"); 
   const [abaAtiva, setAbaAtiva] = useState("apresentacao");
   const [slideBaile, setSlideBaile] = useState(0); // 0 = Capa, 1 = Detalhes
   const [abaBaile, setAbaBaile] = useState("atracoes"); // 'atracoes' ou 'ingressos'
@@ -31,9 +34,12 @@ export default function Home() {
     }
   }, [router.isReady, router.query.busca]);
 
-  const artistasFiltrados = artistas.filter((artista) =>
-    artista.nome.toLowerCase().includes(busca.toLowerCase()),
-  );
+const artistasFiltrados = artistas.filter((artista) => {
+    const termoBusca = busca.toLowerCase();
+    const matchNome = artista.nome.toLowerCase().includes(termoBusca);
+    const matchCategoria = categoriaSelecionada === "TODOS" || artista.categoria === categoriaSelecionada;
+    return matchNome && matchCategoria;
+  });
 
   const handleScrollDown = () => {
     const nextSection = document.getElementById("baile");
@@ -369,50 +375,72 @@ export default function Home() {
           <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
         </div>
 
-        <section id="programacao" className="w-100 py-5">
-          <div className="container">
-            <div className="text-center mb-5">
-              <h1 className="m-titulo-secao">ATRAÇÕES</h1>
-            </div>
+  <section id="programacao" className="py-5" onClick={() => mostrarFiltros && setMostrarFiltros(false)}>
+    <div className="container">
+      
+      <h2 className="m-titulo-programacao mb-5">ATRAÇÕES CONFIRMADAS</h2>
 
-            <div className="row justify-content-center mb-4">
-              <div className="col-md-8 col-12">
-                <div className="input-group input-group-lg sombra-suave">
-                  <span className="input-group-text bg-white border-0 ps-4">
-                    🔍
-                  </span>
-                  <input
-                    type="text"
-                    className="form-control border-0"
-                    placeholder="Quem você quer ver?"
-                    value={busca}
-                    onChange={(e) => setBusca(e.target.value)}
-                    style={{ borderRadius: "0 30px 30px 0", outline: "none" }}
-                  />
-                </div>
-              </div>
-            </div>
+      <div className="search-filter-container mb-5" onClick={(e) => e.stopPropagation()}>
+        
+        <div className="search-box-individual">
+          <i className='bx bx-search'></i>
+          <input
+            type="text"
+            placeholder="Pesquisar atração..."
+            value={busca}
+            onChange={(e) => setBusca(e.target.value)}
+          />
+        </div>
 
-            <div className="d-flex flex-wrap justify-content-center gap-3">
-              {artistasFiltrados.length > 0 ? (
-                artistasFiltrados.map((artista) => (
-                  <span key={artista.id} className="tag-artista">
-                    {artista.nome}
-                  </span>
-                ))
-              ) : (
-                <div
-                  className="text-center mt-3 w-100"
-                  style={{ opacity: 0.8 }}
+        {/* 2. Filtro Dropdown Independente */}
+        <div className="filter-wrapper">
+          <button 
+            className={`filter-pill-btn ${mostrarFiltros ? 'ativo' : ''}`}
+            onClick={() => setMostrarFiltros(!mostrarFiltros)}
+          >
+            <div className="filter-content">
+              <span className="label">CATEGORIA</span>
+              <span className="value">{categoriaSelecionada}</span>
+            </div>
+            <i className={`bx bx-chevron-down arrow ${mostrarFiltros ? 'rotate' : ''}`}></i>
+          </button>
+
+          {/* Lista Flutuante (Absolute) */}
+          {mostrarFiltros && (
+            <div className="dropdown-floating-menu fade-in-animation">
+              {categorias.map((cat) => (
+                <div 
+                  key={cat} 
+                  className={`dropdown-option ${categoriaSelecionada === cat ? 'selected' : ''}`}
+                  onClick={() => {
+                    setCategoriaSelecionada(cat);
+                    setMostrarFiltros(false);
+                  }}
                 >
-                  <p className="text-white">
-                    Nenhum artista encontrado com "{busca}"
-                  </p>
+                  {cat}
                 </div>
-              )}
+              ))}
             </div>
-          </div>
-        </section>
+          )}
+        </div>
+      </div>
+
+      <div className="lineup-grid">
+         {artistasFiltrados.length > 0 ? (
+            artistasFiltrados.map((artista) => (
+              <div key={artista.id} className="artist-card">
+                <div className="card-glow"></div>
+                <h3 className="artist-name">{artista.nome}</h3>
+                {artista.categoria && <span className="artist-tag">{artista.categoria}</span>}
+              </div>
+            ))
+          ) : (
+             <p className="text-white text-center w-100">Nenhum artista encontrado.</p>
+          )}
+      </div>
+
+    </div>
+  </section>
 
         <div className="divisoria-overlap">
           <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
