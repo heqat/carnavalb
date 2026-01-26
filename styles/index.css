@@ -626,10 +626,9 @@
   background-size: 100%;
   background-repeat: repeat;
   min-height: 80vh;
-   position: relative;
+  position: relative;
   overflow: hidden;
 }
-
 
 #programacao::before {
   content: "";
@@ -645,7 +644,6 @@
   position: relative;
   z-index: 2;
 }
-
 
 #mapa {
   scroll-margin-top: 70px;
@@ -897,9 +895,9 @@
   gap: 20px;
   position: relative;
   z-index: 50; /* Garante que fique acima dos cards */
-  
+
   /* Limita largura para não esticar demais em monitores grandes */
-  max-width: 750px; 
+  max-width: 750px;
   margin: 0 auto 3rem auto; /* Margem automática nas laterais centraliza */
   width: 100%;
 }
@@ -935,8 +933,8 @@
 
 /* Cor do Placeholder (texto de ajuda) */
 .search-box-individual input::placeholder {
-  color: rgba(255, 255, 255, 0.8) !important; 
-  opacity: 1; 
+  color: rgba(255, 255, 255, 0.8) !important;
+  opacity: 1;
 }
 
 .search-box-individual input:focus {
@@ -959,7 +957,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   /* Gradiente Laranja */
   background: linear-gradient(135deg, #f5821f 0%, #d96c10 100%);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -967,7 +965,7 @@
   border-radius: 50px; /* Pílula real */
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(245, 130, 31, 0.4); 
+  box-shadow: 0 4px 15px rgba(245, 130, 31, 0.4);
 }
 
 .filter-pill-btn:hover {
@@ -991,7 +989,7 @@
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #e3f2fd; 
+  color: #e3f2fd;
   margin-bottom: 0px;
   opacity: 0.9;
 }
@@ -1001,14 +999,14 @@
   font-weight: 800;
   color: #ffffff;
   text-transform: uppercase;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .arrow {
   color: #ffffff;
   font-size: 1.5rem;
   transition: transform 0.3s ease;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
 }
 
 .arrow.rotate {
@@ -1021,19 +1019,19 @@
   top: calc(100% + 12px);
   right: 0;
   width: 100%;
-  
+
   /* Fundo Escuro */
-  background: rgba(10, 25, 47, 0.95); 
+  background: rgba(10, 25, 47, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   padding: 8px;
-  
+
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
   z-index: 100;
-  
+
   max-height: 300px;
   overflow-y: auto;
-  
+
   /* Scrollbar fina */
   scrollbar-width: thin;
   scrollbar-color: #f5821f #0a192f;
@@ -1058,7 +1056,7 @@
   transition: all 0.2s ease;
   font-size: 0.95rem;
   font-weight: 500;
-  border-bottom: 1px solid rgba(255,255,255,0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .dropdown-option:last-child {
@@ -1094,7 +1092,7 @@
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  padding: 30px 15px;
+  padding: 20px 15px;
   text-align: center;
   transition: all 0.3s ease;
   overflow: hidden;
@@ -1108,7 +1106,7 @@
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .artist-name {
@@ -1120,11 +1118,18 @@
   line-height: 1.3;
 }
 
+.tags-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
 .artist-tag {
   margin-top: 8px;
   font-size: 0.7rem;
   text-transform: uppercase;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   color: #ccc;
   padding: 3px 8px;
   border-radius: 4px;
@@ -1144,7 +1149,6 @@
    RESPONSIVIDADE (CELULAR CORRIGIDO)
    ========================================= */
 @media (max-width: 768px) {
-
   .search-filter-container {
     flex-direction: column !important; /* Empilha: Busca em cima, Filtro embaixo */
     align-items: stretch; /* Estica para largura total */
@@ -1152,7 +1156,7 @@
     margin-bottom: 30px;
     max-width: 100%; /* Remove limite de largura no celular */
   }
-  
+
   .search-box-individual {
     width: 100%;
     max-width: 100%; /* Garante que ocupe a tela toda */
@@ -1161,7 +1165,7 @@
   /* Importante: garante que o botão de filtro ocupe a largura total */
   .filter-wrapper {
     width: 100%;
-    min-width: unset; 
+    min-width: unset;
   }
 
   .lineup-grid {
