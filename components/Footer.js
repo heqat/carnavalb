@@ -37,9 +37,7 @@ export default function () {
         <div className="col mb-3">
           <h5 className="m-titulo-informacoes">Contato</h5>
           <ul className="nav flex-column">
-            <li className="nav-item mb-2 m-texto-informacoes">
-              Telefone: (81) 3728-6700.
-            </li>
+            <li className="nav-item mb-2 m-texto-informacoes">.</li>
           </ul>
         </div>
 

@@ -14,9 +14,7 @@
   animation: fadeInSuave 0.6s ease-out forwards;
 }
 
-/* =========================================
-   HERO INTERATIVO
-   ========================================= */
+/* HERO INTERATIVO */
 .hero-interativo {
   padding-top: 110px;
   width: 100%;
@@ -61,7 +59,6 @@
   justify-content: center;
 }
 
-/* Backgrounds do Hero */
 .bg-festa {
   background-image: url("../public/CBG7.jpg");
 }
@@ -73,7 +70,6 @@
   background: transparent !important;
 }
 
-/* Controles e Botões do Hero */
 .conteudo-fixo {
   padding-top: 2rem;
   padding-bottom: 3.5rem;
@@ -88,7 +84,6 @@
   margin-bottom: 2rem;
 }
 
-/* Seta Rolagem */
 .arrow-down {
   border: none;
   background: none;
@@ -175,9 +170,7 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* =========================================
-   ELEMENTOS GRÁFICOS E LOGOS
-   ========================================= */
+/* ELEMENTOS GRÁFICOS E LOGOS */
 .logog {
   width: 280px;
   height: 180px;
@@ -200,9 +193,7 @@
   background-image: url("../public/marcavazada.png");
 }
 
-/* =========================================
-   BOTÕES E CONTROLES (Toggle)
-   ========================================= */
+/* BOTÕES E CONTROLES (Toggle) */
 .button-container {
   display: flex;
   gap: 10px;
@@ -273,9 +264,7 @@
   box-shadow: 0 4px 15px rgba(0, 205, 172, 0.3);
 }
 
-/* =========================================
-   TIPOGRAFIA
-   ========================================= */
+/* TIPOGRAFIA */
 .m-titulo-secao,
 .m-titulo-programacaotxt,
 .m-titulo-programacao {
@@ -329,7 +318,7 @@
   );
   backdrop-filter: blur(2px);
   z-index: 1;
-  pointer-events: none; /* importante */
+  pointer-events: none;
 }
 
 .baile-viewport {
@@ -346,7 +335,6 @@
   z-index: 2;
 }
 
-/* CADA TELA */
 .baile-slide {
   width: 100vw;
   min-height: 90vh;
@@ -356,7 +344,7 @@
   align-items: center;
 }
 
-/* --- ELEMENTOS GERAIS --- */
+/* ELEMENTOS GERAIS */
 
 .btn-corner-toggle {
   position: absolute;
@@ -387,7 +375,6 @@
   box-shadow: 0 0 15px rgba(255, 128, 8, 0.5);
 }
 
-/* --- TELA 1 (CAPA) --- */
 .logo-baile {
   width: 100%;
   max-width: 450px;
@@ -518,7 +505,6 @@
   background: rgba(0, 0, 0, 0.2);
 }
 
-/* --- TELA 2 (DETALHES) --- */
 .baile-card-vidro {
   background: rgba(243, 141, 41, 0.85);
   backdrop-filter: blur(20px);
@@ -581,7 +567,6 @@
   font-weight: bold;
 }
 
-/* Layout Homenageado */
 .homenageado-layout {
   display: flex;
   align-items: center;
@@ -616,9 +601,7 @@
   line-height: 1.6;
 }
 
-/* =========================================
-   OUTRAS SEÇÕES
-   ========================================= */
+/*  OUTRAS SEÇÕES */
 #programacao {
   scroll-margin-top: 100px;
   background: url("../public/CBG1.jpg");
@@ -713,7 +696,6 @@
   background: white;
 }
 
-/* ANIMAÇÃO DA SETA DO BAILE */
 @keyframes balancoDireita {
   0%,
   100% {
@@ -747,11 +729,8 @@
   animation-play-state: paused;
 }
 
-/* =========================================
-   RESPONSIVIDADE (MOBILE)
-   ========================================= */
+/* RESPONSIVIDADE (MOBILE) */
 @media (max-width: 991px) {
-  /* Hero Ajustes */
   .hero-interativo {
     height: auto !important;
     min-height: 100vh;
@@ -780,16 +759,14 @@
     margin-top: 0;
   }
 
-  /* Seta no Mobile */
   .btn-corner-toggle {
     top: 20px;
-    right: 20px; /* Mantém fixo */
+    right: 20px;
     width: 50px;
     height: 50px;
     font-size: 1.5rem;
   }
 
-  /* Ajuste Tela 1 Baile Mobile */
   #baile {
     min-height: 90vw;
     height: auto;
@@ -883,30 +860,21 @@
     filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.3));
   }
 }
-/* =========================================
-   CONTROLES: BUSCA E FILTRO (SEPARADOS)
-   ========================================= */
 
-/* Container Centralizado para Layout */
-.search-filter-container {
+.search-container-center {
   display: flex;
-  justify-content: center; /* Centraliza no Desktop */
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  position: relative;
-  z-index: 50; /* Garante que fique acima dos cards */
-
-  /* Limita largura para não esticar demais em monitores grandes */
-  max-width: 750px;
-  margin: 0 auto 3rem auto; /* Margem automática nas laterais centraliza */
   width: 100%;
+  margin: 0 auto 3rem auto;
+  position: relative;
+  z-index: 50;
 }
 
-/* --- 1. ESTILO DA BARRA DE BUSCA --- */
 .search-box-individual {
   position: relative;
-  flex: 1; /* Ocupa o espaço restante */
   width: 100%;
+  max-width: 600px;
 }
 
 .search-box-individual i {
@@ -922,16 +890,15 @@
 .search-box-individual input {
   width: 100%;
   padding: 14px 20px 14px 45px;
-  background: rgba(255, 255, 255, 0.08); /* Fundo sutil */
+  background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 12px; /* Arredondamento padrão */
+  border-radius: 50px;
   color: #fff;
   font-size: 1rem;
   transition: all 0.3s ease;
   backdrop-filter: blur(5px);
 }
 
-/* Cor do Placeholder (texto de ajuda) */
 .search-box-individual input::placeholder {
   color: rgba(255, 255, 255, 0.8) !important;
   opacity: 1;
@@ -944,236 +911,100 @@
   box-shadow: 0 0 0 4px rgba(245, 130, 31, 0.15);
 }
 
-/* --- 2. ESTILO DA PILULA DE FILTRO (Laranja + Branco/Azul) --- */
-.filter-wrapper {
-  position: relative;
-  /* Garante tamanho mínimo no Desktop */
-  flex: 0 0 auto;
-  min-width: 180px;
+/* LINE-UP OFICIAL  */
+
+.lineup-editorial {
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  line-height: 1.8;
+  -webkit-text-stroke: 1.5px black;
+  paint-order: stroke fill;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
 }
 
-.filter-pill-btn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  /* Gradiente Laranja */
-  background: linear-gradient(135deg, #f5821f 0%, #d96c10 100%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 10px 20px;
-  border-radius: 50px; /* Pílula real */
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(245, 130, 31, 0.4);
-}
-
-.filter-pill-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(245, 130, 31, 0.6);
-  filter: brightness(1.1);
-}
-
-.filter-pill-btn.ativo {
-  background: linear-gradient(135deg, #d96c10 0%, #b55a0d 100%);
-}
-
-.filter-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.filter-content .label {
-  font-size: 0.65rem;
+.lineup-editorial-item {
+  font-family: var(--fonte-principal, sans-serif);
+  display: inline-block;
+  white-space: nowrap;
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #e3f2fd;
-  margin-bottom: 0px;
-  opacity: 0.9;
 }
 
-.filter-content .value {
-  font-size: 1rem;
-  font-weight: 800;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.arrow {
-  color: #ffffff;
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
-}
-
-.arrow.rotate {
-  transform: rotate(180deg);
-}
-
-/* --- MENU FLUTUANTE (Azul Profundo) --- */
-.dropdown-floating-menu {
-  position: absolute;
-  top: calc(100% + 12px);
-  right: 0;
-  width: 100%;
-
-  /* Fundo Escuro */
-  background: rgba(10, 25, 47, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  padding: 8px;
-
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-  z-index: 100;
-
-  max-height: 300px;
-  overflow-y: auto;
-
-  /* Scrollbar fina */
-  scrollbar-width: thin;
-  scrollbar-color: #f5821f #0a192f;
-}
-
-.dropdown-floating-menu::-webkit-scrollbar {
-  width: 6px;
-}
-.dropdown-floating-menu::-webkit-scrollbar-track {
-  background: #0a192f;
-}
-.dropdown-floating-menu::-webkit-scrollbar-thumb {
-  background-color: #f5821f;
-  border-radius: 10px;
-}
-
-.dropdown-option {
-  padding: 12px 16px;
-  border-radius: 10px;
-  color: #b0c4de;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: 0.95rem;
-  font-weight: 500;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-.dropdown-option:last-child {
-  border-bottom: none;
-}
-
-.dropdown-option:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  padding-left: 20px;
-}
-
-.dropdown-option.selected {
-  background: rgba(245, 130, 31, 0.2);
+.sep {
+  display: inline-block;
   color: #f5821f;
-  font-weight: bold;
-  border: 1px solid rgba(245, 130, 31, 0.3);
+  font-size: 1.2em;
+  margin: 0 12px;
+  vertical-align: middle;
+  opacity: 0.8;
 }
 
-/* =========================================
-   GRID VISUAL DOS ARTISTAS
-   ========================================= */
+@media (max-width: 768px) {
+  .lineup-editorial {
+    padding: 0 10px;
+    line-height: 1.6;
+  }
+
+  .lineup-editorial-item {
+    letter-spacing: 0.5px;
+  }
+
+  .sep {
+    margin: 0 8px;
+  }
+}
+
 .lineup-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 8px;
 }
 
 .artist-card {
-  position: relative;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 20px 15px;
-  text-align: center;
-  transition: all 0.3s ease;
-  overflow: hidden;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0;
+  padding: 10px 4px;
+  min-height: auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-
-.artist-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .artist-name {
-  margin: 0;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1.3;
-}
-
-.tags-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-
-.artist-tag {
-  margin-top: 8px;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.4);
-  color: #ccc;
-  padding: 3px 8px;
-  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  padding: 0;
 }
 
 .card-glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #f5821f, transparent);
-  opacity: 0.5;
+  display: none;
 }
 
-/* =========================================
-   RESPONSIVIDADE (CELULAR CORRIGIDO)
-   ========================================= */
 @media (max-width: 768px) {
-  .search-filter-container {
-    flex-direction: column !important; /* Empilha: Busca em cima, Filtro embaixo */
-    align-items: stretch; /* Estica para largura total */
-    gap: 15px;
-    margin-bottom: 30px;
-    max-width: 100%; /* Remove limite de largura no celular */
-  }
-
-  .search-box-individual {
-    width: 100%;
-    max-width: 100%; /* Garante que ocupe a tela toda */
-  }
-
-  /* Importante: garante que o botão de filtro ocupe a largura total */
-  .filter-wrapper {
-    width: 100%;
-    min-width: unset;
-  }
-
   .lineup-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas lado a lado */
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
 
+  .artist-card {
+    padding: 15px 10px;
+    min-height: 70px;
+    justify-content: center;
+    text-align: center;
+    border-left: none;
+    border-bottom: 2px solid #f5821f;
+  }
+
   .artist-name {
-    font-size: 1rem;
+    padding-left: 0;
+    font-size: 0.85rem;
   }
 }

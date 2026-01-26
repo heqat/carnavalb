@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -18,12 +19,8 @@ import marcaDevassa from "../public/marca-devassa.png";
 import marcaPrefeitura from "../public/marca-prefeitura.png";
 
 export default function Home() {
-  const router = useRouter(); // Inicializa o router
+  const router = useRouter();
   const [busca, setBusca] = useState("");
-  const todasCategorias = artistas.map((a) => a.categoria).flat();
-  const categorias = ["TODOS", ...new Set(todasCategorias)].sort();
-  const [mostrarFiltros, setMostrarFiltros] = useState(false); // Novo estado para o dropdown
-  const [categoriaSelecionada, setCategoriaSelecionada] = useState("TODOS");
   const [abaAtiva, setAbaAtiva] = useState("apresentacao");
   const [slideBaile, setSlideBaile] = useState(0); // 0 = Capa, 1 = Detalhes
   const [abaBaile, setAbaBaile] = useState("atracoes"); // 'atracoes' ou 'ingressos'
@@ -36,15 +33,7 @@ export default function Home() {
   }, [router.isReady, router.query.busca]);
 
   const artistasFiltrados = artistas.filter((artista) => {
-    const termoBusca = busca.toLowerCase();
-    const matchNome = artista.nome.toLowerCase().includes(termoBusca);
-
-    // Se for TODOS, passa. Se não, verifica se a lista de categorias do artista INCLUI a selecionada
-    const matchCategoria =
-      categoriaSelecionada === "TODOS" ||
-      artista.categoria.includes(categoriaSelecionada);
-
-    return matchNome && matchCategoria;
+    return artista.nome.toLowerCase().includes(busca.toLowerCase());
   });
 
   const handleScrollDown = () => {
@@ -229,26 +218,16 @@ export default function Home() {
           <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
         </div>
         <section id="baile">
-          {/* BOTÃO DE NAVEGAÇÃO */}
-          <button
-            className={`btn-corner-toggle ${slideBaile === 1 ? "voltar" : ""}`}
-            onClick={() => {
-              if (slideBaile === 0) {
-                setSlideBaile(1);
-                setAbaBaile("detalhes");
-              } else {
-                setSlideBaile(0);
-              }
-            }}
-          >
-            <i
-              className={`bx ${
-                slideBaile === 0 ? "bx-right-arrow-alt" : "bx-left-arrow-alt"
-              }`}
-            ></i>
-          </button>
-
           <div className="baile-viewport">
+            {slideBaile === 1 && (
+              <button
+                className="btn-corner-toggle voltar"
+                onClick={() => setSlideBaile(0)}
+              >
+                <i className="bx bx-left-arrow-alt"></i>
+              </button>
+            )}
+
             <div
               className="baile-slider-wrapper"
               style={{ transform: `translateX(-${slideBaile * 100}vw)` }}
@@ -267,7 +246,7 @@ export default function Home() {
                         Futebol".
                       </p>
 
-                      <div className="button-container-baile d-flex justify-content-center mt-3">
+                      <div className="button-container-baile d-flex justify-content-center gap-3 mt-3">
                         <a
                           className="m-btn-baile destaque"
                           href="https://www.sympla.com.br/evento/22-baile-municipal-de-bezerros/3269711r"
@@ -275,6 +254,16 @@ export default function Home() {
                         >
                           GARANTIR INGRESSO
                         </a>
+
+                        <button
+                          className="m-btn-baile"
+                          onClick={() => {
+                            setSlideBaile(1);
+                            setAbaBaile("detalhes");
+                          }}
+                        >
+                          MAIS INFORMAÇÕES
+                        </button>
                       </div>
                     </div>
 
@@ -285,7 +274,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* --- TELA 2 --- */}
               <div className="baile-slide">
                 <div className="baile-card-vidro">
                   <div className="baile-controls">
@@ -351,23 +339,25 @@ export default function Home() {
                         <span className="badge-patrimonio">
                           HOMENAGEADOS 2026
                         </span>
-                        <p className="m-apresentacao-texto">
-                          O Baile Municipal deste ano é um tributo a quem
-                          transforma o Carnaval em experiência. Profissionais da
-                          dança que fazem da música um gesto coletivo, do corpo
-                          uma linguagem e da folia uma manifestação artística
-                          que pulsa nas ruas.
-                        </p>
-                        <p className="m-apresentacao-texto">
-                          {" "}
-                          A homenagem se estende a nomes que há anos ajudam a
-                          construir o espetáculo do Carnaval do Papangu, como
-                          Jefferson, Bruno, Ianka, Ana Paula, Carlos Marques,
-                          Clécio, Silvani Kika, Marcos Tota, Luizinho Moreno,
-                          Equilaine, Jonathan, Arthur Bruno e Cláudio. Artistas
-                          que, com presença e dedicação, seguem levando
-                          movimento, identidade e emoção para a festa.
-                        </p>
+                        <div className="hero-homenageado-texto">
+                          <p className="texto-artista">
+                            O Baile Municipal deste ano é um tributo a quem
+                            transforma o Carnaval em experiência. Profissionais
+                            da dança que fazem da música um gesto coletivo, do
+                            corpo uma linguagem e da folia uma manifestação
+                            artística que pulsa nas ruas.
+                          </p>
+                          <p className="texto-artista">
+                            {" "}
+                            A homenagem se estende a nomes que há anos ajudam a
+                            construir o espetáculo do Carnaval do Papangu, como
+                            Jefferson, Bruno, Ianka, Ana Paula, Carlos Marques,
+                            Clécio, Silvani Kika, Marcos Tota, Luizinho Moreno,
+                            Equilaine, Jonathan, Arthur Bruno e Cláudio.
+                            Artistas que, com presença e dedicação, seguem
+                            levando movimento, identidade e emoção para a festa.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   )}
@@ -381,18 +371,12 @@ export default function Home() {
           <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
         </div>
 
-        <section
-          id="programacao"
-          className="py-5"
-          onClick={() => mostrarFiltros && setMostrarFiltros(false)}
-        >
+        <section id="programacao" className="py-5">
           <div className="container">
-            <h2 className="m-titulo-programacao mb-5">ATRAÇÕES CONFIRMADAS</h2>
+            <h2 className="m-titulo-programacao mb-5">LINE-UP OFICIAL</h2>
 
-            <div
-              className="search-filter-container mb-5"
-              onClick={(e) => e.stopPropagation()}
-            >
+            {/* BARRA DE BUSCA */}
+            <div className="search-container-center mb-5">
               <div className="search-box-individual">
                 <i className="bx bx-search"></i>
                 <input
@@ -402,65 +386,31 @@ export default function Home() {
                   onChange={(e) => setBusca(e.target.value)}
                 />
               </div>
+            </div>
 
-              {/* 2. Filtro Dropdown Independente */}
-              <div className="filter-wrapper">
-                <button
-                  className={`filter-pill-btn ${mostrarFiltros ? "ativo" : ""}`}
-                  onClick={() => setMostrarFiltros(!mostrarFiltros)}
-                >
-                  <div className="filter-content">
-                    <span className="label">CATEGORIA</span>
-                    <span className="value">{categoriaSelecionada}</span>
-                  </div>
-                  <i
-                    className={`bx bx-chevron-down arrow ${mostrarFiltros ? "rotate" : ""}`}
-                  ></i>
-                </button>
+            {artistasFiltrados.length > 0 ? (
+              <div className="lineup-editorial">
+                {artistasFiltrados.map((artista, index) => (
+                  <React.Fragment key={artista.id}>
+                    <span className="lineup-editorial-item">
+                      {artista.nome}
+                    </span>
 
-                {/* Lista Flutuante (Absolute) */}
-                {mostrarFiltros && (
-                  <div className="dropdown-floating-menu fade-in-animation">
-                    {categorias.map((cat) => (
-                      <div
-                        key={cat}
-                        className={`dropdown-option ${categoriaSelecionada === cat ? "selected" : ""}`}
-                        onClick={() => {
-                          setCategoriaSelecionada(cat);
-                          setMostrarFiltros(false);
-                        }}
-                      >
-                        {cat}
-                      </div>
-                    ))}
-                  </div>
-                )}
+                    {index < artistasFiltrados.length - 1 && (
+                      <>
+                        <span className="sep">•</span>{" "}
+                      </>
+                    )}
+                  </React.Fragment>
+                ))}
               </div>
-            </div>
-
-            <div className="lineup-grid">
-              {artistasFiltrados.length > 0 ? (
-                artistasFiltrados.map((artista) => (
-                  <div key={artista.id} className="artist-card">
-                    <div className="card-glow"></div>
-                    <h3 className="artist-name">{artista.nome}</h3>
-
-                    {/* 3. MUDANÇA: Renderiza múltiplas tags */}
-                    <div className="tags-container">
-                      {artista.categoria.map((cat, index) => (
-                        <span key={index} className="artist-tag">
-                          {cat}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <p className="text-white text-center w-100">
-                  Nenhum artista encontrado.
+            ) : (
+              <div className="text-center w-100 py-5">
+                <p className="text-white" style={{ opacity: 0.7 }}>
+                  Nenhuma atração encontrada com esse nome.
                 </p>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </section>
 
