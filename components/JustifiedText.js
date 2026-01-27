@@ -4,15 +4,31 @@ const JustifiedText = ({ text, className }) => {
   const textRef = useRef(null);
   const [viewBox, setViewBox] = useState(null);
   const [opacity, setOpacity] = useState(0);
-  const PADDING = window.innerWidth < 768 ? 0.5 : 1;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const PADDING = isMobile ? 0.5 : 1;
 
   const measure = () => {
     if (textRef.current) {
       try {
         const bbox = textRef.current.getBBox();
+
         if (bbox.width > 0 && bbox.height > 0) {
           setViewBox(
-            `${bbox.x - PADDING} ${bbox.y - PADDING} ${bbox.width + PADDING * 2} ${bbox.height + PADDING * 2}`,
+            `${bbox.x - PADDING} ${bbox.y - PADDING} ${
+              bbox.width + PADDING * 2
+            } ${bbox.height + PADDING * 2}`,
           );
           setOpacity(1);
         }
@@ -22,13 +38,15 @@ const JustifiedText = ({ text, className }) => {
 
   useEffect(() => {
     measure();
+
     if (document.fonts) {
-      document.fonts.load('1em "BabySchool"').then(() => measure());
+      document.fonts.load('1em "BabySchool"').then(measure);
       document.fonts.ready.then(measure);
     }
+
     window.addEventListener("resize", measure);
     return () => window.removeEventListener("resize", measure);
-  }, [text]);
+  }, [text, isMobile]);
 
   return (
     <div
@@ -51,10 +69,9 @@ const JustifiedText = ({ text, className }) => {
           display: "block",
           width: "100%",
           height: "auto",
-          maxHeight:
-            window.innerWidth < 768
-              ? "clamp(1.9rem, 6vw, 2.2rem)"
-              : "clamp(2rem, 8vw, 8vh)",
+          maxHeight: isMobile
+            ? "clamp(1.9rem, 6vw, 2.2rem)"
+            : "clamp(2rem, 8vw, 8vh)",
           opacity: opacity,
           transition: "opacity 0.2s ease-in",
         }}
@@ -69,7 +86,7 @@ const JustifiedText = ({ text, className }) => {
             textTransform: "uppercase",
             fill: "white",
             stroke: "rgba(0,0,0,0.65)",
-            strokeWidth: window.innerWidth < 768 ? "2.4px" : "2px",
+            strokeWidth: isMobile ? "2.4px" : "2px",
             paintOrder: "stroke fill",
             textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
           }}
