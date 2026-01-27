@@ -403,11 +403,11 @@
 
 .m-btn-baile {
   padding: 1rem 2.2rem;
-  color: white;
+  color: #f38d29;
   text-decoration: none;
   border-radius: 50px;
-  background: transparent;
-  border: 2px solid white;
+  background: white;
+  border: 2px solid #f38d29;
   transition: 0.3s;
   font-weight: 800;
   text-transform: uppercase;
@@ -417,6 +417,7 @@
 
 .m-btn-baile.destaque {
   border: none;
+  color: white;
   background: #f38d29;
   box-shadow: 0 5px 20px rgba(248, 174, 27, 0.4);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -780,7 +781,6 @@
 
   .baile-slide {
     height: auto;
-    padding: 0;
   }
 
   .logo-baile {
@@ -911,29 +911,6 @@
   box-shadow: 0 0 0 4px rgba(245, 130, 31, 0.15);
 }
 
-/* LINE-UP OFICIAL  */
-
-.lineup-editorial {
-  text-align: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 15px;
-  line-height: 1.8;
-  -webkit-text-stroke: 1.5px black;
-  paint-order: stroke fill;
-  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
-}
-
-.lineup-editorial-item {
-  font-family: var(--fonte-principal, sans-serif);
-  display: inline-block;
-  white-space: nowrap;
-  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 .sep {
   display: inline-block;
   color: #f5821f;
@@ -944,15 +921,6 @@
 }
 
 @media (max-width: 768px) {
-  .lineup-editorial {
-    padding: 0 10px;
-    line-height: 1.6;
-  }
-
-  .lineup-editorial-item {
-    letter-spacing: 0.5px;
-  }
-
   .sep {
     margin: 0 8px;
   }
@@ -964,47 +932,70 @@
   gap: 8px;
 }
 
-.artist-card {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 0;
-  padding: 10px 4px;
-  min-height: auto;
+.container-atracoes {
+  width: 100%;
+  max-width: 100px;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  padding: 0 1rem;
 }
 
-.artist-name {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  line-height: 1.2;
-  padding: 0;
+.artista-item {
+  color: #fff;
 }
 
-.card-glow {
-  display: none;
+.lineup-poster-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 @media (max-width: 768px) {
-  .lineup-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  .lineup-poster-container {
+    max-width: 100%;
+    padding: 0 0.5rem;
   }
+}
 
-  .artist-card {
-    padding: 15px 10px;
-    min-height: 70px;
-    justify-content: center;
-    text-align: center;
-    border-left: none;
-    border-bottom: 2px solid #f5821f;
-  }
+/* SEÇÃO BLOCOS */
+.bloco-section {
+  width: 100%;
+  min-height: 60vh;
+  background-image: url("../public/CBG3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
 
-  .artist-name {
-    padding-left: 0;
-    font-size: 0.85rem;
+.bloco-section::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* Ocupa toda a div */
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.bloco-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.bloco-aviso {
+  font-family: "Gabarito", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .bloco-aviso {
+    font-size: 1.2rem;
   }
 }

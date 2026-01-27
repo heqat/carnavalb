@@ -8,9 +8,9 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const [isVisible, setIsVisible] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-  const [termoBusca, setTermoBusca] = useState(""); 
-  
+
+  const [termoBusca, setTermoBusca] = useState("");
+
   const router = useRouter();
 
   const toggleMenu = () => {
@@ -30,17 +30,17 @@ export default function Navbar() {
     setTermoBusca("");
 
     if (termoParaEnviar.trim() !== "") {
-        router.push({
-            pathname: '/',
-            query: { busca: termoParaEnviar },
-            hash: 'programacao'
-        });
+      router.push({
+        pathname: "/",
+        query: { busca: termoParaEnviar },
+        hash: "programacao",
+      });
     } else {
-        router.push('/#programacao');
+      router.push("/#programacao");
     }
   };
 
- useEffect(() => {
+  useEffect(() => {
     let lastScrollY = window.scrollY;
     let ticking = false; // Variável de controle (semaforo)
 
@@ -58,19 +58,22 @@ export default function Navbar() {
       // 2. Identifica Seção Ativa (Cálculo Pesado)
       const sections = document.querySelectorAll("section");
       let currentSection = "";
-      
+
       // Otimização: Adiciona um buffer para não trocar freneticamente
-      const scrollMiddle = window.scrollY + (window.innerHeight / 3); 
+      const scrollMiddle = window.scrollY + window.innerHeight / 3;
 
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        
-        if (scrollMiddle >= sectionTop && scrollMiddle < sectionTop + sectionHeight) {
+
+        if (
+          scrollMiddle >= sectionTop &&
+          scrollMiddle < sectionTop + sectionHeight
+        ) {
           currentSection = section.getAttribute("id");
         }
       });
-      
+
       // Só atualiza o estado se realmente mudou (Evita re-render desnecessário)
       if (currentSection !== activeSection) {
         setActiveSection(currentSection);
@@ -88,7 +91,7 @@ export default function Navbar() {
 
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
-  }, [activeSection]); 
+  }, [activeSection]);
 
   return (
     <header>
@@ -124,29 +127,58 @@ export default function Navbar() {
             id="navbar-collapse"
           >
             <ul className="navbar-nav me-auto align-items-center">
-              <li className={`nav-item m-2 ${activeSection === "baile" ? "active" : ""}`}>
+              <li
+                className={`nav-item m-2 ${activeSection === "baile" ? "active" : ""}`}
+              >
                 <a
                   href="/../#baile"
                   className="text-nav p-2"
-                  onClick={() => { setActiveSection("baile"); closeMenu(); }}
+                  onClick={() => {
+                    setActiveSection("baile");
+                    closeMenu();
+                  }}
                 >
                   BAILE MUNICIPAL
                 </a>
               </li>
-              <li className={`nav-item m-2 ${activeSection === "programacao" ? "active" : ""}`}>
+              <li
+                className={`nav-item m-2 ${activeSection === "programacao" ? "active" : ""}`}
+              >
                 <a
                   href="/../#programacao"
                   className="text-nav p-2"
-                  onClick={() => { setActiveSection("programacao"); closeMenu(); }}
+                  onClick={() => {
+                    setActiveSection("programacao");
+                    closeMenu();
+                  }}
                 >
                   ATRAÇÕES
                 </a>
               </li>
-              <li className={`nav-item m-2 ${activeSection === "mapa" ? "active" : ""}`}>
+              <li
+                className={`nav-item m-2 ${activeSection === "bloco" ? "active" : ""}`}
+              >
+                <a
+                  href="/../#bloco"
+                  className="text-nav p-2"
+                  onClick={() => {
+                    setActiveSection("bloco");
+                    closeMenu();
+                  }}
+                >
+                  BLOCOS
+                </a>
+              </li>
+              <li
+                className={`nav-item m-2 ${activeSection === "mapa" ? "active" : ""}`}
+              >
                 <a
                   href="/../#mapa"
                   className="text-nav p-2"
-                  onClick={() => { setActiveSection("mapa"); closeMenu(); }}
+                  onClick={() => {
+                    setActiveSection("mapa");
+                    closeMenu();
+                  }}
                 >
                   MAPA
                 </a>
@@ -155,19 +187,21 @@ export default function Navbar() {
 
             {/*  BUSCA */}
             <div className="search-pill-container">
-                <div className="search-pill">
-                    <input 
-                        type="text" 
-                        placeholder="Buscar atração..." 
-                        className="search-input"
-                        value={termoBusca} 
-                        onChange={(e) => setTermoBusca(e.target.value)}
-                        onKeyDown={(e) => { if(e.key === 'Enter') handleSearchFocus(e) }}
-                    />
-                    <button className="search-btn" onClick={handleSearchFocus}>
-                        <i className="bx bx-search bx-sm"></i>
-                    </button>
-                </div>
+              <div className="search-pill">
+                <input
+                  type="text"
+                  placeholder="Buscar atração..."
+                  className="search-input"
+                  value={termoBusca}
+                  onChange={(e) => setTermoBusca(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") handleSearchFocus(e);
+                  }}
+                />
+                <button className="search-btn" onClick={handleSearchFocus}>
+                  <i className="bx bx-search bx-sm"></i>
+                </button>
+              </div>
             </div>
 
             <ul className="navbar-nav ms-auto d-flex justify-content-center flex-row align-items-center m-navbar-icones">

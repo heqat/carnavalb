@@ -6,6 +6,9 @@ import { useRouter } from "next/router";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { artistas } from "../components/data/artistasConfirmados";
+// Importante: O componente novo deve ser importado aqui
+import JustifiedText from "../components/JustifiedText";
+
 import marca from "../public/marcasembezerros.png";
 import marcaFundarpe from "../public/marca-fundarpe.png";
 import marcaEmpetur from "../public/marca-empetur.png";
@@ -32,6 +35,23 @@ export default function Home() {
     }
   }, [router.isReady, router.query.busca]);
 
+  const [mediaCaracteres, setMediaCaracteres] = useState(45);
+
+  useEffect(() => {
+    const definirMedia = () => {
+      if (window.innerWidth < 768) {
+        setMediaCaracteres(45);
+      } else {
+        setMediaCaracteres(75);
+      }
+    };
+
+    definirMedia();
+    window.addEventListener("resize", definirMedia);
+
+    return () => window.removeEventListener("resize", definirMedia);
+  }, []);
+
   const artistasFiltrados = artistas.filter((artista) => {
     return artista.nome.toLowerCase().includes(busca.toLowerCase());
   });
@@ -42,6 +62,46 @@ export default function Home() {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const totalResultados = artistasFiltrados.length;
+
+  const organizarLineup = (listaDeArtistas) => {
+    const linhas = [];
+    let linhaAtual = [];
+    let caracteresNaLinha = 0;
+
+    const poucosResultados = listaDeArtistas.length <= 6;
+
+    listaDeArtistas.forEach((artista) => {
+      const tamanhoNome = artista.nome.length;
+
+      if (poucosResultados && linhaAtual.length >= 2) {
+        linhas.push(linhaAtual);
+        linhaAtual = [];
+        caracteresNaLinha = 0;
+      }
+
+      if (
+        linhaAtual.length > 0 &&
+        caracteresNaLinha + tamanhoNome > mediaCaracteres
+      ) {
+        linhas.push(linhaAtual);
+        linhaAtual = [];
+        caracteresNaLinha = 0;
+      }
+
+      linhaAtual.push(artista.nome);
+      caracteresNaLinha += tamanhoNome + 3; // + separador " • "
+    });
+
+    if (linhaAtual.length > 0) {
+      linhas.push(linhaAtual);
+    }
+
+    return linhas;
+  };
+
+  const lineupOrganizado = organizarLineup(artistasFiltrados);
 
   return (
     <>
@@ -371,9 +431,10 @@ export default function Home() {
           <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
         </div>
 
+        {/* --- SEÇÃO PROGRAMAÇÃO --- */}
         <section id="programacao" className="py-5">
           <div className="container">
-            <h2 className="m-titulo-programacao mb-5">LINE-UP OFICIAL</h2>
+            <h2 className="m-titulo-programacao mb-5">ATRAÇÕES CONFIRMADAS</h2>
 
             {/* BARRA DE BUSCA */}
             <div className="search-container-center mb-5">
@@ -389,19 +450,13 @@ export default function Home() {
             </div>
 
             {artistasFiltrados.length > 0 ? (
-              <div className="lineup-editorial">
-                {artistasFiltrados.map((artista, index) => (
-                  <React.Fragment key={artista.id}>
-                    <span className="lineup-editorial-item">
-                      {artista.nome}
-                    </span>
-
-                    {index < artistasFiltrados.length - 1 && (
-                      <>
-                        <span className="sep">•</span>{" "}
-                      </>
-                    )}
-                  </React.Fragment>
+              <div className="lineup-poster-container">
+                {lineupOrganizado.map((linha, index) => (
+                  <JustifiedText
+                    key={index}
+                    text={linha.join(" • ")}
+                    className="text-white"
+                  />
                 ))}
               </div>
             ) : (
@@ -411,6 +466,19 @@ export default function Home() {
                 </p>
               </div>
             )}
+          </div>
+        </section>
+        <div className="divisoria-overlap">
+          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
+        </div>
+
+        <section
+          id="bloco"
+          className="bloco-section d-flex align-items-center justify-content-center text-center"
+        >
+          <div className="container">
+            <h2 className="m-titulo-programacao mb-4 text-white">BLOCOS</h2>
+            <p className="bloco-aviso text-white">MAIS INFORMAÇÕES EM BREVE!</p>
           </div>
         </section>
 
