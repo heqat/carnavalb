@@ -185,7 +185,7 @@ export default function Navbar() {
               </li>
             </ul>
 
-            {/*  BUSCA */}
+            {/*  BUSCA 
             <div className="search-pill-container">
               <div className="search-pill">
                 <input
@@ -203,6 +203,7 @@ export default function Navbar() {
                 </button>
               </div>
             </div>
+            */}
 
             <ul className="navbar-nav ms-auto d-flex justify-content-center flex-row align-items-center m-navbar-icones">
               <li className="nav-item m-2">

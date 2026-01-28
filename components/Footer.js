@@ -37,7 +37,9 @@ export default function () {
         <div className="col mb-3">
           <h5 className="m-titulo-informacoes">Contato</h5>
           <ul className="nav flex-column">
-            <li className="nav-item mb-2 m-texto-informacoes">.</li>
+            <li className="nav-item mb-2 m-texto-informacoes">
+              E-mail: gabinetebezerrospe@gmail.com.
+            </li>
           </ul>
         </div>
 

@@ -352,7 +352,7 @@ export default function Home() {
                         }`}
                         onClick={() => setAbaBaile("homenageado")}
                       >
-                        🌟 HOMENAGEADO
+                        🌟 HOMENAGEADOS
                       </button>
                     </div>
                   </div>
@@ -436,7 +436,7 @@ export default function Home() {
           <div className="container">
             <h2 className="m-titulo-programacao mb-5">ATRAÇÕES CONFIRMADAS</h2>
 
-            {/* BARRA DE BUSCA */}
+            {/* BARRA DE BUSCA 
             <div className="search-container-center mb-5">
               <div className="search-box-individual">
                 <i className="bx bx-search"></i>
@@ -448,6 +448,7 @@ export default function Home() {
                 />
               </div>
             </div>
+            */}
 
             {artistasFiltrados.length > 0 ? (
               <div className="lineup-poster-container">
