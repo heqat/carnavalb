@@ -9,10 +9,10 @@ export default function Historia() {
   const slides = [
     {
       id: "origem",
-      ano: "1900",
-      titulo: "A Origem",
+      ano: "ORIGEM",
+      titulo: "História",
       texto:
-        "Em meados dos anos de 1900, alguns amigos tiveram a ideia de fazer uma simples brincadeira: sair às ruas da cidade com roupas arranjadas e o rosto totalmente coberto para ninguém identificar quem estava por trás da fantasia. Os 'mascarados' passavam de casa em casa pedindo angu de milho, criando um mistério delicioso sobre suas identidades.",
+        "O Município de Bezerros, no Agreste, é reconhecido nacionalmente como à Terra do Papangu e tem um dos carnavais mais tradicionais e autênticos do interior do Brasil. É o terceiro maior polo carnavalesco de Pernambuco, reunindo milhares de foliões todos os anos. Os papangus são figuras mascaradas e que trazem consigo à riqueza cultural das tradições populares passadas de geração em geração ao longo de anos, misturando  imaginário coletivo do povo bezerrense, misturando.",
     },
     {
       id: "nome",
@@ -24,30 +24,16 @@ export default function Historia() {
     {
       id: "hoje",
       ano: "HOJE",
-      titulo: "Patrimônio Cultural",
+      titulo: "Patrimônio Cultural Imaterial",
       texto:
-        "Saindo em blocos ou sozinhos, os Papangus deram origem ao maior e melhor bloco de carnaval do interior do Brasil. O anfitrião foi declarado Patrimônio Cultural Imaterial de Pernambuco, eternizado em fantasias, xilogravuras e músicas que traduzem nossa riqueza cultural para os quatro cantos do mundo.",
+        "O Carnaval do Papangu de Bezerros é referência pela originalidade e autenticidade do próprio anfitrião que é Patrimônio Cultural Imaterial de Pernambuco, conforme Lei Estadual Nº 13.773/20209. O nome é uma junção das palavras “papa” + “angu”, traduzindo o costume de pedir comida de milho (angu) nas residências.",
     },
     {
-      id: "fase1",
-      ano: "FASES 1-2",
-      titulo: "Do Angu ao Papel",
+      id: "hist, mov e enc",
+      ano: "TEMA",
+      titulo: "HISTÓRIA, MOVIMENTO E ENCANTO",
       texto:
-        "A história registra seis fases de evolução. A 1ª fase (1900) era a busca pelo angu, servido puro ou com carne. A 2ª fase marca o surgimento da máscara confeccionada improvisadamente com papel de embrulhar charque, feita de forma simples, sem qualquer preocupação com a beleza estética.",
-    },
-    {
-      id: "fase3",
-      ano: "FASES 3-4",
-      titulo: "Tecidos e Cores",
-      texto:
-        "A 3ª fase dá vida à máscara de tecido, inicialmente produzida criativamente com fronhas de travesseiro. Já na 4ª fase, a folia ganha cores vibrantes a partir da introdução da técnica do papel colê, permitindo novas formas de expressão.",
-    },
-    {
-      id: "fase5",
-      ano: "FASES 5-6",
-      titulo: "A Arte Final",
-      texto:
-        "O famoso 'Cabeção' entra na 5ª fase, levando alegria em seus traços exagerados. Por fim, chegamos a todo o encantamento da 6ª fase, com as máscaras de papel machê, verdadeiras obras de arte que são as mais tradicionais e valorizadas nos dias de hoje.",
+        "Em 2026, o Carnaval do Papangu de Bezerros tem como tema central “História, Movimento e Encanto” que destaca os elementos marcantes de sua trajetória: a tradição centenária, o mistério das máscaras, a dança pelas ruas e o colorido dos festejos carnavalescos.",
     },
   ];
 
@@ -64,7 +50,7 @@ export default function Historia() {
         root: null,
         rootMargin: "0px",
         threshold: 0.5,
-      }
+      },
     );
 
     slides.forEach((slide) => {

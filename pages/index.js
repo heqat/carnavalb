@@ -29,12 +29,6 @@ export default function Home() {
   const [abaBaile, setAbaBaile] = useState("atracoes"); // 'atracoes' ou 'ingressos'
   const [videoRodando, setVideoRodando] = useState(false);
 
-  useEffect(() => {
-    if (router.isReady && router.query.busca) {
-      setBusca(router.query.busca);
-    }
-  }, [router.isReady, router.query.busca]);
-
   const [mediaCaracteres, setMediaCaracteres] = useState(45);
 
   useEffect(() => {
@@ -159,12 +153,13 @@ export default function Home() {
                     <p className="m-apresentacao-texto">
                       Bem-vindos ao maior e melhor carnaval do interior do
                       Brasil: o Carnaval do Papangu em Bezerros - Pernambuco.
-                      Feito de histórias que se vivem, movimentos que contagiam
-                      e encantos que transformam.
+                      Repleto de “História, Movimento e Encanto”, o nosso
+                      carnaval é autêntico, multicultural, seguro, familiar,
+                      inclusivo, sustentável e diverso.
                     </p>
                     <p className="m-apresentacao-texto">
-                      Você é nosso convidado especial para conhecer a magia dos
-                      nossos papangus e viver essa folia com a gente.
+                      Você é nosso convidado especial para conhecer de perto a
+                      magia dos nossos papangus.
                       <strong> BEZERROS ESPERA POR VOCÊ!!! </strong>
                     </p>
                     <div className="button-container justify-content-center mt-3">
@@ -299,11 +294,15 @@ export default function Home() {
                       <div className="logo-baile mx-auto mb-3"></div>
 
                       <p className="m-baile-texto">
-                        Prepare sua fantasia! O 22º Baile Municipal mais
-                        tradicional do interior está de volta. Uma noite de
-                        muito frevo, cultura e alegria no Clube Literário
-                        celebrando "O encanto do Papangu no país do Frevo e do
-                        Futebol".
+                        Bezerros possui um dos mais tradicionais e autênticos
+                        bailes carnavalescos do interior de Pernambuco,
+                        celebrando emoções, histórias, saudades, cores, ritmos e
+                        alegria no Carnaval do Papangu. Este ano, o evento tem
+                        como tema “O encanto do Papangu no país do frevo e do
+                        futebol” e presta homenagem aos profissionais de dança
+                        (artistas, educadores, coreógrafos e grupos culturais)
+                        como instrumentos de força cultural, formação cidadã e
+                        expressão coletiva.
                       </p>
 
                       <div className="button-container-baile d-flex justify-content-center gap-3 mt-3">
@@ -450,23 +449,15 @@ export default function Home() {
             </div>
             */}
 
-            {artistasFiltrados.length > 0 ? (
-              <div className="lineup-poster-container">
-                {lineupOrganizado.map((linha, index) => (
-                  <JustifiedText
-                    key={index}
-                    text={linha.join(" • ")}
-                    className="text-white"
-                  />
-                ))}
-              </div>
-            ) : (
-              <div className="text-center w-100 py-5">
-                <p className="text-white" style={{ opacity: 0.7 }}>
-                  Nenhuma atração encontrada com esse nome.
-                </p>
-              </div>
-            )}
+            <div className="lineup-poster-container">
+              {lineupOrganizado.map((linha, index) => (
+                <JustifiedText
+                  key={index}
+                  text={linha.join(" • ")}
+                  className="text-white"
+                />
+              ))}
+            </div>
           </div>
         </section>
         <div className="divisoria-overlap">
