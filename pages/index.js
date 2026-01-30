@@ -522,40 +522,6 @@ export default function Home() {
           <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
         </div>
 
-        <section>
-          <div className="container d-flex flex-wrap align-items-center justify-content-center mt-3 pb-3">
-            <p className="texto-patrocinio mt-4 mb-4">PATROCÍNIO:</p>
-            <div className="container mb-4 d-flex flex-wrap gap-5 align-items-center justify-content-center">
-              <Image src={marcaDevassa} height={100}></Image>
-
-              <Image src={marcaCoca} height={100}></Image>
-              <div className="border border-bottom border-1 w-100"></div>
-              <Image src={marcaPitu} height={50}></Image>
-              <Image src={marcaDtel} height={50}></Image>
-              <div className="border border-bottom border-1 w-100"></div>
-            </div>
-
-            <p className="texto-patrocinio">APOIO INSTITUCIONAL:</p>
-            <div className="container d-flex flex-wrap gap-5 align-items-center justify-content-center mb-5">
-              <Image src={marcaFundarpe} height={80}></Image>
-              <Image src={marcaEmpetur} height={80}></Image>
-              <Image src={marcaSecCultura} height={80}></Image>
-
-              <Image src={marcaSesc} height={80}></Image>
-            </div>
-            <div className="border border-bottom border-1 w-100"></div>
-
-            <p className="texto-patrocinio">REALIZAÇÃO:</p>
-            <div className="container d-flex flex-wrap gap-5 align-items-center justify-content-center mb-5">
-              <Image src={marcaPrefeitura} alt="marca prefeitura" height={80} />
-            </div>
-          </div>
-        </section>
-
-        <div className="divisoria-overlap">
-          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
-        </div>
-
         <section id="mapa">
           <div className="d-flex flex-column justify-content-center align-items-center m-container-mapa">
             <h2 className="m-titulo-secao mt-4 mb-4">
@@ -567,6 +533,27 @@ export default function Home() {
               className="mb-5 map-frame"
               src="https://www.google.com/maps/d/embed?mid=1FuFypVAyPR2kLnJPcIWUAxT3uaPzzs8&ehbc=2E312F"
             ></iframe>
+          </div>
+        </section>
+
+        <div className="divisoria-overlap">
+          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
+        </div>
+
+        <section id="patrocinio" className="py-4">
+          <div className="container d-flex justify-content-center">
+            <Image
+              src="/regua.png"
+              alt="Patrocinadores, Apoio e Realização"
+              width={1200}
+              height={300}
+              className="img-fluid"
+              style={{
+                width: "100%",
+                height: "auto",
+                maxWidth: "700px",
+              }}
+            />
           </div>
         </section>
 

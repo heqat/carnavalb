@@ -636,11 +636,32 @@
   scroll-margin-top: 70px;
   background: url("../public/CBG13.jpg");
   background-position: center;
+
   background-repeat: repeat;
 }
 
 #patrocinio {
-  background-color: whitesmoke;
+  scroll-margin-top: 70px;
+  background: url("../public/CBG7.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+#patrocinio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+#patrocinio > .container {
+  position: relative;
+  z-index: 2;
 }
 
 .m-container-mapa iframe {
