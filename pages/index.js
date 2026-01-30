@@ -288,8 +288,8 @@ export default function Home() {
               style={{ transform: `translateX(-${slideBaile * 100}vw)` }}
             >
               <div className="baile-slide">
-                <div className="container h-100 position-relative d-flex flex-column justify-content-center">
-                  <div className="row align-items-center justify-content-center h-100">
+                <div className="container position-relative d-flex flex-column justify-content-center">
+                  <div className="row align-items-center justify-content-center">
                     <div className="col-lg-6 col-12 text-white text-center mb-4 mb-lg-0 fade-in-animation">
                       <div className="logo-baile mx-auto mb-3"></div>
 
