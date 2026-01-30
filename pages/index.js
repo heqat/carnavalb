@@ -522,6 +522,40 @@ export default function Home() {
           <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
         </div>
 
+        <section>
+          <div className="container d-flex flex-wrap align-items-center justify-content-center mt-3 pb-3">
+            <p className="texto-patrocinio mt-4 mb-4">PATROCÍNIO:</p>
+            <div className="container mb-4 d-flex flex-wrap gap-5 align-items-center justify-content-center">
+              <Image src={marcaDevassa} height={100}></Image>
+
+              <Image src={marcaCoca} height={100}></Image>
+              <div className="border border-bottom border-1 w-100"></div>
+              <Image src={marcaPitu} height={50}></Image>
+              <Image src={marcaDtel} height={50}></Image>
+              <div className="border border-bottom border-1 w-100"></div>
+            </div>
+
+            <p className="texto-patrocinio">APOIO INSTITUCIONAL:</p>
+            <div className="container d-flex flex-wrap gap-5 align-items-center justify-content-center mb-5">
+              <Image src={marcaFundarpe} height={80}></Image>
+              <Image src={marcaEmpetur} height={80}></Image>
+              <Image src={marcaSecCultura} height={80}></Image>
+
+              <Image src={marcaSesc} height={80}></Image>
+            </div>
+            <div className="border border-bottom border-1 w-100"></div>
+
+            <p className="texto-patrocinio">REALIZAÇÃO:</p>
+            <div className="container d-flex flex-wrap gap-5 align-items-center justify-content-center mb-5">
+              <Image src={marcaPrefeitura} alt="marca prefeitura" height={80} />
+            </div>
+          </div>
+        </section>
+
+        <div className="divisoria-overlap">
+          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
+        </div>
+
         <section id="mapa">
           <div className="d-flex flex-column justify-content-center align-items-center m-container-mapa">
             <h2 className="m-titulo-secao mt-4 mb-4">
