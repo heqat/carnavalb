@@ -191,7 +191,7 @@ export default function Navbar() {
     }
 
     alert(
-      `Não encontramos resultados para "${termoBusca}". Tente palavras como "Baile", "História" ou o nome da atração.`,
+      `Não encontramos resultados para "${termoBusca}", tente com outro termo.`,
     );
   };
 

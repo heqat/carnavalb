@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -30,6 +30,50 @@ export default function Home() {
   const [videoRodando, setVideoRodando] = useState(false);
 
   const [mediaCaracteres, setMediaCaracteres] = useState(45);
+
+  const baileViewportRef = useRef(null);
+
+  useEffect(() => {
+    const ajustarAltura = () => {
+      const viewport = baileViewportRef.current;
+      const isMobile = window.innerWidth < 992;
+
+      if (viewport && isMobile) {
+        // Pega o slide atual
+        const slides = viewport.querySelectorAll(".baile-slide");
+        const slideAtivo = slides[slideBaile];
+
+        if (slideAtivo) {
+          // Vamos medir o primeiro filho direto (o container ou o card)
+          const conteudo = slideAtivo.firstElementChild;
+
+          if (conteudo) {
+            // Pega a altura total do elemento
+            const alturaConteudo = conteudo.offsetHeight;
+
+            // Adiciona uma folga generosa (100px) para compensar paddings do pai e sombras
+            // Essa folga extra é o que vai impedir o corte embaixo
+            viewport.style.height = `${alturaConteudo + 100}px`;
+          }
+        }
+      } else if (viewport) {
+        viewport.style.height = "";
+      }
+    };
+
+    ajustarAltura();
+    window.addEventListener("resize", ajustarAltura);
+
+    // Pequenos delays para garantir que a renderização terminou
+    const timer1 = setTimeout(ajustarAltura, 50);
+    const timer2 = setTimeout(ajustarAltura, 300);
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+      window.removeEventListener("resize", ajustarAltura);
+    };
+  }, [slideBaile, abaBaile]); // Mantém as dependências
 
   useEffect(() => {
     const definirMedia = () => {
@@ -273,7 +317,8 @@ export default function Home() {
           <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
         </div>
         <section id="baile">
-          <div className="baile-viewport">
+          <div className="baile-viewport" ref={baileViewportRef}>
+            {" "}
             {slideBaile === 1 && (
               <button
                 className="btn-corner-toggle voltar"
@@ -282,7 +327,6 @@ export default function Home() {
                 <i className="bx bx-left-arrow-alt"></i>
               </button>
             )}
-
             <div
               className="baile-slider-wrapper"
               style={{ transform: `translateX(-${slideBaile * 100}vw)` }}

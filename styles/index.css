@@ -324,6 +324,8 @@
 .baile-viewport {
   width: 100%;
   overflow: hidden;
+  min-height: auto;
+  transition: height 0.4s ease-in-out;
 }
 
 .baile-slider-wrapper {
@@ -988,39 +990,34 @@
     font-size: 1.2rem;
   }
 
-  #baile,
-  .baile-viewport,
-  .baile-slider-wrapper,
-  .baile-slide {
-    height: auto !important;
-    min-height: unset !important;
-    align-items: flex-start;
-  }
-
-  /* Slide 1 não força altura */
-  #baile .baile-slide:first-child .container,
-  #baile .baile-slide:first-child .row {
-    height: auto !important;
-  }
-
-  /* Remove h-100 que define altura máxima do slider */
-  #baile .container.h-100,
-  #baile .row.h-100 {
-    height: auto !important;
-  }
-
-  /* Espaçamento controlado */
-  .baile-slide {
-    padding: 24px 0;
-  }
-
   #baile {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-attachment: scroll !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
+
+  .baile-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .baile-slide .container,
+  .baile-slide .baile-card-vidro {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    height: auto !important;
   }
 
   .baile-card-vidro {
-    min-height: auto;
+    width: 90% !important;
+    max-width: 400px;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
