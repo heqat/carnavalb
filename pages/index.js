@@ -26,10 +26,9 @@ export default function Home() {
   const router = useRouter();
 
   const nomesOficiaisPalcos = {
-    "Palco Principal (QG)": "Polo Lucas Cardoso",
-    "Polo Cultural": "Polo Centenária",
-    "Palco do Frevo": "Polo Mestre Vitalino",
-    "São Sebastião": "Polo dos Cocos",
+    "QG do Frevo": "Polo Lucas Cardoso",
+    "Palco Cultural": "Polo Mestre J. Borges",
+    "Palco Centenária": "Polo Mestre Lula Vassoureiro",
   };
 
   const [busca, setBusca] = useState("");
@@ -70,16 +69,32 @@ export default function Home() {
     return acc;
   }, {});
 
+  const ordenarHorarioEvento = (a, b) => {
+    const getMinutos = (time) => {
+      if (!time) return 0;
+      let [horas, minutos] = time.split(":").map(Number);
+
+      if (horas < 5) horas += 24;
+
+      return horas * 60 + minutos;
+    };
+
+    return getMinutos(a.horario) - getMinutos(b.horario);
+  };
+
+  // Aplica a nova ordenação
   Object.keys(eventosPorPalco).forEach((palco) => {
-    eventosPorPalco[palco].sort((a, b) => a.horario.localeCompare(b.horario));
+    eventosPorPalco[palco].sort(ordenarHorarioEvento);
   });
 
-  const [diaBlocoAtivo, setDiaBlocoAtivo] = useState(blocosData[0]?.dia || "");
+  const [dataBlocoAtiva, setDataBlocoAtiva] = useState(
+    blocosData[0]?.data || "",
+  );
 
-  const diasBlocos = [...new Set(blocosData.map((item) => item.dia))];
+  const datasUnicasBlocos = [...new Set(blocosData.map((item) => item.data))];
 
-  const blocosDoDia = blocosData
-    .filter((item) => item.dia === diaBlocoAtivo)
+  const blocosFiltrados = blocosData
+    .filter((item) => item.data === dataBlocoAtiva)
     .sort((a, b) => a.horario.localeCompare(b.horario));
 
   useEffect(() => {
@@ -618,31 +633,33 @@ export default function Home() {
               BLOCOS
             </h2>
 
-            <div className="tabs-container fade-in-animation mb-4">
-              {diasBlocos.map((dia) => (
+            {/* ABAS DE DATAS */}
+            <div
+              className="tabs-container fade-in-animation mb-4"
+              style={{ gap: "10px" }}
+            >
+              {datasUnicasBlocos.map((data) => (
                 <button
-                  key={dia}
-                  className={`tab-btn ${diaBlocoAtivo === dia ? "active-b" : ""}`}
-                  onClick={() => setDiaBlocoAtivo(dia)}
+                  key={data}
+                  className={`tab-btn ${dataBlocoAtiva === data ? "active-b" : ""}`}
+                  onClick={() => setDataBlocoAtiva(data)}
+                  style={{ fontWeight: "bold", minWidth: "80px" }}
                 >
-                  {dia}
+                  {data}
                 </button>
               ))}
             </div>
 
-            {/* Grid de Blocos */}
             <div className="blocos-content fade-in-animation">
-              {blocosDoDia.length > 0 ? (
+              {blocosFiltrados.length > 0 ? (
                 <div className="blocos-grid">
-                  {blocosDoDia.map((bloco) => (
+                  {blocosFiltrados.map((bloco) => (
                     <div key={bloco.id} className="bloco-card">
-                      {/* Cabeçalho: Hora */}
                       <div className="bloco-header">
                         <i className="bx bx-time-five"></i>
                         <span>{bloco.horario}</span>
                       </div>
 
-                      {/* Corpo: Nome e Descrição */}
                       <div className="bloco-body">
                         <h4 className="bloco-nome">{bloco.nome}</h4>
                         {bloco.descricao && (
@@ -650,7 +667,6 @@ export default function Home() {
                         )}
                       </div>
 
-                      {/* Rodapé: Local (Destaque) */}
                       <div className="bloco-footer">
                         <i className="bx bxs-map-pin bx-sm"></i>
                         <span className="local-text">{bloco.local}</span>
@@ -660,7 +676,7 @@ export default function Home() {
                 </div>
               ) : (
                 <div className="text-center text-white mt-5">
-                  <p>Nenhum bloco cadastrado para este dia ainda.</p>
+                  <p>Nenhum bloco cadastrado para esta data.</p>
                 </div>
               )}
             </div>
