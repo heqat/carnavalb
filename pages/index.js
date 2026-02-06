@@ -24,20 +24,45 @@ import marcaPrefeitura from "../public/marca-prefeitura.png";
 
 export default function Home() {
   const router = useRouter();
+
+  const nomesOficiaisPalcos = {
+    "Palco Principal (QG)": "Polo Lucas Cardoso",
+    "Polo Cultural": "Polo Centenária",
+    "Palco do Frevo": "Polo Mestre Vitalino",
+    "São Sebastião": "Polo dos Cocos",
+  };
+
   const [busca, setBusca] = useState("");
   const [abaAtiva, setAbaAtiva] = useState("apresentacao");
-  const [slideBaile, setSlideBaile] = useState(0); // 0 = Capa, 1 = Detalhes
-  const [abaBaile, setAbaBaile] = useState("atracoes"); // 'atracoes' ou 'ingressos'
   const [videoRodando, setVideoRodando] = useState(false);
+
+  const [slideBaile, setSlideBaile] = useState(0);
+  const [abaBaile, setAbaBaile] = useState("atracoes");
+  const baileViewportRef = useRef(null);
+
   const [diaAtivo, setDiaAtivo] = useState(programacaoGeral[0]?.dia || "");
+
+  const [palcoFiltro, setPalcoFiltro] = useState("Todos");
+  const [dropdownAberto, setDropdownAberto] = useState(false);
+  const dropdownRef = useRef(null);
 
   const diasDisponiveis = [
     ...new Set(programacaoGeral.map((item) => item.dia)),
   ];
-  const eventosDoDia = programacaoGeral.filter((item) => item.dia === diaAtivo);
-  const baileViewportRef = useRef(null);
 
-  const eventosPorPalco = eventosDoDia.reduce((acc, evento) => {
+  const eventosDoDia = programacaoGeral.filter((item) => item.dia === diaAtivo);
+
+  const palcosDoDia = [
+    "Todos",
+    ...new Set(eventosDoDia.map((item) => item.palco)),
+  ];
+
+  const eventosFiltrados = eventosDoDia.filter((evento) => {
+    if (palcoFiltro === "Todos") return true;
+    return evento.palco === palcoFiltro;
+  });
+
+  const eventosPorPalco = eventosFiltrados.reduce((acc, evento) => {
     if (!acc[evento.palco]) {
       acc[evento.palco] = [];
     }
@@ -48,6 +73,14 @@ export default function Home() {
   Object.keys(eventosPorPalco).forEach((palco) => {
     eventosPorPalco[palco].sort((a, b) => a.horario.localeCompare(b.horario));
   });
+
+  const [diaBlocoAtivo, setDiaBlocoAtivo] = useState(blocosData[0]?.dia || "");
+
+  const diasBlocos = [...new Set(blocosData.map((item) => item.dia))];
+
+  const blocosDoDia = blocosData
+    .filter((item) => item.dia === diaBlocoAtivo)
+    .sort((a, b) => a.horario.localeCompare(b.horario));
 
   useEffect(() => {
     const ajustarAltura = () => {
@@ -60,10 +93,8 @@ export default function Home() {
 
         if (slideAtivo) {
           const conteudo = slideAtivo.firstElementChild;
-
           if (conteudo) {
             const alturaConteudo = conteudo.offsetHeight;
-
             viewport.style.height = `${alturaConteudo + 100}px`;
           }
         }
@@ -74,7 +105,6 @@ export default function Home() {
 
     ajustarAltura();
     window.addEventListener("resize", ajustarAltura);
-
     const timer1 = setTimeout(ajustarAltura, 50);
     const timer2 = setTimeout(ajustarAltura, 300);
 
@@ -85,18 +115,18 @@ export default function Home() {
     };
   }, [slideBaile, abaBaile]);
 
-  const [diaBlocoAtivo, setDiaBlocoAtivo] = useState(blocosData[0]?.dia || "");
-
-  // 2. Extrair dias disponíveis nos blocos
-  const diasBlocos = [...new Set(blocosData.map((item) => item.dia))];
-
-  // 3. Filtrar blocos pelo dia selecionado
-  const blocosDoDia = blocosData
-    .filter((item) => item.dia === diaBlocoAtivo)
-    .sort((a, b) => a.horario.localeCompare(b.horario));
-
-  /* 
+  // NOVO: Efeito 2: Fechar dropdown ao clicar fora
   useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownAberto(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  /* useEffect(() => {
     const definirMedia = () => {
       if (window.innerWidth < 768) {
         setMediaCaracteres(45);
@@ -113,7 +143,8 @@ export default function Home() {
 
   const artistasFiltrados = artistas.filter((artista) => {
     return artista.nome.toLowerCase().includes(busca.toLowerCase());
-  }); */
+  }); 
+  */
 
   const handleScrollDown = () => {
     const nextSection = document.getElementById("baile");
@@ -121,46 +152,17 @@ export default function Home() {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }
   };
-  /* 
-  const totalResultados = artistasFiltrados.length;
+
+  /* const totalResultados = artistasFiltrados.length;
 
   const organizarLineup = (listaDeArtistas) => {
-    const linhas = [];
-    let linhaAtual = [];
-    let caracteresNaLinha = 0;
-
-    const poucosResultados = listaDeArtistas.length <= 6;
-
-    listaDeArtistas.forEach((artista) => {
-      const tamanhoNome = artista.nome.length;
-
-      if (poucosResultados && linhaAtual.length >= 2) {
-        linhas.push(linhaAtual);
-        linhaAtual = [];
-        caracteresNaLinha = 0;
-      }
-
-      if (
-        linhaAtual.length > 0 &&
-        caracteresNaLinha + tamanhoNome > mediaCaracteres
-      ) {
-        linhas.push(linhaAtual);
-        linhaAtual = [];
-        caracteresNaLinha = 0;
-      }
-
-      linhaAtual.push(artista.nome);
-      caracteresNaLinha += tamanhoNome + 3; // + separador " • "
-    });
-
-    if (linhaAtual.length > 0) {
-      linhas.push(linhaAtual);
-    }
-
+    // ... (código antigo de lineup)
+    // omiti para economizar espaço visual, mas pode manter se quiser
     return linhas;
   };
 
-  const lineupOrganizado = organizarLineup(artistasFiltrados); */
+  const lineupOrganizado = organizarLineup(artistasFiltrados); 
+  */
 
   return (
     <>
@@ -495,7 +497,6 @@ export default function Home() {
           <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
         </div>
 
-        {/* --- SEÇÃO PROGRAMAÇÃO --- */}
         <section
           id="programacao"
           className="py-5"
@@ -506,8 +507,7 @@ export default function Home() {
               PROGRAMAÇÃO OFICIAL
             </h2>
 
-            {/* 1. Navegação por Dias (Abas) */}
-            <div className="tabs-container fade-in-animation">
+            <div className="controls-container fade-in-animation">
               {diasDisponiveis.map((dia) => (
                 <button
                   key={dia}
@@ -517,17 +517,65 @@ export default function Home() {
                   {dia}
                 </button>
               ))}
+
+              <div className="filter-wrapper" ref={dropdownRef}>
+                <button
+                  className="filter-btn"
+                  onClick={() => setDropdownAberto(!dropdownAberto)}
+                >
+                  <i className="bx bx-filter-alt"></i>
+                  {palcoFiltro === "Todos" ? "TODOS OS PALCOS" : palcoFiltro}
+                  <i
+                    className={`bx bx-chevron-down ${dropdownAberto ? "bx-rotate-180" : ""}`}
+                    style={{ transition: "0.3s" }}
+                  ></i>
+                </button>
+
+                <ul
+                  className={`filter-dropdown ${dropdownAberto ? "show" : ""}`}
+                >
+                  {palcosDoDia.map((palco) => (
+                    <li
+                      key={palco}
+                      className={`filter-item ${palcoFiltro === palco ? "selected" : ""}`}
+                      onClick={() => {
+                        setPalcoFiltro(palco);
+                        setDropdownAberto(false);
+                      }}
+                    >
+                      {palco}
+                      {palcoFiltro === palco && <i className="bx bx-check"></i>}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            {/* 2. Conteúdo dos Palcos */}
             <div className="programacao-content">
               {Object.keys(eventosPorPalco).length > 0 ? (
                 Object.keys(eventosPorPalco).map((palco) => (
                   <div key={palco} className="palco-section fade-in-animation">
-                    {/* Título do Palco */}
-                    <h3 className="palco-title">{palco}</h3>
+                    <h3 className="palco-title">
+                      {nomesOficiaisPalcos[palco] ? (
+                        <>
+                          {nomesOficiaisPalcos[palco]}{" "}
+                          <br className="d-md-none" />
+                          <span
+                            style={{
+                              fontSize: "0.6em",
+                              opacity: 0.8,
+                              fontWeight: "normal",
+                              marginLeft: "10px",
+                            }}
+                          >
+                            ({palco})
+                          </span>
+                        </>
+                      ) : (
+                        palco
+                      )}
+                    </h3>
 
-                    {/* Grid de Cards */}
                     <div className="cards-grid">
                       {eventosPorPalco[palco].map((evento) => (
                         <div key={evento.id} className="prog-card">
@@ -540,11 +588,9 @@ export default function Home() {
                               <span className="genre-badge">{evento.tag}</span>
                             )}
                           </div>
-
                           <div className="card-body">
                             <h4 className="artist-name">{evento.artista}</h4>
                           </div>
-
                           <div className="card-footer">
                             <i className="bx bx-calendar"></i> {evento.data}
                           </div>
@@ -555,7 +601,7 @@ export default function Home() {
                 ))
               ) : (
                 <div className="text-center text-white mt-5">
-                  <p>Nenhuma programação encontrada para este dia.</p>
+                  <p>Nenhuma programação encontrada para este filtro.</p>
                 </div>
               )}
             </div>

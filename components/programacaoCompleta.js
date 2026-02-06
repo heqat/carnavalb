@@ -4,7 +4,7 @@ export const programacaoGeral = [
     dia: "Sábado",
     data: "14/02",
     palco: "Palco Principal (QG)",
-    artista: "Maestro Forró",
+    artista: "EXEMPLO",
     horario: "20:00",
   },
   {
@@ -12,7 +12,7 @@ export const programacaoGeral = [
     dia: "Sábado",
     data: "14/02",
     palco: "Palco Principal (QG)",
-    artista: "Elba Ramalho",
+    artista: "EXEMPLO",
     horario: "22:00",
   },
   {
@@ -20,7 +20,7 @@ export const programacaoGeral = [
     dia: "Sábado",
     data: "14/02",
     palco: "Polo Cultural",
-    artista: "Orquestra Cônego",
+    artista: "EXEMPLO",
     horario: "16:00",
   },
 
@@ -29,7 +29,7 @@ export const programacaoGeral = [
     dia: "Domingo",
     data: "15/02",
     palco: "Palco Principal (QG)",
-    artista: "Alceu Valença",
+    artista: "EXEMPLO",
     horario: "23:00",
   },
   {
@@ -37,7 +37,7 @@ export const programacaoGeral = [
     dia: "Domingo",
     data: "15/02",
     palco: "Polo Cultural",
-    artista: "Maracatu Nação",
+    artista: "EXEMPLO",
     horario: "17:00",
   },
 
@@ -46,7 +46,7 @@ export const programacaoGeral = [
     dia: "Segunda",
     data: "16/02",
     palco: "Palco Principal (QG)",
-    artista: "Nação Zumbi",
+    artista: "EXEMPLO",
     horario: "00:00",
   },
   {
@@ -54,7 +54,7 @@ export const programacaoGeral = [
     dia: "Terça",
     data: "17/02",
     palco: "Palco Principal (QG)",
-    artista: "Nação Zumbi",
+    artista: "EXEMPLO",
     horario: "00:00",
   },
   {
@@ -62,7 +62,7 @@ export const programacaoGeral = [
     dia: "Quarta",
     data: "17/02",
     palco: "Palco Principal (QG)",
-    artista: "Nação Zumbi",
+    artista: "EXEMPLO",
     horario: "00:00",
   },
 ];

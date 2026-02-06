@@ -81,8 +81,8 @@
 }
 
 .time-badge {
-  background: #222;
-  color: #ec671a;
+  background: #ec671a;
+  color: #222;
   font-weight: 800;
   padding: 5px 12px;
   border-radius: 8px;
@@ -115,4 +115,111 @@
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+/* Container que agrupa os Dias e o Filtro */
+.controls-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  position: relative; /* Necessário para contexto de empilhamento */
+  z-index: 20;
+}
+
+/* --- ESTILO DO DROPDOWN (FILTRO) --- */
+/* --- ESTILO DO DROPDOWN (FILTRO) --- */
+
+.filter-wrapper {
+  position: relative; /* Contexto para o absoluto */
+  display: inline-block; /* Garante que o wrapper tenha o tamanho exato do botão */
+}
+
+/* Botão do Filtro (Pílula) */
+.filter-btn {
+  background: #ec671a;
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Ajuste leve no padding */
+  border-radius: 50px;
+  font-family: "Gabarito", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Garante espaço entre texto e seta */
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(236, 103, 26, 0.3);
+  transition: all 0.3s ease;
+  min-width: 160px; /* Define uma largura mínima para o botão não ficar minúsculo */
+}
+
+.filter-btn:hover {
+  background: #d6560e;
+  transform: translateY(-2px);
+}
+
+/* A Lista Suspensa (Flutuante) */
+.filter-dropdown {
+  position: absolute;
+  top: calc(100% + 8px); /* Distância fixa e precisa do topo */
+  left: 0; /* Alinha a esquerda da lista com a esquerda do botão */
+
+  /* LÓGICA DE TAMANHO CORRIGIDA */
+  min-width: 100%; /* A lista nunca será mais estreita que o botão */
+  width: max-content; /* A lista cresce se o texto dentro for longo */
+  max-width: 90vw; /* Segurança para celular: não estoura a tela */
+
+  background: rgba(255, 255, 255, 0.98); /* Fundo mais sólido para leitura */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Borda sutil */
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  list-style: none;
+  z-index: 100;
+
+  /* Animação */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); /* Animação mais suave */
+}
+
+/* Classe para mostrar o menu */
+.filter-dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Itens da Lista */
+.filter-item {
+  padding: 10px 20px;
+  color: #444;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+.filter-item:hover {
+  background: #fdf0e7; /* Laranja bem clarinho no hover */
+  color: #ec671a;
+}
+
+.filter-item.selected {
+  background: rgba(236, 103, 26, 0.1);
+  color: #ec671a;
+}
+
+.filter-item i {
+  font-size: 1.1rem;
+  margin-left: 10px;
 }
