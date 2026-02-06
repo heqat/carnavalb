@@ -1,0 +1,118 @@
+/* Container das Abas de Dias */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.tab-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-family: "Gabarito", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.tab-btn.active {
+  background: #ec671a; /* Laranja da marca */
+  border-color: #ec671a;
+  box-shadow: 0 4px 15px rgba(236, 103, 26, 0.4);
+  transform: scale(1.05);
+}
+
+/* Título do Palco */
+.palco-title {
+  color: #fff;
+  font-family: "BabySchool", sans-serif; /* Fonte do título */
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #ec671a;
+  padding-left: 15px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Grid de Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 3rem;
+}
+
+/* O Card Moderno */
+.prog-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border-left: 8px solid #ec671a; /* Detalhe colorido na esquerda */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-header-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.time-badge {
+  background: #222;
+  color: #ec671a;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.genre-badge {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+  font-weight: bold;
+}
+
+.artist-name {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.2;
+  font-family: "Gabarito", sans-serif;
+}
+
+.card-footer {
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  font-size: 0.85rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

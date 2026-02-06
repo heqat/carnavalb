@@ -1,0 +1,68 @@
+export const programacaoGeral = [
+  {
+    id: 1,
+    dia: "Sábado",
+    data: "14/02",
+    palco: "Palco Principal (QG)",
+    artista: "Maestro Forró",
+    horario: "20:00",
+  },
+  {
+    id: 2,
+    dia: "Sábado",
+    data: "14/02",
+    palco: "Palco Principal (QG)",
+    artista: "Elba Ramalho",
+    horario: "22:00",
+  },
+  {
+    id: 3,
+    dia: "Sábado",
+    data: "14/02",
+    palco: "Polo Cultural",
+    artista: "Orquestra Cônego",
+    horario: "16:00",
+  },
+
+  {
+    id: 4,
+    dia: "Domingo",
+    data: "15/02",
+    palco: "Palco Principal (QG)",
+    artista: "Alceu Valença",
+    horario: "23:00",
+  },
+  {
+    id: 5,
+    dia: "Domingo",
+    data: "15/02",
+    palco: "Polo Cultural",
+    artista: "Maracatu Nação",
+    horario: "17:00",
+  },
+
+  {
+    id: 6,
+    dia: "Segunda",
+    data: "16/02",
+    palco: "Palco Principal (QG)",
+    artista: "Nação Zumbi",
+    horario: "00:00",
+  },
+  {
+    id: 7,
+    dia: "Terça",
+    data: "17/02",
+    palco: "Palco Principal (QG)",
+    artista: "Nação Zumbi",
+    horario: "00:00",
+  },
+  {
+    id: 8,
+    dia: "Quarta",
+    data: "17/02",
+    palco: "Palco Principal (QG)",
+    artista: "Nação Zumbi",
+    horario: "00:00",
+  },
+];

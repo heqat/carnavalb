@@ -843,9 +843,10 @@
 }
 
 /* SEÇÃO BLOCOS */
-.bloco-section {
+
+#blocos {
   width: 100%;
-  min-height: 60vh;
+  min-height: 100vh;
   background-image: url("../public/CBG3.jpg");
   background-size: cover;
   background-position: center;
@@ -853,15 +854,15 @@
   position: relative;
 }
 
-.bloco-section::before {
+#blocos::before {
   content: "";
   position: absolute;
-  inset: 0; /* Ocupa toda a div */
-  background: rgba(0, 0, 0, 0.2);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
-.bloco-section .container {
+#blocos .container {
   position: relative;
   z-index: 2;
 }

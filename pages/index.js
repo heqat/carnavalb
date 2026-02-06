@@ -6,7 +6,8 @@ import { useRouter } from "next/router";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { artistas } from "../components/data/artistasConfirmados";
-// Importante: O componente novo deve ser importado aqui
+import { programacaoGeral } from "../components/programacaoCompleta";
+import { blocosData } from "../components/blocosData";
 import JustifiedText from "../components/JustifiedText";
 
 import marca from "../public/marcasembezerros.png";
@@ -28,10 +29,25 @@ export default function Home() {
   const [slideBaile, setSlideBaile] = useState(0); // 0 = Capa, 1 = Detalhes
   const [abaBaile, setAbaBaile] = useState("atracoes"); // 'atracoes' ou 'ingressos'
   const [videoRodando, setVideoRodando] = useState(false);
+  const [diaAtivo, setDiaAtivo] = useState(programacaoGeral[0]?.dia || "");
 
-  const [mediaCaracteres, setMediaCaracteres] = useState(45);
-
+  const diasDisponiveis = [
+    ...new Set(programacaoGeral.map((item) => item.dia)),
+  ];
+  const eventosDoDia = programacaoGeral.filter((item) => item.dia === diaAtivo);
   const baileViewportRef = useRef(null);
+
+  const eventosPorPalco = eventosDoDia.reduce((acc, evento) => {
+    if (!acc[evento.palco]) {
+      acc[evento.palco] = [];
+    }
+    acc[evento.palco].push(evento);
+    return acc;
+  }, {});
+
+  Object.keys(eventosPorPalco).forEach((palco) => {
+    eventosPorPalco[palco].sort((a, b) => a.horario.localeCompare(b.horario));
+  });
 
   useEffect(() => {
     const ajustarAltura = () => {
@@ -39,20 +55,15 @@ export default function Home() {
       const isMobile = window.innerWidth < 992;
 
       if (viewport && isMobile) {
-        // Pega o slide atual
         const slides = viewport.querySelectorAll(".baile-slide");
         const slideAtivo = slides[slideBaile];
 
         if (slideAtivo) {
-          // Vamos medir o primeiro filho direto (o container ou o card)
           const conteudo = slideAtivo.firstElementChild;
 
           if (conteudo) {
-            // Pega a altura total do elemento
             const alturaConteudo = conteudo.offsetHeight;
 
-            // Adiciona uma folga generosa (100px) para compensar paddings do pai e sombras
-            // Essa folga extra é o que vai impedir o corte embaixo
             viewport.style.height = `${alturaConteudo + 100}px`;
           }
         }
@@ -64,7 +75,6 @@ export default function Home() {
     ajustarAltura();
     window.addEventListener("resize", ajustarAltura);
 
-    // Pequenos delays para garantir que a renderização terminou
     const timer1 = setTimeout(ajustarAltura, 50);
     const timer2 = setTimeout(ajustarAltura, 300);
 
@@ -73,8 +83,19 @@ export default function Home() {
       clearTimeout(timer2);
       window.removeEventListener("resize", ajustarAltura);
     };
-  }, [slideBaile, abaBaile]); // Mantém as dependências
+  }, [slideBaile, abaBaile]);
 
+  const [diaBlocoAtivo, setDiaBlocoAtivo] = useState(blocosData[0]?.dia || "");
+
+  // 2. Extrair dias disponíveis nos blocos
+  const diasBlocos = [...new Set(blocosData.map((item) => item.dia))];
+
+  // 3. Filtrar blocos pelo dia selecionado
+  const blocosDoDia = blocosData
+    .filter((item) => item.dia === diaBlocoAtivo)
+    .sort((a, b) => a.horario.localeCompare(b.horario));
+
+  /* 
   useEffect(() => {
     const definirMedia = () => {
       if (window.innerWidth < 768) {
@@ -92,7 +113,7 @@ export default function Home() {
 
   const artistasFiltrados = artistas.filter((artista) => {
     return artista.nome.toLowerCase().includes(busca.toLowerCase());
-  });
+  }); */
 
   const handleScrollDown = () => {
     const nextSection = document.getElementById("baile");
@@ -100,7 +121,7 @@ export default function Home() {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }
   };
-
+  /* 
   const totalResultados = artistasFiltrados.length;
 
   const organizarLineup = (listaDeArtistas) => {
@@ -139,7 +160,7 @@ export default function Home() {
     return linhas;
   };
 
-  const lineupOrganizado = organizarLineup(artistasFiltrados);
+  const lineupOrganizado = organizarLineup(artistasFiltrados); */
 
   return (
     <>
@@ -475,46 +496,128 @@ export default function Home() {
         </div>
 
         {/* --- SEÇÃO PROGRAMAÇÃO --- */}
-        <section id="programacao" className="py-5">
+        <section
+          id="programacao"
+          className="py-5"
+          style={{ minHeight: "80vh" }}
+        >
           <div className="container">
-            <h2 className="m-titulo-programacao mb-5">ATRAÇÕES CONFIRMADAS</h2>
+            <h2 className="m-titulo-programacao mb-5 text-center">
+              PROGRAMAÇÃO OFICIAL
+            </h2>
 
-            {/* BARRA DE BUSCA 
-            <div className="search-container-center mb-5">
-              <div className="search-box-individual">
-                <i className="bx bx-search"></i>
-                <input
-                  type="text"
-                  placeholder="Pesquisar atração..."
-                  value={busca}
-                  onChange={(e) => setBusca(e.target.value)}
-                />
-              </div>
-            </div>
-            */}
-
-            <div className="lineup-poster-container">
-              {lineupOrganizado.map((linha, index) => (
-                <JustifiedText
-                  key={index}
-                  text={linha.join(" • ")}
-                  className="text-white"
-                />
+            {/* 1. Navegação por Dias (Abas) */}
+            <div className="tabs-container fade-in-animation">
+              {diasDisponiveis.map((dia) => (
+                <button
+                  key={dia}
+                  className={`tab-btn ${diaAtivo === dia ? "active" : ""}`}
+                  onClick={() => setDiaAtivo(dia)}
+                >
+                  {dia}
+                </button>
               ))}
+            </div>
+
+            {/* 2. Conteúdo dos Palcos */}
+            <div className="programacao-content">
+              {Object.keys(eventosPorPalco).length > 0 ? (
+                Object.keys(eventosPorPalco).map((palco) => (
+                  <div key={palco} className="palco-section fade-in-animation">
+                    {/* Título do Palco */}
+                    <h3 className="palco-title">{palco}</h3>
+
+                    {/* Grid de Cards */}
+                    <div className="cards-grid">
+                      {eventosPorPalco[palco].map((evento) => (
+                        <div key={evento.id} className="prog-card">
+                          <div className="card-header-time">
+                            <span className="time-badge">
+                              <i className="bx bx-time-five"></i>{" "}
+                              {evento.horario}
+                            </span>
+                            {evento.tag && (
+                              <span className="genre-badge">{evento.tag}</span>
+                            )}
+                          </div>
+
+                          <div className="card-body">
+                            <h4 className="artist-name">{evento.artista}</h4>
+                          </div>
+
+                          <div className="card-footer">
+                            <i className="bx bx-calendar"></i> {evento.data}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="text-center text-white mt-5">
+                  <p>Nenhuma programação encontrada para este dia.</p>
+                </div>
+              )}
             </div>
           </div>
         </section>
+
         <div className="divisoria-overlap">
           <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
         </div>
 
-        <section
-          id="bloco"
-          className="bloco-section d-flex align-items-center justify-content-center text-center"
-        >
+        <section id="blocos" className="py-5" style={{ minHeight: "80vh" }}>
           <div className="container">
-            <h2 className="m-titulo-programacao mb-4 text-white">BLOCOS</h2>
-            <p className="bloco-aviso text-white">MAIS INFORMAÇÕES EM BREVE!</p>
+            <h2 className="m-titulo-programacao mb-5 text-center text-white">
+              BLOCOS
+            </h2>
+
+            <div className="tabs-container fade-in-animation mb-4">
+              {diasBlocos.map((dia) => (
+                <button
+                  key={dia}
+                  className={`tab-btn ${diaBlocoAtivo === dia ? "active-b" : ""}`}
+                  onClick={() => setDiaBlocoAtivo(dia)}
+                >
+                  {dia}
+                </button>
+              ))}
+            </div>
+
+            {/* Grid de Blocos */}
+            <div className="blocos-content fade-in-animation">
+              {blocosDoDia.length > 0 ? (
+                <div className="blocos-grid">
+                  {blocosDoDia.map((bloco) => (
+                    <div key={bloco.id} className="bloco-card">
+                      {/* Cabeçalho: Hora */}
+                      <div className="bloco-header">
+                        <i className="bx bx-time-five"></i>
+                        <span>{bloco.horario}</span>
+                      </div>
+
+                      {/* Corpo: Nome e Descrição */}
+                      <div className="bloco-body">
+                        <h4 className="bloco-nome">{bloco.nome}</h4>
+                        {bloco.descricao && (
+                          <p className="bloco-desc">{bloco.descricao}</p>
+                        )}
+                      </div>
+
+                      {/* Rodapé: Local (Destaque) */}
+                      <div className="bloco-footer">
+                        <i className="bx bxs-map-pin bx-sm"></i>
+                        <span className="local-text">{bloco.local}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center text-white mt-5">
+                  <p>Nenhum bloco cadastrado para este dia ainda.</p>
+                </div>
+              )}
+            </div>
           </div>
         </section>
 
