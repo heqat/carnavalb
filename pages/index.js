@@ -633,7 +633,6 @@ export default function Home() {
               BLOCOS
             </h2>
 
-            {/* ABAS DE DATAS */}
             <div
               className="tabs-container fade-in-animation mb-4"
               style={{ gap: "10px" }}

@@ -138,7 +138,7 @@ export default function Navbar() {
         keywords: ["baile", "municipal", "clube", "ingresso", "festa"],
       },
       {
-        route: "/#bloco",
+        route: "/#blocos",
         keywords: ["bloco", "cortejo", "troca", "agremiacao"],
       },
       {
@@ -152,6 +152,10 @@ export default function Navbar() {
           "polo",
           "localizacao",
         ],
+      },
+      {
+        route: "/#blocos",
+        keywords: ["blocos", "bloco", "cortejo"],
       },
     ];
 
@@ -306,13 +310,13 @@ export default function Navbar() {
                 </a>
               </li>
               <li
-                className={`nav-item m-2 ${activeSection === "bloco" ? "active" : ""}`}
+                className={`nav-item m-2 ${activeSection === "blocos" ? "active" : ""}`}
               >
                 <a
-                  href="/../#bloco"
+                  href="/../#blocos"
                   className="text-nav p-2"
                   onClick={() => {
-                    setActiveSection("bloco");
+                    setActiveSection("blocos");
                     closeMenu();
                   }}
                 >

@@ -6,8 +6,7 @@ export const programacaoGeral = [
     dia: "Sábado",
     data: "14/02",
     palco: "QG do Frevo",
-    artista:
-      "Abertura oficial: Orquestra Cônego Alexandre Cavalcanti e Grupos Culturais Folcpopular e Papanguarte",
+    artista: "Orq. Cônego Alexandre e Grupos Folcpopular e Papanguarte",
     horario: "20:00",
   },
   {
@@ -40,7 +39,7 @@ export const programacaoGeral = [
     dia: "Domingo",
     data: "15/02",
     palco: "QG do Frevo",
-    artista: "Marrom Brasileiro",
+    artista: "Marron Brasileiro",
     horario: "12:00",
   },
   {
