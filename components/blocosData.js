@@ -38,15 +38,6 @@ export const blocosData = [
   {
     id: 5,
     dia: "Domingo",
-    data: "08/02",
-    nome: "Bloco Infantil - Brincando de ser criança",
-    horario: "15:00",
-    local: "São Sebastião",
-    descricao: "",
-  },
-  {
-    id: 6,
-    dia: "Domingo",
     data: "11/02",
     nome: "Movimento na Folia",
     horario: "16:00",
@@ -54,7 +45,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 7,
+    id: 6,
     dia: "Domingo",
     data: "11/02",
     nome: "Educarnaval",
@@ -63,7 +54,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 8,
+    id: 7,
     dia: "Quinta",
     data: "12/02",
     nome: "SEMP Folia",
@@ -72,7 +63,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 9,
+    id: 8,
     dia: "Quinta",
     data: "12/02",
     nome: "Folia da Boa Idade",
@@ -81,7 +72,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 10,
+    id: 9,
     dia: "Quinta",
     data: "12/02",
     nome: "Corredores Noturnos de Bezerros",
@@ -90,7 +81,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 11,
+    id: 10,
     dia: "Quinta",
     data: "12/02",
     nome: "Na Batida e No Frevo",
@@ -99,7 +90,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 12,
+    id: 11,
     dia: "Quinta",
     data: "12/02",
     nome: "Risotril",
@@ -108,7 +99,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 13,
+    id: 12,
     dia: "Quinta",
     data: "12/02",
     nome: "Óia o Chico",
@@ -117,7 +108,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 14,
+    id: 13,
     dia: "Sexta",
     data: "13/02",
     nome: "EduPapangu I",
@@ -126,7 +117,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 15,
+    id: 14,
     dia: "Sexta",
     data: "13/02",
     nome: "Batatão Folia",
@@ -135,7 +126,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 16,
+    id: 15,
     dia: "Sexta",
     data: "13/02",
     nome: "Balé da Kika",
@@ -144,7 +135,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 17,
+    id: 16,
     dia: "Sexta",
     data: "13/02",
     nome: "EduPapangu II",
@@ -153,7 +144,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 18,
+    id: 17,
     dia: "Sexta",
     data: "13/02",
     nome: "Bloco To No SUAS",
@@ -162,7 +153,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 19,
+    id: 18,
     dia: "Sexta",
     data: "13/02",
     nome: "Bloco Cafofo",
@@ -171,7 +162,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 20,
+    id: 19,
     dia: "Sábado",
     data: "14/02",
     nome: "A Casa Caiu",
@@ -180,7 +171,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 21,
+    id: 20,
     dia: "Sábado",
     data: "14/02",
     nome: "Catraias do Cruzeiro",
@@ -189,7 +180,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 22,
+    id: 21,
     dia: "Sábado",
     data: "14/02",
     nome: "Bloco do Biu",
@@ -198,7 +189,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 23,
+    id: 22,
     dia: "Sábado",
     data: "14/02",
     nome: "Libera o Toin",
@@ -207,7 +198,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 24,
+    id: 23,
     dia: "Sábado",
     data: "14/02",
     nome: "Bloco Eu Sozinho",
@@ -216,7 +207,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 25,
+    id: 24,
     dia: "Sábado",
     data: "14/02",
     nome: "Bloco do Zé Pereira",
@@ -225,7 +216,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 26,
+    id: 25,
     dia: "Domingo",
     data: "15/02",
     nome: "Boi Chorão",
@@ -234,7 +225,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 27,
+    id: 26,
     dia: "Domingo",
     data: "15/02",
     nome: "Ressuscita Facilita",
@@ -243,7 +234,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 28,
+    id: 27,
     dia: "Domingo",
     data: "15/02",
     nome: "Bloco do Papangu",
@@ -252,7 +243,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 29,
+    id: 28,
     dia: "Segunda",
     data: "16/02",
     nome: "Bloco das Catraias",
@@ -261,7 +252,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 30,
+    id: 29,
     dia: "Segunda",
     data: "16/02",
     nome: "O Urso de vocês",
@@ -270,7 +261,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 31,
+    id: 30,
     dia: "Segunda",
     data: "16/02",
     nome: "Segura o Ovo",
@@ -279,7 +270,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 32,
+    id: 31,
     dia: "Segunda",
     data: "16/02",
     nome: "As brilhosas",
@@ -288,7 +279,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 33,
+    id: 32,
     dia: "Segunda",
     data: "16/02",
     nome: "Bloco do Guarani",
@@ -297,7 +288,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 34,
+    id: 33,
     dia: "Terça",
     data: "17/02",
     nome: "Boca de Álcool Folia",
@@ -306,7 +297,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 35,
+    id: 34,
     dia: "Terça",
     data: "17/02",
     nome: "Bloco Beijo",
@@ -315,7 +306,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 36,
+    id: 35,
     dia: "Terça",
     data: "17/02",
     nome: "Caiana Tropicana",
@@ -324,7 +315,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 37,
+    id: 36,
     dia: "Terça",
     data: "17/02",
     nome: "Balança o Saco",
@@ -333,7 +324,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 38,
+    id: 37,
     dia: "Terça",
     data: "17/02",
     nome: "Os 100 futuro",
@@ -342,7 +333,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 39,
+    id: 38,
     dia: "Terça",
     data: "17/02",
     nome: "Concentra mas não sai",
@@ -351,7 +342,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 40,
+    id: 39,
     dia: "Terça",
     data: "17/02",
     nome: "As kengas da Cohab",
@@ -360,7 +351,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 41,
+    id: 40,
     dia: "Terça",
     data: "17/02",
     nome: "As Melindrosas",
@@ -369,7 +360,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 42,
+    id: 41,
     dia: "Quarta",
     data: "18/02",
     nome: "Peixada da confra",
@@ -378,7 +369,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 43,
+    id: 42,
     dia: "Quarta",
     data: "18/02",
     nome: "Bacalhau do Lula Vassoureiro",
@@ -387,7 +378,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 44,
+    id: 43,
     dia: "Domingo",
     data: "22/02",
     nome: "Carnaval do Santo Amaro 2",
@@ -396,7 +387,7 @@ export const blocosData = [
     descricao: "",
   },
   {
-    id: 45,
+    id: 44,
     dia: "Domingo",
     data: "22/02",
     nome: "Só as cinzas",
